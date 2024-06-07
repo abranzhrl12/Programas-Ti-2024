@@ -1,0 +1,17 @@
+.paginacion{
+    margin-top: 8rem;
+    .paginas{
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+      
+        &__btn{
+            border: unset;
+            padding: 1rem 1.2rem;
+            border-radius: 0.5rem;
+            box-shadow: 3px 3px 3px rgba(197, 184, 184, 0.149);
+        }
+    }
+}
+
+

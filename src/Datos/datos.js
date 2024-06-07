@@ -1,0 +1,58 @@
+export default {
+  programas: {
+    Edicion: [
+      {
+        id: 1,
+        nombre: "Adobe Ilustrator",
+        imagen: "/imagenes/ilustrator.webp",
+        Descripcion: "lorem lorem lorem lorem lorem lorem",
+        Caracteristica: "lorem lorem",
+        Video: "/aaaaa",
+        link_drive: "https//google.com",
+        link_mediafire: "https://google.com",
+      },
+      {
+        id: 2,
+        nombre: "Adobe Photoshop",
+        imagen: "/imagenes/potoshop.webp",
+        Descripcion: "lorem lorem lorem lorem lorem lorem",
+        Caracteristica: "lorem lorem",
+        Video: "/aaaaa",
+        link_drive: "https//google.com",
+        link_mediafire: "https://google.com",
+      },
+      {
+        id: 3,
+        nombre: "Corel draw",
+        imagen: "/imagenes/coreldraww.webp",
+        Descripcion: "lorem lorem lorem lorem lorem lorem",
+        Caracteristica: "lorem lorem",
+        Video: "/aaaaa",
+        link_drive: "https//google.com",
+        link_mediafire: "https://google.com",
+      },
+      {
+        id: 4,
+        nombre: "Luminar 2024",
+        imagen: "/imagenes/lumina (2).webp",
+        Descripcion: "lorem lorem lorem lorem lorem lorem",
+        Caracteristica: "lorem lorem",
+        Video: "/aaaaa",
+        link_drive: "https//google.com",
+        link_mediafire: "https://google.com",
+      },
+    ],
+    Utilidades: [
+      {
+        id: 1,
+        nombre: "Windows 11",
+        imagen: "/imagenes/win11.webp",
+        Descripcion: "lorem lorem lorem lorem lorem lorem",
+        Caracteristica: "lorem lorem",
+        Video: "/aaaaa",
+        link_drive: "https//google.com",
+        link_mediafire: "https://google.com",
+      },
+    ],
+  },
+};
