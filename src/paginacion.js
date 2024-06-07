@@ -88,7 +88,7 @@ function generarPaginacion() {
     btnpaginacion.textContent = index;
     btnpaginacion.addEventListener("click", () => {
       paginaActual = index;
-      cargarProgramasPagina(); // Cargar programas de la nueva página
+      cargarProgramasPagina(); 
     });
     contenedorPaginacion.appendChild(btnpaginacion);
   }
