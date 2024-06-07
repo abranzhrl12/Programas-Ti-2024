@@ -94,8 +94,5 @@ function generarPaginacion() {
   }
 }
 cargarProgramasPagina(programasTodos);
-// window.location.href = "index.html";
-generarPaginacion();
-// Cargar programas de la página actual y generar la paginación inicial
 
-// Event listeners para cambiar la categoría de programas
+generarPaginacion();
