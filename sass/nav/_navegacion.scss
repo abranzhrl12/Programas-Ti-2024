@@ -1,5 +1,7 @@
 @use "../Global/mixin" as m;
 
+
+
 .navegacion {
   width: 100%;
   padding: 0 5rem;
@@ -8,18 +10,12 @@
   background-color: rgb(0, 0, 0);
   background-color: #1d1c24;
   display: flex;
+  top: 0;
   align-items: center;
   position: fixed;
   z-index: 2;
 
-  // align-content: center;
-  // @include m.telefono {
-  //   display: inline-flex;
-  //   display: flex;
-  //   flex-direction: row;
-  //   justify-content: center;
-  //   align-items: center;
-  // }
+  
   @include m.tablet {
     .lista {
       position: static;

@@ -4,7 +4,7 @@ export default {
       {
         id: 1,
         nombre: "Adobe Ilustrator",
-        imagen: "/imagenes/ilustrator.webp",
+        imagen: "/imagenes/ilustrator22 (1).avif",
         Descripcion: "lorem lorem lorem lorem lorem lorem",
         Caracteristica: "lorem lorem",
         Video: "/aaaaa",

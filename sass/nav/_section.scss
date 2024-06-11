@@ -3,11 +3,12 @@
 .section {
   width: 100%;
   padding: 0 2rem;
-
+  margin-top: 5rem;
   background-color: transparent;
   opacity: 0.97;
-
+ 
   &__titulo {
+    color: white;
     text-align: center;
     padding: 4rem 0;
   }
@@ -70,7 +71,7 @@
     font-size: 1.5rem;
     word-break: keep-all;
     text-align: center;
-    text-wrap: balance;
+    text-wrap: pretty;
     line-height: 1.7;
     width: 100%;
   }
