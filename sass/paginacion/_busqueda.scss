@@ -1,0 +1,26 @@
+.busqueda{
+    width: 100%;
+    height: fit-content;
+    margin-top: 14rem;
+    &__contenedor{
+  
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+
+    }
+    &__item{
+        display: block;
+        width: 38rem;
+        padding: 1rem;
+        border-radius: 1rem;
+    }
+    &__btn{
+        width: 20rem;
+        height: 4rem;
+        background-color: rgb(255, 255, 255);
+        color: black;
+        border: none;
+        border-radius: 0.8rem;
+    }
+}

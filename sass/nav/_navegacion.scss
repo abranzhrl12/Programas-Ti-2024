@@ -39,12 +39,15 @@
     align-items: center;
   }
   &__logo {
-    width: 4rem;
+    width: fit-content;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     color: #ffffff;
+  }
+  &__img{
+    width: 4rem;
   }
   &__label {
     @include m.tablet {
