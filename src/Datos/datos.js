@@ -73,6 +73,116 @@ export default {
           "https://drive.google.com/file/d/1SKJlaPntQmhtB1Wxb-S853GsJEX0W9Ol/view?usp=sharing",
         link_mediafire: "https://google.com",
       },
+      {
+        id: 7,
+        nombre: "Adobe XD",
+        imagen: "/imagenes/xd.webp",
+        Descripcion:
+          "EdrawMax 13 es un software de diagramación y diseño versátil y fácil de usar.",
+        Caracteristica: "lorem lorem",
+        Video: "/aaaaa",
+        link_drive: "https://google.com",
+        link_mediafire: "https://google.com",
+      },
+      {
+        id: 8,
+        nombre: "Topaz Photo AI",
+        imagen: "/imagenes/topaz-photo-ai.webp",
+        Descripcion:
+          "EdrawMax 13 es un software de diagramación y diseño versátil y fácil de usar.",
+        Caracteristica: "lorem lorem",
+        Video: "/aaaaa",
+        link_drive: "https://google.com",
+        link_mediafire: "https://google.com",
+      },
+      {
+        id: 9,
+        nombre: "Adobe Premier 2024",
+        imagen: "/imagenes/adobe premier.webp",
+        Descripcion:
+          "EdrawMax 13 es un software de diagramación y diseño versátil y fácil de usar.",
+        Caracteristica: "lorem lorem",
+        Video: "/aaaaa",
+        link_drive: "https://google.com",
+        link_mediafire: "https://google.com",
+      },
+      {
+        id: 10,
+        nombre: "Adobe Acrobat 2024",
+        imagen: "/imagenes/acrobat.webp",
+        Descripcion:
+          "EdrawMax 13 es un software de diagramación y diseño versátil y fácil de usar.",
+        Caracteristica: "lorem lorem",
+        Video: "/aaaaa",
+        link_drive: "https://google.com",
+        link_mediafire: "https://google.com",
+      },
+      {
+        id: 11,
+        nombre: "Whodershare Uniconverter",
+        imagen: "/imagenes/uniconverter.webp",
+        Descripcion:
+          "EdrawMax 13 es un software de diagramación y diseño versátil y fácil de usar.",
+        Caracteristica: "lorem lorem",
+        Video: "/aaaaa",
+        link_drive: "https://google.com",
+        link_mediafire: "https://google.com",
+      },
+      {
+        id: 12,
+        nombre: "File Converter",
+        imagen: "/imagenes/fileconverter.webp",
+        Descripcion:
+          "EdrawMax 13 es un software de diagramación y diseño versátil y fácil de usar.",
+        Caracteristica: "lorem lorem",
+        Video: "/aaaaa",
+        link_drive: "https://google.com",
+        link_mediafire: "https://google.com",
+      },
+      {
+        id: 13,
+        nombre: "Driver Bosster 11 Pro",
+        imagen: "/imagenes/boster.webp",
+        Descripcion:
+          "EdrawMax 13 es un software de diagramación y diseño versátil y fácil de usar.",
+        Caracteristica: "lorem lorem",
+        Video: "/aaaaa",
+        link_drive: "https://google.com",
+        link_mediafire: "https://google.com",
+      },
+      {
+        id: 14,
+        nombre: "Office 2024",
+        imagen: "/imagenes/office2024.webp",
+        Descripcion:
+          "EdrawMax 13 es un software de diagramación y diseño versátil y fácil de usar.",
+        Caracteristica: "lorem lorem",
+        Video: "/aaaaa",
+        link_drive: "https://google.com",
+        link_mediafire: "https://google.com",
+      },
+      {
+        id: 15,
+        nombre: "Zoom",
+        imagen: "/imagenes/zoom.webp",
+        Descripcion:
+          "EdrawMax 13 es un software de diagramación y diseño versátil y fácil de usar.",
+        Caracteristica: "lorem lorem",
+        Video: "/aaaaa",
+        link_drive: "https://google.com",
+        link_mediafire: "https://google.com",
+      },
+      {
+        id: 16,
+        nombre: "Google Earth Pro",
+        imagen: "/imagenes/google-earth-pro.webp",
+        Descripcion:
+          "EdrawMax 13 es un software de diagramación y diseño versátil y fácil de usar.",
+        Caracteristica: "lorem lorem",
+        Video: "/aaaaa",
+        link_drive: "https://google.com",
+        link_mediafire: "https://google.com",
+      },
     ],
     Utilidades: [
       {

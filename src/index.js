@@ -8,27 +8,25 @@ window.addEventListener("resize", () => {
     const listadrop = document.querySelector(".lista__drop");
     const tamaño = nav ? nav.offsetWidth : 0; // Asegúrate de verificar si nav es nulo antes de acceder a su propiedad offsetWidth
     if (tamaño > 768) {
-      console.log(tamaño);
       check.checked = false;
-
-      let click = false;
-
-      desplegable.addEventListener("click", (e) => {
-        if (!click) {
-          click = true;
-          listadrop.style.display = "block";
-        } else {
-          listadrop.style.display = "none";
-
-          click = false;
-        }
-      });
-    } else {
-      console.log("El checkbox está marcado.");
+      console.log("aaaaa");
       listadrop.style.display = "none";
-      desplegable.addEventListener("mouseover", function () {
-        listadrop.style.display = "block";
-      });
+      // desplegable.addEventListener("click", (e) => {
+      //   if (!click) {
+      //     console.log("se desplego11");
+      //     click = true;
+      //     listadrop.style.display = "block";
+      //   } else {
+      //     listadrop.style.display = "none";
+      //     console.log("se desplegoaaaa");
+      //     click = false;
+      //   }
+      // });
+    } else {
+      // listadrop.style.display = "none";
+      // desplegable.addEventListener("mouseover", function () {
+      //   listadrop.style.display = "block";
+      // });
     }
   } catch (error) {}
 });

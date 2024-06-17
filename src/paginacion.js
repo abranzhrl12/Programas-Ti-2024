@@ -4,12 +4,14 @@ let programasTodos = [...programasDeEdicion, ...programasUtilidades];
 let programasActuales = programasTodos;
 const diseño = document.querySelector("#programas");
 
-const programasPorPagina = 4;
+let programasPorPagina = 12;
+
 const busqueda = document.querySelector(".busqueda__item");
 const busquedabtn = document.querySelector(".busqueda__btn");
 
 let paginaActual = 1;
 const catDiseño = document.querySelector("#diseño");
+
 catDiseño.addEventListener("click", () => {
   programasActuales = programasDeEdicion; // Cambiar a programas de edición
   paginaActual = 1;
