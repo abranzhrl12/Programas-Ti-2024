@@ -2,7 +2,7 @@
     position: fixed;
     width: 64px;
     height: 64px;
-    background: #070000;
+    background: #ffffff;
     color: WHITE;
     border-radius: 50%;
     overflow: hidden;
@@ -24,6 +24,7 @@
     position: absolute;
     inset: 0px;
     margin: auto;
+    background: #de3500;
     animation: crlMugLoader 0.5s linear infinite alternate;
 }
 @keyframes crlMugLoader {
@@ -50,7 +51,7 @@
     color: white;
 }
 .nombrelogo23{
-  font-size: 5rem;
+  width: 35rem;
   position: fixed;
   z-index: 100;
   color: white;
