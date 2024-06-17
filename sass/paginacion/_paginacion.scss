@@ -15,7 +15,12 @@
             border: unset;
             padding: 1rem 1.2rem;
             border-radius: 0.5rem;
-            box-shadow: 3px 3px 3px rgba(197, 184, 184, 0.149);
+            
+            cursor: pointer;
+            
+           &:hover{
+            box-shadow: 0 0 3rem rgba(255, 255, 255, 0.149);
+           } 
            
         }
     }

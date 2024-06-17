@@ -47,7 +47,7 @@
     display: grid;
     place-items: center;
     z-index: 99;
-    animation: hideLoader 1.5s forwards;
+    animation: hideLoader .5s forwards;
     color: white;
 }
 .nombrelogo23{
@@ -58,7 +58,7 @@
   top: calc(50% - 12.4rem);
   left: calc((50% - 10rem ) - 6.5rem);
   opacity: 1;
-  animation: loadertext 1.5s forwards;
+  animation: loadertext .5s forwards;
 }
 @keyframes loadertext {
   0%{

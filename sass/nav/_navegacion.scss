@@ -46,7 +46,8 @@
     color: #ffffff;
   }
   &__img{
-    width: 4rem;
+    width: 15rem;
+    cursor: pointer;
   }
   &__label {
     @include m.tablet {
