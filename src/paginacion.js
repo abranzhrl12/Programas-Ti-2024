@@ -82,7 +82,7 @@ function cargarProgramasPagina() {
         <div class="card__picture">
           <img src="${programa.imagen}" alt="" class="card__img" width="256.5" height="144.28" />
         </div>
-
+      <a href="index3.html" style="text-decoration:none; color:white;">
         <div class="card__contenedorTitulo">
          <h3 class="card__titulo">${programa.nombre}</h3>
        
@@ -96,10 +96,7 @@ function cargarProgramasPagina() {
             ${programa.Descripcion} 
           </p>
         </div>
-        <div class="card__botones">
-     
-         
-        </div>
+        </a>
 
       `;
 
