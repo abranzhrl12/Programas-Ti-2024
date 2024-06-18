@@ -81,6 +81,7 @@
     top: 5.5rem;
     color: #000;
     transform: rotate(270deg);
+   
   }
   &__contenedorTitulo {
     display: flex;
@@ -88,6 +89,7 @@
     justify-content: center;
     align-items: center;
     padding: 0 0.4rem;
+    margin-bottom: 1rem;
   }
  
   &__titulo {
@@ -119,7 +121,7 @@
     height: 8rem;
     overflow: hidden;
     position: relative;
-    padding-top: 0.8rem;
+    padding-top: 0.9rem;
     &::before{
       
         content: "";
