@@ -1,5 +1,8 @@
 @use "variables" as v;
-
+@use "mixin" as m;
+:root{
+  --contentcardbefore:"hola";
+}
 html {
   font-size: 62.5%;
   box-sizing: border-box;
@@ -17,6 +20,9 @@ html {
   max-width: 150rem;
   width: 95%;
   margin: 0 auto;
+  @include m.desktopFull {
+    max-width: 160rem;
+  }
 }
 [class*="__img"] {
   display: block;

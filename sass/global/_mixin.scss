@@ -29,9 +29,9 @@
 }
 
 
-
 @mixin desktopFull {
-  @media (min-width: v.$desktopfull) {
+  @media (min-width: v.$desktopFull) {
     @content;
   }
 }
+
