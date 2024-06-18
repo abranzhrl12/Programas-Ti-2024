@@ -1,0 +1,14 @@
+.DetallePrograma{
+    &__contenedor{
+        display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+ 
+    margin-top: 10rem;
+    &__picture{
+        width: 90%;
+        max-width: 80rem;
+    }
+}
