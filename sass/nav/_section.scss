@@ -59,6 +59,10 @@
   flex-direction: column;
   gap: 0.9rem;
   box-shadow: 0px 0px 5px rgba(19, 16, 32, 0.726);
+  box-shadow: -4px -2px 16px 0px #050e11,
+  4px 2px 16px 0px rgba(95, 156, 231, 0.363), 0px 0px 20px 10px #00000008,
+  inset 5px 5px 20px rgba(0, 0, 0, 0.042),
+  inset -5px -5px 20px #050e11;
   transition: transform 0.3s ease-out;
   position: relative;
   border: 0.1rem solid rgba(70, 214, 185, 0.7058823529);

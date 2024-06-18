@@ -202,7 +202,7 @@ export default {
     ],
     Utilidades: [
       {
-        id: 1,
+        id: 100,
         nombre: "Windows 11",
         imagen: "/imagenes/win11.webp",
         tipo: "Utilidad",
