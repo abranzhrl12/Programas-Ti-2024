@@ -5,13 +5,16 @@
     height: fit-content;
     margin-top: 14rem;
     padding: 0 1.5rem;
+ 
     &__contenedor{
 
 
 
         display: flex;
+        
         gap: 2rem;
         justify-content: center;
+        align-items: center;
         background-color: aliceblue;
         padding: 0.6rem;
         border-radius: .6rem;
@@ -39,6 +42,8 @@
         background-color: transparent;
         font-size: larger;
         overflow: hidden;
+        display: flex;
+        align-items: center;
         font-family: v.$fuente_principal;
         @include m.tablet {
             flex: 1;
@@ -59,7 +64,6 @@
         border-radius: 0.4em;
         display: flex;
         gap: 2rem;
-
         align-items: center;
         font-size: large;
         cursor: pointer;

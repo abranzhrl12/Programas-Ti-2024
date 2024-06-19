@@ -70,7 +70,7 @@ export default {
       },
       {
         id: 6,
-        nombre: "Wondershare EdrawMax 13",
+        nombre: "EdrawMax 13",
         imagen: "/imagenes/edrawmax.webp",
         tipo: "diseño",
         Descripcion:
@@ -131,7 +131,7 @@ export default {
       },
       {
         id: 11,
-        nombre: "Whodershare Uniconverter",
+        nombre: "Uniconverter 15",
         imagen: "/imagenes/uniconverter.webp",
         tipo: "diseño",
         Descripcion:

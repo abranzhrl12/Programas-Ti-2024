@@ -222,6 +222,7 @@ let e = {
 document.addEventListener("DOMContentLoaded", () => {
   // Obtener el hash fragment de la URL
   // document.body.style.backgroundColor = "white";
+  
   const hash = window.location.hash;
   const programaId = hash.replace("#programa", "").trim();
 

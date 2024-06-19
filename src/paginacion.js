@@ -11,7 +11,8 @@ const busqueda = document.querySelector(".busqueda__item");
 const busquedabtn = document.querySelector(".busqueda__btn");
 
 let paginaActual = 1;
-const catDiseño = document.querySelector("#diseño");
+try {
+  const catDiseño = document.querySelector("#diseño");
 
 catDiseño.addEventListener("click", () => {
   programasActuales = programasDeEdicion; // Cambiar a programas de edición
@@ -19,8 +20,12 @@ catDiseño.addEventListener("click", () => {
   cargarProgramasPagina(); // Cargar programas de la nueva categoría
   generarPaginacion();
 });
+} catch (error) {
+  
+}
 
-const utilidades = document.querySelector("#utilidades");
+try {
+  const utilidades = document.querySelector("#utilidades");
 utilidades.addEventListener("click", () => {
   programasActuales = programasUtilidades; // Cambiar a programas de utilidades
   paginaActual = 1;
@@ -28,34 +33,46 @@ utilidades.addEventListener("click", () => {
   setPage(paginaActual);
   generarPaginacion();
 });
-busquedabtn.addEventListener("click", () => {
-  // Obtiene el valor del campo de entrada de búsqueda
-  const terminoBusqueda = busqueda.value.trim().toLowerCase();
-  console.log(terminoBusqueda);
-  // Filtra los programas que coincidan con el término de búsqueda en su nombre
-  programasActuales = programasTodos.filter((programa) =>
-    programa.nombre.toLowerCase().includes(terminoBusqueda)
-  );
-  // Actualiza la página a la primera página después de la búsqueda
-  paginaActual = 1;
-  // Vuelve a cargar los programas en la página y genera la paginación
-  cargarProgramasPagina();
-  generarPaginacion();
-});
-
-busqueda.addEventListener("input", () => {
-  // Obtiene el valor del campo de entrada de búsqueda
-  const terminoBusqueda = busqueda.value.trim().toLowerCase();
-  // Verifica si el campo de búsqueda está vacío
-  if (terminoBusqueda === "") {
-    // Restaura los programas a la lista completa
-    programasActuales = programasTodos;
+} catch (error) {
+  
+}
+try {
+  busquedabtn.addEventListener("click", () => {
+    // Obtiene el valor del campo de entrada de búsqueda
+    const terminoBusqueda = busqueda.value.trim().toLowerCase();
+    console.log(terminoBusqueda);
+    // Filtra los programas que coincidan con el término de búsqueda en su nombre
+    programasActuales = programasTodos.filter((programa) =>
+      programa.nombre.toLowerCase().includes(terminoBusqueda)
+    );
+    // Actualiza la página a la primera página después de la búsqueda
     paginaActual = 1;
-    // Carga nuevamente los programas y genera la paginación
+    // Vuelve a cargar los programas en la página y genera la paginación
     cargarProgramasPagina();
     generarPaginacion();
-  }
-});
+  });
+} catch (error) {
+  
+}
+
+try {
+  busqueda.addEventListener("input", () => {
+    // Obtiene el valor del campo de entrada de búsqueda
+    const terminoBusqueda = busqueda.value.trim().toLowerCase();
+    // Verifica si el campo de búsqueda está vacío
+    if (terminoBusqueda === "") {
+      // Restaura los programas a la lista completa
+      programasActuales = programasTodos;
+      paginaActual = 1;
+      // Carga nuevamente los programas y genera la paginación
+      cargarProgramasPagina();
+      generarPaginacion();
+    }
+  });
+} catch (error) {
+  
+}
+
 
 function precargarImagenes(programas) {
   programas.forEach((programa) => {
@@ -63,17 +80,20 @@ function precargarImagenes(programas) {
     img.src = programa.imagen;
   });
 }
+
+
 // Función para cargar los programas de la página actual
 function cargarProgramasPagina() {
-  diseño.innerHTML = ""; // Limpiar contenido anterior
+  try {
+    diseño.innerHTML = ""; // Limpiar contenido anterior
 
-  // Calcular el índice inicial y final de los programas a mostrar en la página actual
-  const inicio = (paginaActual - 1) * programasPorPagina;
-  const fin = inicio + programasPorPagina;
-
-  // Obtener los programas correspondientes a la página actual usando slice
-  const programasPagina = programasActuales.slice(inicio, fin);
-
+    // Calcular el índice inicial y final de los programas a mostrar en la página actual
+    const inicio = (paginaActual - 1) * programasPorPagina;
+    const fin = inicio + programasPorPagina;
+  
+    // Obtener los programas correspondientes a la página actual usando slice
+    const programasPagina = programasActuales.slice(inicio, fin);
+    
   // Iterar sobre los programas de la página y crear las tarjetas para cada uno
   programasPagina.forEach((programa) => {
     // Crear un elemento div para la tarjeta
@@ -122,36 +142,46 @@ function cargarProgramasPagina() {
     precargarImagenes(programasPagina2);
     precargarImagenes(programasPagina3);
   }
+  } catch (error) {
+    
+  }
+ 
+
 }
 
 // Función para generar la paginación
 function generarPaginacion() {
-  const totalPaginas = Math.ceil(programasActuales.length / programasPorPagina);
-  const contenedorPaginacion = document.querySelector(".paginas");
-  contenedorPaginacion.innerHTML = ""; // Limpiar contenido anterior
-  const currentPage = getCurrentPage();
-  for (let index = 1; index <= totalPaginas; index++) {
-    const btnpaginacion = document.createElement("button");
-    btnpaginacion.classList.add("paginas__btn");
-    btnpaginacion.textContent = index;
-
-    if (index === currentPage) {
-      btnpaginacion.classList.add("active"); // Marcar el botón de la página actual
-    }
-
-    btnpaginacion.addEventListener("click", () => {
-      setPage(index); // Establecer la página al hacer clic
-      cargarProgramasPagina();
-
-      contenedorPaginacion.querySelectorAll(".paginas__btn").forEach((btn) => {
-        btn.classList.remove("active");
+  try {
+    const totalPaginas = Math.ceil(programasActuales.length / programasPorPagina);
+    const contenedorPaginacion = document.querySelector(".paginas");
+    contenedorPaginacion.innerHTML = ""; // Limpiar contenido anterior
+    const currentPage = getCurrentPage();
+    for (let index = 1; index <= totalPaginas; index++) {
+      const btnpaginacion = document.createElement("button");
+      btnpaginacion.classList.add("paginas__btn");
+      btnpaginacion.textContent = index;
+  
+      if (index === currentPage) {
+        btnpaginacion.classList.add("active"); // Marcar el botón de la página actual
+      }
+  
+      btnpaginacion.addEventListener("click", () => {
+        setPage(index); // Establecer la página al hacer clic
+        cargarProgramasPagina();
+  
+        contenedorPaginacion.querySelectorAll(".paginas__btn").forEach((btn) => {
+          btn.classList.remove("active");
+        });
+  
+        // Agregar la clase "active" solo al botón de la página actual
+        btnpaginacion.classList.add("active");
       });
-
-      // Agregar la clase "active" solo al botón de la página actual
-      btnpaginacion.classList.add("active");
-    });
-    contenedorPaginacion.appendChild(btnpaginacion);
+      contenedorPaginacion.appendChild(btnpaginacion);
+    }
+  } catch (error) {
+    
   }
+ 
 }
 
 function getCurrentPage() {
@@ -179,9 +209,9 @@ window.addEventListener("popstate", () => {
   cargarProgramasPagina(); // Cargar los programas de la página actual
   generarPaginacion(); // Regenerar la paginación para marcar el botón de la página actual
 });
+
+
 window.addEventListener("load", () => {
-  console.log(programasActuales);
-  console.log(cargarProgramasPagina());
   const currentPage = getCurrentPage(); // Obtener la página actual desde la URL
   setPage(currentPage); // Establecer la página actual y cargar los programas
 });
