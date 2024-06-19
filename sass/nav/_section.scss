@@ -19,7 +19,7 @@
     color: white;
     text-align: center;
     padding: 4rem 0;
-    font-size: 3.5rem;
+    font-size: 3.9rem;
   }
 
   &__grid {
@@ -65,7 +65,7 @@
   // inset -5px -5px 20px #050e11;
   transition: transform 0.3s ease-out;
   position: relative;
-  border: 0.1rem solid rgba(70, 214, 185, 0.7058823529);
+  border: 0.1rem solid rgba(255, 255, 255, 0.706);
   cursor: pointer;
   &:hover {
     transform: scale(1.02);
@@ -75,7 +75,7 @@
     position: absolute;
     width: 7.8rem;
     height: 2.1rem;
-    background-color: #68e2c8;
+    background-color: #ffffff;
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
     display: flex;
@@ -85,6 +85,7 @@
     top: 5.5rem;
     color: #000;
     transform: rotate(270deg);
+    
    
   }
   &__contenedorTitulo {
@@ -98,7 +99,7 @@
  
   &__titulo {
     display: inline-block;
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     text-align: center;
   }
   &__img {

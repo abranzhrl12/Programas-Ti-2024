@@ -5,37 +5,51 @@
     height: fit-content;
     margin-top: 14rem;
     padding: 0 1.5rem;
- 
+    display: flex;
+    justify-content: center;
+   &__principal{
+    width: 90%;
+    max-width: 100rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+   }
+  &__img{
+    
+    width: 5.5rem;
+    @include m.tablet {
+        width: 7.5rem;
+    }
+  }
     &__contenedor{
-
-
-
         display: flex;
-        
+        width: 100%;
+        max-width: 80%;
         gap: 2rem;
         justify-content: center;
         align-items: center;
         background-color: aliceblue;
         padding: 0.6rem;
-        border-radius: .6rem;
-
-
+        border-radius: 1.8rem;
+      
         @include m.tablet {
-            max-width: 70%;
+            width: 100%;
+             max-width: 60%;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
 
         }
         @include m.tabletM {
-            max-width: 60%;
+             max-width: 90%;
         }
 
     }
     &__item{
         display: block;
         width: 38rem;
-        padding: 1rem;
+        padding: 0rem;
         border-radius: 1rem;
         outline: none;
         border: none;
@@ -47,21 +61,20 @@
         font-family: v.$fuente_principal;
         @include m.tablet {
             flex: 1;
+            padding: 1rem;
         }
 
     }
     &__btn{
         width: 20rem;
-        width: 25%;
         height: 4rem;
-        background-color: rgb(255, 255, 255);
         color: black;
         background-color: rgb(79, 250, 193);
-        color: rgb(15, 15, 15);
+        color: rgb(22, 18, 18);
         border: none;
         border-radius: 0.8rem;
         padding: 1rem;
-        border-radius: 0.4em;
+        border-radius: 0.8em;
         display: flex;
         gap: 2rem;
         align-items: center;
@@ -77,4 +90,5 @@
 
 .icon_buscar{
     width: 1.5rem;
+    order: -1;
 }

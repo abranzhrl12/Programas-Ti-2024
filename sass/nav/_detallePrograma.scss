@@ -57,17 +57,14 @@
       &__ConVideo{
         position: relative;
         width: 90%;
-        max-width: 60rem;
+        max-width: 65rem;
         height: 40rem;
-        border-radius: 5rem;
+     
         overflow: hidden;
       }
       &__video{
         display: block;
         aspect-ratio: 16/9;
-       
-        border-radius: 50%;
-        border-radius: 5rem;
         overflow: hidden;
       }
 }

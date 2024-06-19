@@ -9,7 +9,7 @@
     .paginas{
         display: flex;
         justify-content: center;
-        gap: 2rem;
+        gap: 1.6rem;
       
         &__btn{
             border: unset;
@@ -17,7 +17,16 @@
             border-radius: 0.5rem;
             
             cursor: pointer;
-            
+            margin: 0px 5px;
+            background-color: #dde1e7;
+            border-radius: 3px;
+            box-shadow: -3px -3px 7px #ffffff73, 3px 3px 5px rgba(94, 104, 121, 0.288); font-size: 18px;
+            text-decoration: none;
+            color: #4d3252;
+            height: 40px;
+            width: 50px;
+            display: block;
+
            &:hover{
             box-shadow: 0 0 3rem rgba(255, 255, 255, 0.149);
            } 
@@ -27,5 +36,5 @@
 }
 
 .active{
-    background-color: gold;
+    background-color: #45F4D3!important;
 }
