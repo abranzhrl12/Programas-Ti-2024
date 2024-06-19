@@ -1,14 +1,83 @@
 .DetallePrograma{
+
     &__contenedor{
         display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 2.5rem;
+    padding: 1.8rem 0;
     }
  
     margin-top: 10rem;
     &__picture{
-        width: 90%;
+        width: 85%;
         max-width: 80rem;
+        border-radius: 0.5rem;
+     
     }
+    &__img{
+        width: 100%;
+        object-fit: cover;
+        border-radius: inherit;
+    }
+    &__Caracteristicas{
+        width: 64%;
+        text-wrap: pretty;
+        word-break: keep-all;
+        
+        text-overflow: clip;
+    }
+    &__botones{
+        display: flex;
+        justify-content: center;
+        gap: 2.5rem;
+        width: 80%;
+        max-width: 80rem;
+        border-radius: 2rem;
+        border: 1px solid rgba(143, 134, 134, 0.349);
+        padding: 2rem;
+    }
+    .btn {
+        all: unset;
+        display: inline-block;
+        background-color: rgb(34, 34, 46);
+        color: white;
+        width: 130px;
+        height: 40px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 0.5rem;
+        align-items: center;
+        border-radius: 10px;
+        cursor: pointer;
+        box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.678);
+      }
+      &__ConVideo{
+        position: relative;
+        width: 90%;
+        max-width: 60rem;
+        height: 40rem;
+        border-radius: 5rem;
+        overflow: hidden;
+      }
+      &__video{
+        display: block;
+        aspect-ratio: 16/9;
+       
+        border-radius: 50%;
+        border-radius: 5rem;
+        overflow: hidden;
+      }
+}
+// body{
+//     background-image: url(/imagenes/astract.jpg)!important;
+//     background-size: 120rem;
+//     background-repeat: repeat;
+//     color: white;
+// }
+body{
+    background-color: #081c22;
+    color: white!important;
 }

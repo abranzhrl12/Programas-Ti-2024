@@ -5,10 +5,12 @@ export default {
         id: 1,
         nombre: "Adobe Ilustrator 2024",
         imagen: "/imagenes/ilustrator22 (1).avif",
+        imagenX: "/imagenes/ilustrator.webp",
         tipo: "diseño",
         Descripcion:
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
-        Caracteristica: "lorem lorem",
+        Caracteristica:
+          "Adobe Illustrator 2024 es una aplicación avanzada de diseño gráfico y creación de vectores que se utiliza ampliamente por profesionales del diseño para crear ilustraciones, gráficos, logotipos, iconos, tipografías y más. Aquí tienes una descripción de sus características principales y su funcionalidad:",
         Video: "/aaaaa",
         link_drive:
           "https://drive.google.com/file/d/1CQ0R679G-0wJPPcccTd0kqvTYjGkq4GD/view?usp=sharing",
@@ -143,6 +145,7 @@ export default {
         id: 12,
         nombre: "File Converter",
         imagen: "/imagenes/fileconverter.webp",
+        imagenX: "/imagenes/fileconverter2.webp",
         tipo: "diseño",
         Descripcion:
           "EdrawMax 13 es un software de diagramación y diseño versátil y fácil de usar.",

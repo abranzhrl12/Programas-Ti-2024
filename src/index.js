@@ -1,4 +1,5 @@
 import "./paginacion";
+
 let loader = document.querySelector(".loader");
 let overlay = document.querySelector(".overlay");
 let nombrelogo23 = document.querySelector(".nombrelogo23");

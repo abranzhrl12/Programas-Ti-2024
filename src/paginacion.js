@@ -1,4 +1,5 @@
 import "./cargarProgramas.js";
+
 import { programasDeEdicion, programasUtilidades } from "./cargarProgramas.js";
 let programasTodos = [...programasDeEdicion, ...programasUtilidades];
 let programasActuales = programasTodos;
@@ -18,6 +19,7 @@ catDiseño.addEventListener("click", () => {
   cargarProgramasPagina(); // Cargar programas de la nueva categoría
   generarPaginacion();
 });
+
 const utilidades = document.querySelector("#utilidades");
 utilidades.addEventListener("click", () => {
   programasActuales = programasUtilidades; // Cambiar a programas de utilidades
