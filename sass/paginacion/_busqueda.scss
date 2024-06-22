@@ -3,17 +3,28 @@
 .busqueda{
     width: 100%;
     height: fit-content;
-    margin-top: 14rem;
+    margin-top: 13rem;
     padding: 0 1.5rem;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    &__texto{
+        font-size: 2.2rem;
+        padding-bottom: 3.5rem;
+        color: #45F4D3;
+        font-weight: 600;
+        @include m.tablet {
+            font-size: 3.2rem;
+        }
+    }
    &__principal{
     width: 90%;
     max-width: 100rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 1.5rem;
    }
   &__img{
     
@@ -30,12 +41,12 @@
         justify-content: center;
         align-items: center;
         background-color: aliceblue;
-        padding: 0.6rem;
+        padding: 0.5rem;
         border-radius: 1.8rem;
       
         @include m.tablet {
             width: 100%;
-             max-width: 60%;
+             max-width: 82%;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
@@ -76,7 +87,7 @@
         padding: 1rem;
         border-radius: 0.8em;
         display: flex;
-        gap: 2rem;
+        gap: 1.5rem;
         align-items: center;
         font-size: large;
         cursor: pointer;

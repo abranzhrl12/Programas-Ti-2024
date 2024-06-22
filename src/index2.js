@@ -5,6 +5,9 @@ let e = {
       nombre: "Adobe Ilustrator 2024",
       imagen: "/imagenes/ilustrator22 (1).avif",
       imagenX: "/imagenes/ilustrator.webp",
+      imagenes:["/imagenes/ImagenesX/ilustrator1.png","/imagenes/ImagenesX/ilustrator2.png","/imagenes/ImagenesX/ilustrator3.png"
+
+      ],
       tipo: "diseño",
       Descripcion:
         "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
@@ -19,10 +22,14 @@ let e = {
       id: 2,
       nombre: "Adobe Photoshop 2024",
       imagen: "/imagenes/potoshop.webp",
+      imagenX:"/imagenes/ImagenesX/maxresdefault.webp",
+      imagenes :[ "/imagenes/ImagenesX/adobepotoshop2024-topaz-2.webp","/imagenes/ImagenesX/maxresdefault.webp"
+
+      ],
       tipo: "diseño",
       Descripcion:
         "Potente herramienta de edición de imágenes: Photoshop. Transforma tus fotos con creatividad y precisión",
-      Caracteristica: "lorem lorem",
+      Caracteristica: "Adobe Photoshop 2024, la última versión del famoso software de edición de imágenes, incluye numerosas mejoras y características avanzadas. Una característica general destacada de Photoshop 2024 es la Expansión de Herramientas de IA Generativa.",
       Video: "/aaaaa",
       link_drive:
         "https://drive.google.com/file/d/1wBvBgOHLs4GH7pvpvyvMAxOdliRR_tvm/view?usp=sharing",
@@ -32,10 +39,11 @@ let e = {
       id: 3,
       nombre: "Corel draw 2024",
       imagen: "/imagenes/coreldrawavi.avif",
+      imagenX: "/imagenes/ImagenesX/coreldrawX.webp",
       tipo: "diseño",
       Descripcion:
         "Diseño sin límites con CorelDRAW. Libera tu creatividad y lleva tus ideas a otro nivel con esta potente herramienta de diseño gráfico.",
-      Caracteristica: "lorem lorem",
+      Caracteristica: "CorelDRAW 2024 es la última versión de la popular suite de software de diseño gráfico de Corel. Una característica general destacada de CorelDRAW 2024 es su enfoque en la integración de inteligencia artificial (IA) para mejorar la experiencia de diseño y aumentar la eficiencia de los usuarios.",
       Video: "/aaaaa",
       link_drive:
         "https://drive.google.com/file/d/1AJSdfCK7ZWSqsSz4OtAst37JK5l977NF/view?usp=sharing",
@@ -45,10 +53,11 @@ let e = {
       id: 4,
       nombre: "Luminar 2024",
       imagen: "/imagenes/lumina (2).webp",
+      imagenX: "/imagenes/ImagenesX/luminarX.jpg",
       tipo: "diseño",
       Descripcion:
         "Iluminación perfecta con Luminar Neo. Transforma tus fotos con tecnología de vanguardia y efectos sorprendentes.",
-      Caracteristica: "lorem lorem",
+      Caracteristica: "Luminar Neo 2024 es una actualización significativa del software de edición de fotos desarrollado por Skylum, conocido por su enfoque en la automatización impulsada por inteligencia artificial. Una característica general destacada de Luminar Neo 2024 es su Avanzada Edición de Retratos con IA.",
       Video: "/aaaaa",
       link_drive:
         "https://drive.google.com/file/d/1FJro8-hTz64S3NGXhV-4EKVMDZhxtRXa/view?usp=sharing",
@@ -218,12 +227,69 @@ let e = {
     },
   ],
 };
+try {
+  let loader = document.querySelector(".loader");
+let overlay = document.querySelector(".overlay");
+let nombrelogo23 = document.querySelector(".nombrelogo23");
+
+// Escuchar el evento animationend en el loader y el overlay
+loader.addEventListener("animationend", function () {
+  // Eliminar el elemento loader una vez que la animación haya terminado
+  loader.remove();
+});
+
+overlay.addEventListener("animationend", function () {
+  // Eliminar el elemento overlay una vez que la animación haya terminado
+  overlay.remove();
+
+  // Ocultar el elemento nombrelogo23 después de que la animación haya terminado
+  nombrelogo23.remove();
+});
+} catch (error) {
+  
+}
+const menuStart=document.querySelector(".navegacion__menu-start");
+const menuClose=document.querySelector(".navegacion__menu-close")
+menuStart.addEventListener('click',()=>{
+   menuStart.style.display="none"
+    menuClose.style.display="inline-block"
+});
+menuClose.addEventListener('click',()=>{
+  menuStart.style.display="inline-block"
+   menuClose.style.display="none"
+});
+window.addEventListener("resize", () => {
+  try {
+    let viewportWidth2 = window.innerWidth;
+    let check = document.getElementById("icono");
+    let nav = document.querySelector("#nav");
+    const desplegable = document.querySelector(".lista__item--desplegable");
+    const listadrop = document.querySelector(".lista__drop");
+    prueba();
+    const tamaño = nav ? nav.offsetWidth : 0; // Asegúrate de verificar si nav es nulo antes de acceder a su propiedad offsetWidth
+    if (tamaño > 768) {
+      check.checked = false;
+      listadrop.style.display = "none";
+      listadrop.style.display = "absolute";
+    } else {
+      // Si el viewportWidth2 es menor o igual a 768, quita los event listeners
+      listadrop.removeEventListener("mouseenter", mouseEnterHandler);
+      listadrop.removeEventListener("mouseleave", mouseLeaveHandler);
+    }
+    if (viewportWidth2 > 768) {
+      // Si el viewportWidth2 es mayor que 768, agrega los event listeners
+      listadrop.addEventListener("mouseenter", mouseEnterHandler);
+      listadrop.addEventListener("mouseleave", mouseLeaveHandler);
+    }
+
+  } catch (error) {}
+});
 
 document.addEventListener("DOMContentLoaded", () => {
   // Obtener el hash fragment de la URL
   // document.body.style.backgroundColor = "white";
-  
-  const hash = window.location.hash;
+  try {
+    const hash = window.location.hash;
   const programaId = hash.replace("#programa", "").trim();
 
   if (programaId) {
@@ -237,6 +303,16 @@ document.addEventListener("DOMContentLoaded", () => {
       document.querySelector(".DetallePrograma__Caracteristicas").textContent =
         programa.Caracteristica;
       document.querySelector("#programa-imagen").src = programa.imagenX;
+      const imagenesProgramas = document.querySelector(".DetallePrograma__imagenes");
+
+      if (programa.imagenes && Array.isArray(programa.imagenes)) {
+        programa.imagenes.forEach(imagen => {
+          const imagenDiv = document.createElement("div");
+          imagenDiv.innerHTML = `<img class="DetallePrograma__imagenD" src="${imagen}" alt="Imagen de ${programa.nombre}">`;
+          imagenDiv.classList.add("DetallePrograma__imagenes")
+          imagenesProgramas.appendChild(imagenDiv);
+        });
+      }
       const btnDrive = document.querySelector("#btnDrive");
       btnDrive.href = programa.link_drive;
     } else {
@@ -245,10 +321,32 @@ document.addEventListener("DOMContentLoaded", () => {
   } else {
     console.error("ID de programa no especificado en la URL");
   }
+  } catch (error) {
+    
+  }
+  
+  
 });
 
 function encontrarProgramaPorId(id) {
-  const programas = [...e.Edicion, ...e.Utilidades];
-  const programaEncontrado = programas.find((programa) => programa.id == id);
-  return programaEncontrado;
+  try {
+    const programas = [...e.Edicion, ...e.Utilidades];
+    const programaEncontrado = programas.find((programa) => programa.id == id);
+    return programaEncontrado;
+  } catch (error) {
+    
+  }
+ 
 }
+document.getElementById('fullscreenBtn').addEventListener('click', function() {
+  var iframe = document.getElementById('myIframe');
+  if (iframe.requestFullscreen) {
+      iframe.requestFullscreen();
+  } else if (iframe.mozRequestFullScreen) { // Firefox
+      iframe.mozRequestFullScreen();
+  } else if (iframe.webkitRequestFullscreen) { // Chrome, Safari, Opera
+      iframe.webkitRequestFullscreen();
+  } else if (iframe.msRequestFullscreen) { // IE/Edge
+      iframe.msRequestFullscreen();
+  }
+});

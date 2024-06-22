@@ -1,5 +1,8 @@
-.DetallePrograma{
+@use "../global/mixin" as m;
 
+.DetallePrograma{
+  width: 100%;
+    padding: 0 2rem;
     &__contenedor{
         display: flex;
     flex-direction: column;
@@ -11,7 +14,7 @@
  
     margin-top: 10rem;
     &__picture{
-        width: 85%;
+        width: 95%;
         max-width: 80rem;
         border-radius: 0.5rem;
      
@@ -22,11 +25,18 @@
         border-radius: inherit;
     }
     &__Caracteristicas{
-        width: 64%;
+        width: 90%;
         text-wrap: pretty;
         word-break: keep-all;
-        
         text-overflow: clip;
+    }
+    &__lista{
+      padding: 0 3.4rem;
+      @include m.tablet {
+        align-self: flex-start;
+        padding: 0 7rem;
+      }
+      
     }
     &__botones{
         display: flex;
@@ -57,15 +67,26 @@
       &__ConVideo{
         position: relative;
         width: 90%;
-        max-width: 65rem;
-        height: 40rem;
-     
-        overflow: hidden;
+        max-width: 80rem;
+        aspect-ratio: 16/9;
+        height: auto;
+    
       }
       &__video{
         display: block;
         aspect-ratio: 16/9;
-        overflow: hidden;
+        
+      }
+      &__imagenes{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 90%;
+        max-width: 80rem;
+        gap: 3rem;
+      }
+      &__imagenD{
+        border-radius: 0.8rem;
       }
 }
 // body{

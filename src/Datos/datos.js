@@ -20,6 +20,7 @@ export default {
         id: 2,
         nombre: "Adobe Photoshop 2024",
         imagen: "/imagenes/potoshop.webp",
+        imagenX:"/imagenes/ImagenesX/adobepotoshop2024-topaz-2 (2).webp",
         tipo: "diseño",
         Descripcion:
           "Potente herramienta de edición de imágenes: Photoshop. Transforma tus fotos con creatividad y precisión",

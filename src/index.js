@@ -21,6 +21,19 @@ overlay.addEventListener("animationend", function () {
   
 }
 
+  
+   
+
+  const menuStart=document.querySelector(".navegacion__menu-start");
+    const menuClose=document.querySelector(".navegacion__menu-close")
+    menuStart.addEventListener('click',()=>{
+       menuStart.style.display="none"
+        menuClose.style.display="inline-block"
+    });
+    menuClose.addEventListener('click',()=>{
+      menuStart.style.display="inline-block"
+       menuClose.style.display="none"
+   });
 
 function prueba() {
   try {
@@ -31,9 +44,11 @@ function prueba() {
   
     function toggleListadrop() {
       if (clickd) {
+      
         listadrop.style.display = "none";
         clickd = false;
       } else {
+          
         listadrop.style.display = "block";
         listadrop.style.position = "static";
         clickd = true;
