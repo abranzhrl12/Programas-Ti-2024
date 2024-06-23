@@ -23,17 +23,21 @@ overlay.addEventListener("animationend", function () {
 
   
    
-
+try {
   const menuStart=document.querySelector(".navegacion__menu-start");
-    const menuClose=document.querySelector(".navegacion__menu-close")
-    menuStart.addEventListener('click',()=>{
-       menuStart.style.display="none"
-        menuClose.style.display="inline-block"
-    });
-    menuClose.addEventListener('click',()=>{
-      menuStart.style.display="inline-block"
-       menuClose.style.display="none"
-   });
+  const menuClose=document.querySelector(".navegacion__menu-close")
+  menuStart.addEventListener('click',()=>{
+     menuStart.style.display="none"
+      menuClose.style.display="inline-block"
+  });
+  menuClose.addEventListener('click',()=>{
+    menuStart.style.display="inline-block"
+     menuClose.style.display="none"
+ });
+} catch (error) {
+  
+}
+
 
 function prueba() {
   try {

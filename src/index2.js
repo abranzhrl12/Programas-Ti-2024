@@ -5,7 +5,7 @@ let e = {
       nombre: "Adobe Ilustrator 2024",
       imagen: "/imagenes/ilustrator22 (1).avif",
       imagenX: "/imagenes/ilustrator.webp",
-      imagenes:["/imagenes/ImagenesX/ilustrator1.png","/imagenes/ImagenesX/ilustrator2.png","/imagenes/ImagenesX/ilustrator3.png"
+      imagenes:["/imagenes/ImagenesX/ilustrator0.png","/imagenes/ImagenesX/ilustrator1.png","/imagenes/ImagenesX/ilustrator2.png","/imagenes/ImagenesX/ilustrator3.png"
 
       ],
       tipo: "diseño",
@@ -13,10 +13,10 @@ let e = {
         "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
       Caracteristica:
         "Adobe Illustrator 2024 es una aplicación avanzada de diseño gráfico y creación de vectores que se utiliza ampliamente por profesionales del diseño para crear ilustraciones, gráficos, logotipos, iconos, tipografías y más. Aquí tienes una descripción de sus características principales y su funcionalidad:",
-      Video: "/aaaaa",
+      Video: "https://iframe.mediadelivery.net/embed/257368/e46d440d-7ed7-4e6a-88f5-5e61b5b3033e",
       link_drive:
         "https://drive.google.com/file/d/1CQ0R679G-0wJPPcccTd0kqvTYjGkq4GD/view?usp=sharing",
-      link_mediafire: "https://google.com",
+      link_mediafire: "https://www.mediafire.com/file/acy7ogmi657akqo/Adobe_Illustrator_2024_%2528Pre_Activado%2529.rar/file",
     },
     {
       id: 2,
@@ -30,7 +30,7 @@ let e = {
       Descripcion:
         "Potente herramienta de edición de imágenes: Photoshop. Transforma tus fotos con creatividad y precisión",
       Caracteristica: "Adobe Photoshop 2024, la última versión del famoso software de edición de imágenes, incluye numerosas mejoras y características avanzadas. Una característica general destacada de Photoshop 2024 es la Expansión de Herramientas de IA Generativa.",
-      Video: "/aaaaa",
+      Video: "https://iframe.mediadelivery.net/embed/257368/e46d440d-7ed7-4e6a-88f5-5e61b5b3033e",
       link_drive:
         "https://drive.google.com/file/d/1wBvBgOHLs4GH7pvpvyvMAxOdliRR_tvm/view?usp=sharing",
       link_mediafire: "https://google.com",
@@ -47,7 +47,7 @@ let e = {
       Video: "/aaaaa",
       link_drive:
         "https://drive.google.com/file/d/1AJSdfCK7ZWSqsSz4OtAst37JK5l977NF/view?usp=sharing",
-      link_mediafire: "https://google.com",
+      link_mediafire: "https://www.mediafire.com/file/15i3wc1haia8qsb/CorelDRAW__2024.rar/file",
     },
     {
       id: 4,
@@ -66,15 +66,16 @@ let e = {
     {
       id: 5,
       nombre: "Filmora 13",
-      imagen: "/imagenes/filmora13.webp",
+        imagen: "/imagenes/filmora13",
+      imagenX: "/imagenes/ImagenesX/Filmora-13X (2).webp",
       tipo: "diseño",
       Descripcion:
         "Crea y edita vídeos como un profesional con Filmora. Añade efectos, música y transiciones para dar vida a tus historias de manera fácil y divertida.",
-      Caracteristica: "lorem lorem",
+      Caracteristica: "Filmora 13 es un editor de video intuitivo y poderoso desarrollado por Wondershare. Esta última versión introduce varias funciones impulsadas por IA que facilitan la creación de videos impresionantes, incluso para principiantes.",
       Video: "/aaaaa",
       link_drive:
-        "https://drive.google.com/file/d/1JJuMh2q1PfT6qgnLuk5KKvlTtpVvywVN/view?usp=sharing",
-      link_mediafire: "https://google.com",
+        "https://drive.google.com/file/d/1cJrtiZfNOatSENdzCylk91Jq8A4UVwLf/view?usp=sharing",
+      link_mediafire: "https://www.mediafire.com/file/cwhd7b4h48c30e4/FIlmora_13.rar/file",
     },
     {
       id: 6,
@@ -98,8 +99,8 @@ let e = {
         "EdrawMax 13 es un software de diagramación y diseño versátil y fácil de usar.",
       Caracteristica: "lorem lorem",
       Video: "/aaaaa",
-      link_drive: "https://google.com",
-      link_mediafire: "https://google.com",
+      link_drive: "https://drive.google.com/file/d/15emw6fhHpUSeMBBtg-evML2UkQahbQhB/view?usp=sharing",
+      link_mediafire: "https://www.mediafire.com/file/wpkubpbpf1fydgx/Adobe_XD_2023.rar/file",
     },
     {
       id: 8,
@@ -123,7 +124,7 @@ let e = {
       Caracteristica: "lorem lorem",
       Video: "/aaaaa",
       link_drive: "https://google.com",
-      link_mediafire: "https://google.com",
+      link_mediafire: "https://www.mediafire.com/file/f6yujfflwyce5eu/Adobe_Premiere_Pro_2024_PreActivado.X64.rar/file",
     },
     {
       id: 10,
@@ -134,8 +135,8 @@ let e = {
         "EdrawMax 13 es un software de diagramación y diseño versátil y fácil de usar.",
       Caracteristica: "lorem lorem",
       Video: "/aaaaa",
-      link_drive: "https://google.com",
-      link_mediafire: "https://google.com",
+      link_drive: "https://drive.google.com/file/d/1KKt3UcU7mXIf2ccI-T2yeMaFIAoGUz1o/view?usp=sharing",
+      link_mediafire: "https://www.mediafire.com/file/23cryuoqgo43t27/Adobe_Acrobat_Pro_DC_2024.rar/file",
     },
     {
       id: 11,
@@ -248,16 +249,21 @@ overlay.addEventListener("animationend", function () {
 } catch (error) {
   
 }
-const menuStart=document.querySelector(".navegacion__menu-start");
-const menuClose=document.querySelector(".navegacion__menu-close")
-menuStart.addEventListener('click',()=>{
-   menuStart.style.display="none"
-    menuClose.style.display="inline-block"
-});
-menuClose.addEventListener('click',()=>{
-  menuStart.style.display="inline-block"
-   menuClose.style.display="none"
-});
+try {
+  const menuStart=document.querySelector(".navegacion__menu-start");
+  const menuClose=document.querySelector(".navegacion__menu-close")
+  menuStart.addEventListener('click',()=>{
+     menuStart.style.display="none"
+      menuClose.style.display="inline-block"
+  });
+  menuClose.addEventListener('click',()=>{
+    menuStart.style.display="inline-block"
+     menuClose.style.display="none"
+  }); 
+} catch (error) {
+ 
+}
+
 window.addEventListener("resize", () => {
   try {
     let viewportWidth2 = window.innerWidth;
@@ -313,6 +319,14 @@ document.addEventListener("DOMContentLoaded", () => {
           imagenesProgramas.appendChild(imagenDiv);
         });
       }
+     
+         const VideoP=document.querySelector(".DetallePrograma__ConVideo")
+          VideoP.innerHTML= ` <iframe class="DetallePrograma__imagenD" id="myIframe"  src="${programa.Video}?autoplay=false&loop=false&muted=false&preload=true&responsive=true" loading="lazy" style="border:0;position:absolute;top:0;height:100%;width:100%;" allow="accelerometer;gyroscope;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>`
+      
+     
+
+
+
       const btnDrive = document.querySelector("#btnDrive");
       btnDrive.href = programa.link_drive;
     } else {
