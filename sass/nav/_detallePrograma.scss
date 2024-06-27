@@ -3,6 +3,7 @@
 .DetallePrograma{
   width: 100%;
     padding: 0 2rem;
+    margin-bottom: 10rem;
     &__contenedor{
         display: flex;
     flex-direction: column;
@@ -48,7 +49,7 @@
         border: 1px solid rgba(143, 134, 134, 0.349);
         padding: 3rem;
         @include m.tabletM {
-          margin-bottom: -6rem;
+          margin-bottom: 16rem;
         }
     }
     .btn {
@@ -73,6 +74,7 @@
         max-width: 80rem;
         aspect-ratio: 16/9;
         height: auto;
+        margin: 0 auto;
     
       }
       &__video{

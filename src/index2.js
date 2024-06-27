@@ -32,6 +32,7 @@ let e = {
       link_mediafire: "https://www.mediafire.com/file/acy7ogmi657akqo/Adobe_Illustrator_2024_%2528Pre_Activado%2529.rar/file",
     },
     {
+  
       id: 2,
       nombre: "Adobe Photoshop 2024",
       imagen: "/imagenes/potoshop.webp",
@@ -91,7 +92,7 @@ let e = {
         "Funciones de accesibilidad mejoradas",
         "Herramientas de asistencia para usuarios con discapacidades"
            ] , 
-      Video: "/aaaaa",
+      Video: "https://5fc584f3f19c9.streamlock.net/agrotendencia/videoagrotendencia_hls1/playlist.m3u8",
       link_drive:
         "https://drive.google.com/file/d/1AJSdfCK7ZWSqsSz4OtAst37JK5l977NF/view?usp=sharing",
       link_mediafire: "https://www.mediafire.com/file/15i3wc1haia8qsb/CorelDRAW__2024.rar/file",
