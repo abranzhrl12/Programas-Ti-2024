@@ -1,3 +1,15 @@
+
+document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+});
+document.addEventListener('keydown', function(e) {
+    // Desactivar la tecla F12
+    if (e.key === 'F12' || e.keyCode === 123) {
+        e.preventDefault();
+        return false;
+    }
+});
+
 let e = {
   Edicion: [
     {

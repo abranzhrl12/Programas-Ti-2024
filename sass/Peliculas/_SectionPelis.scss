@@ -1,9 +1,11 @@
 .Peliculas{
     margin-top: 12rem;
+    margin-bottom: 5rem;
     &__grid{
         width: 100%;
         display: grid;
         place-items: center;
+       
     }
     &__card{
         width: 20rem;

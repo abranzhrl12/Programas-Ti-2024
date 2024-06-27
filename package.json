@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass --watch --style=compressed sass/app.scss:Public/style.css",
+    "sass": "sass --watch --style=compressed sass/app.scss:Public/style.css ",
     "build": "rollup --watch --config"
   },
   "keywords": [],
@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "autoprefixer": "^10.4.19",
+    "chokidar": "^3.6.0",
     "postcss": "^8.4.38",
     "videojs-hls-quality-selector": "^2.0.0"
   }

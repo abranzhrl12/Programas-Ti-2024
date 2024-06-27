@@ -179,8 +179,7 @@
     </div>
 </Section>
 <div class="DetallePrograma__ConVideo">
-  <div style="position:relative;padding-top:56.25%;"><iframe src="https://iframe.mediadelivery.net/embed/257368/54593201-b492-4b5b-8f44-85f8c39e80c0?autoplay=true&loop=false&muted=false&preload=true&responsive=true" loading="lazy" style="border:0;position:absolute;top:0;height:100%;width:100%;" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe></div>    
-
+ <iframe src="https://iframe.mediadelivery.net/embed/257368/54593201-b492-4b5b-8f44-85f8c39e80c0?autoplay=false&loop=false&muted=false&preload=true&responsive=true" loading="lazy" style="border:0;position:absolute;top:0;height:100%;width:100%;" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>   
 </div>
 
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -238,10 +237,23 @@
       <span class="footer__copy">&copy2024 ProgramasTi.</span>
     </footer>
     <script>
+
       window.addEventListener('DOMContentLoaded', (event) => {
         // Cambiar el hash de la URL una vez que la página se ha cargado
         window.location.hash = 'peliculas';
       });
+    
+document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+});
+document.addEventListener('keydown', function(e) {
+    // Desactivar la tecla F12
+    if (e.key === 'F12' || e.keyCode === 123) {
+        e.preventDefault();
+        return false;
+    }
+});
+
     </script>
   </body>
 </html>
