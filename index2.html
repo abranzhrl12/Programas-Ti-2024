@@ -24,14 +24,10 @@
     <link rel="preload" href="Public/style.css" as="style" />
 
    <link rel="stylesheet" href="public/style.css" as="style">
-    <!-- <script src="/public/bundle2.js" defer></script> -->
-
-    <!-- <link href="https://vjs.zencdn.net/7.14.3/video-js.css" rel="stylesheet">
-    <script src="https://vjs.zencdn.net/7.14.3/video.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls/5.15.0/videojs-contrib-hls.js"></script> -->
-    <link href="https://vjs.zencdn.net/8.10.0/video-js.css" rel="stylesheet" />
-    <script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
-    
+  
+    <!-- <link href="https://vjs.zencdn.net/8.10.0/video-js.css" rel="stylesheet" />
+    <script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script> -->
+    <script src="/public//Pelis.js" defer></script>
 
 
   </head>
@@ -109,8 +105,7 @@
                 </g>
               </svg></a>
            
-            <!-- <img src="/Imagenes/Logo.webp" alt="Logo Programas-TI"  width="60" height="40" /> -->
-            <!-- <span>Programas</span> -->
+          
           </div>
           <div class="navegacion__menu">
             <label for="icono" class="navegacion__label">
@@ -166,20 +161,21 @@
       </p>
     </video>
   </video>-->
+  <section class="Categorias">
+    <div class="Categorias__contenedor">
+      <a href="#">Generos</a>
+      
+    </div>
+  </section>
   <Section class="Peliculas">
     <div class="Peliculas__contenedor">
         <div class="Peliculas__grid">
-            <div class="Peliculas__card">
-                <figure class="Peliculas__figure">
-                    <img class="Peliculas__img" src="/Imagenes_Pelis/godzilla2024.webp" alt="">
-                </figure>
-                <p class="Peliculas__nombre">Godzilla vs Kong</p>
-            </div>
+        
         </div>
     </div>
 </Section>
 <div class="DetallePrograma__ConVideo">
- <iframe src="https://iframe.mediadelivery.net/embed/257368/54593201-b492-4b5b-8f44-85f8c39e80c0?autoplay=false&loop=false&muted=false&preload=true&responsive=true" loading="lazy" style="border:0;position:absolute;top:0;height:100%;width:100%;" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>   
+
 </div>
 
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -238,21 +234,14 @@
     </footer>
     <script>
 
-      window.addEventListener('DOMContentLoaded', (event) => {
-        // Cambiar el hash de la URL una vez que la página se ha cargado
-        window.location.hash = 'peliculas';
-      });
-    
-document.addEventListener('contextmenu', function(e) {
-    e.preventDefault();
-});
-document.addEventListener('keydown', function(e) {
-    // Desactivar la tecla F12
-    if (e.key === 'F12' || e.keyCode === 123) {
-        e.preventDefault();
-        return false;
-    }
-});
+  ;
+// document.addEventListener('keydown', function(e) {
+//     // Desactivar la tecla F12
+//     if (e.key === 'F12' || e.keyCode === 123) {
+//         e.preventDefault();
+//         return false;
+//     }
+// });
 
     </script>
   </body>
