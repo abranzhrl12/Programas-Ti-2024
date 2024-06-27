@@ -25,9 +25,12 @@
     "video.js": "^8.12.0"
   },
   "dependencies": {
+    "@videojs/vhs-utils": "^4.0.0",
     "autoprefixer": "^10.4.19",
     "chokidar": "^3.6.0",
+    "m3u8-parser": "^7.1.0",
     "postcss": "^8.4.38",
+    "videojs-contrib-dash": "^5.1.1",
     "videojs-hls-quality-selector": "^2.0.0"
   }
 }

@@ -431,7 +431,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
      
          const VideoP=document.querySelector(".DetallePrograma__ConVideo")
-          VideoP.innerHTML= ` <iframe class="DetallePrograma__imagenD" id="myIframe"  src="${programa.Video}?autoplay=false&loop=false&muted=false&preload=true&responsive=true" loading="lazy" style="border:0;position:absolute;top:0;height:100%;width:100%;" allow="accelerometer;gyroscope;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>`
+          VideoP.innerHTML= ` <iframe class="DetallePrograma__imagenD" id="myIframe"  src="${programa.Video}?autoplay=true&loop=false&muted=false&preload=true&responsive=true" loading="lazy" style="border:0;height:100%;width:100%;" allow="accelerometer;gyroscope;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>`
       
           const detalleLista = document.querySelector(".DetallePrograma__lista");
 

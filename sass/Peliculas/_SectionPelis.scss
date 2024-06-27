@@ -9,8 +9,34 @@
         place-content: center;
         row-gap: 2rem;
         column-gap: 2rem;
+  
+        @supports (display: grid) {
+            grid-template-columns: repeat(auto-fit, minmax(27rem, min-content));
+        }
+
+        @supports not (display: grid) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .Peliculas__card {
+                width: calc(20% - 2rem);
+                margin-bottom: 2rem;
+            }
+        }
+
         @include m.tablet {
-            grid-template-columns: repeat(auto-fit, minmax(24rem,min-content)); 
+            @supports (display: grid) {
+                grid-template-columns: repeat(auto-fit, minmax(24rem, min-content));
+            }
+
+            @supports not (display: grid) {
+                .Peliculas__card {
+                    width: calc(25% - 1.5rem); /* Calculamos el ancho para 4 tarjetas */
+                    margin-right: 1.5rem; /* Espacio entre las tarjetas */
+                    margin-bottom: 2rem; /* Espacio entre filas de tarjetas */
+                }
+            }
         }
     }
     &__card{
@@ -61,4 +87,17 @@ position: relative;
     height: fit-content;
     aspect-ratio: 16/9;
     position: absolute;
+}
+#fullscreenBtn{
+    display: block;
+    margin: 5rem auto;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 0.8rem;
+    background-color: #2E8A7B;
+    color: white;
+    cursor: pointer;
+    &:hover{
+        transform: scale(1.05);
+    }
 }

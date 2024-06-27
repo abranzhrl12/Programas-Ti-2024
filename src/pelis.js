@@ -56,7 +56,7 @@ try {
     }
 
     const plantilla = `
-      <iframe src=${pelicula}?autoplay=false&loop=false&muted=false&preload=true&responsive=true" loading="lazy" style="border:0;position:absolute;top:0;height:100%;width:100%;" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
+      <iframe id="myIframe" src=${pelicula}?autoplay=true&loop=false&muted=false&preload=true&responsive=true" loading="lazy" style="border:0;height:100%;width:100%;" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
     `;
     videoPelicula.innerHTML = plantilla;
 } catch (error) {
@@ -64,3 +64,15 @@ try {
 }
   
 }
+document.getElementById('fullscreenBtn').addEventListener('click', function() {
+    var iframe = document.getElementById('myIframe');
+    if (iframe.requestFullscreen) {
+        iframe.requestFullscreen();
+    } else if (iframe.mozRequestFullScreen) { // Firefox
+        iframe.mozRequestFullScreen();
+    } else if (iframe.webkitRequestFullscreen) { // Chrome, Safari, Opera
+        iframe.webkitRequestFullscreen();
+    } else if (iframe.msRequestFullscreen) { // IE/Edge
+        iframe.msRequestFullscreen();
+    }
+  });

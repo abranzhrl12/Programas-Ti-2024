@@ -37,15 +37,33 @@ import terser from "@rollup/plugin-terser";
 
 
 
+// export default {
+//   input: "./src/pelis.js",
+//   output: [
+//     {
+//       file: "./public/Pelis.js",
+//       format: "cjs",
+//     },
+//     {
+//       file: "./public/Pelis.js",
+//       format: "iife",
+//       name: "version",
+//       plugins: [terser()],
+//     },
+//   ],
+     
+// };
+
+
 export default {
-  input: "./src/pelis.js",
+  input: "./src/canales.js",
   output: [
     {
-      file: "./public/Pelis.js",
+      file: "./public/canalestv.js",
       format: "cjs",
     },
     {
-      file: "./public/Pelis.js",
+      file: "./public/canalestv.js",
       format: "iife",
       name: "version",
       plugins: [terser()],

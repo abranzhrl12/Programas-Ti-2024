@@ -9,12 +9,11 @@
   background-color: transparent;
   padding-bottom: 2rem;
   opacity: 0.97;
-  
- &__contenedor{
-  width: 100%;
-  min-height: fit-content;
 
- }
+  &__contenedor {
+    width: 100%;
+    min-height: fit-content;
+  }
   &__titulo {
     color: white;
     text-align: center;
@@ -24,17 +23,31 @@
 
   &__grid {
     display: grid;
-  width: 100%;
-  min-height: fit-content;
-  grid-template-columns: repeat(auto-fit, minmax(28rem, min-content));
-  gap: 3.8rem;
-  place-content: center;
-  place-items: center;
-   @include m.desktopFull {
     width: 100%;
-      grid-template-columns: repeat(auto-fit, minmax(28.5rem, min-content));
-   }    
-   
+    min-height: fit-content;
+    grid-template-columns: repeat(auto-fit, minmax(28rem, min-content));
+    gap: 3.8rem;
+    place-content: center;
+    place-items: center;
+    @supports not (display: grid) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+  }
+
+  .Peliculas__card {
+      width: 28rem; /* Ancho fijo para cada tarjeta */
+      margin-bottom: 3.8rem; /* Espacio entre filas de tarjetas */
+
+      @supports (display: grid) {
+          width: auto; /* Restaurar el ancho automático para grid */
+          margin: 0; /* Sin márgenes en grid */
+      }
+
+      @include m.tablet {
+          width: 45%; /* Ancho para tabletas */
+      }
+  }
   }
 
   &__contenedor {
@@ -83,8 +96,6 @@
     top: 5.5rem;
     color: #000;
     transform: rotate(270deg);
-    
-   
   }
   &__contenedorTitulo {
     display: flex;
@@ -94,7 +105,7 @@
     padding: 0 0.4rem;
     margin-bottom: 1rem;
   }
- 
+
   &__titulo {
     display: inline-block;
     font-size: 1.8rem;
@@ -125,49 +136,44 @@
     overflow: hidden;
     position: relative;
     padding-top: 0.9rem;
-    &::before{
-      
-        content: "";
-        display: block;
-        position: absolute;
-        top: 0;
-        border-radius: 0.1rem;
-        width: 100%;
-        height: 0.1rem;
-        background: #dde4e6;
-        background: linear-gradient(
-          90deg,
-          rgba(201, 197, 193, 0.26),
-          rgb(255, 255, 255) 16%,
-          rgb(255, 255, 255) 85%,
-          rgba(201, 197, 193, 0.233) 100%
-        );
-        z-index: 99;
-      
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      border-radius: 0.1rem;
+      width: 100%;
+      height: 0.1rem;
+      background: #dde4e6;
+      background: linear-gradient(
+        90deg,
+        rgba(201, 197, 193, 0.26),
+        rgb(255, 255, 255) 16%,
+        rgb(255, 255, 255) 85%,
+        rgba(201, 197, 193, 0.233) 100%
+      );
+      z-index: 99;
     }
   }
   &__parrafo {
     width: 100%;
-  font-size: 1.4rem;
-  word-break: keep-all;
-  text-align: center;
-  font-family: "Poppins", sans-serif;
-  text-wrap: pretty;
-  line-height: 1.7;
-  text-overflow: clip;
-    
-   
+    font-size: 1.4rem;
+    word-break: keep-all;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    text-wrap: pretty;
+    line-height: 1.7;
+    text-overflow: clip;
   }
 
   &__botones {
     width: 100%;
     width: fit-content;
     display: flex;
-    
+
     gap: 3rem;
   }
 }
-
 
 .btn__icono {
   display: block;

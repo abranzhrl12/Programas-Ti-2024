@@ -69,17 +69,17 @@
         box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.678);
       }
       &__ConVideo{
-        position: relative;
+         display: block;
         width: 90%;
         max-width: 80rem;
-        aspect-ratio: 16/9;
-        height: auto;
+        height: 48rem;
         margin: 0 auto;
     
       }
       &__video{
         display: block;
-        aspect-ratio: 16/9;
+        background-color: red;
+       
         
       }
       &__imagenes{
