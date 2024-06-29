@@ -76,3 +76,4 @@ document.getElementById('fullscreenBtn').addEventListener('click', function() {
         iframe.msRequestFullscreen();
     }
   });
+
