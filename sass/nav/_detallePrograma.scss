@@ -74,12 +74,10 @@
         max-width: 80rem;
         height: 48rem;
         margin: 0 auto;
-    
+      
       }
       &__video{
         display: block;
-        background-color: red;
-       
         
       }
       &__imagenes{
@@ -103,12 +101,7 @@
         }
       }
 }
-// body{
-//     background-image: url(/imagenes/astract.jpg)!important;
-//     background-size: 120rem;
-//     background-repeat: repeat;
-//     color: white;
-// }
+
 body{
     background-color: #081c22;
     color: white!important;

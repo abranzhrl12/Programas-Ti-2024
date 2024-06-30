@@ -21,10 +21,12 @@ function agregarCanalesAlContenedor(canal) {
     });
     contenedor.addEventListener('click', (event) => {
         const figura = event.target.closest('.canales__figure');
-        const idCanal = figura.getAttribute('data-id');
+        const idCanal = parseInt(figura.getAttribute('data-id'));
       
-         const canalSeleccionado = canal.find(canal => canal.id == idCanal);
-       agregarCanal(canalSeleccionado.link_m3u8);
+            const canalSeleccionado = canal.find(canal => canal.id == idCanal);
+            agregarCanal(canalSeleccionado.link_m3u8);
+        
+      
     });
 }
 
@@ -34,13 +36,14 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 function agregarCanal(linkCanal) {
+   
     const canaltv = document.querySelector('.canales__Video');
+  
+   
     try {
         canaltv.innerHTML = `<video id="my-video" class="video-js vjs-default-skin" controls preload="auto" width="640" height="360" data-setup='{}'>
             <source src="${linkCanal}" type="application/x-mpegURL">
-            <p class="vjs-no-js">
-                Para ver este video, por favor habilita JavaScript y considera actualizar a un navegador web que soporte HTML5 video.
-            </p>
+          
         </video>`;
 
         // Destruir el reproductor de Video.js existente si ya está inicializado
@@ -56,3 +59,6 @@ function agregarCanal(linkCanal) {
         console.error("Error al agregar el video:", error);
     }
 }
+
+
+

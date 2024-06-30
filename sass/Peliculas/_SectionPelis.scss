@@ -5,14 +5,14 @@
     &__grid{
         width: 100%;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(27rem,min-content));
-        grid-template-rows: repeat(44rem);
+        grid-template-columns: repeat(auto-fit, minmax(16.5rem,min-content));
+        grid-template-rows: repeat(22rem);
         place-content: center;
         row-gap: 2rem;
         column-gap: 2rem;
   
         @supports (display: grid) {
-            grid-template-columns: repeat(auto-fit, minmax(27rem, min-content));
+            grid-template-columns: repeat(auto-fit, minmax(16.5rem, min-content));
         }
 
         @supports not (display: grid) {
@@ -95,7 +95,7 @@
 position: relative;
     margin: 10rem auto;
      align-items: center;
-     background-color: red;
+   
 }
 #my-video{
     width: 90%;
@@ -106,7 +106,7 @@ position: relative;
 }
 #fullscreenBtn{
     display: block;
-    margin: 5rem auto;
+    margin: 12rem auto 5rem auto;
     border: none;
     padding: 1rem 2rem;
     border-radius: 0.8rem;
@@ -117,3 +117,24 @@ position: relative;
         transform: scale(1.05);
     }
 }
+
+.modal{
+width: 100%;
+height: 100%;
+position: fixed;
+inset: 0;
+margin: auto;
+background: #2E8A7B;
+opacity: .6;
+backdrop-filter: blur(2rem);
+z-index: 99;
+}
+// .modal-content{
+    
+//     width: 30rem;
+//     height: 25rem;
+//     background-color: white;
+  
+//     inset: 0;
+//     margin: auto;
+// }

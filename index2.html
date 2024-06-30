@@ -25,8 +25,7 @@
 
    <link rel="stylesheet" href="public/style.css" as="style">
   
-    <!-- <link href="https://vjs.zencdn.net/8.10.0/video-js.css" rel="stylesheet" />
-    <script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script> -->
+
     <script src="/public//Pelis.js" defer></script>
 
 
@@ -84,7 +83,7 @@
                 <a href="index.html" id="#boton-inicio" class="lista__link">Inicio</a>
               </li>
               <li class="lista__item lista__item--desplegable lista__item--hover">
-                <a href="http://127.0.0.1:5500/index.html?page=1" class="lista__link lista__link--pading">
+                <a href="index.html" class="lista__link lista__link--pading">
                   <span>Programas</span>
                 </a>
               <li class="lista__item">
@@ -100,14 +99,7 @@
     </header>
 
   
-    <!-- <video id="my-video" class="video-js vjs-default-skin" controls preload="auto" width="640" height="360" data-setup='{}'>
-      <source src="http://cdn.adultiptv.net/pov.m3u8?PlaylistM3UCL" type="application/x-mpegURL">
-     
-      <p class="vjs-no-js">
-        Para ver este video, por favor habilita JavaScript y considera actualizar a un navegador web que soporte HTML5 video.
-      </p>
-    </video>
-  </video>-->
+   
   <section class="Categorias">
     <div class="Categorias__contenedor">
       <a href="#">Generos</a>
@@ -120,6 +112,13 @@
         
         </div>
     </div>
+    <section class="paginacion">
+      <div class="paginacion__contenedor">
+        <div class="paginas">
+        </div>
+      </div>
+    </section>
+    
     <button id="fullscreenBtn">Pantalla Completa</button>
 </Section>
 
@@ -127,10 +126,12 @@
 
 </div>
 
+
+
+
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
       <path fill="#195B62" fill-opacity="1" d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
     </svg> 
-    
     <footer class="footer">
       
       <div class="footer__contenedor">
@@ -167,8 +168,7 @@
           </svg>
           <p class="footer__texto">Somos un grupo de personas que no tiene dinero para pagar programas.</p>
         </div>
-
-        <div class="footer__item">
+      <div class="footer__item">
           <h4 class="footer__titulo">Recursos Adicionales</h4>
           <p>Preguntas Frecuentas</p>
           <p>Surencias y Feedback</p>
@@ -181,7 +181,14 @@
   
       <span class="footer__copy">&copy2024 ProgramasTi.</span>
     </footer>
+    <div id="modalDesarrollador" >
+      <div class="modal-content">
+          <p style="display: none;">No puedes usar esta página en modo desarrollador.</p>
+      </div>
+  </div>
+  
     <script>
+
 
   ;
 document.addEventListener('keydown', function(e) {
