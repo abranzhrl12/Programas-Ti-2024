@@ -121,10 +121,8 @@ export default {
            link_m3u8: "https://video.misistemareseller.com/corporationhc/corporationhc/playlist.m3u8",
            
           },
-      
+          
          
-      
-      
       
           
       ],  

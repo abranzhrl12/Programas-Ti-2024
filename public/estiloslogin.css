@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+[class*="__img"] {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  align-content: center;
+  background-color: #dcdfe8;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  width: 90%;
+  height: 500px;
+  /* background-color: rgb(168, 149, 149); */
+  margin: 0 auto;
+  align-content: center;
+}
+
+.formulario {
+  width: 100%;
+  max-width: 41rem;
+  height: 50rem;
+  /* background-color: white; */
+  margin: 0 auto;
+  padding:4.5rem 3rem;
+  border-radius: 12px;
+  background-color: #ffffff9a;
+  box-shadow: -4px -2px 16px 0px #ffffff8a,
+  4px 2px 16px 0px rgb(95 157 231 / 48%), 0px 0px 20px 10px #00000008,
+  inset 5px 5px 20px rgba(0, 0, 0, 0.042),
+  inset -5px -5px 20px rgba(255, 255, 255, 0.626);
+}
+
+.formulario__contenedor {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.formulario__titulo {
+  text-align: center;
+  font-size: 3.5rem;
+  color: black;
+  margin: 0;
+  margin-bottom: 4.5rem;
+}
+
+.formulario__contenido {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 1.8rem;
+}
+
+.formulario__input {
+  border: unset;
+  outline: unset;
+  display: block;
+  width: 100%;
+  min-height: 46px;
+  border-radius: 12px;
+  background-color: #eeeeee;
+  border: 1px solid rgba(0, 0, 0, 0.062);
+  color: #b3b2b3;
+  padding-left: 10px;
+}
+
+.formulario__input:focus + .formulario__label,
+.formulario__input:not(:placeholder-shown) + .formulario__label {
+  /* background: linear-gradient(to bottom, #FFFFFF 50%, #EEEEEE 50%); */
+  transform: translateY(-9.7px) scale(0.9);
+  font-family: "Roboto", sans-serif;
+  /* transform-origin: left top; */
+  font-weight: 300;
+  animation: applyGradient 0.5s forwards;
+}
+.formulario__input:focus {
+  border: 2px solid blue;
+}
+.formulario__label {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0 0.5rem;
+  position: absolute;
+  left: 12px;
+  top: 0;
+  color: #757575;
+  background-color: transparent;
+  font-size: 1.4rem;
+  transition: transform 0.35s ease;
+  transform: translateY(1.4rem);
+  pointer-events: none;
+}
+
+@keyframes applyGradient {
+  0% {
+    background-color: transparent;
+  }
+
+  90% {
+    background-color: transparent;
+  }
+
+  100% {
+    background: linear-gradient(to bottom, transparent 50%, #eeeeee 50%);
+    color: rgb(18, 18, 209);
+  }
+}
+
+.formulario__terminos {
+  display: flex;
+  gap: 5px;
+}
+
+.formulario__parrafo {
+  color: #757575;
+  text-align: center;
+}
+
+.btn {
+  all: unset;
+  display: block;
+  width: 105px;
+  height: 2.6rem;
+  text-align: center;
+  background-color: black;
+  color: white;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  margin: 5rem auto;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+
+  z-index: 2;
+  transition: clip-path 0.5s;
+  clip-path: circle(0 at center);
+}
+
+.btn:hover::after {
+  clip-path: circle(100% at center);
+  background-color: rgb(27, 22, 22);
+}
+
+.btn__span {
+  position: relative;
+  z-index: 5;
+}
+
+.apps {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-evenly;
+  cursor: pointer;
+  gap: 3rem;
+  margin-bottom: 4.5rem;
+}
+
+.apps__icono {
+  color: #333333;
+  transition: transform 0.4s;
+}
+
+.apps__icono:hover {
+  color: #512da8;
+  transform: scale(1.3);
+}
+
+.apps__circulo {
+  width: 50px;
+  height: 50px;
+  border: 1px solid rgba(110, 106, 106, 0.432);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.26);
+  transition: box-shadow 0.4s ease;
+}
+
+.circulo:hover {
+  box-shadow: 0px 5px 15px rgba(95, 93, 93, 0.329);
+}

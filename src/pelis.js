@@ -30,15 +30,20 @@ let programasPorPagina =  calcularProgramasPorPaginaActual();;
 let paginaActual = 1;
 
 function herramientasDesarrolladorAbiertas() {
-    const widthThreshold = 300; // Umbral de ancho para considerar las herramientas de desarrollador
-    const heightThreshold = 200; // Umbral de alto para considerar las herramientas de desarrollador
-
-    // Diferencia entre el tamaño exterior e interior de la ventana del navegador
-    const widthDiff = window.outerWidth - window.innerWidth;
-    const heightDiff = window.outerHeight - window.innerHeight;
-
-    // Verificar si alguna de las diferencias supera los umbrales establecidos
-    return widthDiff > widthThreshold || heightDiff > heightThreshold;
+    try {
+        const widthThreshold = 300; // Umbral de ancho para considerar las herramientas de desarrollador
+        const heightThreshold = 200; // Umbral de alto para considerar las herramientas de desarrollador
+    
+        // Diferencia entre el tamaño exterior e interior de la ventana del navegador
+        const widthDiff = window.outerWidth - window.innerWidth;
+        const heightDiff = window.outerHeight - window.innerHeight;
+    
+        // Verificar si alguna de las diferencias supera los umbrales establecidos
+        return widthDiff > widthThreshold || heightDiff > heightThreshold;
+    } catch (error) {
+        
+    }
+  
 }
 
 // Variable para controlar el estado anterior de las herramientas de desarrollador
@@ -74,27 +79,58 @@ window.addEventListener("resize", () => {
     }
 });
 function herramientasDev(){
-    let herramientasAbiertas = herramientasDesarrolladorAbiertas();
+    try {
+        let herramientasAbiertas = herramientasDesarrolladorAbiertas();
   
-    const modal = document.getElementById('modalDesarrollador');
-   
-   console.log(view2 + "mostrando")
-   console.log(view + "primer valor")
-    // Mostrar el modal si las herramientas de desarrollador están abiertas
-    if (herramientasAbiertas && view!=view2) {
-        modal.classList.add('modal'); // Agregar clase para mostrar el modal
-        setTimeout(() => {
-            location.reload();
-        }, 3500);
-        localStorage.setItem('miDato', '1');
-    } else {
-        console.log("aaa")
+        const modal = document.getElementById('modalDesarrollador');
        
-        // modal.classList.remove('modal');
+    
+        // Mostrar el modal si las herramientas de desarrollador están abiertas
+        if (herramientasAbiertas && view!=view2) {
+            modal.classList.add('modal'); // Agregar clase para mostrar el modal
+            setTimeout(() => {
+                location.reload();
+            }, 3500);
+            
+        } else {
+            
+           
+            // modal.classList.remove('modal');
+        }  
+    } catch (error) {
+        
     }
+
+   
 }  
+function cargarDatosUsuario() {
+ try {
+    const usuarioGuardado = localStorage.getItem('usuario');
+    console.log('Datos guardados en localStorage:', usuarioGuardado);
+
+    if (usuarioGuardado) {
+        try {
+            const usuarioParseado = JSON.parse(usuarioGuardado);
+            
+            return usuarioParseado;
+        } catch (error) {
+            console.error('Error al parsear datos del usuario:', error);
+            return null;
+        }
+    } else {
+        console.log('No se encontraron datos guardados en localStorage.');
+        return null; // No hay datos guardados
+    }
+ } catch (error) {
+    
+ }
+   
+}
+
 
 function agregarPeliculasAlGrid(peliculas) {
+    
+    let irVideo = document.querySelector("#Videosplay");
     const grid = document.querySelector('.Peliculas__grid');
     if (!grid) {
         throw new Error("No se encontró el contenedor Peliculas__grid.");
@@ -116,22 +152,39 @@ function agregarPeliculasAlGrid(peliculas) {
         grid.innerHTML += peliculaHTML;
     });
 
-    // Agregar evento click para cargar el video de la película seleccionada
-    grid.addEventListener('click', (event) => {
-        const tarjeta = event.target.closest('.Peliculas__card');
-        if (tarjeta) {
-            const idPelicula = tarjeta.getAttribute('data-id');
-            const peliculaSeleccionada = peliculas.find(pelicula => pelicula.id == idPelicula);
-            if (peliculaSeleccionada) {
-                cargarVideoPelicula(peliculaSeleccionada.Video);
+    try {
+        grid.addEventListener('click', async (event) => {
+            const tarjeta = event.target.closest('.Peliculas__card');
+        
+            // Verificar si el usuario está autenticado
+            const usuarioActual = cargarDatosUsuario();
+            if (usuarioActual) {
+                console.log('Usuario autenticado:', usuarioActual.email);
+                if (tarjeta) {
+                    const idPelicula = tarjeta.getAttribute('data-id');
+                    const peliculaSeleccionada = peliculas.find(pelicula => pelicula.id == idPelicula);
+                    if (peliculaSeleccionada) {
+                        // Llamar a la función para cargar el video de la película seleccionada
+                        await cargarVideoPelicula(peliculaSeleccionada.Video);
+                        irVideo.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            } else {
+                console.log('No se encontraron datos de usuario guardados o el usuario no está autenticado.');
+                
+                // Redirigir a la página de inicio de sesión si el usuario no está autenticado
+                 window.location.href = 'login.html'; 
             }
-        }
-    });
+        });
+    } catch (error) {
+        
+    }
+   
 }
 
 // Función para calcular el número actual de programas por página
 function calcularProgramasPorPaginaActual() {
-   
+   try {
     if(window.innerWidth > 369 && window.innerWidth < 564){
         return 26;
     }
@@ -148,6 +201,10 @@ function calcularProgramasPorPaginaActual() {
     else{
         return 25;
     }
+   } catch (error) {
+    
+   }
+    
      
 }
 
@@ -220,27 +277,30 @@ function setPage(page) {
 }
 
 window.addEventListener('DOMContentLoaded', (event) => {
-    let herramientasAbiertas = herramientasDesarrolladorAbiertas();
+    try {
+        let herramientasAbiertas = herramientasDesarrolladorAbiertas();
 
-    const modal = document.getElementById('modalDesarrollador');
-   
-   console.log(view2 + "mostrando")
-   console.log(view + "primer valor")
-    // Mostrar el modal si las herramientas de desarrollador están abiertas
-    if (herramientasAbiertas ) {
-        modal.classList.add('modal'); // Agregar clase para mostrar el modal
-        setTimeout(() => {
-            location.reload();
-        }, 3500);
-
-    } else {
-        console.log("aaa")
+        const modal = document.getElementById('modalDesarrollador');
        
-        // modal.classList.remove('modal');
+        if (herramientasAbiertas ) {
+            modal.classList.add('modal'); // Agregar clase para mostrar el modal
+            setTimeout(() => {
+                location.reload();
+            }, 3500);
+    
+        } else {
+            console.log("aaa")
+           
+            // modal.classList.remove('modal');
+        }
+        view=window.innerWidth;
+        agregarPeliculasAlGrid(peliculas);
+        generarPaginacion();
+        cargarDatosUsuario(); 
+    } catch (error) {
+        
     }
-    view=window.innerWidth;
-    agregarPeliculasAlGrid(peliculas);
-    generarPaginacion();
+    
   });
   function cargarVideoPelicula(pelicula) {
 try {
@@ -268,6 +328,12 @@ window.addEventListener("popstate", () => {
   
   
   window.addEventListener("load", () => {
+    try {
+        cargarDatosUsuario(); 
+    } catch (error) {
+        
+    }
+   
     const currentPage = getCurrentPage(); // Obtener la página actual desde la URL
     setPage(currentPage); // Establecer la página actual y cargar los programas
   });

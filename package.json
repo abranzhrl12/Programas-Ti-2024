@@ -13,6 +13,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^26.0.1",
+    "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-terser": "^0.4.4",
     "gulp": "^5.0.0",
     "gulp-autoprefixer": "^9.0.0",
@@ -28,6 +30,7 @@
     "@videojs/vhs-utils": "^4.0.0",
     "autoprefixer": "^10.4.19",
     "chokidar": "^3.6.0",
+    "firebase": "^10.12.2",
     "m3u8-parser": "^7.1.0",
     "postcss": "^8.4.38",
     "videojs-contrib-dash": "^5.1.1",

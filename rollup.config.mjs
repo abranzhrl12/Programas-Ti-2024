@@ -1,6 +1,7 @@
 // rollup.config.mjs
 
-import terser from "@rollup/plugin-terser";
+   import terser from "@rollup/plugin-terser";
+
 
 // export default {
 //   input: "./src/index.js",
@@ -64,10 +65,26 @@ export default {
 //     },
 //     {
 //       file: "./public/canalestv.js",
-//       format: "iife",
+//       format: "cjs",
 //       name: "version",
 //       plugins: [terser()],
 //     },
 //   ],
      
+// };
+
+
+
+// import { nodeResolve } from '@rollup/plugin-node-resolve';
+
+// export default {
+//   input: 'src/Login/login.js', // archivo de entrada de tu aplicación
+//   output: {
+//     file: 'dist/bundle6.js', // archivo de salida generado
+//     sourcemap: 'inline', // mapeo de código fuente para depuración
+//     format: 'iife' // formato de salida, en este caso autoinvocable
+//   },
+//   plugins: [
+//     nodeResolve() // resuelve los módulos npm durante la construcción
+//   ]
 // };
