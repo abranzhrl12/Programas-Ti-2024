@@ -4,15 +4,20 @@
 
 .navegacion {
   width: 100%;
-  padding: 0 5rem;
-  height: auto;
-
+  padding: 0 3.5rem;
+  height: 7.8rem;
   background-color: #131218;
   display: flex;
   top: 0;
   align-items: center;
   position: fixed;
   z-index: 2;
+  &__contenedor{
+ 
+  width: 100%; 
+
+
+  }
   @include m.tablet {
     .lista {
       position: static;
@@ -81,7 +86,7 @@
   left: 0;
   list-style: none;
   width: 100%;
-  margin-top: -0.1rem;
+  margin-top: -0.4rem;
 
   background-color: #131218;
   display: none;

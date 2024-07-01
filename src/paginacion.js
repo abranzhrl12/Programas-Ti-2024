@@ -216,28 +216,3 @@ window.addEventListener("load", () => {
   setPage(currentPage); // Establecer la página actual y cargar los programas
 });
 
-// try {
-//   const peliculasLink = document.querySelector('.lista__link--peliculas');
-
- 
-  
-
-//     const nuevaURL = this.href; 
-//     const url = new URL(nuevaURL); 
-
-
-//     url.pathname = 'index2.html'; 
-//     url.hash = 'peliculas'; 
-
-
-//     url2.search = '';
-
-    
-//     window.history.pushState({}, '', url.href);
-
-   
-//     window.location.href = url.href;
-  
-// } catch (error) {
-//   console.error('Error al configurar el evento de clic para "Peliculas":', error);
-// }

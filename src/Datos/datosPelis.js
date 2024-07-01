@@ -148,6 +148,16 @@ export default {
         },
         {
           id: 17,
+          nombre: "Avatar 1",
+          imagen: "../../Imagenes_Pelis/avatar1.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/26592292-6e2e-4091-8e63-710fb845c8ce",
+        }, 
+        
+        {
+          id: 18,
           nombre: "Shazam 2",
           imagen: "../../Imagenes_Pelis/aShazam2(2023).webp",
           imagenX: "/imagenes/ilustrator.webp",
@@ -156,7 +166,7 @@ export default {
           Video: "https://iframe.mediadelivery.net/embed/261653/2919fead-ff5a-43ec-9373-6f817f7691c8",
         },
         {
-          id: 18,
+          id: 19,
           nombre: "Black Adam",
           imagen: "../../Imagenes_Pelis/blackadam2022.webp",
           imagenX: "/imagenes/ilustrator.webp",
@@ -165,7 +175,7 @@ export default {
           Video: "https://iframe.mediadelivery.net/embed/261653/ed8c2e41-a4b3-4487-90c7-1bf11ef71490",
         },
         {
-          id: 19,
+          id: 20,
           nombre: "El señor de los anillos",
           imagen: "../../Imagenes_Pelis/El_seanor_de_los_anillos_La_comunidad_del_anillo.webp",
           imagenX: "/imagenes/ilustrator.webp",
@@ -174,7 +184,7 @@ export default {
           Video: "https://iframe.mediadelivery.net/embed/261653/374c6ec2-aa0a-43f2-969e-3959d9c6b49d",
         },
         {
-          id: 20,
+          id: 21,
           nombre: "El señor de los anillos 2",
           imagen: "../../Imagenes_Pelis/el señor de los anillos 2 las dos torres.webp",
           imagenX: "/imagenes/ilustrator.webp",
@@ -183,7 +193,7 @@ export default {
           Video: "https://iframe.mediadelivery.net/embed/261653/606f3bbe-2d4e-4286-89e9-64dd3020e06e",
         },
         {
-          id: 21,
+          id: 22,
           nombre: "El señor de los anillos 3",
           imagen: "../../Imagenes_Pelis/el señor de los anillos 3 el retorno del rey.webp",
           imagenX: "/imagenes/ilustrator.webp",
@@ -192,7 +202,7 @@ export default {
           Video: "https://iframe.mediadelivery.net/embed/261653/dd9d3ab1-8cef-4111-a902-45a5a26b2b0f",
         },
         {
-          id: 22,
+          id: 23,
           nombre: "Ponyo",
           imagen: "../../Imagenes_Pelis/ponyo.webp",
           imagenX: "/imagenes/ilustrator.webp",
@@ -201,7 +211,7 @@ export default {
           Video: "https://iframe.mediadelivery.net/embed/261653/303a8128-668d-4fff-9ad1-7e33b56bd7ef",
         },
         {
-          id: 23,
+          id: 24,
           nombre: "Harry potter 1",
           imagen: "../../Imagenes_Pelis/harrypoter1.webp",
           imagenX: "/imagenes/ilustrator.webp",
@@ -210,7 +220,7 @@ export default {
           Video: "https://iframe.mediadelivery.net/embed/261653/3d6462c2-ea4a-4213-8942-ee465332ea12",
         },
         {
-          id: 24,
+          id: 25,
           nombre: "Harry potter 2",
           imagen: "../../Imagenes_Pelis/harrypotter2.webp",
           imagenX: "/imagenes/ilustrator.webp",
@@ -219,7 +229,7 @@ export default {
           Video: "https://iframe.mediadelivery.net/embed/261653/d37b2219-95db-4309-b91f-f91c00b88a65",
         },
         {
-          id: 25,
+          id: 26,
           nombre: "Harry potter 3",
           imagen: "../../Imagenes_Pelis/harrypoter3.webp",
           imagenX: "/imagenes/ilustrator.webp",
@@ -228,7 +238,7 @@ export default {
           Video: "https://iframe.mediadelivery.net/embed/261653/f2521270-b920-4395-92df-aad4c94ec84d",
         },
         {
-          id: 26,
+          id: 27,
           nombre: "Harry potter 4",
           imagen: "../../Imagenes_Pelis/harrypoter4.webp",
           imagenX: "/imagenes/ilustrator.webp",
@@ -237,7 +247,7 @@ export default {
           Video: "https://iframe.mediadelivery.net/embed/261653/465ec713-18a7-4093-8a8d-f1e886286227",
         },
         {
-          id: 27,
+          id: 28,
           nombre: "Harry potter 5",
           imagen: "../../Imagenes_Pelis/harrypotter5.webp",
           imagenX: "/imagenes/ilustrator.webp",
@@ -246,7 +256,7 @@ export default {
           Video: "https://iframe.mediadelivery.net/embed/261653/dd5978ac-8973-45da-ae49-7af3c1532ec1",
         },
         {
-          id: 28,
+          id: 29,
           nombre: "Harry potter 6",
           imagen: "../../Imagenes_Pelis/harrypotter6.webp",
           imagenX: "/imagenes/ilustrator.webp",
@@ -255,7 +265,7 @@ export default {
           Video: "https://iframe.mediadelivery.net/embed/261653/dee102f2-041e-4d47-8f70-86220c8a6771",
         },
         {
-          id: 29,
+          id: 30,
           nombre: "Harry potter 7",
           imagen: "../../Imagenes_Pelis/harrypotter7.webp",
           imagenX: "/imagenes/ilustrator.webp",
@@ -264,7 +274,7 @@ export default {
           Video: "https://iframe.mediadelivery.net/embed/261653/00800159-1dfa-40f5-919b-2649efc36399",
         },
         {
-          id: 30,
+          id: 31,
           nombre: "Harry potter 8",
           imagen: "../../Imagenes_Pelis/harrypotter8.webp",
           imagenX: "/imagenes/ilustrator.webp",
@@ -272,6 +282,46 @@ export default {
             "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
           Video: "https://iframe.mediadelivery.net/embed/261653/6cbcce39-23aa-42e1-870e-ca45b99041d2",
         },
+
+        {
+          id: 32,
+          nombre: "Un lugar en Silencio (2018)",
+          imagen: "../../Imagenes_Pelis/unlugarensilencio2018.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/0a4592ee-1409-4a6c-898c-3fe37e181f59",
+        },
+
+       
+        {
+          id: 33,
+          nombre: "jurassic world :Dominion 2022",
+          imagen: "../../Imagenes_Pelis/jurassiwork2022.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/4777dbe2-2fc8-43fb-aafc-b75c17fcbba6",
+        },
+        {
+          id: 34,
+          nombre: "Doctor Strange en el multiverso de la locura",
+          imagen: "../../Imagenes_Pelis/doctorstrange2.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/2926db3a-1474-4fcb-bfb5-334223c79484",
+        },
+        {
+          id: 35,
+          nombre: "Sonic 2",
+          imagen: "../../Imagenes_Pelis/sonic2.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/90b9498d-16da-47af-a68c-fec569eb6cf7",
+        },
+        
       ],  
     },
   };

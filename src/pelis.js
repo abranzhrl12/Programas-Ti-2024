@@ -1,135 +1,108 @@
-import datosPelis from "./Datos/datosPelis";
-
-document.addEventListener('contextmenu', function(e) {
-e.preventDefault();
-})
-document.addEventListener('keydown', function(e) {
-    // Desactivar la tecla F12
-    if (e.key === 'F12' || e.keyCode === 123) {
-        e.preventDefault();
-        return false;
+import { verificarCredenciales } from "./Conexion/conexion";
+ function cargarDatosUsuario() {
+    try {
+        const usuarioGuardado = localStorage.getItem('usuario');
+        if (usuarioGuardado) {
+            console.log(JSON.parse(usuarioGuardado))
+            return JSON.parse(usuarioGuardado);
+        } else {
+            console.log('No se encontraron datos guardados en localStorage.');
+            return null;
+        }
+    } catch (error) {
+        console.error('Error al cargar datos de usuario desde localStorage:', error);
+        return null;
     }
-});
-
-const peliculas = datosPelis.Peliculas.Extreno;
-
-function generarPlantillaPelicula(pelicula) {
-    return `
-    <div class="Peliculas__card" data-id="${pelicula.id}">
-            <figure class="Peliculas__figure">
-                <img class="Peliculas__img" src="${pelicula.imagen}" alt="">
-            </figure>
-            <p class="Peliculas__nombre">${pelicula.nombre}</p>
-        </div>
-    `;
 }
-
+ 
+import {peliculas , generarPlantillaPelicula} from "./Peliculas/Peliculas";
+import seguridad from "./Peliculas/Seguridad";
+import {calcularProgramasPorPaginaActual} from "./Peliculas/cantidaPagina"
 let widthViewport = window.innerWidth;
-
 let programasPorPagina =  calcularProgramasPorPaginaActual();;
 let paginaActual = 1;
-
-function herramientasDesarrolladorAbiertas() {
-    try {
-        const widthThreshold = 300; // Umbral de ancho para considerar las herramientas de desarrollador
-        const heightThreshold = 200; // Umbral de alto para considerar las herramientas de desarrollador
-    
-        // Diferencia entre el tamaño exterior e interior de la ventana del navegador
-        const widthDiff = window.outerWidth - window.innerWidth;
-        const heightDiff = window.outerHeight - window.innerHeight;
-    
-        // Verificar si alguna de las diferencias supera los umbrales establecidos
-        return widthDiff > widthThreshold || heightDiff > heightThreshold;
-    } catch (error) {
-        
-    }
-  
-}
-
 // Variable para controlar el estado anterior de las herramientas de desarrollador
 let herramientasAbiertasPrevias = false;
-
 
 let view2=window.innerWidth;
 
 let view=window.innerWidth;
 
+function agregarPeliculasAlGrid(peliculas) {
+    generarPeliculas(peliculas);
 
-window.addEventListener("resize", () => {
-  view2=window.innerWidth;
     try {
-    //   calcularProgramasPorPaginaActual();
-    //   agregarPeliculasAlGrid(peliculas)
-    // verificarHerramientasDesarrollador();
-    herramientasDev()
-    programasPorPagina = calcularProgramasPorPaginaActual();
-
-    // Actualizar la página actual para asegurar que esté dentro de los límites de las páginas disponibles
-    if (paginaActual > Math.ceil(peliculas.length / programasPorPagina)) {
-        paginaActual = Math.ceil(peliculas.length / programasPorPagina);
-    }
-
-    // Volver a agregar las películas al grid con el nuevo número de programas por página
-    agregarPeliculasAlGrid(peliculas);
-    
-    // Volver a generar la paginación con el nuevo número de programas por página
-    generarPaginacion();
-    } catch (error) {
-        console.error("Error al manejar el evento resize:", error);
-    }
-});
-function herramientasDev(){
-    try {
-        let herramientasAbiertas = herramientasDesarrolladorAbiertas();
-  
-        const modal = document.getElementById('modalDesarrollador');
-       
-    
-        // Mostrar el modal si las herramientas de desarrollador están abiertas
-        if (herramientasAbiertas && view!=view2) {
-            modal.classList.add('modal'); // Agregar clase para mostrar el modal
-            setTimeout(() => {
-                location.reload();
-            }, 3500);
-            
-        } else {
-            
-           
-            // modal.classList.remove('modal');
-        }  
-    } catch (error) {
+        const grid = document.querySelector('.Peliculas__grid');
+        grid.addEventListener('click', async (event) => {
+            const tarjeta = event.target.closest('.Peliculas__card');
         
-    }
+            // Verificar si el usuario está autenticado y obtener sus datos
+            const usuarioActual = cargarDatosUsuario();
+            console.log("Usuario actual:", usuarioActual);
 
-   
-}  
-function cargarDatosUsuario() {
- try {
-    const usuarioGuardado = localStorage.getItem('usuario');
-    console.log('Datos guardados en localStorage:', usuarioGuardado);
-
-    if (usuarioGuardado) {
-        try {
-            const usuarioParseado = JSON.parse(usuarioGuardado);
-            
-            return usuarioParseado;
-        } catch (error) {
-            console.error('Error al parsear datos del usuario:', error);
-            return null;
-        }
-    } else {
-        console.log('No se encontraron datos guardados en localStorage.');
-        return null; // No hay datos guardados
+            if (usuarioActual && usuarioActual.usuario && usuarioActual.contraseña) {
+                console.log('Usuario autenticado:', usuarioActual.usuario);
+                if (tarjeta) {
+                    const idPelicula = tarjeta.getAttribute('data-id');
+                    const peliculaSeleccionada = peliculas.find(pelicula => pelicula.id == idPelicula);
+                    if (peliculaSeleccionada) {
+                        // Comparar los datos del usuario con los datos en Firebase para la película seleccionada
+                        const authenticated = await verificarCredenciales(usuarioActual.usuario, usuarioActual.contraseña);
+                        
+                        if (authenticated) {
+                            // Si los datos coinciden, cargar el video de la película seleccionada
+                            await cargarVideoPelicula(peliculaSeleccionada.Video);
+                            irVideo.scrollIntoView({ behavior: 'smooth' });
+                        } else {
+                            // Si los datos no coinciden, redirigir al usuario a la página de inicio de sesión
+                            console.log('Los datos del usuario en localStorage no coinciden con los datos en Firebase.');
+                             window.location.href = 'login.html';
+                        }
+                    }
+                }
+            } else {
+                console.log('No se encontraron datos de usuario guardados o el usuario no está autenticado.');
+                
+                // Redirigir a la página de inicio de sesión si el usuario no está autenticado
+                window.location.href = 'login.html'; 
+            }
+        });
+    } catch (error) {
+        console.error('Error al manejar el evento click en la tarjeta:', error);
     }
- } catch (error) {
-    
- }
-   
 }
 
-
-function agregarPeliculasAlGrid(peliculas) {
-    
+// function agregarPeliculasAlGrid(peliculas) {
+//         generarPeliculas(peliculas);
+//     try {
+//         grid.addEventListener('click', async (event) => {
+//             const tarjeta = event.target.closest('.Peliculas__card');
+        
+//             // Verificar si el usuario está autenticado
+//             const usuarioActual = cargarDatosUsuario();
+//             if (usuarioActual) {
+//                 console.log('Usuario autenticado:', usuarioActual.email);
+//                 if (tarjeta) {
+//                     const idPelicula = tarjeta.getAttribute('data-id');
+//                     const peliculaSeleccionada = peliculas.find(pelicula => pelicula.id == idPelicula);
+//                     if (peliculaSeleccionada) {
+//                         // Llamar a la función para cargar el video de la película seleccionada
+//                         await cargarVideoPelicula(peliculaSeleccionada.Video);
+//                         irVideo.scrollIntoView({ behavior: 'smooth' });
+//                     }
+//                 }
+//             } else {
+//                 console.log('No se encontraron datos de usuario guardados o el usuario no está autenticado.');
+                
+//                 // Redirigir a la página de inicio de sesión si el usuario no está autenticado
+//                  window.location.href = 'login.html'; 
+//             }
+//         });
+//     } catch (error) {
+        
+//     } 
+// }
+function generarPeliculas(pelicula){
     let irVideo = document.querySelector("#Videosplay");
     const grid = document.querySelector('.Peliculas__grid');
     if (!grid) {
@@ -151,63 +124,7 @@ function agregarPeliculasAlGrid(peliculas) {
         const peliculaHTML = generarPlantillaPelicula(pelicula);
         grid.innerHTML += peliculaHTML;
     });
-
-    try {
-        grid.addEventListener('click', async (event) => {
-            const tarjeta = event.target.closest('.Peliculas__card');
-        
-            // Verificar si el usuario está autenticado
-            const usuarioActual = cargarDatosUsuario();
-            if (usuarioActual) {
-                console.log('Usuario autenticado:', usuarioActual.email);
-                if (tarjeta) {
-                    const idPelicula = tarjeta.getAttribute('data-id');
-                    const peliculaSeleccionada = peliculas.find(pelicula => pelicula.id == idPelicula);
-                    if (peliculaSeleccionada) {
-                        // Llamar a la función para cargar el video de la película seleccionada
-                        await cargarVideoPelicula(peliculaSeleccionada.Video);
-                        irVideo.scrollIntoView({ behavior: 'smooth' });
-                    }
-                }
-            } else {
-                console.log('No se encontraron datos de usuario guardados o el usuario no está autenticado.');
-                
-                // Redirigir a la página de inicio de sesión si el usuario no está autenticado
-                 window.location.href = 'login.html'; 
-            }
-        });
-    } catch (error) {
-        
-    }
-   
 }
-
-// Función para calcular el número actual de programas por página
-function calcularProgramasPorPaginaActual() {
-   try {
-    if(window.innerWidth > 369 && window.innerWidth < 564){
-        return 26;
-    }
-  else if(window.innerWidth > 563 && window.innerWidth < 1242){
-    return 24;
-   }
-   
-   else if (window.innerWidth > 1243 && window.innerWidth < 1495) {
-        return 25;
-    } else if(window.innerWidth > 1495) {
-        console.log(window.window.innerWidth)
-        return 30;
-    }
-    else{
-        return 25;
-    }
-   } catch (error) {
-    
-   }
-    
-     
-}
-
 
 function generarPaginacion() {
     try {
@@ -250,6 +167,31 @@ function generarPaginacion() {
     }
 }
 
+
+window.addEventListener("resize", () => {
+    view2=window.innerWidth;
+      try {
+      //   calcularProgramasPorPaginaActual();
+      //   agregarPeliculasAlGrid(peliculas)
+      // verificarHerramientasDesarrollador();
+      // herramientasDev()
+      programasPorPagina = calcularProgramasPorPaginaActual();
+  
+      // Actualizar la página actual para asegurar que esté dentro de los límites de las páginas disponibles
+      if (paginaActual > Math.ceil(peliculas.length / programasPorPagina)) {
+          paginaActual = Math.ceil(peliculas.length / programasPorPagina);
+      }
+  
+      // Volver a agregar las películas al grid con el nuevo número de programas por página
+      agregarPeliculasAlGrid(peliculas);
+      
+      // Volver a generar la paginación con el nuevo número de programas por página
+      generarPaginacion();
+      } catch (error) {
+          console.error("Error al manejar el evento resize:", error);
+      }
+  });
+  
   function getCurrentPage() {
     const params = new URLSearchParams(window.location.search);
     let hash = window.location.hash; // Obtener el hash actual
@@ -278,21 +220,7 @@ function setPage(page) {
 
 window.addEventListener('DOMContentLoaded', (event) => {
     try {
-        let herramientasAbiertas = herramientasDesarrolladorAbiertas();
-
-        const modal = document.getElementById('modalDesarrollador');
-       
-        if (herramientasAbiertas ) {
-            modal.classList.add('modal'); // Agregar clase para mostrar el modal
-            setTimeout(() => {
-                location.reload();
-            }, 3500);
     
-        } else {
-            console.log("aaa")
-           
-            // modal.classList.remove('modal');
-        }
         view=window.innerWidth;
         agregarPeliculasAlGrid(peliculas);
         generarPaginacion();

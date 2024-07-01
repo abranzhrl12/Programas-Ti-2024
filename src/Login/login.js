@@ -1,30 +1,60 @@
 import { verificarCredenciales } from '../Conexion/conexion';
 
-
-document.getElementById('loginForm').addEventListener('submit', async function(event) {
-    event.preventDefault();
-    
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
-  
-    try {
-        const authenticated = await verificarCredenciales(email, password);
-        if (authenticated) {
-            // Solo si las credenciales son correctas, guardar en localStorage
-            localStorage.setItem('usuario', JSON.stringify({ nombre: 'John', email: 'john@example.com' }));
-            localStorage.setItem('usuarioAutenticado', 'true');
-  
-            // Redirigir al usuario a otra página
-            window.location.href = 'index.html';
+try {
+    document.getElementById('loginForm').addEventListener('submit', async function(event) {
+        event.preventDefault();
+        
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+      
+        try {
+            const authenticated = await verificarCredenciales(email, password);
             
-            console.log("Acceso concedido.");
-            alert("Acceso concedido. Redirigiendo a la página principal...");
-        } else {
-            console.log("Acceso denegado.");
-            alert("Email o contraseña incorrectos. Por favor, intenta de nuevo.");
+            if (authenticated) {
+                // Obtener datos del usuario autenticado desde localStorage
+                const userData = JSON.parse(localStorage.getItem('usuario'));
+    
+                // Mostrar mensaje de éxito
+                showModal("¡Inicio de sesión exitoso!");
+    
+                // Redirigir al usuario a otra página (opcional)
+                setTimeout(function() {
+                    window.location.href = 'index.html';
+    
+                }, 900);
+              
+            } else {
+                // Mostrar mensaje de error
+                showModal("Credenciales incorrectas. Inténtalo de nuevo.");
+            }
+        } catch (error) {
+            console.error("Error al verificar credenciales:", error);
+            showModal("Error al intentar iniciar sesión. Por favor, inténtalo más tarde.");
         }
-    } catch (error) {
-        console.error("Error al verificar credenciales:", error);
-        alert("Error al intentar iniciar sesión. Por favor, intenta de nuevo más tarde.");
+    });
+    
+    
+    function showModal(message) {
+        const modal = document.getElementById('myModal');
+        const modalText = document.getElementById('modalText');
+        modal.style.display = 'block'; // Mostrar el modal
+        
+        // Asignar mensaje al contenido del modal
+        modalText.innerHTML = `<p>${message}</p>`;
+        
+        // Agregar evento para cerrar el modal al hacer clic en la X
+        const closeBtn = document.getElementsByClassName('close')[0];
+        closeBtn.onclick = function() {
+            modal.style.display = 'none'; // Ocultar el modal al hacer clic en la X
+        }
+        
+        // Cerrar automáticamente el modal después de 2 segundos
+        setTimeout(function() {
+            modal.style.display = 'none';
+        }, 2500);
     }
-});
+    
+     
+} catch (error) {
+    
+}

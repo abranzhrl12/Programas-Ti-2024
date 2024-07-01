@@ -38,22 +38,22 @@
 
 
 
-export default {
-  input: "./src/pelis.js",
-  output: [
-    {
-      file: "./public/Pelis.js",
-      format: "cjs",
-    },
-    {
-      file: "./public/Pelis.js",
-      format: "iife",
-      name: "version",
-      plugins: [terser()],
-    },
-  ],
+// export default {
+//   input: "./src/pelis.js",
+//   output: [
+//     {
+//       file: "./public/Pelis.js",
+//       format: "cjs",
+//     },
+//     {
+//       file: "./public/Pelis.js",
+//       format: "iife",
+//       name: "version",
+//       plugins: [terser()],
+//     },
+//   ],
      
-};
+// };
 
 
 // export default {
@@ -75,7 +75,7 @@ export default {
 
 
 
-// import { nodeResolve } from '@rollup/plugin-node-resolve';
+;
 
 // export default {
 //   input: 'src/Login/login.js', // archivo de entrada de tu aplicación
@@ -88,3 +88,40 @@ export default {
 //     nodeResolve() // resuelve los módulos npm durante la construcción
 //   ]
 // };
+
+// import { nodeResolve } from '@rollup/plugin-node-resolve'
+
+// export default {
+//   input: "./src/pelis.js",
+//   output: 
+//     {
+//       file: "./public/Pelis.js",
+//       sourcemap: 'inline',
+//        format: 'iife'
+//     },
+  
+//   plugins: [
+//     nodeResolve() ,
+    
+//     // resuelve los módulos npm durante la construcción
+//   ]
+// };
+
+
+export default {
+  input: "./src/pelis.js",
+  output: [
+    {
+      file: "./public/Pelis2.js",
+      sourcemap: 'inline',
+      format: "iife",
+    },
+    {
+      file: "./public/Pelis2.js",
+      format: "iife",
+      name: "version",
+      plugins: [terser()],
+    },
+  ],
+     
+};
