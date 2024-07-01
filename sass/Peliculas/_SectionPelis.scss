@@ -86,14 +86,13 @@
     }
 }
 .videovivo-contenedor{
-  
     width: 90%;
     max-width: 120rem;
     height: auto;
     display: flex;
     justify-content: center;
-position: relative;
-    margin: 10rem auto;
+    position: relative;
+    margin: 0 auto;
      align-items: center;
    
 }
@@ -103,14 +102,17 @@ position: relative;
     height: fit-content;
     aspect-ratio: 16/9;
     position: absolute;
+    
+  
 }
 #fullscreenBtn{
     display: block;
-    margin: 10rem auto 5rem auto;
+    margin: 0rem auto 0rem auto;
     border: none;
     padding: 1rem 2rem;
     border-radius: 0.8rem;
     background-color: #2E8A7B;
+
     color: white;
     cursor: pointer;
     &:hover{

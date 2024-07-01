@@ -89,39 +89,22 @@
 //   ]
 // };
 
-// import { nodeResolve } from '@rollup/plugin-node-resolve'
-
-// export default {
-//   input: "./src/pelis.js",
-//   output: 
-//     {
-//       file: "./public/Pelis.js",
-//       sourcemap: 'inline',
-//        format: 'iife'
-//     },
-  
-//   plugins: [
-//     nodeResolve() ,
-    
-//     // resuelve los módulos npm durante la construcción
-//   ]
-// };
-
+import { nodeResolve } from '@rollup/plugin-node-resolve'
 
 export default {
   input: "./src/pelis.js",
-  output: [
+  output: 
     {
-      file: "./public/Pelis2.js",
+      file: "./public/Pelis.js",
       sourcemap: 'inline',
-      format: "iife",
+       format: 'iife'
     },
-    {
-      file: "./public/Pelis2.js",
-      format: "iife",
-      name: "version",
-      plugins: [terser()],
-    },
-  ],
-     
+  
+  plugins: [
+    nodeResolve() ,
+    
+    // resuelve los módulos npm durante la construcción
+  ]
 };
+
+

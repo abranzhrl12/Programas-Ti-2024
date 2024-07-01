@@ -72,9 +72,14 @@
          display: block;
         width: 90%;
         max-width: 80rem;
-        height: 48rem;
+        height: 21.5rem;
         margin: 0 auto;
-      
+        @include m.tablet {
+          height: 40rem;
+        }
+        @include m.desktop {
+          height: 45rem;
+        }
       }
       &__video{
         display: block;

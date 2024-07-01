@@ -52,6 +52,8 @@ function agregarPeliculasAlGrid(peliculas) {
                         if (authenticated) {
                             // Si los datos coinciden, cargar el video de la película seleccionada
                             await cargarVideoPelicula(peliculaSeleccionada.Video);
+                            const irVideo=document.querySelector("#fullscreenBtn")
+                            console.log(irVideo)
                             irVideo.scrollIntoView({ behavior: 'smooth' });
                         } else {
                             // Si los datos no coinciden, redirigir al usuario a la página de inicio de sesión
