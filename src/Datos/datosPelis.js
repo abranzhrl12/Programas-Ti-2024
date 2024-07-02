@@ -21,6 +21,15 @@ export default {
             Video: "https://iframe.mediadelivery.net/embed/261653/04590fbd-e578-4a98-9949-f8e96057f02b",
         },
         {
+          id: 100,
+          nombre: "Garfield 2024",
+          imagen: "../../Imagenes_Pelis/garfield2024.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+            Video: "https://iframe.mediadelivery.net/embed/261653/72498cd5-85d4-4a28-b7b0-b29f5eff59ca",
+        },
+        {
           id: 3,
           nombre: "El Reino del planeta de los Simios",
           imagen: "../../Imagenes_Pelis/El_reino_del_planeta_de_los_simios-663256597-large.webp",
@@ -54,7 +63,7 @@ export default {
           imagenX: "/imagenes/ilustrator.webp",
           Descripcion:
             "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
-          Video: "https://iframe.mediadelivery.net/embed/261653/733a857d-d749-4cf0-a088-a5a208f4e419",
+          Video: "https://iframe.mediadelivery.net/embed/261653/d70e03ea-9e04-4cea-817c-b40da14218eb",
         },
         {
           id: 7,
@@ -63,7 +72,7 @@ export default {
           imagenX: "/imagenes/ilustrator.webp",
           Descripcion:
             "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
-          Video: "https://iframe.mediadelivery.net/embed/261653/213664c1-27fe-4272-b055-1267f687b871",
+          Video: "https://iframe.mediadelivery.net/embed/261653/9d135a79-a9e8-488d-9c33-8e247c302dd0",
         },
         {
           id: 8,
@@ -321,7 +330,105 @@ export default {
             "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
           Video: "https://iframe.mediadelivery.net/embed/261653/90b9498d-16da-47af-a68c-fec569eb6cf7",
         },
-        
+        {
+          id: 36,
+          nombre: "Drepredador 1",
+          imagen: "../../Imagenes_Pelis/depredador1.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/0014b830-146e-47ba-9e29-969aa5b10342",
+        },
+        {
+          id: 37,
+          nombre: "Alien vs Depredador 1",
+          imagen: "../../Imagenes_Pelis/alien_vs_depredador 1.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/e7bd0db3-a4dd-46f6-b4b6-e1904aa533ae",
+        },
+        {
+          id: 38,
+          nombre: "Alien vs Depredador 2",
+          imagen: "../../Imagenes_Pelis/Aliens_vs_Predator_2.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/37c66b5f-6682-4bc4-a274-772327d7b35c",
+        },
+        {
+          id: 39,
+          nombre: "Destino Final 1",
+          imagen: "../../Imagenes_Pelis/destinofinal1.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/23939ba9-2802-41ad-bf2e-ae9440c82cbd",
+        },
+        {
+          id: 40,
+          nombre: "Destino Final 2",
+          imagen: "../../Imagenes_Pelis/destinofinal2.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/c6df3b83-a02c-4c72-bad5-14912ed06c08",
+        },
+        {
+          id: 41,
+          nombre: "Destino Final 3",
+          imagen: "../../Imagenes_Pelis/destinofinal3.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/7d046ca7-485f-4bc4-a5b6-b7f235e56a42",
+        },
+        {
+          id: 42,
+          nombre: "Destino Final 4",
+          imagen: "../../Imagenes_Pelis/destinofinal4.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/1c66e803-05f5-4d84-916e-8f3d9b806031",
+        },
+        {
+          id: 43,
+          nombre: "Destino Final 5",
+          imagen: "../../Imagenes_Pelis/destinofinal5.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/7d8c9db3-b08d-4541-9c1e-8e8cd40eb093",
+        },
+        {
+          id: 44,
+          nombre: "Transformers: El despertar de las bestias",
+          imagen: "../../Imagenes_Pelis/transformers2023.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/39598aa1-350c-4093-af11-9f2c158cc3ee",
+        },
+        {
+          id: 45,
+          nombre: "Piratas del Caribe 1",
+          imagen: "../../Imagenes_Pelis/Piratas_del_Caribe_La_maldiciaon_de_la_Perla_Negra.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/8c3d763f-fe88-4680-a983-7918d1f762aa",
+        },
+        {
+          id: 46,
+          nombre: "La hera del hielo 1",
+          imagen: "../../Imagenes_Pelis/Piratas_del_Caribe_La_maldiciaon_de_la_Perla_Negra.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/640242c8-924e-4d6c-a994-9761c0a0062a",
+        }
       ],  
     },
   };

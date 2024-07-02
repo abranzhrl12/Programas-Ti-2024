@@ -17,11 +17,11 @@ html {
 }
 
 [class*="__contenedor"] {
-  max-width: 150rem;
+  max-width: 143rem;
   width: 95%;
   margin: 0 auto;
   @include m.desktopFull {
-    max-width: 160rem;
+    max-width: 162rem;
   }
 }
 [class*="__img"] {

@@ -12,7 +12,7 @@ export function calcularProgramasPorPaginaActual() {
          return 25;
      } else if(window.innerWidth > 1495) {
          console.log(window.window.innerWidth)
-         return 30;
+         return 35;
      }
      else{
          return 25;

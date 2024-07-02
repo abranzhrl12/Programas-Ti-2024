@@ -2,14 +2,19 @@
 .Peliculas{
     margin-top: 12rem;
     margin-bottom: 5rem;
+    &__contenedor{
+        @include m.desktopFull {
+            max-width: 184rem;
+        }
+    }
     &__grid{
         width: 100%;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(16.5rem,min-content));
         grid-template-rows: repeat(22rem);
         place-content: center;
-        row-gap: 2rem;
-        column-gap: 2rem;
+        row-gap: 2.2rem;
+        column-gap: 2.2rem;
   
         @supports (display: grid) {
             grid-template-columns: repeat(auto-fit, minmax(16.5rem, min-content));
