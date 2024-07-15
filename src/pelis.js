@@ -219,19 +219,42 @@ function setPage(page) {
     agregarPeliculasAlGrid(peliculas); // Cargar los programas de la página actual
     generarPaginacion(); // Volver a generar la paginación para reflejar el cambio de página
 }
-
 window.addEventListener('DOMContentLoaded', (event) => {
-    try {
-    
-        view=window.innerWidth;
-        agregarPeliculasAlGrid(peliculas);
-        generarPaginacion();
-        cargarDatosUsuario(); 
-    } catch (error) {
-        
+    // Inicializar el SDK de Cast
+    if (!chrome.cast || !chrome.cast.isAvailable) {
+        setTimeout(initializeCastApi, 1000);
+    } else {
+        initializeCastApi();
     }
-    
-  });
+
+    function initializeCastApi() {
+        cast.framework.CastContext.getInstance().setOptions({
+            receiverApplicationId: chrome.cast.media.DEFAULT_MEDIA_RECEIVER_APP_ID,
+            autoJoinPolicy: chrome.cast.AutoJoinPolicy.ORIGIN_SCOPED
+        });
+
+        // Configurar el botón de Cast
+        const castButton = document.getElementById('castButton');
+        castButton.addEventListener('click', () => {
+            const castContext = cast.framework.CastContext.getInstance();
+            const castSession = castContext.getCurrentSession();
+
+            if (castSession) {
+                const mediaInfo = new chrome.cast.media.MediaInfo('https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4', 'video/mp4');
+                const request = new chrome.cast.media.LoadRequest(mediaInfo);
+
+                castSession.loadMedia(request).then(
+                    () => {
+                        console.log('Media load success');
+                    },
+                    (errorCode) => {
+                        console.log('Error code: ' + errorCode);
+                    }
+                );
+            }
+        });
+    }
+});
   function cargarVideoPelicula(pelicula) {
 try {
     const videoPelicula = document.querySelector('.DetallePrograma__ConVideo');
