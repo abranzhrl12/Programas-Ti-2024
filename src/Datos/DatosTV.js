@@ -122,8 +122,57 @@ export default {
            
           },
           
+          {
+            id: 18,
+            nombre: "Panamericana",
+            imagen: "../../ImagenesTV/panamerica.png",
+           link_m3u8: "https://cdnhd.iblups.com/hls/ptv5.m3u8",
+           
+          },
+          {
+            id: 19,
+            nombre: "Discovery kids",
+            imagen: "../../ImagenesTV/discoverykids.webp",
+           link_m3u8: "http://sdmx.vip:8080/belpley/sYqKZQrTZa/2092569.m3u8",
+           
+          },
+          {
+            id: 20,
+            nombre: "Disney Junior",
+            imagen: "../../ImagenesTV/disneyjuniors.png",
+           link_m3u8: "http://sdmx.vip:8080/belpley/sYqKZQrTZa/2092570.m3u8",
+           
+          },
+          {
+            id: 21,
+            nombre: "AmericaTv SD",
+            imagen: "../../ImagenesTV/americatv.jpeg",
+           link_m3u8: "http://sdmx.vip:8080/belpley/sYqKZQrTZa/10626.m3u8",
+           
+          },
+          {
+            id: 22,
+            nombre: "Cartoon Network",
+            imagen: "../../ImagenesTV/cartonnetwork.webp",
+           link_m3u8: "http://pro.boxdigital.org:8080/tinoco/QRe2QbFyQg/181756.m3u8",
+           
+          },
+          {
+            id: 23,
+            nombre: "History Chanel",
+            imagen: "../../ImagenesTV/historychanel.jpg",
+           link_m3u8: "http://sdmx.vip:8080/belpley/sYqKZQrTZa/192976.m3u8",
+           
+          },
+          {
+            id: 24,
+            nombre: "Dsport",
+            imagen: "../../ImagenesTV/directvsport.jpg",
+           link_m3u8: "http://sdmx.vip:8080/belpley/sYqKZQrTZa/202157.m3u8",
+           
+          },
+     
          
-      
           
       ],  
 

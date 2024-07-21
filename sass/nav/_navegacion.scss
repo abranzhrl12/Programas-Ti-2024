@@ -13,10 +13,7 @@
   position: fixed;
   z-index: 2;
   &__contenedor{
- 
   width: 100%; 
-
-
   }
   @include m.tablet {
     .lista {

@@ -28,9 +28,12 @@
     <link href="https://vjs.zencdn.net/8.10.0/video-js.css" rel="stylesheet" />
     <script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
     
+    <!-- <link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css">
+    <script src="https://cdn.plyr.io/3.6.8/plyr.polyfilled.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+  
 
-
-  </head>
+  </head>  Access-Control-Allow-Origin: *
   <body>
     
      <svg id="Capa_2" class="nombrelogo23" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1987.62 291.94">
@@ -197,11 +200,11 @@
     </section>
    
     <div class="videovivo-contenedor" >
-    
+      <video id="player" playsinline controls width="640" height="360"></video>
   </div>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-      <path fill="#195B62" fill-opacity="1" d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-    </svg>
+
+
+
 
     <footer class="footer">
       
@@ -253,5 +256,6 @@
   
       <span class="footer__copy">&copy2024 ProgramasTi.</span>
     </footer>
+  
   </body>
 </html>

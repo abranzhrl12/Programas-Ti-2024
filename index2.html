@@ -25,9 +25,41 @@
     <link rel="preload" href="Public/style.css" as="style" />
 
    <link rel="stylesheet" href="public/style.css" as="style">
-  
+   
+   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js" defer></script>
+
+   <link href="https://vjs.zencdn.net/8.16.1/video-js.css" rel="stylesheet" />
     <script src="/public/Pelis.js" defer></script>
- 
+
+  <style>
+
+
+
+swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+
+    swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+.portada{
+  object-position: 0px -12px;
+}
+
+  </style>
   </head>
   <body>
     <header class="header">
@@ -95,14 +127,25 @@
           </div>
         </div>
       </nav>
+      <div class="hero"> 
+        <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="false" space-between="30"
+        centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="false">
+        <swiper-slide><img src="./ImagenesTV/cesar.webp" alt="" class="portada"></swiper-slide>
+        <swiper-slide><img src="./ImagenesTV/dragon ball.webp" alt="" class="portada"></swiper-slide>
+        <swiper-slide><img src="./ImagenesTV/intensamente-2-lecciones.webp" alt="" class="portada"></swiper-slide>
+        <swiper-slide><img src="./ImagenesTV/descendants-3.jpg" alt="" class="portada"></swiper-slide>
+      </swiper-container>
+    </div>
+    
+     
     </header>
 
   
    
   <section class="Categorias">
     <div class="Categorias__contenedor">
-      <a href="#">Generos</a>
-      
+     
+      <h2 class="generos">Generos</h2>
     </div>
   </section>
   <Section class="Peliculas">
@@ -118,7 +161,7 @@
       </div>
     </section>
     <button hidden id="castButton">Cast</button>
-    <button id="fullscreenBtn">Pantalla Completa</button>
+    <button id="fullscreenBtn" >Pantalla Completa</button>
 </Section>
 
 <div id="Videosplay" class="DetallePrograma__ConVideo">
@@ -198,6 +241,9 @@ document.addEventListener('keydown', function(e) {
     }
 });
 
+
     </script>
+    
+   
   </body>
 </html>

@@ -35,3 +35,27 @@
   }
 }
 
+
+// @mixin gap($gap-size) {
+//   @if (display: flex) {
+//     display: flex;
+//     flex-wrap: wrap;
+//     @supports (gap: $gap-size) {
+//       gap: $gap-size;
+//     } @else {
+//       margin: -($gap-size / 2);
+
+//       & > * {
+//         margin: ($gap-size / 2);
+//       }
+//     }
+//   } @else if (display: grid) {
+//     display: grid;
+//     @supports (gap: $gap-size) {
+//       gap: $gap-size;
+//     } @else {
+//       grid-gap: $gap-size;
+//     }
+//   }
+// }
+// Define el mixin para grid con fallback a flex

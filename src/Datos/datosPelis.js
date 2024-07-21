@@ -2,6 +2,46 @@ export default {
     Peliculas: {
       Extreno: [
         {
+          id: 410,
+          nombre: "Immaculada 2024",
+          imagen: "../../Imagenes_Pelis/Immaculate.jpg",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+            Video: "https://iframe.mediadelivery.net/embed/261653/c9834c60-2585-4132-af7d-ebf2d07b8446",
+         
+        },
+        {
+          id: 411,
+          nombre: "Lisa Frankenstein 2024",
+          imagen: "../../Imagenes_Pelis/Lisa.Frankenstein.2024.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+            Video: "https://iframe.mediadelivery.net/embed/261653/6fac1415-642e-486a-b55f-a0e55a0686db",
+         
+        },
+        {
+          id: 412,
+          nombre: "Amigos Imaginarios (2024)",
+          imagen: "../../Imagenes_Pelis/Amigos.imaginarios.(2024).webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+            Video: "https://iframe.mediadelivery.net/embed/261653/7b9a8340-50a7-48ba-ab5c-712325bce518",
+         
+        },
+        {
+          id: 413,
+          nombre: "Furiosa De la Saga Mad.Max (2024)",
+          imagen: "../../Imagenes_Pelis/Furiosa.De.la.Saga.Mad.Max.(2024).webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+            Video: "https://iframe.mediadelivery.net/embed/261653/7b9a8340-50a7-48ba-ab5c-712325bce518",
+         
+        },
+        {
           id: 400,
           nombre: "Descendientes 4 (2024)",
           imagen: "../../Imagenes_Pelis/decendientes2024.webp",
@@ -12,6 +52,33 @@ export default {
          
         },
         {
+          id: 357,
+          nombre: "Descendientes 3",
+          imagen: "../../Imagenes_Pelis/Los descendientes 3 (2019).webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/8085d69e-0137-4602-8573-bb4bdfe3bb7d",
+        },
+        {
+          id: 358,
+          nombre: "Descendientes 2",
+          imagen: "../../Imagenes_Pelis/Los descendientes 2 (2017) (2).webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/bea964f4-32f9-4dc0-8c23-8fb9ed5be859",
+        },
+        {
+          id: 359,
+          nombre: "Descendientes 1",
+          imagen: "../../Imagenes_Pelis/Los descendientes1 (2).webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/2c83d9e8-bfd5-46ca-a35a-466082defa3b",
+        },
+        {
           id: 1,
           nombre: "Godzilla y Kong: El nuevo imperio",
           imagen: "../../Imagenes_Pelis/godzilla2024.webp",
@@ -20,6 +87,24 @@ export default {
             "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
             Video: "https://iframe.mediadelivery.net/embed/257368/54593201-b492-4b5b-8f44-85f8c39e80c0",
          
+        },
+        {
+          id: 356,
+          nombre: "Godzilla vs Kong (2021)",
+          imagen: "../../Imagenes_Pelis/Godzilla.vs.Kong.2021.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/bf1c5a19-5b66-43d6-99ef-c1552075506d",
+        },
+        {
+          id: 360,
+          nombre: "Godzilla 2 : El Rey de Los Monstruos",
+          imagen: "../../Imagenes_Pelis/godzilla_El_Rey_De_Los_Monstruos (2).webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/5b083208-249b-4b36-abaa-6e8935b3aae5",
         },
         {
           id: 2,
@@ -58,6 +143,15 @@ export default {
           Video: "https://iframe.mediadelivery.net/embed/261653/a79c96c3-547b-4e30-8c2d-613930bc555b",
         },
         {
+          id: 361,
+          nombre: "Sobrevivientes después del terremoto (2023)",
+          imagen: "../../Imagenes_Pelis/Sobrevivientes.después.del.terremoto.2023 (2).webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/24109fc9-c15f-4500-bfd0-431acccebd37",
+        },
+        {
           id: 148,
           nombre: "La Sirenita",
           imagen: "../../Imagenes_Pelis/lasirenitapelicula.webp",
@@ -66,6 +160,7 @@ export default {
             "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
           Video: "https://iframe.mediadelivery.net/embed/261653/e56995dd-071d-4c56-be26-6d8f150f872b",
         },
+        
         {
           id: 5,
           nombre: "Intensamente 2",
@@ -194,14 +289,42 @@ export default {
           Video: "https://iframe.mediadelivery.net/embed/261653/14610fed-2221-4058-ab24-72815a8473ee",
         },
         {
-          id: 275,
-          nombre: "La Monja 1",
-          imagen: "../../Imagenes_Pelis/lamonja1.webp",
+          id: 355,
+          nombre: "Guardianes de la Galaxia vol. 3",
+          imagen: "../../Imagenes_Pelis/Guardians.Of.The.Galaxy.Vol.3.webp",
           imagenX: "/imagenes/ilustrator.webp",
           Descripcion:
             "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
-          Video: "https://iframe.mediadelivery.net/embed/261653/36d6e6ee-1461-4305-af97-d4b8cb22af3e",
+          Video: "https://iframe.mediadelivery.net/embed/261653/37b70bc0-c1d0-4a35-af0d-ee55a445f0f2",
         },
+        {
+          id: 352,
+          nombre: "Super Mario Bros (2023)",
+          imagen: "../../Imagenes_Pelis/supermariobros2023.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/5f063302-fed1-4df1-96f0-9b06bfe1a600",
+        },
+        {
+          id: 353,
+          nombre: "Oppen Heimer 2023",
+          imagen: "../../Imagenes_Pelis/Oppenheimer.2023.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/b140ec67-a922-433a-8b3e-aac14e5008b7",
+        },
+        {
+          id: 354,
+          nombre: "Finch (2021)",
+          imagen: "../../Imagenes_Pelis/Finch (2021) (2).webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/f5e6fa06-534c-4d58-a654-0204d3d89b80",
+        },
+
         {
           id: 14,
           nombre: "Barbie",
@@ -863,7 +986,7 @@ export default {
           imagenX: "/imagenes/ilustrator.webp",
           Descripcion:
             "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
-          Video: "https://iframe.mediadelivery.net/embed/261653/b1859828-7235-4338-8d3d-7dacd91a1eae",
+          Video: "https://iframe.mediadelivery.net/embed/261653/bd68b67a-250b-4bea-b499-13f31849307d",
         },
         {
           id: 70,
@@ -911,6 +1034,15 @@ export default {
           Video: "https://iframe.mediadelivery.net/embed/261653/1a4b6966-1c32-43c3-b44d-9a342f076d5e",
         },
         {
+          id: 351,
+          nombre: "Iro man 3",
+          imagen: "../../Imagenes_Pelis/Iron_Man_3_Portada (2).webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/865aacd2-befa-4fc1-8d88-0e9b0c7e4aa7",
+        },
+        {
           id: 75,
           nombre: "deapool 1",
           imagen: "../../Imagenes_Pelis/deapool1.webp",
@@ -918,6 +1050,15 @@ export default {
           Descripcion:
             "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
           Video: "https://iframe.mediadelivery.net/embed/261653/b7bee605-0662-49aa-9ced-38747a039d92",
+        },
+        {
+          id: 350,
+          nombre: "deapool 2",
+          imagen: "../../Imagenes_Pelis/Deadpool 2 (2018) (2).webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/c1971947-07dc-40bd-b9d5-17fb217d57b3",
         },
         {
           id: 76,
@@ -964,6 +1105,173 @@ export default {
             "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
           Video: "https://iframe.mediadelivery.net/embed/261653/eae8c0cb-8adb-40f8-9caa-a90a2d41080d",
         },
+        {
+          id: 81,
+          nombre: "Dragon Ball Z La resurrección de Freezer (2015)",
+          imagen: "../../Imagenes_Pelis/Dragon Ball Z La resurrección de Freezer (2015).webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/6c70e043-94ff-452e-a80e-2186e62cbb00",
+        },
+        {
+          id: 82,
+          nombre: "Dragon Ball Z Los guerreros de plata (1993)",
+          imagen: "../../Imagenes_Pelis/Dragon Ball Z Los guerreros de plata (1993).webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/cef37b8c-6e4e-41a0-9eab-291f952048ed",
+        },
+        {
+          id: 83,
+          nombre: "Dragon Ball ZDevuélvanme a mi Gohan",
+          imagen: "../../Imagenes_Pelis/Dragon Ball ZDevuélvanme a mi Gohan.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/d8f7a148-baf4-409c-99ae-7c1d41be8bbd",
+        },
+       
+        {
+          id: 84,
+          nombre: "Dragon BallEl camino hacia el más fuerte (1996)",
+          imagen: "../../Imagenes_Pelis/Dragon BallEl camino hacia el más fuerte (1996).jpg",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/19981496-8ad3-42d6-aa0c-e36bde661bad",
+        },
+        {
+          id: 85,
+          nombre: "Dragon Ball Z La Fusión de Goku y Vegeta",
+          imagen: "../../Imagenes_Pelis/Dragon Ball Z La Fusión de Goku y Vegeta (2).webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/a0f19435-2443-4ca9-b52b-e693c833c38c",
+        },
+        {
+          id: 86,
+          nombre: "Dragon Ball La leyenda del dragón Shenron (1986)",
+          imagen: "../../Imagenes_Pelis/Dragon Ball La leyenda del dragón Shenron (1986).webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/6a27be2a-4ad1-4a5c-952e-fe8779dafb6b",
+        },
+        {
+          id: 87,
+          nombre: "Dragon Ball Z El más fuerte del mundo (1990)",
+          imagen: "../../Imagenes_Pelis/Dragon Ball Z El más fuerte del mundo (1990).webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/97b5140e-fe2d-427a-9395-1bc13a8bbe02",
+        },
+        {
+          id: 88,
+          nombre: "Dragon Ball Z Goku es un Super Saiyajin",
+          imagen: "../../Imagenes_Pelis/Dragon Ball Z Goku es un Super Saiyajin (2).webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/40ac62e8-db8c-44c6-8f9d-060f55b93951",
+        },
+        {
+          id: 89,
+          nombre: "Dragon Ball La princesa durmiente del castillo",
+          imagen: "../../Imagenes_Pelis/Dragon Ball La princesa durmiente del castillo.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/a37bf829-2f74-40a1-9263-14ab8c83849c",
+        },
+        {
+          id: 90,
+          nombre: "Dragon Ball Z La Pelea de los Tres Saiyajin",
+          imagen: "../../Imagenes_Pelis/Dragon_Ball_z_la_pelea_de_los_3_sayayins.jpg",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/616647e4-5706-4f0b-8c0c-b02ce4a7b8a2",
+        },
+        {
+          id: 91,
+          nombre: "Dragon Ball Z Los Guerreros más Poderosos",
+          imagen: "../../Imagenes_Pelis/Dragon Ball Z Los Guerreros más Poderosos.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/aab8fa46-3ee9-4637-9a8a-6d1ba1765622",
+        },
+        {
+          id: 92,
+          nombre: "Dragon Ball Z El Regreso del Guerrero Legendario",
+          imagen: "../../Imagenes_Pelis/Dragon Ball Z El Regreso del Guerrero Legendario.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/7aa2b287-44d6-4ebf-997b-c3ddfe1e0dde",
+        },
+        {
+          id: 93,
+          nombre: "Dragon Ball Z El ataque del dragón (1995)",
+          imagen: "../../Imagenes_Pelis/Dragon Ball Z El ataque del dragón (1995).webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/f2031b0f-f98c-44af-b794-d4557fa856e5",
+        },
+        {
+          id: 94,
+          nombre: "Dragon Ball Z La Galaxia Corre Peligro",
+          imagen: "../../Imagenes_Pelis/Dragon Ball Z La Galaxia Corre Peligro (2).webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/f285f135-ca2c-4b19-8e71-e025eef7f00b",
+        },
+        {
+          id: 95,
+          nombre: "Dragon Ball Z Estalla el duelo (1993)",
+          imagen: "../../Imagenes_Pelis/Dragon Ball Z Estalla el duelo (1993).webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/d0a710a7-2007-48fd-b5a5-00d11546e184",
+        },
+        {
+          id: 96,
+          nombre: "Terminator Destino oscuro (2019)",
+          imagen: "../../Imagenes_Pelis/Terminator Destino oscuro (2019) (2).webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/5a2726ae-5599-41ce-ad9e-2dc36a35d29c",
+        },
+        {
+          id: 97,
+          nombre: "Río 1",
+          imagen: "../../Imagenes_Pelis/Río.2011.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/520f5c86-569f-4088-a36e-6824665c02e2",
+        },
+
+
+
+
+
+
+        
+
+
+
+
+
+       
       ],  
     },
   };

@@ -58,7 +58,6 @@ function agregarCanal(linkCanal) {
     } catch (error) {
         console.error("Error al agregar el video:", error);
     }
+   
 }
-
-
 
