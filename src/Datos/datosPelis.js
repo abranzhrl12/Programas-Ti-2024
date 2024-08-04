@@ -474,7 +474,15 @@ export default {
             "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
           Video: "https://iframe.mediadelivery.net/embed/261653/26592292-6e2e-4091-8e63-710fb845c8ce",
         }, 
-        
+        {
+          id: 506,
+          nombre: "Eternals",
+          imagen: "../../Imagenes_Pelis/eternals.jpg",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/aa9b5a8f-8ec1-4ff2-896f-4050d5892ff2",
+        }, 
         {
           id: 72,
           nombre: "Shazam 2",
@@ -565,6 +573,24 @@ export default {
           Descripcion:
             "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
           Video: "https://iframe.mediadelivery.net/embed/261653/303a8128-668d-4fff-9ad1-7e33b56bd7ef",
+        },
+        {
+          id: 519,
+          nombre: "Free Guy 2021",
+          imagen: "../../Imagenes_Pelis/freeguy2021.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/062367c8-3720-44a9-b69e-a48c3a0ad960",
+        },
+        {
+          id: 520,
+          nombre: "Animales Fantasticos 2016",
+          imagen: "../../Imagenes_Pelis/animalesfantasticos1.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/735e17de-cb14-4b8a-b997-7ff31e5a3c09",
         },
         {
           id: 79,
@@ -658,6 +684,15 @@ export default {
           Video: "https://iframe.mediadelivery.net/embed/261653/951256b5-a352-4708-9f8e-6587a4c87a3f",
         },
         {
+          id: 304,
+          nombre: "Rapidos y Furiosos 10",
+          imagen: "../../Imagenes_Pelis/rapidosyfuriosos10.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "falta 10 8 7 6 5 4 3 2",
+          Video: "https://iframe.mediadelivery.net/embed/261653/0f874072-e3da-4602-ae71-317cd94280a4",
+        },
+        {
           id: 305,
           nombre: "Rapidos y Furiosos 9",
           imagen: "../../Imagenes_Pelis/rapidosyfuriosos9 (2).webp",
@@ -665,6 +700,60 @@ export default {
           Descripcion:
             "falta 10 8 7 6 5 4 3 2",
           Video: "https://iframe.mediadelivery.net/embed/261653/a4c8912c-ac28-4455-91c7-45481c09940d",
+        },
+        {
+          id: 306,
+          nombre: "Rapidos y Furiosos 8",
+          imagen: "../../Imagenes_Pelis/rapidosyfuriosos8.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "falta 10 8 7 6 5 4 3 2",
+          Video: "https://iframe.mediadelivery.net/embed/261653/9ea87955-4643-402f-953e-543628f6eb78",
+        },
+        {
+          id: 307,
+          nombre: "Rapidos y Furiosos 7",
+          imagen: "../../Imagenes_Pelis/rapidosyfuroisos7.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "falta 10 8 7 6 5 4 3 2",
+          Video: "https://iframe.mediadelivery.net/embed/261653/c2cb6886-74e3-401c-b7c7-370d8cfb73d0",
+        },
+        {
+          id: 308,
+          nombre: "Rapidos y Furiosos 6",
+          imagen: "../../Imagenes_Pelis/rapidosyfuriosos6.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "falta 10 8 7 6 5 4 3 2",
+          Video: "https://iframe.mediadelivery.net/embed/261653/2b4fac3c-05ce-4b76-a97b-a9ab1e2d745e",
+        },
+        {
+          id: 309,
+          nombre: "Rapidos y Furiosos 5",
+          imagen: "../../Imagenes_Pelis/rapidosyfuriosos5.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "falta 10 8 7 6 5 4 3 2",
+          Video: "https://iframe.mediadelivery.net/embed/261653/57e44ebe-ed30-4845-9a89-ea9f14363a57",
+        },
+        {
+          id: 310,
+          nombre: "Rapidos y Furiosos 4",
+          imagen: "../../Imagenes_Pelis/rapidosyfuriosos4.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "falta 10 8 7 6 5 4 3 2",
+          Video: "https://iframe.mediadelivery.net/embed/261653/b8406af0-b45f-468f-8fcb-e6c8c3b572c0",
+        },
+        {
+          id: 311,
+          nombre: "Rapidos y Furiosos 3",
+          imagen: "../../Imagenes_Pelis/rapidosyfuriosos3.jpg",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "falta 10 8 7 6 5 4 3 2",
+          Video: "https://iframe.mediadelivery.net/embed/261653/fc427100-74a3-4605-954f-d8225091d140",
         },
         {
           id: 312,
@@ -913,6 +1002,52 @@ export default {
           Video: "https://iframe.mediadelivery.net/embed/261653/39598aa1-350c-4093-af11-9f2c158cc3ee",
         },
         {
+          id: 370,
+          nombre: "Transformers: El último caballero",
+          imagen: "../../Imagenes_Pelis/transformers5 (2).webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/bdc603e2-ea1e-442c-a2ba-dca5cc35cb8f",
+        },
+        {
+          id: 371,
+          nombre: "Transformers: La era de la extinción",
+          imagen: "../../Imagenes_Pelis/transformers4.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/9942b7e8-4c28-4491-b1be-093ae732b3c2",
+        },
+        {
+          id: 372,
+          nombre: "Transformers: El lado oscuro de la luna",
+          imagen: "../../Imagenes_Pelis/transformers3.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/9fed87d3-a628-4634-98c9-c9c5f0bb0a43",
+        },
+        {
+          id: 373,
+          nombre: "Transformers: La venganza de los caídos",
+          imagen: "../../Imagenes_Pelis/transformers2.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/0f89c699-0bbd-40f7-9d4e-92c95991752d",
+        },
+        {
+          id: 374,
+          nombre: "Transformers 1",
+          imagen: "../../Imagenes_Pelis/transformers1.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/082e27c6-6860-4a68-82a0-79793cffc946",
+        },
+        
+        {
           id: 110,
           nombre: "Piratas del Caribe 1",
           imagen: "../../Imagenes_Pelis/Piratas_del_Caribe_La_maldiciaon_de_la_Perla_Negra.webp",
@@ -1067,6 +1202,51 @@ export default {
           Video: "https://iframe.mediadelivery.net/embed/261653/44f24f84-20dd-4f7f-95bb-6ea8e77f3f39",
         },
         {
+          id: 501,
+          nombre: "Capitán América Civil War 2016",
+          imagen: "../../Imagenes_Pelis/capitanamerica3.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/cd31ce7d-5414-46c7-acad-ca0a4e00633a",
+        }, 
+        {
+          id: 502,
+          nombre: "Capitán América Y El Soldado Del Invierno 2014",
+          imagen: "../../Imagenes_Pelis/capitanamerica2.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/fc44caad-52f2-4f33-aefa-67c8e3ad8722",
+        }, 
+        {
+          id: 503,
+          nombre: "Capitán América El Primer Vengador 2011",
+          imagen: "../../Imagenes_Pelis/capitanamerica1.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/43c147f3-dab9-4751-9120-b960d730d348",
+        }, 
+        {
+          id: 504,
+          nombre: "Venom 2",
+          imagen: "../../Imagenes_Pelis/venom2.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/dc84ccdd-3d3b-4ba9-9a10-7d705ebc593e",
+        }, 
+        {
+          id: 505,
+          nombre: "Venom 1",
+          imagen: "../../Imagenes_Pelis/venom1.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/8b11ac22-b05e-43f1-be94-c8798c308d34",
+        },
+        {
           id: 127,
           nombre: "Avengers: La hera de Ultron",
           imagen: "../../Imagenes_Pelis/avengerslaeradeultron2015.webp",
@@ -1138,6 +1318,33 @@ export default {
             "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
           Video: "https://iframe.mediadelivery.net/embed/261653/d9f52c19-1195-4d39-b391-f46b4d76bc0e",
         },
+        {
+          id: 500,
+          nombre: "Thor Ragnarok",
+          imagen: "../../Imagenes_Pelis/thorragnarok.jpg",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/9aac63d0-82a9-4320-990f-39f338315bb0",
+        },
+        {
+          id: 501,
+          nombre: "Black Panther  2",
+          imagen: "../../Imagenes_Pelis/blackpanter2.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/dcf24f18-a15e-4ec0-a2f4-c93c1f853d2f",
+        },
+        {
+          id: 500,
+          nombre: "Black Panther  2",
+          imagen: "../../Imagenes_Pelis/blackpanter1.jpeg",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/a27eeec5-7175-46d1-987f-d1b2b2ce0f1e",
+        },  
         {
           id: 135,
           nombre: "Black Widow",
@@ -1263,6 +1470,15 @@ export default {
           Descripcion:
             "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
           Video: "https://iframe.mediadelivery.net/embed/261653/6adeb728-ee2d-44a1-a48b-2182f5a93b42",
+        },
+        {
+          id: 522,
+          nombre: "Batman vs Superman",
+          imagen: "../../Imagenes_Pelis/batmanvssuperman (2).webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/95ed937b-358b-448b-9091-7a929abcc78d",
         },
         {
           id: 149,
@@ -1517,19 +1733,143 @@ export default {
             "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
           Video: "https://iframe.mediadelivery.net/embed/261653/78437cf0-4df1-4418-b80f-3bfc2773bb73",
         },
-
-
-
-     
-
+        {
+          id: 171,
+          nombre: "Asu Mare 3",
+          imagen: "../../Imagenes_Pelis/asu_mare3.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/48dbc61b-686f-46e9-8fdc-2f101e39d445",
+        },
+        {
+          id: 172,
+          nombre: "Asu Mare 2",
+          imagen: "../../Imagenes_Pelis/asu_mare_2.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/9dbc3a31-7a0c-4cca-bf85-a43343437693",
+        },
+        {
+          id: 171,
+          nombre: "Asu Mare 1",
+          imagen: "../../Imagenes_Pelis/asu_mare1.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/7064a824-4006-4221-bdbe-4a352618d1c3",
+        },
+        {
+          id: 172,
+          nombre: "Scary Movie 5",
+          imagen: "../../Imagenes_Pelis/scarymovie5.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/2c309bfa-72b6-44e3-9240-5967f254dca9",
+        },
+        {
+          id: 173,
+          nombre: "Scary Movie 4",
+          imagen: "../../Imagenes_Pelis/scarymovie4.jpg",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/547ed7b4-8ace-485e-8809-407c52f19a68",
+        },
+        {
+          id: 174,
+          nombre: "Scary Movie 3",
+          imagen: "../../Imagenes_Pelis/scarymovie3.jpg",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/189dc069-aa05-4351-ae60-11ceba03abcc",
+        },
+        {
+          id: 175,
+          nombre: "Scary Movie 2",
+          imagen: "../../Imagenes_Pelis/scarymovie2.jpg",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/4ecd06b4-9c95-4233-80b7-af555bbb1c5e",
+        },
+        {
+          id: 176,
+          nombre: "Scary Movie 1",
+          imagen: "../../Imagenes_Pelis/scarymovie1.jpg",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/258a295a-ac34-4e24-a268-ec8fb31f3c51",
+        },
+        {
+          id: 177,
+          nombre: "Cómo Entrenar A Tu Dragón 3",
+          imagen: "../../Imagenes_Pelis/como_entrenar_a_tu_dragon3.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/38a22b5d-d7e8-49f4-81bc-2234d6364a23",
+        },
+        {
+          id: 178,
+          nombre: "Cómo Entrenar A Tu Dragón 2",
+          imagen: "../../Imagenes_Pelis/como_entrenar_a_tu_dragon2.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/d496ff68-9307-4f58-a3fc-adc230df5551",
+        },
+        {
+          id: 179,
+          nombre: "Cómo Entrenar A Tu Dragón 1",
+          imagen: "../../Imagenes_Pelis/como_entrenar_a_tu_dragon.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/79dfb1df-eca6-470b-8fc3-8aeb5c676554",
+        },
+        {
+          id: 180,
+          nombre: "Interstellar 2014",
+          imagen: "../../Imagenes_Pelis/interstellar1.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/34b54458-b0eb-44de-b77b-7402d40ab211",
+        },   
+        {
+          id: 181,
+          nombre: "Angry Birds 2",
+          imagen: "../../Imagenes_Pelis/angrybirds2.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/6bed7979-3caf-4388-a7d4-d569469e96b1",
+        },  
+        {
+          id: 182,
+          nombre: "Angry Birds 1",
+          imagen: "../../Imagenes_Pelis/angrybirds1.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/560dc09f-3a97-481d-bd26-8ea55c2d8584",
+        },  
+        {
+          id: 183,
+          nombre: "Tren Bala",
+          imagen: "../../Imagenes_Pelis/trenbala.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/967790df-966c-4ecb-9f56-8ce5ea0e255d",
+        },
 
         
-
-
-
-
-
-       
       ],  
     },
   };
