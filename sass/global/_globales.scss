@@ -25,6 +25,7 @@ html {
 [class*="__img"] {
   display: block;
   max-width: 100%;
+  filter: contrast(115%) saturate(106%) brightness(103%);
 }
 body {
   width: 100%;

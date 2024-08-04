@@ -1499,6 +1499,15 @@ export default {
           Video: "https://iframe.mediadelivery.net/embed/261653/1aea5910-dc70-4c9f-90e4-dd4612e661b2",
         },
         {
+          id: 600,
+          nombre: "Dragon Ball Super Super Hero 2022",
+          imagen: "../../Imagenes_Pelis/Dragon_Ball_Super_Super_Hero2022 (2).webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/218e0a98-2bdc-45df-aa71-4f0041d7cb47",
+        },
+        {
           id: 151,
           nombre: "Dragon Ball Super Broly",
           imagen: "../../Imagenes_Pelis/dragonballsuperbroly.webp",
@@ -1507,6 +1516,7 @@ export default {
             "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
           Video: "https://iframe.mediadelivery.net/embed/261653/eae8c0cb-8adb-40f8-9caa-a90a2d41080d",
         },
+      
         {
           id: 152,
           nombre: "Dragon Ball Z La resurrección de Freezer (2015)",
@@ -1517,6 +1527,44 @@ export default {
           Video: "https://iframe.mediadelivery.net/embed/261653/6c70e043-94ff-452e-a80e-2186e62cbb00",
         },
         {
+          id: 601,
+          nombre: "Dragon Ball Z La Batalla de los Dioses",
+          imagen: "../../Imagenes_Pelis/Dragon.Ball.Z.La.Batalla.de.los.Dioses.2013 (2) (2).webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/5afb9a74-23f9-45b9-8099-1bf2b25c7f2a",
+        },
+        {
+          id: 602,
+          nombre: "Dragon Ball Z El Combate Final 1994",
+          imagen: "../../Imagenes_Pelis/Dragon.Ball.Z.El.Combate.Final1994 (2) (2).webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/87b37c55-abd4-4098-bcb5-ee2d3bb54d72",
+        },
+        {
+          id: 603,
+          nombre: "Dragon Ball Z Freezer vs el Padre de Goku",
+          imagen: "../../Imagenes_Pelis/Dragon.Ball.Z.La.Batalla.de.Freezer.contra.el.Padre.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/ccf1655b-b7b8-420f-8607-5e715b5dd005",
+        },
+        {
+          id: 604,
+          nombre: "Dragon Ball Z La super batalla (1990)",
+          imagen: "../../Imagenes_Pelis/Dragon Ball ZLa super batalla (película 1990).webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/a820e4e0-e782-44da-aba8-273336296b92",
+        },
+
+        
+        {
           id: 153,
           nombre: "Dragon Ball Z Los guerreros de plata (1993)",
           imagen: "../../Imagenes_Pelis/Dragon Ball Z Los guerreros de plata (1993).webp",
@@ -1525,6 +1573,8 @@ export default {
             "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
           Video: "https://iframe.mediadelivery.net/embed/261653/cef37b8c-6e4e-41a0-9eab-291f952048ed",
         },
+
+        
         {
           id: 154,
           nombre: "Dragon Ball ZDevuélvanme a mi Gohan",
@@ -1616,6 +1666,7 @@ export default {
             "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
           Video: "https://iframe.mediadelivery.net/embed/261653/7aa2b287-44d6-4ebf-997b-c3ddfe1e0dde",
         },
+        
         {
           id: 164,
           nombre: "Dragon Ball Z El ataque del dragón (1995)",
@@ -1752,7 +1803,7 @@ export default {
           Video: "https://iframe.mediadelivery.net/embed/261653/9dbc3a31-7a0c-4cca-bf85-a43343437693",
         },
         {
-          id: 171,
+          id: 173,
           nombre: "Asu Mare 1",
           imagen: "../../Imagenes_Pelis/asu_mare1.webp",
           imagenX: "/imagenes/ilustrator.webp",
@@ -1761,7 +1812,7 @@ export default {
           Video: "https://iframe.mediadelivery.net/embed/261653/7064a824-4006-4221-bdbe-4a352618d1c3",
         },
         {
-          id: 172,
+          id: 174,
           nombre: "Scary Movie 5",
           imagen: "../../Imagenes_Pelis/scarymovie5.webp",
           imagenX: "/imagenes/ilustrator.webp",
@@ -1770,7 +1821,7 @@ export default {
           Video: "https://iframe.mediadelivery.net/embed/261653/2c309bfa-72b6-44e3-9240-5967f254dca9",
         },
         {
-          id: 173,
+          id: 175,
           nombre: "Scary Movie 4",
           imagen: "../../Imagenes_Pelis/scarymovie4.jpg",
           imagenX: "/imagenes/ilustrator.webp",
@@ -1779,7 +1830,7 @@ export default {
           Video: "https://iframe.mediadelivery.net/embed/261653/547ed7b4-8ace-485e-8809-407c52f19a68",
         },
         {
-          id: 174,
+          id: 176,
           nombre: "Scary Movie 3",
           imagen: "../../Imagenes_Pelis/scarymovie3.jpg",
           imagenX: "/imagenes/ilustrator.webp",
@@ -1788,7 +1839,7 @@ export default {
           Video: "https://iframe.mediadelivery.net/embed/261653/189dc069-aa05-4351-ae60-11ceba03abcc",
         },
         {
-          id: 175,
+          id: 177,
           nombre: "Scary Movie 2",
           imagen: "../../Imagenes_Pelis/scarymovie2.jpg",
           imagenX: "/imagenes/ilustrator.webp",
@@ -1797,7 +1848,7 @@ export default {
           Video: "https://iframe.mediadelivery.net/embed/261653/4ecd06b4-9c95-4233-80b7-af555bbb1c5e",
         },
         {
-          id: 176,
+          id: 178,
           nombre: "Scary Movie 1",
           imagen: "../../Imagenes_Pelis/scarymovie1.jpg",
           imagenX: "/imagenes/ilustrator.webp",
@@ -1806,7 +1857,7 @@ export default {
           Video: "https://iframe.mediadelivery.net/embed/261653/258a295a-ac34-4e24-a268-ec8fb31f3c51",
         },
         {
-          id: 177,
+          id: 179,
           nombre: "Cómo Entrenar A Tu Dragón 3",
           imagen: "../../Imagenes_Pelis/como_entrenar_a_tu_dragon3.webp",
           imagenX: "/imagenes/ilustrator.webp",
@@ -1815,7 +1866,7 @@ export default {
           Video: "https://iframe.mediadelivery.net/embed/261653/38a22b5d-d7e8-49f4-81bc-2234d6364a23",
         },
         {
-          id: 178,
+          id: 180,
           nombre: "Cómo Entrenar A Tu Dragón 2",
           imagen: "../../Imagenes_Pelis/como_entrenar_a_tu_dragon2.webp",
           imagenX: "/imagenes/ilustrator.webp",
@@ -1824,7 +1875,7 @@ export default {
           Video: "https://iframe.mediadelivery.net/embed/261653/d496ff68-9307-4f58-a3fc-adc230df5551",
         },
         {
-          id: 179,
+          id: 181,
           nombre: "Cómo Entrenar A Tu Dragón 1",
           imagen: "../../Imagenes_Pelis/como_entrenar_a_tu_dragon.webp",
           imagenX: "/imagenes/ilustrator.webp",
@@ -1833,7 +1884,7 @@ export default {
           Video: "https://iframe.mediadelivery.net/embed/261653/79dfb1df-eca6-470b-8fc3-8aeb5c676554",
         },
         {
-          id: 180,
+          id: 182,
           nombre: "Interstellar 2014",
           imagen: "../../Imagenes_Pelis/interstellar1.webp",
           imagenX: "/imagenes/ilustrator.webp",
@@ -1842,7 +1893,7 @@ export default {
           Video: "https://iframe.mediadelivery.net/embed/261653/34b54458-b0eb-44de-b77b-7402d40ab211",
         },   
         {
-          id: 181,
+          id: 183,
           nombre: "Angry Birds 2",
           imagen: "../../Imagenes_Pelis/angrybirds2.webp",
           imagenX: "/imagenes/ilustrator.webp",
@@ -1851,7 +1902,7 @@ export default {
           Video: "https://iframe.mediadelivery.net/embed/261653/6bed7979-3caf-4388-a7d4-d569469e96b1",
         },  
         {
-          id: 182,
+          id: 184,
           nombre: "Angry Birds 1",
           imagen: "../../Imagenes_Pelis/angrybirds1.webp",
           imagenX: "/imagenes/ilustrator.webp",
@@ -1860,7 +1911,7 @@ export default {
           Video: "https://iframe.mediadelivery.net/embed/261653/560dc09f-3a97-481d-bd26-8ea55c2d8584",
         },  
         {
-          id: 183,
+          id: 185,
           nombre: "Tren Bala",
           imagen: "../../Imagenes_Pelis/trenbala.webp",
           imagenX: "/imagenes/ilustrator.webp",
