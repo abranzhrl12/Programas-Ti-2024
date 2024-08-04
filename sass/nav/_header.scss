@@ -1,11 +1,35 @@
+@use "../global/mixin" as m;
 .hero{
     width: 100%;
     margin-top: 8rem;
-    height: 45rem;
-
+    height: 21rem;
+    @include m.tablet {
+        height: 40rem;
+    }
+    @include m.desktop {
+        height: 44rem;
+    }
+    @include m.desktopFull {
+        height: 52rem;
+    }
 }
 
 .generos{
-    margin-top: 3rem;
-    margin-bottom: -8rem;
+    margin-top: 2rem;
+    margin-bottom: -10rem;
 }
+.portada{
+    max-width: 100%;
+    // object-position: 0px 21rem;
+     object-fit: cover; 
+     @include m.desktop {
+     
+        object-fit: cover; 
+        object-position: 0px 13rem;
+    }
+    @include m.desktopFull {
+        object-fit: cover; 
+        object-position: 0px 20rem;
+    }
+    }
+  

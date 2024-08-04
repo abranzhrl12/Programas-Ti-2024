@@ -15,7 +15,7 @@ const db = getFirestore(firebaseApp);
 export async function verificarCredenciales(email, password) {
   try {
     // Consulta para buscar usuarios con el email y contraseña especificados
-    const usersRef = collection(db, 'Usuarios');
+    const usersRef = collection(db, 'usuarios');
     const q = query(usersRef, where('usuario', '==', email), where('contraseña', '==', password));
     const querySnapshot = await getDocs(q);
 
