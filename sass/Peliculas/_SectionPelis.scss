@@ -13,8 +13,8 @@
         grid-template-columns: repeat(auto-fit, minmax(16.5rem,min-content));
         grid-template-rows: repeat(22rem);
         place-content: center;
-        row-gap: 2.2rem;
-        column-gap: 2.2rem;
+        row-gap: 2.5rem;
+        column-gap: 1.5rem;
   
         @supports (display: grid) {
             grid-template-columns: repeat(auto-fit, minmax(16.5rem, min-content));

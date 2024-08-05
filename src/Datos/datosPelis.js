@@ -457,6 +457,45 @@ export default {
           Video: "https://iframe.mediadelivery.net/embed/261653/e769eda7-c89a-4c58-a825-6f87e901d443",
         },
         {
+          id: 680,
+          nombre: "Red 2022",
+          imagen: "../../Imagenes_Pelis/red2022.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/df0dc4ed-04c7-41c0-b668-92b4fe22fcb0",
+        },
+        {
+          id: 681,
+          nombre: "Raya El Ultimo Dragon",
+          imagen: "../../Imagenes_Pelis/raya2021.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/4a1f74e2-fb96-421a-b781-b7832c6b0f04",
+        },
+        {
+          id: 682,
+          nombre: "Los Increibles 2",
+          imagen: "../../Imagenes_Pelis/losincreibles2.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/ab797c23-913d-40e8-9c06-5b524e51a57d",
+        },
+        {
+          id: 683,
+          nombre: "Los Increibles 1",
+          imagen: "../../Imagenes_Pelis/losincreibles1 (2).webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/a0548cfe-6e2e-40a8-9a4f-39a3afbef432",
+        },
+
+
+
+        {
           id: 70,
           nombre: "Avatar 2",
           imagen: "../../Imagenes_Pelis/avatar2-poste2023.webp",
@@ -690,7 +729,7 @@ export default {
           imagenX: "/imagenes/ilustrator.webp",
           Descripcion:
             "falta 10 8 7 6 5 4 3 2",
-          Video: "https://iframe.mediadelivery.net/embed/261653/0f874072-e3da-4602-ae71-317cd94280a4",
+          Video: "https://iframe.mediadelivery.net/embed/261653/29b72ab8-59ff-4f11-a20b-1f9930d57419",
         },
         {
           id: 305,
@@ -1273,6 +1312,16 @@ export default {
             "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
           Video: "https://iframe.mediadelivery.net/embed/261653/0a5c11b4-2668-41ab-b96e-8c5db625a66c",
         },
+     
+        {
+          id: 660,
+          nombre: "The Marvel",
+          imagen: "../../Imagenes_Pelis/capitanaamarvel2.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/d8ab1f50-d037-4332-aaa5-9b13fd5a3104",
+        },
         {
           id: 130,
           nombre: "Kong: La Isla Calavera",
@@ -1281,6 +1330,15 @@ export default {
           Descripcion:
             "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
           Video: "https://iframe.mediadelivery.net/embed/261653/d0b28bc6-846c-4016-a5a0-96ab7a5be4cf",
+        },
+        {
+          id: 661,
+          nombre: "Capitana Marvel",
+          imagen: "../../Imagenes_Pelis/capitanaamarvel1 (2).webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/25c8b7e4-deca-42be-8533-28797e54ef7c",
         },
         {
           id: 131,
@@ -1845,7 +1903,7 @@ export default {
           imagenX: "/imagenes/ilustrator.webp",
           Descripcion:
             "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
-          Video: "https://iframe.mediadelivery.net/embed/261653/4ecd06b4-9c95-4233-80b7-af555bbb1c5e",
+          Video: "https://iframe.mediadelivery.net/embed/261653/4d72e63c-72d1-4a19-bf82-7222edd3e794",
         },
         {
           id: 178,
@@ -1919,6 +1977,140 @@ export default {
             "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
           Video: "https://iframe.mediadelivery.net/embed/261653/967790df-966c-4ecb-9f56-8ce5ea0e255d",
         },
+        {
+          id: 186,
+          nombre: "Furia de Titanes 2",
+          imagen: "../../Imagenes_Pelis/furiadetitanes2.jpg",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/9779470b-c978-4b32-b965-74795b1f33ca",
+        },
+        {
+          id: 187,
+          nombre: "Furia de Titanes 1",
+          imagen: "../../Imagenes_Pelis/furiadetitanes1.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/e8f73b21-1682-4784-91c0-5159fd01f602",
+        },
+        {
+          id: 188,
+          nombre: "El abuelo sinvergüenza",
+          imagen: "../../Imagenes_Pelis/elabuelosinverguenza.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/a6421839-9020-4b74-beaf-3f20a2a52159",
+        },
+      
+        {
+          id: 189,
+          nombre: "La Sirenita 1",
+          imagen: "../../Imagenes_Pelis/lasirenita1 (2).webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/66945366-5d05-4919-84fc-19bfab87e3b6",
+        },
+        {
+          id: 190,
+          nombre: "La Sirenita 2",
+          imagen: "../../Imagenes_Pelis/lasirenita2 (2).webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/78cd77fb-9404-476f-b1ce-6773bbfe8344",
+        },
+        {
+          id: 191,
+          nombre: "La Sirenita 3",
+          imagen: "../../Imagenes_Pelis/lasirenita3.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/eaf65b4e-d94e-4644-bebb-737c3214d071",
+        },
+        {
+          id: 192,
+          nombre: "Inframundo 1",
+          imagen: "../../Imagenes_Pelis/inframundo1 (2).webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/76292a56-f1e8-4751-a0dd-bd066723b723",
+        },
+
+
+        {
+          id: 193,
+          nombre: "Inframundo 2",
+          imagen: "../../Imagenes_Pelis/inframundo2 (2).webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/7d98c8e9-8f80-415a-94e9-f8ab94b58e5a",
+        },
+        
+        {
+          id: 194,
+          nombre: "Inframundo 3",
+          imagen: "../../Imagenes_Pelis/inframundo3.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/85f59a22-19d6-4f70-a08b-478a85273cc8",
+        },
+     
+        {
+          id: 195,
+          nombre: "Inframundo 4",
+          imagen: "../../Imagenes_Pelis/inframundo4.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/88cce4aa-c3bb-4e48-9759-f990da0a693d",
+        },
+        {
+          id: 196,
+          nombre: "Inframundo 5",
+          imagen: "../../Imagenes_Pelis/inframundo5 (2).webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/97bde54d-57fa-4222-a74f-79f245b965a9",
+        },
+        {
+          id: 197,
+          nombre: "Jhon Carter",
+          imagen: "../../Imagenes_Pelis/johnCARTER.jpg",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/694a5f48-4692-4364-ab68-f5d5967f7f36",
+        },
+        {
+          id: 198,
+          nombre: "Ted 2",
+          imagen: "../../Imagenes_Pelis/ted2.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/80df0ddd-90e4-41a5-8ac1-174fb1fbb09f",
+        },
+        {
+          id: 199,
+          nombre: "Ted 1",
+          imagen: "../../Imagenes_Pelis/ted1.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/7fa95c2b-1600-4c94-964a-19818f64d79f",
+        },
+     
+     
+     
 
         
       ],  
