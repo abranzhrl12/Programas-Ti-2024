@@ -1,0 +1,61 @@
+@use './../global/mixin' as m;
+
+.buscar-pelicula{
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    z-index: 10;
+    display: none;
+    box-shadow: 4px 0px 6px rgba(0, 0, 0, 0.1);;
+    &--active{
+       display: block; 
+    }
+    &__contenedor{
+
+    }
+    .buscar{
+        width: 100%;
+        height: auto;
+        padding: 2rem;
+        display: flex;
+        gap: 2rem;
+       
+        &__input{
+            width: 100%;
+            padding: 1.5rem 1rem;
+            border-radius: 1.5rem;
+            border: none;
+            outline: .1rem  solid grey;
+            box-shadow: 5px 5px 20px #d8e6fd, -5px -5px 30px rgba(255, 255, 255, 0.705);
+            
+        }
+      
+    }
+ 
+   
+  
+}
+.busqueda-label{
+    width: 50%;
+    
+    padding: 0 1.5rem;
+        @include m.tablet {
+        width: 35%; 
+        padding: unset;
+        background-color: transparent;
+    }
+    @include m.desktop {
+        width: 72%;
+    }
+    
+}
+
+.icono-busqueda{
+    display: block;
+    width: 2.1rem;
+    cursor: pointer;
+    margin-left: auto;
+    align-content: center;
+    margin-top: -.2rem; 
+}

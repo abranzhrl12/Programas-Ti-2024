@@ -393,6 +393,33 @@ export default {
           Video: "https://iframe.mediadelivery.net/embed/261653/a9981311-1a62-4b33-8f03-49671f8d8aca",
         },
         {
+          id: 802,
+          nombre: "Ant-Man y la Avispa: Quantumanía 2023",
+          imagen: "../../Imagenes_Pelis/atman3.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/e331dc46-cf09-47e8-809b-692eab8bf55f",
+        },
+        {
+          id: 803,
+          nombre: "Ant-Man y La Avispa 2018",
+          imagen: "../../Imagenes_Pelis/atman2.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/efc70612-3bba-47fc-a7be-4e7d3f824d10",
+        },
+        {
+          id: 804,
+          nombre: "Ant-Man El hombre hormiga 2015",
+          imagen: "../../Imagenes_Pelis/atman.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/379422c9-3ae0-417e-8fb3-14ad18ba3b07",
+        },
+        {
           id: 63,
           nombre: "Super Mario Bros (2023)",
           imagen: "../../Imagenes_Pelis/supermariobros2023.webp",
@@ -438,6 +465,16 @@ export default {
             "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
           Video: "https://iframe.mediadelivery.net/embed/261653/6f497905-c7ca-4edf-b937-471e29e8c737",
         },
+        {
+          id: 808,
+          nombre: "Dora La Ciudad Peridad",
+          imagen: "../../Imagenes_Pelis/doralaciudadperdida (2).webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/2e3c3da2-f719-45c6-9747-18f06812bb8d",
+        },
+
         {
           id: 68,
           nombre: "Encanto(2021)",
@@ -1386,6 +1423,24 @@ export default {
           Video: "https://iframe.mediadelivery.net/embed/261653/9aac63d0-82a9-4320-990f-39f338315bb0",
         },
         {
+          id: 800,
+          nombre: "Thor un mundo oscuro 2013",
+          imagen: "../../Imagenes_Pelis/thor2.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/5dfbc725-f532-42e2-bbcb-6a50b5437a10",
+        },
+        {
+          id: 801,
+          nombre: "Thor 2011",
+          imagen: "../../Imagenes_Pelis/thor1.jpg",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/24e51db4-3a27-4286-8bab-5c13a64aa516",
+        },
+        {
           id: 501,
           nombre: "Black Panther  2",
           imagen: "../../Imagenes_Pelis/blackpanter2.webp",
@@ -2108,6 +2163,54 @@ export default {
             "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
           Video: "https://iframe.mediadelivery.net/embed/261653/7fa95c2b-1600-4c94-964a-19818f64d79f",
         },
+        {
+          id: 200,
+          nombre: "Boruto",
+          imagen: "../../Imagenes_Pelis/borutopelicula.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/f7e3bc90-a48c-4b35-85d5-8f6af88c6a6a",
+        },
+        
+        {
+          id: 201,
+          nombre: "Crepúsculo Luna nueva 2009",
+          imagen: "../../Imagenes_Pelis/crepusculosagaluna (2).webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/1c95f49a-f4da-4f24-a25c-a413b8b05dfb",
+        },
+       
+        {
+          id: 202,
+          nombre: "Crepúsculo Eclipse 2010",
+          imagen: "../../Imagenes_Pelis/crepusculosagaluna (2).webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/9fc9e526-840d-44ba-a07f-e86c6f8b0d0c",
+        },
+        {
+          id: 203,
+          nombre: "Crepúsculo  Amanecer - Parte 1",
+          imagen: "../../Imagenes_Pelis/crepusculoelamanecer1.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/61c1a931-1689-4155-aba6-e25b417d92d7",
+        },
+        {
+          id: 204,
+          nombre: "La saga Crepúsculo  Amanecer - Parte 2",
+          imagen: "../../Imagenes_Pelis/crepusculoelamanecer2.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/b8fce20e-4a8a-47e9-95d1-80abb37b5913",
+        },
+     
      
      
      
