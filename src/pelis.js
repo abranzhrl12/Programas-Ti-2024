@@ -27,180 +27,194 @@ let herramientasAbiertasPrevias = false;
 let view2=window.innerWidth;
 
 let view=window.innerWidth;
-
-function agregarPeliculasAlGrid(peliculas) {
-    generarPeliculas(peliculas);
-
-    try {
-        const grid = document.querySelector('.Peliculas__grid');
-        grid.addEventListener('click', async (event) => {
-            const tarjeta = event.target.closest('.Peliculas__card');
-        
-            // Verificar si el usuario está autenticado y obtener sus datos
-            const usuarioActual = cargarDatosUsuario();
-            console.log("Usuario actual:", usuarioActual);
-
-            if (usuarioActual && usuarioActual.usuario && usuarioActual.contraseña) {
-                console.log('Usuario autenticado:', usuarioActual.usuario);
-                if (tarjeta) {
-                    const idPelicula = tarjeta.getAttribute('data-id');
-                    const peliculaSeleccionada = peliculas.find(pelicula => pelicula.id == idPelicula);
-                    if (peliculaSeleccionada) {
-                        // Comparar los datos del usuario con los datos en Firebase para la película seleccionada
-                        const authenticated = await verificarCredenciales(usuarioActual.usuario, usuarioActual.contraseña);
-                        
-                        if (authenticated) {
-                            // Si los datos coinciden, cargar el video de la película seleccionada
-                            await cargarVideoPelicula(peliculaSeleccionada.Video);
-                            const irVideo=document.querySelector("#fullscreenBtn")
-                            console.log(irVideo)
-                            irVideo.scrollIntoView({ behavior: 'smooth' });
-                        } else {
-                            // Si los datos no coinciden, redirigir al usuario a la página de inicio de sesión
-                            console.log('Los datos del usuario en localStorage no coinciden con los datos en Firebase.');
-                             window.location.href = 'login.html';
-                        }
-                    }
-                }
-            } else {
-                console.log('No se encontraron datos de usuario guardados o el usuario no está autenticado.');
-                
-                // Redirigir a la página de inicio de sesión si el usuario no está autenticado
-                window.location.href = 'login.html'; 
-            }
-        });
-    } catch (error) {
-        console.error('Error al manejar el evento click en la tarjeta:', error);
-    }
-}
 const iconobusqueda = document.querySelector('.busqueda-label');
 const buscarPelicula = document.querySelector('.buscar-pelicula');
 const buscarPeliculaInput = document.querySelector('.buscar__input');
+const btnBuscarPelicula = document.querySelector('.buscar__btn');
+const seccionPeliculas = document.querySelector('.Peliculas');
 
-iconobusqueda.addEventListener('click', () => {
-  buscarPelicula.classList.add('buscar-pelicula--active');
-  buscarPeliculaInput.focus();
-  console.log('Icono de búsqueda clicado, input activado.');
-});
-
-// Función para filtrar las películas por nombre
-function filtrarPeliculasPorNombre(nombre) {
-  if (!peliculas || !Array.isArray(peliculas)) {
-    console.error("La variable 'peliculas' no está definida o no es un array.");
-    return [];
-  }
-
-  return peliculas.filter(pelicula => {
-    if (pelicula && pelicula.nombre) {
-      return pelicula.nombre.toLowerCase().includes(nombre.toLowerCase());
-    } else {
-      console.warn("Un objeto en 'peliculas' no tiene la propiedad 'nombre'.", pelicula);
-      return false;
-    }
-  });
-}
-
-function actualizarPeliculas() {
-  const nombre = buscarPeliculaInput.value.trim(); // Eliminamos espacios en blanco
-  console.log('Valor de búsqueda:', nombre);
-
-  if (nombre === '') {
-    // Si el campo de búsqueda está vacío, mostrar todas las películas
-    paginaActual = 1; // Restablecer a la primera página
+function agregarPeliculasAlGrid(peliculas) {
     generarPeliculas(peliculas);
-    generarPaginacion(peliculas);
-  } else {
-    const peliculasFiltradas = filtrarPeliculasPorNombre(nombre);
-    console.log('Películas filtradas:', peliculasFiltradas);
-    paginaActual = 1; // Restablecer a la primera página
-    generarPeliculas(peliculasFiltradas);
-    generarPaginacion(peliculasFiltradas); // Actualizar la paginación según las películas filtradas
+  
+    try {
+      const grid = document.querySelector('.Peliculas__grid');
+      grid.addEventListener('click', async (event) => {
+        event.preventDefault();
+        
+        const tarjeta = event.target.closest('.Peliculas__card');
+        if (!tarjeta) return; // Solo continuar si se hizo clic en una tarjeta
+  
+        // Limpiar el input de búsqueda
+        buscarPeliculaInput.value = '';
+        generarPeliculas(peliculas);
+        generarPaginacion(peliculas);
+  
+        // Verificar si el usuario está autenticado y obtener sus datos
+        const usuarioActual = cargarDatosUsuario();
+        console.log("Usuario actual:", usuarioActual);
+  
+        if (usuarioActual && usuarioActual.usuario && usuarioActual.contraseña) {
+          console.log('Usuario autenticado:', usuarioActual.usuario);
+          const idPelicula = tarjeta.getAttribute('data-id');
+          const peliculaSeleccionada = peliculas.find(pelicula => pelicula.id == idPelicula);
+          if (peliculaSeleccionada) {
+            // Comparar los datos del usuario con los datos en Firebase para la película seleccionada
+            const authenticated = await verificarCredenciales(usuarioActual.usuario, usuarioActual.contraseña);
+            if (authenticated) {
+              // Si los datos coinciden, cargar el video de la película seleccionada
+              await cargarVideoPelicula(peliculaSeleccionada.Video);
+              const irVideo = document.querySelector("#fullscreenBtn");
+              console.log(irVideo);
+              irVideo.scrollIntoView({ behavior: 'smooth' });
+            } else {
+              // Si los datos no coinciden, redirigir al usuario a la página de inicio de sesión
+              console.log('Los datos del usuario en localStorage no coinciden con los datos en Firebase.');
+              window.location.href = 'login.html';
+            }
+          }
+        } else {
+          console.log('No se encontraron datos de usuario guardados o el usuario no está autenticado.');
+          // Redirigir a la página de inicio de sesión si el usuario no está autenticado
+          window.location.href = 'login.html'; 
+        }
+      });
+    } catch (error) {
+      console.error('Error al manejar el evento click en la tarjeta:', error);
+    }
   }
-}
 
-// Añadir evento input al campo de búsqueda para actualizar en tiempo real
-buscarPeliculaInput.addEventListener('input', actualizarPeliculas);
 
-// Función para generar las películas en el grid
-function generarPeliculas(peliculas) {
-  const grid = document.querySelector('.Peliculas__grid');
-  if (!grid) {
-    throw new Error("No se encontró el contenedor Peliculas__grid.");
-  }
-  grid.innerHTML = ""; // Limpiar contenido anterior
 
-  if (!peliculas || !Array.isArray(peliculas)) {
-    console.error("La variable 'peliculas' no está definida o no es un array.");
-    return;
-  }
 
-  // Obtener el número actual de programas por página
-  const programasPorPaginaActual = calcularProgramasPorPaginaActual();
-
-  // Calcular inicio y fin según la página actual y programasPorPaginaActual
-  const inicio = (paginaActual - 1) * programasPorPaginaActual;
-  const fin = inicio + programasPorPaginaActual;
-
-  // Obtener las películas de la página actual
-  const programasPagina = peliculas.slice(inicio, fin);
-
-  programasPagina.forEach(pelicula => {
-    const peliculaHTML = generarPlantillaPelicula(pelicula);
-    grid.innerHTML += peliculaHTML;
+  
+  iconobusqueda.addEventListener('click', () => {
+    buscarPelicula.classList.add('buscar-pelicula--active');
+    buscarPeliculaInput.focus();
+    console.log('Icono de búsqueda clicado, input activado.');
   });
-}
-
-// Función para generar la paginación
-function generarPaginacion(peliculas) {
-  if (!peliculas || !Array.isArray(peliculas)) {
-    console.error("La variable 'peliculas' no está definida o no es un array.");
-    return;
+  
+  // Función para filtrar las películas por nombre
+  function filtrarPeliculasPorNombre(nombre) {
+    if (!peliculas || !Array.isArray(peliculas)) {
+      console.error("La variable 'peliculas' no está definida o no es un array.");
+      return [];
+    }
+  
+    return peliculas.filter(pelicula => {
+      if (pelicula && pelicula.nombre) {
+        return pelicula.nombre.toLowerCase().includes(nombre.toLowerCase());
+      } else {
+        console.warn("Un objeto en 'peliculas' no tiene la propiedad 'nombre'.", pelicula);
+        return false;
+      }
+    });
   }
-
-  try {
+  
+  function actualizarPeliculas() {
+    const nombre = buscarPeliculaInput.value.trim(); // Eliminamos espacios en blanco
+    console.log('Valor de búsqueda:', nombre);
+  
+    if (nombre === '') {
+      // Si el campo de búsqueda está vacío, mostrar todas las películas
+      paginaActual = 1; // Restablecer a la primera página
+      generarPeliculas(peliculas);
+      generarPaginacion(peliculas);
+    } else {
+      const peliculasFiltradas = filtrarPeliculasPorNombre(nombre);
+      console.log('Películas filtradas:', peliculasFiltradas);
+      paginaActual = 1; // Restablecer a la primera página
+      generarPeliculas(peliculasFiltradas);
+      generarPaginacion(peliculasFiltradas); // Actualizar la paginación según las películas filtradas
+    }
+    // Desplazar al inicio de la sección de películas
+    seccionPeliculas.scrollIntoView({ behavior: 'smooth' });
+  }
+  
+  // Eliminar el evento input del campo de búsqueda
+  // buscarPeliculaInput.removeEventListener('input', actualizarPeliculas);
+  
+  // Añadir evento click al botón de búsqueda para realizar la búsqueda
+  btnBuscarPelicula.addEventListener('click', actualizarPeliculas);
+  
+  // Función para generar las películas en el grid
+  function generarPeliculas(peliculas) {
+    const grid = document.querySelector('.Peliculas__grid');
+    if (!grid) {
+      throw new Error("No se encontró el contenedor Peliculas__grid.");
+    }
+    grid.innerHTML = ""; // Limpiar contenido anterior
+  
+    if (!peliculas || !Array.isArray(peliculas)) {
+      console.error("La variable 'peliculas' no está definida o no es un array.");
+      return;
+    }
+  
     // Obtener el número actual de programas por página
     const programasPorPaginaActual = calcularProgramasPorPaginaActual();
-
-    // Calcular el total de páginas según el número actual de programas por página y la cantidad de películas
-    const totalPaginas = Math.ceil(peliculas.length / programasPorPaginaActual);
-
-    const contenedorPaginacion = document.querySelector(".paginas");
-    contenedorPaginacion.innerHTML = ""; // Limpiar contenido anterior
-    const currentPage = getCurrentPage();
-
-    // Generar botones de paginación hasta el número total de páginas
-    for (let index = 1; index <= totalPaginas; index++) {
-      const btnpaginacion = document.createElement("button");
-      btnpaginacion.classList.add("paginas__btn");
-      btnpaginacion.textContent = index;
-
-      if (index === currentPage) {
-        btnpaginacion.classList.add("active"); // Marcar el botón de la página actual
-      }
-
-      btnpaginacion.addEventListener("click", () => {
-        setPage(index); // Establecer la página al hacer clic
-        generarPeliculas(peliculas);
-
-        contenedorPaginacion.querySelectorAll(".paginas__btn").forEach((btn) => {
-          btn.classList.remove("active");
-        });
-
-        // Agregar la clase "active" solo al botón de la página actual
-        btnpaginacion.classList.add("active");
-      });
-
-      contenedorPaginacion.appendChild(btnpaginacion);
-    }
-  } catch (error) {
-    console.error("Error al generar la paginación:", error);
+  
+    // Calcular inicio y fin según la página actual y programasPorPaginaActual
+    const inicio = (paginaActual - 1) * programasPorPaginaActual;
+    const fin = inicio + programasPorPaginaActual;
+  
+    // Obtener las películas de la página actual
+    const programasPagina = peliculas.slice(inicio, fin);
+  
+    programasPagina.forEach(pelicula => {
+      const peliculaHTML = generarPlantillaPelicula(pelicula);
+      grid.innerHTML += peliculaHTML;
+    });
   }
-}
+  
+  // Función para generar la paginación
+  function generarPaginacion(peliculas) {
+    if (!peliculas || !Array.isArray(peliculas)) {
+      console.error("La variable 'peliculas' no está definida o no es un array.");
+      return;
+    }
+  
+    try {
+      // Obtener el número actual de programas por página
+      const programasPorPaginaActual = calcularProgramasPorPaginaActual();
+  
+      // Calcular el total de páginas según el número actual de programas por página y la cantidad de películas
+      const totalPaginas = Math.ceil(peliculas.length / programasPorPaginaActual);
+  
+      const contenedorPaginacion = document.querySelector(".paginas");
+      contenedorPaginacion.innerHTML = ""; // Limpiar contenido anterior
+      const currentPage = getCurrentPage();
+  
+      // Generar botones de paginación hasta el número total de páginas
+      for (let index = 1; index <= totalPaginas; index++) {
+        const btnpaginacion = document.createElement("button");
+        btnpaginacion.classList.add("paginas__btn");
+        btnpaginacion.textContent = index;
+  
+        if (index === currentPage) {
+          btnpaginacion.classList.add("active"); // Marcar el botón de la página actual
+        }
+  
+        btnpaginacion.addEventListener("click", () => {
+          setPage(index); // Establecer la página al hacer clic
+          generarPeliculas(peliculas);
+  
+          contenedorPaginacion.querySelectorAll(".paginas__btn").forEach((btn) => {
+            btn.classList.remove("active");
+          });
+  
+          // Agregar la clase "active" solo al botón de la página actual
+          btnpaginacion.classList.add("active");
+        });
+  
+        contenedorPaginacion.appendChild(btnpaginacion);
+      }
+    } catch (error) {
+      console.error("Error al generar la paginación:", error);
+    }
+  }
 
 // Inicializar la página con todas las películas
-generarPeliculas(peliculas);
-generarPaginacion(peliculas);
-
+// generarPeliculas(peliculas);
+ generarPaginacion(peliculas);
 
 
 

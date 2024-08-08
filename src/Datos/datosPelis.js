@@ -189,6 +189,25 @@ export default {
             "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
           Video: "https://iframe.mediadelivery.net/embed/261653/e56995dd-071d-4c56-be26-6d8f150f872b",
         },
+
+        {
+          id: 846,
+          nombre: "Culpa mía 2023",
+          imagen: "../../Imagenes_Pelis/culpamía (2).webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/b99bc74a-27b1-4b8d-a20f-10c7d32fdf27",
+        },
+        {
+          id: 847,
+          nombre: "Violet y Finch",
+          imagen: "../../Imagenes_Pelis/violet y finch.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/123855d7-6d89-49b6-b170-2949f422979e",
+        },
         
         {
           id: 48,
@@ -467,7 +486,7 @@ export default {
         },
         {
           id: 808,
-          nombre: "Dora La Ciudad Peridad",
+          nombre: "Dora La Ciudad Perdida",
           imagen: "../../Imagenes_Pelis/doralaciudadperdida (2).webp",
           imagenX: "/imagenes/ilustrator.webp",
           Descripcion:
@@ -2210,6 +2229,178 @@ export default {
             "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
           Video: "https://iframe.mediadelivery.net/embed/261653/b8fce20e-4a8a-47e9-95d1-80abb37b5913",
         },
+        {
+          id: 205,
+          nombre: "Rampage Devastación 2018",
+          imagen: "../../Imagenes_Pelis/rampage.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/6ae66e58-04c4-4c01-9f05-ab70690bed74",
+        },
+        {
+          id: 206,
+          nombre: "Y dónde están las rubias 2004",
+          imagen: "../../Imagenes_Pelis/ydondeestanlasrubias (2).webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/432f781e-93e9-4396-a18a-02ace20158f6",
+        },
+        {
+          id: 207,
+          nombre: "Happy feet El pingüino 2006",
+          imagen: "../../Imagenes_Pelis/happyfeet1.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/34a4a708-4586-4ce4-a049-a762cb11c5a3",
+        },
+        {
+          id: 208,
+          nombre: "Happy feet El pingüino 2",
+          imagen: "../../Imagenes_Pelis/happyfeet2.jpg",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/59f76ec1-a6fd-4cdc-b866-4b614a479158",
+        },
+        {
+          id: 209,
+          nombre: "Los Pingüinos de Madagascar 2014",
+          imagen: "../../Imagenes_Pelis/lospinguinosdemadagascar (2).webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/9c884af7-e6e9-4ee2-a7ce-33ad57077bfa",
+        },
+        {
+          id: 210,
+          nombre: "Madagascar 3 Los Fugitivos",
+          imagen: "../../Imagenes_Pelis/MadagascarPoster (2).webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/dd8634e6-37c2-43d9-b7e2-33bb09e2e66c",
+        },
+        {
+          id: 211,
+          nombre: "El libro de la vida",
+          imagen: "../../Imagenes_Pelis/ellibrodelavida (2).webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/13f3c04b-2d03-4bfa-ad66-9588f2d690f6",
+        },
+        {
+          id: 212,
+          nombre: "Náufrago 2000",
+          imagen: "../../Imagenes_Pelis/naufrago (2).webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/f2bd8bbe-ac04-4229-aa60-6cb9572259bf",
+        },
+        {
+          id: 213,
+          nombre: "Mulán 1998",
+          imagen: "../../Imagenes_Pelis/mulan1 (2).webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/8016c426-7c67-4574-b954-d5ba1b15e1fe",
+        },
+        {
+          id: 214,
+          nombre: "Mulan II.2004",
+          imagen: "../../Imagenes_Pelis/mulan2.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/8add53c8-1b03-4dea-accd-acf13b2d00f2",
+        },
+        {
+          id: 215,
+          nombre: "Barbie Equipo de espías (2016)",
+          imagen: "../../Imagenes_Pelis/baribieequipodeespias (2).webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/fab4d706-f35a-46d0-ad69-8afff008c321",
+        },
+        {
+          id: 216,
+          nombre: "Barbie y sus hermanas En busca de los perritos",
+          imagen: "../../Imagenes_Pelis/barbieysushermanadasenbuscadelosperritos.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/406ddff4-e8d4-467a-913b-53d6ba0d2319",
+        },
+        {
+          id: 217,
+          nombre: "Barbie Superheroína del videojuego (2017)",
+          imagen: "../../Imagenes_Pelis/baribieequipodeespias (2).webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/7945a1e3-fd87-4c39-9b6c-c91880dc47ab",
+        },
+        {
+          id: 218,
+          nombre: "Barbie Una aventura de princesas (2020)",
+          imagen: "../../Imagenes_Pelis/barbieunaaventuradeprincesas (2).webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/1ef7e8e8-67b5-4de8-bd75-45e812904e5b",
+        },
+        {
+          id: 219,
+          nombre: "Barbie Skipper y su gran aventura como canguro",
+          imagen: "../../Imagenes_Pelis/barbieskipperysugranaventuracomocanguro.jpg",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/c1f6ec4f-dd43-4c0c-b2a8-1663bd2aa93e",
+        },
+        {
+          id: 220,
+          nombre: "Alvin y las ardillas Fiesta sobre ruedas (2015)",
+          imagen: "../../Imagenes_Pelis/Alvin_y_las_ardillas_Fiesta_sobre_ruedas.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/a078be1f-d330-4dd4-ba92-7d6512d302cc",
+        },
+        {
+          id: 221,
+          nombre: "Hachiko 2",
+          imagen: "../../Imagenes_Pelis/hachiko2.jpg",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/34815a4b-3199-43ba-9cbd-baa5bdaa946d",
+        },
+        {
+          id: 222,
+          nombre: "Camino hacia el terror 2003",
+          imagen: "../../Imagenes_Pelis/caminohaciaelterror1.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/335a452d-ade6-454f-8893-96dcd7b83d30",
+        },
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
      
      
      
