@@ -5,16 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reproductor de Video con Plyr y HLS.js</title>
     <link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css">
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css" />
     <script src="https://cdn.plyr.io/3.6.8/plyr.polyfilled.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    
 </head>
-<body>
-    <video id="player" playsinline controls></video>
+<body> 
+    
+    <div style="position:relative;padding-top:56.25%;"><iframe src="https://iframe.mediadelivery.net/embed/257368/e46d440d-7ed7-4e6a-88f5-5e61b5b3033e?autoplay=true&loop=false&muted=false&preload=true&responsive=true" loading="lazy" style="border:0;position:absolute;top:0;height:100%;width:100%;" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe></div>
+    <!-- <video id="player" playsinline controls></video>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const video = document.getElementById('player');
-            const source = 'http://sdmx.vip:8080/belpley/sYqKZQrTZa/2092569.m3u8'; // Reemplaza con tu URL de stream M3U8
+            const source = 'https://spa-ha-p005.cdn.masmediatv.es/SVoriginOperatorEdge2/smil:21_HD.smil/manifest.m3u8'; // Reemplaza con tu URL de stream M3U8
 
             if (Hls.isSupported()) {
                 const hls = new Hls();
@@ -32,6 +36,6 @@
 
             const player = new Plyr(video);
         });
-    </script>
+    </script> -->
 </body>
 </html>

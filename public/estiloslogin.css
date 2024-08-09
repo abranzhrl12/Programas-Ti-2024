@@ -227,7 +227,7 @@ body {
 
 .modal-content {
   background-color: #fefefe; /* Fondo blanco para el contenido del modal */
-  margin: 15% auto; /* Margen automático, centrado verticalmente */
+  margin: 10% auto; /* Margen automático, centrado verticalmente */
   padding: 20px;
   border: 1px solid #888;
   width: 80%; /* Ancho del modal */

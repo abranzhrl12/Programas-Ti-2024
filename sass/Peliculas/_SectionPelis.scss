@@ -3,21 +3,26 @@
     margin-top: 12rem;
     margin-bottom: 5rem;
     &__contenedor{
+        width: 98%;
+        @include m.tablet {
+            width: 90%;
+            max-width: 120rem;
+        }
         @include m.desktopFull {
             max-width: 184rem;
         }
     }
     &__grid{
-        width: 100%;
+        max-width: 100%;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(16.5rem,min-content));
-        grid-template-rows: repeat(22rem);
+        // grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+       
         place-content: center;
-        row-gap: 2.5rem;
-        column-gap: 1.5rem;
+        row-gap: 2rem;
+         column-gap: 0.9rem;
   
         @supports (display: grid) {
-            grid-template-columns: repeat(auto-fit, minmax(16.5rem, min-content));
+            grid-template-columns: repeat(auto-fit, minmax(10.5rem, max-content));
         }
 
         @supports not (display: grid) {
@@ -30,64 +35,154 @@
                 margin-bottom: 2rem;
             }
         }
-
-        @include m.tablet {
+        @include m.telefonoFull {
             @supports (display: grid) {
-                grid-template-columns: repeat(auto-fit, minmax(22rem, min-content));
+               grid-template-columns: repeat(auto-fit, minmax(16rem, min-content));
+               column-gap: 2rem;
+               row-gap: 2.2rem;
             }
 
             @supports not (display: grid) {
                 .Peliculas__card {
-                    width: calc(25% - 1.5rem); /* Calculamos el ancho para 4 tarjetas */
-                    margin-right: 1.5rem; /* Espacio entre las tarjetas */
-                    margin-bottom: 2rem; /* Espacio entre filas de tarjetas */
+                   width: calc(25% - 1.5rem); 
+                   margin-right: 1.5rem; 
+                   margin-bottom: 2rem; 
+               }
+           }
+       }
+       @include m.tablet {
+        @supports (display: grid) {
+           grid-template-columns: repeat(auto-fit, minmax(20rem, min-content));
+           column-gap: 2rem;
+           row-gap: 2.2rem;
+        }
+
+        @supports not (display: grid) {
+            .Peliculas__card {
+               width: calc(25% - 1.5rem); 
+               margin-right: 1.5rem; 
+               margin-bottom: 2rem; 
+           }
+       }
+   }
+        @include m.tabletM {
+             @supports (display: grid) {
+                grid-template-columns: repeat(auto-fit, minmax(16.8rem, min-content));
+                column-gap: 2rem;
+                row-gap: 2.2rem;
+             }
+
+             @supports not (display: grid) {
+                 .Peliculas__card {
+                    width: calc(25% - 1.5rem); 
+                    margin-right: 1.5rem; 
+                    margin-bottom: 2rem; 
                 }
             }
         }
+    @include m.desktop {
+        @supports (display: grid) {
+            grid-template-columns: repeat(auto-fit, minmax(21.8rem, 1fr));
+            column-gap: 2rem;
+            row-gap: 3rem;
+         }
+
+         @supports not (display: grid) {
+             .Peliculas__card {
+                width: calc(25% - 1.5rem); 
+                margin-right: 1.5rem; 
+                margin-bottom: 2rem; 
+            }
+        } 
+    }
+    @include m.desktopFull {
+        @supports (display: grid) {
+            grid-template-columns: repeat(auto-fit, minmax(22.1rem, min-content));
+            column-gap: 2rem;
+            row-gap: 3rem;
+         }
+
+         @supports not (display: grid) {
+             .Peliculas__card {
+                width: calc(25% - 1.5rem); 
+                margin-right: 1.5rem; 
+                margin-bottom: 2rem; 
+            }
+        } 
+    }
+        
     }
     &__card{
         width: 100%;
-        height: 100%;
+        height: 24rem;
         border-radius: 1rem;
         display: flex;
+        gap: 1rem;
         flex-direction: column;
         cursor: pointer;
         @include m.tablet {
             width: 100%;
+            height: auto;
             
         }
       
         
     }
-    &__figure{
+    &__figure{      
+
         width: 100%;
-        object-fit: 9/16;
+        object-fit: cover;
         border-radius: 1rem;
         overflow: hidden;
-        padding-bottom: 1.5rem;
-        object-fit: cover;
-        flex: 5;
-        @include m.desktop {
+        aspect-ratio: 9/16;
+       
+        @include m.tabletM {
+           
             max-height: 34.6rem;
+           
         }
+        @include m.desktop {
+            width: 100%;
+            height: 100%;
+            aspect-ratio: unset;
+           
+          
+        }
+        @include m.desktopFull {
+            flex: 5;
+            padding-bottom: 1rem;
+        }
+     
         &:hover{
             transform: scale(1.05);
         }
     }
     &__img{
-        display: block;
         width: 100%;
         height: 100%;
-        object-fit: 9/16;
+        object-fit: cover;
         border-radius: 1rem;
         box-shadow: 0rem 0rem 1rem rgb(56, 52, 52);
       
-        object-fit: cover;
+      
         
     }
     &__nombre{
-        flex: 1;
+        height: 4rem;
+        font-size: 1.2rem;
+        text-wrap: pretty;
+        font-weight: 400;
         text-align: center;
+        @include m.tablet {
+            font-size: 1.4rem;
+        }
+        @include m.desktop {
+            
+            font-size: 1.8rem;
+        }
+        @include m.desktopFull {
+            flex: 1;
+        }
     }
 }
 .videovivo-contenedor{

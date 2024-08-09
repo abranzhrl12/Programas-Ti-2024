@@ -75,8 +75,8 @@
 
 
 
-;
 
+import { nodeResolve } from '@rollup/plugin-node-resolve'
 // export default {
 
 //   input: 'src/Login/login.js', // archivo de entrada de tu aplicación
@@ -90,7 +90,21 @@
 //   ]
 // };
 
-// import { nodeResolve } from '@rollup/plugin-node-resolve'
+// import commonjs from '@rollup/plugin-commonjs';
+// export default {
+//   input: "./src/pelis.js",
+//   output: {
+//     file: "./public/Pelis.js",
+//     sourcemap: 'inline',
+//     format: 'iife',
+//     name: 'MyBundle'
+//   },
+//   plugins: [
+//     nodeResolve(),
+//     commonjs() // Añade el plugin commonjs
+//   ]
+// };
+
 
 // export default {
 //   input: "./src/pelis.js",

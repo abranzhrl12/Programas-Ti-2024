@@ -1,20 +1,21 @@
-import { verificarCredenciales } from "./Conexion/conexion";
- function cargarDatosUsuario() {
-    try {
-        const usuarioGuardado = localStorage.getItem('usuario');
-        if (usuarioGuardado) {
-            console.log(JSON.parse(usuarioGuardado))
-            return JSON.parse(usuarioGuardado);
-        } else {
-            console.log('No se encontraron datos guardados en localStorage.');
-            return null;
-        }
-    } catch (error) {
-        console.error('Error al cargar datos de usuario desde localStorage:', error);
-        return null;
-    }
+import platform from 'platform';
+import { verificarCredenciales, verificarDispositivo, verificarFechaExpiracion } from './Conexion/conexion';
+
+function cargarDatosUsuario() {
+  try {
+      const usuarioGuardado = localStorage.getItem('usuario');
+      if (usuarioGuardado) {
+          return JSON.parse(usuarioGuardado);
+      } else {
+          console.log('No se encontraron datos guardados en localStorage.');
+          return null;
+      }
+  } catch (error) {
+      console.error('Error al cargar datos de usuario desde localStorage:', error);
+      return null;
+  }
 }
- 
+
 import {peliculas , generarPlantillaPelicula} from "./Peliculas/Peliculas";
 import seguridad from "./Peliculas/Seguridad";
 import {calcularProgramasPorPaginaActual} from "./Peliculas/cantidaPagina"
@@ -32,64 +33,116 @@ const buscarPelicula = document.querySelector('.buscar-pelicula');
 const buscarPeliculaInput = document.querySelector('.buscar__input');
 const btnBuscarPelicula = document.querySelector('.buscar__btn');
 const seccionPeliculas = document.querySelector('.Peliculas');
+const busquedaclose=document.querySelector('.busqueda__close')
+busquedaclose.addEventListener('click',()=>
+  {
+    buscarPelicula.classList.toggle('buscar-pelicula--active');
+  })
+
+let usuarioAutenticado = cargarDatosUsuario();
+let detallesDispositivo = null;
+
+async function obtenerDetallesDispositivo() {
+  if (!detallesDispositivo) {
+    detallesDispositivo = await getDeviceDetails();
+    detallesDispositivo.deviceId = localStorage.getItem('deviceId');
+  }
+  return detallesDispositivo;
+}
+
+function inicializarAplicacion() {
+  agregarPeliculasAlGrid(peliculas);
+}
+
+inicializarAplicacion();
 
 function agregarPeliculasAlGrid(peliculas) {
-    generarPeliculas(peliculas);
-  
-    try {
-      const grid = document.querySelector('.Peliculas__grid');
-      grid.addEventListener('click', async (event) => {
-        event.preventDefault();
-        
-        const tarjeta = event.target.closest('.Peliculas__card');
-        if (!tarjeta) return; // Solo continuar si se hizo clic en una tarjeta
-  
-        // Limpiar el input de búsqueda
-        buscarPeliculaInput.value = '';
-        generarPeliculas(peliculas);
-        generarPaginacion(peliculas);
-  
-        // Verificar si el usuario está autenticado y obtener sus datos
-        const usuarioActual = cargarDatosUsuario();
-        console.log("Usuario actual:", usuarioActual);
-  
-        if (usuarioActual && usuarioActual.usuario && usuarioActual.contraseña) {
-          console.log('Usuario autenticado:', usuarioActual.usuario);
-          const idPelicula = tarjeta.getAttribute('data-id');
-          const peliculaSeleccionada = peliculas.find(pelicula => pelicula.id == idPelicula);
-          if (peliculaSeleccionada) {
-            // Comparar los datos del usuario con los datos en Firebase para la película seleccionada
-            const authenticated = await verificarCredenciales(usuarioActual.usuario, usuarioActual.contraseña);
-            if (authenticated) {
-              // Si los datos coinciden, cargar el video de la película seleccionada
-              await cargarVideoPelicula(peliculaSeleccionada.Video);
-              const irVideo = document.querySelector("#fullscreenBtn");
-              console.log(irVideo);
-              irVideo.scrollIntoView({ behavior: 'smooth' });
-            } else {
-              // Si los datos no coinciden, redirigir al usuario a la página de inicio de sesión
-              console.log('Los datos del usuario en localStorage no coinciden con los datos en Firebase.');
-              window.location.href = 'login.html';
-            }
-          }
-        } else {
-          console.log('No se encontraron datos de usuario guardados o el usuario no está autenticado.');
-          // Redirigir a la página de inicio de sesión si el usuario no está autenticado
-          window.location.href = 'login.html'; 
-        }
-      });
-    } catch (error) {
-      console.error('Error al manejar el evento click en la tarjeta:', error);
-    }
+  generarPeliculas(peliculas);
+
+  try {
+    const grid = document.querySelector('.Peliculas__grid');
+
+    // Remover cualquier evento existente antes de agregar uno nuevo
+    grid.removeEventListener('click', handlePeliculaClick);
+    grid.addEventListener('click', handlePeliculaClick);
+  } catch (error) {
+    console.error('Error al manejar el evento click en la tarjeta:', error);
   }
+}
+
+async function handlePeliculaClick(event) {
+  event.preventDefault();
+
+  const tarjeta = event.target.closest('.Peliculas__card');
+  if (!tarjeta) return;
+
+  buscarPeliculaInput.value = '';
+  generarPeliculas(peliculas);
+  generarPaginacion(peliculas);
+
+  usuarioAutenticado = cargarDatosUsuario(); // Recargar datos del usuario desde localStorage
+
+  if (usuarioAutenticado) {
+    const idPelicula = tarjeta.getAttribute('data-id');
+    const peliculaSeleccionada = peliculas.find(pelicula => pelicula.id == idPelicula);
+    if (peliculaSeleccionada) {
+      const { correo, contraseña, usuarioId } = usuarioAutenticado;
+      detallesDispositivo = await obtenerDetallesDispositivo();
+
+      const credencialesResultado = await verificarCredenciales(correo, contraseña);
+      if (!credencialesResultado.authenticated) {
+        alert(credencialesResultado.reason);
+        localStorage.removeItem('usuarioAutenticado');
+        localStorage.removeItem('usuario');
+        localStorage.removeItem('deviceId');
+        window.location.href = 'login.html';
+        return;
+      }
+
+      const fechaExpiracionResultado = verificarFechaExpiracion(credencialesResultado.userData.fechaExpiracion);
+      if (fechaExpiracionResultado.expired) {
+        alert('Tu cuenta ha expirado. Por favor, comunícate con el administrador del servicio.');
+        return;
+      }
+
+      const dispositivoResultado = await verificarDispositivo(usuarioId, detallesDispositivo.deviceId);
+      if (!dispositivoResultado.verified) {
+        alert(dispositivoResultado.reason);
+        localStorage.removeItem('usuarioAutenticado');
+        localStorage.removeItem('usuario');
+        localStorage.removeItem('deviceId');
+        window.location.href = 'login.html';
+        return;
+      }
+
+      await cargarVideoPelicula(peliculaSeleccionada.Video);
+      const irVideo = document.querySelector('#fullscreenBtn');
+      irVideo.scrollIntoView({ behavior: 'smooth' });
+    }
+  } else {
+    alert('No se encontraron datos de usuario guardados o el usuario no está autenticado.');
+    window.location.href = 'login.html';
+  }
+}
+
+async function getDeviceDetails() {
+  const platformInfo = platform.parse(navigator.userAgent);
+  const { name, os } = platformInfo;
+
+  const ipResponse = await fetch('https://api.ipify.org?format=json');
+  const ipData = await ipResponse.json();
+
+  return {
+    navegadorNombre: name,
+    sistemaOperativo: `${os.family} ${os.version}`,
+    ipPublica: ipData.ip
+  };
+}
 
 
 
-
-  
   iconobusqueda.addEventListener('click', () => {
     buscarPelicula.classList.add('buscar-pelicula--active');
-    buscarPeliculaInput.focus();
     console.log('Icono de búsqueda clicado, input activado.');
   });
   

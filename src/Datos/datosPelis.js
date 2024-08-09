@@ -172,6 +172,15 @@ export default {
           Video: "https://iframe.mediadelivery.net/embed/261653/bcd4abc1-cb2a-435d-99fe-1d1eda3716ad",
         },
         {
+          id: 45,
+          nombre: "John Wick 4 (2023)",
+          imagen: "../../Imagenes_Pelis/jhonwick4.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/33b1071d-75a6-486b-99e8-966b42c6a597",
+        },
+        {
           id: 46,
           nombre: "Sobrevivientes después del terremoto (2023)",
           imagen: "../../Imagenes_Pelis/Sobrevivientes.después.del.terremoto.2023 (2).webp",
@@ -529,6 +538,24 @@ export default {
           Descripcion:
             "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
           Video: "https://iframe.mediadelivery.net/embed/261653/4a1f74e2-fb96-421a-b781-b7832c6b0f04",
+        },
+        {
+          id: 822,
+          nombre: "La Bella y la Bestia (2017)",
+          imagen: "../../Imagenes_Pelis/labellaylabestia2017.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/274b6942-eae4-4a30-9f5b-22dbc39b48e3",
+        },
+        {
+          id: 823,
+          nombre: "El Rey Leon (2019)",
+          imagen: "../../Imagenes_Pelis/elreyleon2019.jpeg",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/d9986397-88ce-4600-9cd1-348828e00901",
         },
         {
           id: 682,
@@ -1541,6 +1568,35 @@ export default {
           Video: "https://iframe.mediadelivery.net/embed/261653/bd68b67a-250b-4bea-b499-13f31849307d",
         },
         {
+          id: 845,
+          nombre: "Los 4 Fantásticos (2015)",
+          imagen: "../../Imagenes_Pelis/los4fantasticos3.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/8983b829-1de7-4399-9d71-4677de5b8617",
+        },
+        {
+          id: 846,
+          nombre: "Los 4 fantásticos y Silver Surfer (2007)",
+          imagen: "../../Imagenes_Pelis/los4fantasticos2 (2).webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/93ecceec-44ee-46da-a71d-17c577dfc97a",
+        },
+        {
+          id: 847,
+          nombre: "Los 4 fantásticos(2005)",
+          imagen: "../../Imagenes_Pelis/los4fantasticos1.jpg",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/b9ee1e9a-fe5e-438a-b3c8-85181384e3e3",
+        },
+
+
+        {
           id: 142,
           nombre: "Iro man 1",
           imagen: "../../Imagenes_Pelis/iroman1.webp",
@@ -2284,6 +2340,24 @@ export default {
           Video: "https://iframe.mediadelivery.net/embed/261653/dd8634e6-37c2-43d9-b7e2-33bb09e2e66c",
         },
         {
+          id: 840,
+          nombre: "Madagascar 2",
+          imagen: "../../Imagenes_Pelis/MadagascarPoster (2).webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/c23f1420-d2ed-435b-b507-6c3c0863cfda",
+        },
+        {
+          id: 841,
+          nombre: "Madagascar 1",
+          imagen: "../../Imagenes_Pelis/madagascar1 (2).webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/d942cab9-ee91-4c02-8c7e-8db9147cb0b1",
+        },
+        {
           id: 211,
           nombre: "El libro de la vida",
           imagen: "../../Imagenes_Pelis/ellibrodelavida (2).webp",
@@ -2384,7 +2458,7 @@ export default {
         },
         {
           id: 222,
-          nombre: "Camino hacia el terror 2003",
+          nombre: "Camino hacia el terror 1 (2003)",
           imagen: "../../Imagenes_Pelis/caminohaciaelterror1.webp",
           imagenX: "/imagenes/ilustrator.webp",
           Descripcion:
@@ -2392,19 +2466,25 @@ export default {
           Video: "https://iframe.mediadelivery.net/embed/261653/335a452d-ade6-454f-8893-96dcd7b83d30",
         },
      
+        {
+          id: 223,
+          nombre: "Camino hacia el terror 2",
+          imagen: "../../Imagenes_Pelis/caminohaciaelterror1.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/5c7d0a91-5e1b-44ae-9ef7-c0d3ea4695eb",
+        },
      
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
+        {
+          id: 229,
+          nombre: "Rango",
+          imagen: "../../Imagenes_Pelis/rango.jpg",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/d776d052-1255-4bfa-9955-386052caaf14",
+        },
 
         
       ],  

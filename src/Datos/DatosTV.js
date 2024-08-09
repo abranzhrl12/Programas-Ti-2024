@@ -147,7 +147,7 @@ export default {
             id: 21,
             nombre: "AmericaTv SD",
             imagen: "../../ImagenesTV/americatv.jpeg",
-           link_m3u8: "http://sdmx.vip:8080/belpley/sYqKZQrTZa/10626.m3u8",
+           link_m3u8: "http://152.230.126.5:3344/play/a0rw",
            
           },
           {
@@ -164,14 +164,7 @@ export default {
            link_m3u8: "http://sdmx.vip:8080/belpley/sYqKZQrTZa/192976.m3u8",
            
           },
-          {
-            id: 24,
-            nombre: "Dsport",
-            imagen: "../../ImagenesTV/directvsport.jpg",
-           link_m3u8: "http://sdmx.vip:8080/belpley/sYqKZQrTZa/202157.m3u8",
-           
-          },
-     
+   
          
           
       ],  

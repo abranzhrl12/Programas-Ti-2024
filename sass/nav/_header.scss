@@ -19,13 +19,14 @@
     margin-bottom: -10rem;
 }
 .portada{
-    max-width: 100%;
+    width: 100%;
     // object-position: 0px 21rem;
      object-fit: cover; 
+     height: 100%;
      @include m.desktop {
-     
+        max-width: 100%;
         object-fit: cover; 
-        object-position: 0px 13rem;
+        object-position: 0px 0rem;
     }
     @include m.desktopFull {
         object-fit: cover; 

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capturar Dispositivo</title>
+
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #007BFF;
+    color: #fff;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Captura Automática del Dispositivo</h1>
+        <button id="captureButton">Capturar Dispositivo</button>
+        <p id="deviceInfo"></p>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/platform/1.3.6/platform.min.js"></script>
+    <!-- <script>
+   document.getElementById('captureButton').addEventListener('click', () => {
+    const deviceDetails = getDeviceDetails();
+    document.getElementById('deviceInfo').innerText = `Dispositivo: ${deviceDetails}`;
+    console.log(`Dispositivo: ${deviceDetails}`);
+});
+
+function getDeviceDetails() {
+    const platformInfo = platform.parse(navigator.userAgent);
+    const { name, version, os, description } = platformInfo;
+
+    return `Navegador: ${name} ${version}, Sistema Operativo: ${os.family} ${os.version}, Descripción: ${description}`;
+}
+
+    </script> -->
+    <script>document.getElementById('captureButton').addEventListener('click', async () => {
+        const deviceDetails = await getDeviceDetails();
+        displayDeviceDetails(deviceDetails);
+        console.log(deviceDetails);
+    });
+    
+    async function getDeviceDetails() {
+        const platformInfo = platform.parse(navigator.userAgent);
+        const { name, os } = platformInfo;
+        
+        // Obtener la dirección IP pública
+        const ipResponse = await fetch('https://api.ipify.org?format=json');
+        const ipData = await ipResponse.json();
+    
+        return {
+            navegadorNombre: name,
+            sistemaOperativoNombre: os.family,
+            sistemaOperativoVersion: os.version,
+            ipPublica: ipData.ip
+        };
+    }
+    
+    function displayDeviceDetails(details) {
+        const deviceInfoDiv = document.getElementById('deviceInfo');
+        deviceInfoDiv.innerHTML = `
+            <p><strong>Navegador:</strong> ${details.navegadorNombre}</p>
+            <p><strong>Sistema Operativo:</strong> ${details.sistemaOperativoNombre} ${details.sistemaOperativoVersion}</p>
+            <p><strong>IP Pública:</strong> ${details.ipPublica}</p>
+        `;
+    }
+    </script>
+</body>
+</html>
