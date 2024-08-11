@@ -122,21 +122,21 @@ import { nodeResolve } from '@rollup/plugin-node-resolve'
 //   ]
 // };
 
-// import resolve from '@rollup/plugin-node-resolve';
+import resolve from '@rollup/plugin-node-resolve';
 
-// export default {
-//   input: 'public/Pelis.js', // Ruta a tu archivo pelis.js
-//   output: {
-//     file: 'dist/pelis.min.js', // Ruta y nombre del archivo minificado
-//     format: 'iife', // Formato del bundle (IIFE para navegador)
-//     name: 'Pelis' // Nombre global para el bundle (opcional)
-//   },
-//   plugins: [
-//     resolve(), // Permite resolver módulos desde node_modules
-//     terser({
-//       format: {
-//         comments: false, // Elimina todos los comentarios
-//       }
-//     })
-//   ]
-// };
+export default {
+  input: 'public/Pelis.js', // Ruta a tu archivo pelis.js
+  output: {
+    file: 'dist/pelis.min.js', // Ruta y nombre del archivo minificado
+    format: 'iife', // Formato del bundle (IIFE para navegador)
+    name: 'Pelis' // Nombre global para el bundle (opcional)
+  },
+  plugins: [
+    resolve(), // Permite resolver módulos desde node_modules
+    terser({
+      format: {
+        comments: false, // Elimina todos los comentarios
+      }
+    })
+  ]
+};

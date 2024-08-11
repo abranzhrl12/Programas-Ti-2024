@@ -2,7 +2,8 @@
 .hero{
     width: 100%;
     margin-top: 8rem;
-    height: 21rem;
+    height: 18.8rem;
+   
     @include m.tablet {
         height: 40rem;
     }

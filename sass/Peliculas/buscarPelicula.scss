@@ -2,12 +2,18 @@
 
 .buscar-pelicula{
     width: 100%;
+    height: auto;
+    height: 12dvh;
     background-color: white;
     position: fixed;
     bottom: 0;
     z-index: 500;
     display: none;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    @include m.desktop {
+        height: auto;
+        height: 8dvh;
+    }
     &--active{
        display: block; 
     }

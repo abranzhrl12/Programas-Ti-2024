@@ -120,6 +120,9 @@
         gap: 1rem;
         flex-direction: column;
         cursor: pointer;
+        user-select: none;
+        outline: none; /* Elimina el borde de enfoque */
+    -webkit-tap-highlight-color: transparent; 
         @include m.tablet {
             width: 100%;
             height: auto;
@@ -194,7 +197,7 @@
     }
 }
 .videovivo-contenedor{
-    width: 90%;
+    width: 100%;
     max-width: 120rem;
     height: auto;
     display: flex;
@@ -202,10 +205,11 @@
     position: relative;
     margin: 0 auto;
      align-items: center;
+     background-color: blue;
    
 }
 #my-video{
-    width: 90%;
+    width: 97%;
     max-width: 80rem;
     height: fit-content;
     aspect-ratio: 16/9;
