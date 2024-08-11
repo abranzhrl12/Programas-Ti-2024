@@ -24,7 +24,7 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
             
             // Redirigir al usuario a otra página (opcional)
             setTimeout(function() {
-                window.location.href = 'index.html';
+                window.location.href = 'perfiles.html';
             }, 900);
         } else {
             // Mostrar mensaje de error

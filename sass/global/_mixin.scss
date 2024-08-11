@@ -35,6 +35,19 @@
   }
 }
 
+@mixin desktopFullHD {
+  @media (min-width: v.$desktopfulhd) {
+    @content;
+  }
+}
+
+@mixin TV {
+  @media (min-width: v.$TV) {
+    @content;
+  }
+}
+
+
 
 // @mixin gap($gap-size) {
 //   @if (display: flex) {

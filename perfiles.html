@@ -22,6 +22,15 @@
             margin: 0;
             text-align: center;
         }
+        img{
+            filter: saturate(104%);
+            filter: contrast(105%);
+            cursor: pointer;
+            transition: transform .3s ;
+        }
+        img:hover{
+            transform: scale(1.1);
+        }
         h1 {
             margin-bottom: 50px;
         }
@@ -39,7 +48,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 10px;
+            gap: 15px;
         }
         .profile img {
             border-radius: 50%;
@@ -88,29 +97,32 @@
     <h1>¿Quién está viendo ahora?</h1>
     <div class="profile-container">
         <div class="profile">
-            <img src="https://via.placeholder.com/150?text=Luis1" alt="Luis">
-            <div class="profile-name">Luis</div>
+            <img src="ImagenesAvatares/Screenshot_1-topaz-enhance-4x.png" alt="Luis">
+            <div class="profile-name"></div>
         </div>
-        <div class="profile">
-            <img src="https://via.placeholder.com/150?text=Distraction" alt="Distraction">
-            <div class="profile-name">Distraction</div>
-        </div>
-        <div class="profile">
-            <img src="https://via.placeholder.com/150?text=Luhanita" alt="Luhanita">
-            <div class="profile-name">Luhanita</div>
-        </div>
-        <div class="profile">
-            <img src="https://via.placeholder.com/150?text=Chase" alt="Chase">
-            <div class="profile-name">CHASE</div>
-        </div>
-        <div class="profile">
-            <img src="https://via.placeholder.com/150?text=Luis2" alt="Luis">
-            <div class="profile-name">Luis</div>
-        </div>
+    
     </div>
     <div class="button-container">
         <button>Administrar perfiles</button>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Recuperar los datos del usuario desde localStorage
+            const usuario = JSON.parse(localStorage.getItem('usuario'));
+           
+            // Verificar que el usuario y el nombre existan en los datos recuperados
+            if (usuario && usuario.nombre) {
+                // Asignar el nombre al elemento con la clase 'profile-name'
+                document.querySelector('.profile-name').textContent = usuario.nombre;
+                const profile=document.querySelector('.profile')
+                profile.addEventListener('click',()=>{
+                    window.location.href = 'index2.html';
+                })
+            } else {
+                console.log('No se encontró el nombre del usuario en localStorage.');
+            }
+        });
+    </script>
 </body>
 </html>
 

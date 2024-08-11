@@ -55,7 +55,7 @@ export async function registrarDispositivoYAutenticar(correo, contraseña, detal
       }
 
       // Guardar datos del usuario en localStorage
-      localStorage.setItem('usuario', JSON.stringify({ correo, contraseña, usuarioId: userId, nombre: userData.nombre }));
+      localStorage.setItem('usuario', JSON.stringify({ correo, contraseña, usuarioId: userId, nombre: userData.nombreUsuario }));
       localStorage.setItem('usuarioAutenticado', 'true');
 
       console.log("Usuario autenticado y dispositivo registrado correctamente.");
