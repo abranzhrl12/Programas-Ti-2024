@@ -1,15 +1,26 @@
 
- document.addEventListener('contextmenu', function(e) {
-    e.preventDefault();
-    })
+export function desactivarMenuContextual() {
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    });
+}
+
+// Desactivar la tecla F12 y otras teclas de desarrollo
+export function desactivarTeclasDesarrollo() {
     document.addEventListener('keydown', function(e) {
         // Desactivar la tecla F12
         if (e.key === 'F12' || e.keyCode === 123) {
             e.preventDefault();
             return false;
         }
+
+        // Desactivar otras teclas de desarrollo como Ctrl+Shift+I y Ctrl+U
+        if (e.ctrlKey && (e.shiftKey || e.key === 'I' || e.key === 'U')) {
+            e.preventDefault();
+            return false;
+        }
     });
-    
+}
 
 
 // function herramientasDesarrolladorAbiertas() {

@@ -1,65 +1,63 @@
-import platform from 'platform';
+// import platform from 'platform';
+import { obtenerDetallesDispositivo } from './Peliculas/dispostivo'; // Importa la función desde dispositivo.js
 import { verificarCredenciales, verificarDispositivo, verificarFechaExpiracion } from './Conexion/conexion';
+import peliss from './Peliculas/categoriasPeliculas';
+import {peliculas , generarPlantillaPelicula,} from "./Peliculas/Peliculas";
 
-
-import {peliculas , generarPlantillaPelicula} from "./Peliculas/Peliculas";
-import seguridad from "./Peliculas/Seguridad";
 import {calcularProgramasPorPaginaActual} from "./Peliculas/cantidaPagina"
+import { cargarDatosUsuario } from './Peliculas/datosUsuario'; 
+import { iconobusqueda,buscarPelicula,buscarPeliculaInput,btnBuscarPelicula,seccionPeliculas ,inicializarBusqueda, actualizarPeliculas } from './Peliculas/busquedaPelicula';
+import { desactivarMenuContextual, desactivarTeclasDesarrollo } from './Peliculas/Seguridad';
 
-function cargarDatosUsuario() {
-  try {
-      const usuarioGuardado = localStorage.getItem('usuario');
-      if (usuarioGuardado) {
-          return JSON.parse(usuarioGuardado);
-      } else {
-          console.log('No se encontraron datos guardados en localStorage.');
-          return null;
-      }
-  } catch (error) {
-      console.error('Error al cargar datos de usuario desde localStorage:', error);
-      return null;
-  }
-}
+// Llama a las funciones para activar la desactivación de menú y teclas de desarrollo
+desactivarMenuContextual();
+desactivarTeclasDesarrollo();
+
 
 let widthViewport = window.innerWidth;
 let programasPorPagina =  calcularProgramasPorPaginaActual();;
 let paginaActual = 1;
-// Variable para controlar el estado anterior de las herramientas de desarrollador
 let herramientasAbiertasPrevias = false;
-
 let view2=window.innerWidth;
-
 let view=window.innerWidth;
-const iconobusqueda = document.querySelector('.busqueda-label');
-const buscarPelicula = document.querySelector('.buscar-pelicula');
-const buscarPeliculaInput = document.querySelector('.buscar__input');
-const btnBuscarPelicula = document.querySelector('.buscar__btn');
-const seccionPeliculas = document.querySelector('.Peliculas');
-
-try {
-  const busquedaclose=document.querySelector('.busqueda__close')
-busquedaclose.addEventListener('click',()=>
-  {
-    buscarPelicula.classList.toggle('buscar-pelicula--active');
-  })
-
-} catch (error) {
-  
-}
 
 let usuarioAutenticado = cargarDatosUsuario();
-let detallesDispositivo = null;
 
-async function obtenerDetallesDispositivo() {
-  if (!detallesDispositivo) {
-    detallesDispositivo = await getDeviceDetails();
-    detallesDispositivo.deviceId = localStorage.getItem('deviceId');
-   
+
+function generarPeliculas(peliculas, cantidadMostrar = 0) {
+  const grid = document.querySelector('.Peliculas__grid');
+  if (!grid) {
+      throw new Error("No se encontró el contenedor Peliculas__grid.");
   }
-  return detallesDispositivo;
+  grid.innerHTML = ""; // Limpiar contenido anterior
+
+  if (!peliculas || !Array.isArray(peliculas)) {
+      console.error("La variable 'peliculas' no está definida o no es un array.");
+      return;
+  }
+
+  const { inicial, incremento, limite } = calcularProgramasPorPaginaActual();
+  const cantidad = cantidadMostrar || inicial;
+
+  // Calcular inicio y fin según la página actual y cantidad de películas a mostrar
+  const inicio = (paginaActual - 1) * limite;
+  const fin = Math.min(inicio + cantidad, peliculas.length);
+
+  // Obtener las películas de la página actual
+  const programasPagina = peliculas.slice(inicio, fin);
+
+  programasPagina.forEach(pelicula => {
+      const peliculaHTML = generarPlantillaPelicula(pelicula);
+      grid.innerHTML += peliculaHTML;
+  });
+
+  const botonVerMas = document.querySelector('.boton-vermas');
+  if (cantidad >= limite || fin >= peliculas.length) {
+      botonVerMas.style.display = 'none';
+  } else {
+      botonVerMas.style.display = 'block';
+  }
 }
-
-
 function inicializarAplicacion() {
   generarPeliculas(peliculas);
   agregarBotonVerMas(peliculas);
@@ -81,11 +79,12 @@ function agregarPeliculasAlGrid(peliculas) {
   }
 }
 
+
 async function handlePeliculaClick(event) {
   event.preventDefault();
 
   const tarjeta = event.target.closest('.Peliculas__card');
-  console.log("hola")
+  console.log("hola");
   if (!tarjeta) return;
 
   buscarPeliculaInput.value = '';
@@ -99,7 +98,8 @@ async function handlePeliculaClick(event) {
     const peliculaSeleccionada = peliculas.find(pelicula => pelicula.id == idPelicula);
     if (peliculaSeleccionada) {
       const { correo, contraseña, usuarioId } = usuarioAutenticado;
-      detallesDispositivo = await obtenerDetallesDispositivo();
+
+      let detallesDispositivo = await obtenerDetallesDispositivo(); // Declarar aquí
 
       const credencialesResultado = await verificarCredenciales(correo, contraseña);
       if (!credencialesResultado.authenticated) {
@@ -137,110 +137,21 @@ async function handlePeliculaClick(event) {
   }
 }
 
-async function getDeviceDetails() {
-  const platformInfo = platform.parse(navigator.userAgent);
-  const { name, os } = platformInfo;
-
-  const ipResponse = await fetch('https://api.ipify.org?format=json');
-  const ipData = await ipResponse.json();
-
-  return {
-    navegadorNombre: name,
-    sistemaOperativo: `${os.family} ${os.version}`,
-    ipPublica: ipData.ip
-  };
-}
-
-iconobusqueda.addEventListener('click', () => {
-  buscarPelicula.classList.add('buscar-pelicula--active');
-  buscarPeliculaInput.focus(); // Asegúrate de enfocar el input cuando se hace clic en el icono
-  console.log('Icono de búsqueda clicado, input activado.');
-});
-
+inicializarBusqueda(iconobusqueda, buscarPelicula, buscarPeliculaInput);
 btnBuscarPelicula.addEventListener('click', () => {
-  actualizarPeliculas(); // Llama a la función cuando se hace clic en el botón
+  actualizarPeliculas(buscarPeliculaInput, peliculas, generarPeliculas, generarPaginacion, seccionPeliculas, paginaActual); 
 });
+
 buscarPeliculaInput.addEventListener('keydown', (event) => {
   if (event.key === 'Enter') {
-    event.preventDefault(); // Evitar que se realice el comportamiento predeterminado
-    actualizarPeliculas();
+      event.preventDefault(); // Evitar que se realice el comportamiento predeterminado
+      actualizarPeliculas(buscarPeliculaInput, peliculas, generarPeliculas, generarPaginacion, seccionPeliculas, paginaActual);
   }
 });
 
-// Función para filtrar las películas por nombre
-function filtrarPeliculasPorNombre(nombre) {
-  if (!peliculas || !Array.isArray(peliculas)) {
-    console.log("La variable 'peliculas' no está definida o no es un array.");
-    return [];
-  }
-
-  return peliculas.filter(pelicula => {
-    if (pelicula && pelicula.nombre) {
-      return pelicula.nombre.toLowerCase().includes(nombre.toLowerCase());
-    } else {
-      console.warn("Un objeto en 'peliculas' no tiene la propiedad 'nombre'.", pelicula);
-      return false;
-    }
-  });
-}
-
-// Función para actualizar las películas basadas en la búsqueda
-function actualizarPeliculas() {
-  const nombre = buscarPeliculaInput.value.trim(); // Eliminamos espacios en blanco
-  console.log('Valor de búsqueda:', nombre);
-
-  if (nombre === '') {
-    // Si el campo de búsqueda está vacío, mostrar todas las películas
-    paginaActual = 1; // Restablecer a la primera página
-    generarPeliculas(peliculas);
-    generarPaginacion(peliculas);
-  } else {
-    const peliculasFiltradas = filtrarPeliculasPorNombre(nombre);
-    console.log('Películas filtradas:', peliculasFiltradas);
-    paginaActual = 1; // Restablecer a la primera página
-    generarPeliculas(peliculasFiltradas);
-    generarPaginacion(peliculasFiltradas); // Actualizar la paginación según las películas filtradas
-  }
-  // Desplazar al inicio de la sección de películas
-  seccionPeliculas.scrollIntoView({ behavior: 'smooth' });
-}
 
 
 
-function generarPeliculas(peliculas, cantidadMostrar = 0) {
-  const grid = document.querySelector('.Peliculas__grid');
-  if (!grid) {
-      throw new Error("No se encontró el contenedor Peliculas__grid.");
-  }
-  grid.innerHTML = ""; // Limpiar contenido anterior
-
-  if (!peliculas || !Array.isArray(peliculas)) {
-      console.error("La variable 'peliculas' no está definida o no es un array.");
-      return;
-  }
-
-  const { inicial, incremento, limite } = calcularProgramasPorPaginaActual();
-  const cantidad = cantidadMostrar || inicial;
-
-  // Calcular inicio y fin según la página actual y cantidad de películas a mostrar
-  const inicio = (paginaActual - 1) * limite;
-  const fin = Math.min(inicio + cantidad, peliculas.length);
-
-  // Obtener las películas de la página actual
-  const programasPagina = peliculas.slice(inicio, fin);
-
-  programasPagina.forEach(pelicula => {
-      const peliculaHTML = generarPlantillaPelicula(pelicula);
-      grid.innerHTML += peliculaHTML;
-  });
-
-  const botonVerMas = document.querySelector('.boton-vermas');
-  if (cantidad >= limite || fin >= peliculas.length) {
-      botonVerMas.style.display = 'none';
-  } else {
-      botonVerMas.style.display = 'block';
-  }
-}
 function agregarBotonVerMas(peliculas) {
   const botonVerMas = document.querySelector('.boton-vermas');
   if (!botonVerMas) return;
@@ -265,46 +176,48 @@ function agregarBotonVerMas(peliculas) {
   });
 }
 
-  function generarPaginacion(peliculas) {
-    if (!peliculas || !Array.isArray(peliculas)) {
-        console.error("La variable 'peliculas' no está definida o no es un array.");
-        return;
-    }
+function generarPaginacion(peliculas) {
+  if (!peliculas || !Array.isArray(peliculas)) {
+      console.error("La variable 'peliculas' no está definida o no es un array.");
+      return;
+  }
 
-    try {
-        const totalPaginas = Math.ceil(peliculas.length / calcularProgramasPorPaginaActual().limite);
-        const contenedorPaginacion = document.querySelector(".paginas");
-        contenedorPaginacion.innerHTML = ""; // Limpiar contenido anterior
-        const currentPage = getCurrentPage();
+  try {
+      const totalPaginas = Math.ceil(peliculas.length / calcularProgramasPorPaginaActual().limite);
+      const contenedorPaginacion = document.querySelector(".paginas");
+      contenedorPaginacion.innerHTML = ""; // Limpiar contenido anterior
+      const currentPage = getCurrentPage();
 
-        for (let index = 1; index <= totalPaginas; index++) {
-            const btnpaginacion = document.createElement("button");
-            btnpaginacion.classList.add("paginas__btn");
-            btnpaginacion.textContent = index;
+      for (let index = 1; index <= totalPaginas; index++) {
+          const btnpaginacion = document.createElement("button");
+          btnpaginacion.classList.add("paginas__btn");
+          btnpaginacion.textContent = index;
 
-            if (index === currentPage) {
-                btnpaginacion.classList.add("active");
-            }
+          if (index === currentPage) {
+              btnpaginacion.classList.add("active");
+          }
 
-            btnpaginacion.addEventListener("click", () => {
-                setPage(index);
-                paginaActual = index;
-                generarPeliculas(peliculas);
-                agregarBotonVerMas(peliculas);
+          btnpaginacion.addEventListener("click", () => {
+              setPage(index);
+              paginaActual = index;
+              generarPeliculas(peliculas);
+              agregarBotonVerMas(peliculas);
 
-                contenedorPaginacion.querySelectorAll(".paginas__btn").forEach((btn) => {
-                    btn.classList.remove("active");
-                });
+              contenedorPaginacion.querySelectorAll(".paginas__btn").forEach((btn) => {
+                  btn.classList.remove("active");
+              });
 
-                btnpaginacion.classList.add("active");
-            });
+              btnpaginacion.classList.add("active");
+          });
 
-            contenedorPaginacion.appendChild(btnpaginacion);
-        }
-    } catch (error) {
-        console.error("Error al generar la paginación:", error);
-    }
+          contenedorPaginacion.appendChild(btnpaginacion);
+      }
+  } catch (error) {
+      console.error("Error al generar la paginación:", error);
+  }
 }
+
+
 agregarPeliculasAlGrid(peliculas)
 window.addEventListener("DOMContentLoaded",()=>{
   try {
@@ -395,17 +308,203 @@ window.addEventListener("popstate", () => {
     setPage(currentPage); // Establecer la página actual y cargar los programas
   });
   
-document.getElementById('fullscreenBtn').addEventListener('click', function() {
-    var iframe = document.getElementById('myIframe');
-    if (iframe.requestFullscreen) {
-        iframe.requestFullscreen();
-    } else if (iframe.mozRequestFullScreen) { // Firefox
-        iframe.mozRequestFullScreen();
-    } else if (iframe.webkitRequestFullscreen) { // Chrome, Safari, Opera
-        iframe.webkitRequestFullscreen();
-    } else if (iframe.msRequestFullscreen) { // IE/Edge
-        iframe.msRequestFullscreen();
-    }
-  });
+  import { enableFullscreen } from './Peliculas/botonAgrandarVideo';
 
- 
+  // Activa el modo fullscreen al hacer clic en el botón
+  enableFullscreen();
+
+
+
+// function generarPeliculas(peliculas, cantidadMostrar = 0) {
+//   const grid = document.querySelector('.Peliculas__grid');
+//   if (!grid) {
+//       throw new Error("No se encontró el contenedor Peliculas__grid.");
+//   }
+//   grid.innerHTML = ""; // Limpiar contenido anterior
+
+//   if (!peliculas || !Array.isArray(peliculas)) {
+//       console.error("La variable 'peliculas' no está definida o no es un array.");
+//       return;
+//   }
+
+//   const { inicial, incremento, limite } = calcularProgramasPorPaginaActual();
+//   const cantidad = cantidadMostrar || inicial;
+
+//   // Calcular inicio y fin según la página actual y cantidad de películas a mostrar
+//   const inicio = (paginaActual - 1) * limite;
+//   const fin = Math.min(inicio + cantidad, peliculas.length);
+
+//   // Obtener las películas de la página actual
+//   const programasPagina = peliculas.slice(inicio, fin);
+
+//   programasPagina.forEach(pelicula => {
+//       const peliculaHTML = generarPlantillaPelicula(pelicula);
+//       grid.innerHTML += peliculaHTML;
+//   });
+
+//   const botonVerMas = document.querySelector('.boton-vermas');
+//   if (cantidad >= limite || fin >= peliculas.length) {
+//       botonVerMas.style.display = 'none';
+//   } else {
+//       botonVerMas.style.display = 'block';
+//   }
+// }
+
+
+
+
+
+
+// function agregarBotonVerMas(peliculas) {
+//   const botonVerMas = document.querySelector('.boton-vermas');
+//   if (!botonVerMas) return;
+
+//   botonVerMas.style.display = 'block'; // Asegurarse de que el botón esté visible
+
+//   // Remove any existing event listeners to prevent multiple increments
+//   const newButton = botonVerMas.cloneNode(true);
+//   botonVerMas.parentNode.replaceChild(newButton, botonVerMas);
+
+//   newButton.addEventListener('click', () => {
+//       const grid = document.querySelector('.Peliculas__grid');
+//       const peliculasMostradas = grid.querySelectorAll('.Peliculas__card').length;
+//       const { incremento, limite } = calcularProgramasPorPaginaActual();
+//       const nuevasPeliculas = peliculasMostradas + incremento;
+
+//       if (nuevasPeliculas >= limite) {
+//           newButton.style.display = 'none';
+//       }
+
+//       generarPeliculas(peliculas, nuevasPeliculas);
+//   });
+// }
+
+
+//   function generarPaginacion(peliculas) {
+//     if (!peliculas || !Array.isArray(peliculas)) {
+//         console.error("La variable 'peliculas' no está definida o no es un array.");
+//         return;
+//     }
+
+//     try {
+//         const totalPaginas = Math.ceil(peliculas.length / calcularProgramasPorPaginaActual().limite);
+//         const contenedorPaginacion = document.querySelector(".paginas");
+//         contenedorPaginacion.innerHTML = ""; // Limpiar contenido anterior
+//         const currentPage = getCurrentPage();
+
+//         for (let index = 1; index <= totalPaginas; index++) {
+//             const btnpaginacion = document.createElement("button");
+//             btnpaginacion.classList.add("paginas__btn");
+//             btnpaginacion.textContent = index;
+
+//             if (index === currentPage) {
+//                 btnpaginacion.classList.add("active");
+//             }
+
+//             btnpaginacion.addEventListener("click", () => {
+//                 setPage(index);
+//                 paginaActual = index;
+//                 generarPeliculas(peliculas);
+//                 agregarBotonVerMas(peliculas);
+
+//                 contenedorPaginacion.querySelectorAll(".paginas__btn").forEach((btn) => {
+//                     btn.classList.remove("active");
+//                 });
+
+//                 btnpaginacion.classList.add("active");
+//             });
+
+//             contenedorPaginacion.appendChild(btnpaginacion);
+//         }
+//     } catch (error) {
+//         console.error("Error al generar la paginación:", error);
+//     }
+// }
+
+
+
+
+// let detallesDispositivo = null;
+
+// async function obtenerDetallesDispositivo() {
+//   if (!detallesDispositivo) {
+//     detallesDispositivo = await getDeviceDetails();
+//     detallesDispositivo.deviceId = localStorage.getItem('deviceId');
+   
+//   }
+//   return detallesDispositivo;
+// }
+
+
+
+// async function getDeviceDetails() {
+//   const platformInfo = platform.parse(navigator.userAgent);
+//   const { name, os } = platformInfo;
+
+//   const ipResponse = await fetch('https://api.ipify.org?format=json');
+//   const ipData = await ipResponse.json();
+
+//   return {
+//     navegadorNombre: name,
+//     sistemaOperativo: `${os.family} ${os.version}`,
+//     ipPublica: ipData.ip
+//   };
+// }
+
+
+// iconobusqueda.addEventListener('click', () => {
+//   buscarPelicula.classList.add('buscar-pelicula--active');
+//   buscarPeliculaInput.focus(); // Asegúrate de enfocar el input cuando se hace clic en el icono
+//   console.log('Icono de búsqueda clicado, input activado.');
+// });
+
+// btnBuscarPelicula.addEventListener('click', () => {
+//   actualizarPeliculas(); // Llama a la función cuando se hace clic en el botón
+// });
+
+  
+// buscarPeliculaInput.addEventListener('keydown', (event) => {
+//   if (event.key === 'Enter') {
+//     event.preventDefault(); // Evitar que se realice el comportamiento predeterminado
+//     actualizarPeliculas();
+//   }
+// });
+
+  
+// Función para filtrar las películas por nombre
+// function filtrarPeliculasPorNombre(nombre) {
+//   if (!peliculas || !Array.isArray(peliculas)) {
+//     console.log("La variable 'peliculas' no está definida o no es un array.");
+//     return [];
+//   }
+
+//   return peliculas.filter(pelicula => {
+//     if (pelicula && pelicula.nombre) {
+//       return pelicula.nombre.toLowerCase().includes(nombre.toLowerCase());
+//     } else {
+//       console.warn("Un objeto en 'peliculas' no tiene la propiedad 'nombre'.", pelicula);
+//       return false;
+//     }
+//   });
+// }
+
+// Función para actualizar las películas basadas en la búsqueda
+// function actualizarPeliculas() {
+//   const nombre = buscarPeliculaInput.value.trim(); // Eliminamos espacios en blanco
+//   console.log('Valor de búsqueda:', nombre);
+
+//   if (nombre === '') {
+//     // Si el campo de búsqueda está vacío, mostrar todas las películas
+//     paginaActual = 1; // Restablecer a la primera página
+//     generarPeliculas(peliculas);
+//     generarPaginacion(peliculas);
+//   } else {
+//     const peliculasFiltradas = filtrarPeliculasPorNombre(nombre);
+//     console.log('Películas filtradas:', peliculasFiltradas);
+//     paginaActual = 1; // Restablecer a la primera página
+//     generarPeliculas(peliculasFiltradas);
+//     generarPaginacion(peliculasFiltradas); // Actualizar la paginación según las películas filtradas
+//   }
+//   // Desplazar al inicio de la sección de películas
+//   seccionPeliculas.scrollIntoView({ behavior: 'smooth' });
+// }
