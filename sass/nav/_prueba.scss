@@ -1,0 +1,23 @@
+@use "../global/mixin" as m;
+
+.container{
+    background-color: aliceblue;
+
+    &__item{
+        color: black;
+
+        &:hover{
+            color: red;
+        }
+    }
+
+    @include m.tablet {
+        background-color: aqua;
+    
+    }
+    @include m.desktop {
+        background-color: rgb(5, 105, 30);
+    
+    }
+    
+}
