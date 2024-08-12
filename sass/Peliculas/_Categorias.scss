@@ -38,6 +38,9 @@
         flex: 0 0 auto; /* No permitir que los elementos se encojan o crezcan */
         // outline: .1rem solid rgb(115, 114, 114);
         cursor: pointer;
+        user-select: none;
+        outline: none; /* Elimina el borde de enfoque */
+    -webkit-tap-highlight-color: transparent; 
         @include m.desktop {
             width: 14rem;
             height: 10.5rem;
@@ -51,6 +54,7 @@
         }
         &:hover{
             filter: unset;
+            transform: scale(1.02);
         //    filter: contrast(120%) saturate(150%);
         }
         
@@ -168,7 +172,7 @@
         position: absolute;
         border-radius: 1rem;
         text-wrap: balance;
-        font-size: 1.3rem;
+        font-size: 1.4rem;
         inset: 0;
         margin: auto auto;
         text-shadow: 0px 0px 5px blue;

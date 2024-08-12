@@ -4,6 +4,7 @@
     margin-bottom: 5rem;
     &__contenedor{
         width: 98%;
+      
         @include m.tablet {
             width: 90%;
             max-width: 120rem;
@@ -22,7 +23,7 @@
          column-gap: 0.9rem;
   
         @supports (display: grid) {
-            grid-template-columns: repeat(auto-fit, minmax(10.5rem, min-content));
+            grid-template-columns: repeat(auto-fit, minmax(10.5rem, 1fr));
         }
 
         @supports not (display: grid) {
@@ -176,6 +177,7 @@
         text-wrap: pretty;
         font-weight: 400;
         text-align: center;
+   
         @include m.tablet {
             font-size: 1.4rem;
         }
@@ -242,6 +244,9 @@ background: #2E8A7B;
 opacity: .6;
 backdrop-filter: blur(2rem);
 z-index: 99;
+}
+.generos{
+    padding-left: 1.5rem;
 }
 // .modal-content{
     

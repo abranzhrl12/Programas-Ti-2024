@@ -5,7 +5,8 @@ export default {
           id: 28,
           nombre: "Telma La Unicornio 2024",
           imagen: "../../Imagenes_Pelis/Telma_la_unicornio.webp",
-          imagenX: "/imagenes/ilustrator.webp",
+          imagen_small: "../../Assets/Imagenespeliculas/small/telma_el_unicornio_2024-small.webp",
+          imagen_tv:"../../Assets/Imagenespeliculas/tv/telma_el_unicornio_2024-tv.webp",
           Descripcion:
             "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
             Video: "https://iframe.mediadelivery.net/embed/261653/f12ee4c1-3660-4932-856f-e8c3779b5e91", 
@@ -15,7 +16,8 @@ export default {
           id: 29,
           nombre: "Un lugar en silencio: Día uno (2024)",
           imagen: "../../Imagenes_Pelis/unlugarensilencio2024.webp",
-          imagenX: "/imagenes/ilustrator.webp",
+          imagen_small: "../../Assets/Imagenespeliculas/small/un_lugar_en_silencio_2024-small.webp",
+          imagen_tv:"../../Assets/Imagenespeliculas/tv/un_lugar_en_silencio_2024-tv.webp",
           Descripcion:
             "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
             Video: "https://iframe.mediadelivery.net/embed/261653/c7e38666-613b-49d0-891c-fb02f99f9ff6",  
@@ -25,7 +27,8 @@ export default {
           id: 30,
           nombre: "Deapool 3",
           imagen: "../../Imagenes_Pelis/deapool3.jpg",
-          imagenX: "/imagenes/ilustrator.webp",
+          imagen_small: "../../Assets/Imagenespeliculas/small/deadpool3-small.webp",
+          imagen_tv:"../../Assets/Imagenespeliculas/tv/deadpool3-tv.webp",
           Descripcion:
             "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
             Video: "https://iframe.mediadelivery.net/embed/261653/0f93e18c-70d6-4764-aa2c-f87cc0a2102b",
@@ -34,8 +37,9 @@ export default {
         {
           id: 31,
           nombre: "Immaculada 2024",
-          imagen: "../../Imagenes_Pelis/Immaculate.jpg",
-          imagenX: "/imagenes/ilustrator.webp",
+          imagen:  "../../Imagenes_Pelis/Immaculate.jpg",
+          imagen_small: "../../Assets/Imagenespeliculas/small/inmaculada_2024-small.webp",
+          imagen_tv:"../../Assets/Imagenespeliculas/tv/inmaculada_2024-tv.webp",
           Descripcion:
             "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
             Video: "https://iframe.mediadelivery.net/embed/261653/c9834c60-2585-4132-af7d-ebf2d07b8446",
@@ -45,7 +49,8 @@ export default {
           id: 32,
           nombre: "Lisa Frankenstein 2024",
           imagen: "../../Imagenes_Pelis/Lisa.Frankenstein.2024.webp",
-          imagenX: "/imagenes/ilustrator.webp",
+          imagen_small:"../../Assets/Imagenespeliculas/small/lisa_frankentein_2024-small.webp",
+          imagen_tv:"../../Assets/Imagenespeliculas/tv/lisa_frankentein_2024-tv.webp",
           Descripcion:
             "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
             Video: "https://iframe.mediadelivery.net/embed/261653/6fac1415-642e-486a-b55f-a0e55a0686db",
@@ -54,8 +59,9 @@ export default {
         {
           id: 33,
           nombre: "Amigos Imaginarios (2024)",
-          imagen: "../../Imagenes_Pelis/Amigos.imaginarios.(2024).webp",
-          imagenX: "/imagenes/ilustrator.webp",
+          imagen:  "../../Imagenes_Pelis/Amigos.imaginarios.(2024).webp",
+          imagen_small:"../../Assets/Imagenespeliculas/small/amigos_imaginarios_2024-small.webp",
+          imagen_tv:"../../Assets/Imagenespeliculas/tv/amigos_imaginarios_2024-tv.webp",
           Descripcion:
             "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
             Video: "https://iframe.mediadelivery.net/embed/261653/7b9a8340-50a7-48ba-ab5c-712325bce518",
@@ -65,7 +71,8 @@ export default {
           id: 34,
           nombre: "Furiosa De la Saga Mad.Max (2024)",
           imagen: "../../Imagenes_Pelis/Furiosa.De.la.Saga.Mad.Max.(2024).webp",
-          imagenX: "/imagenes/ilustrator.webp",
+          imagen_small: "../../Assets/Imagenespeliculas/small/furiosa_de_la_Saga_mad_max_2024-small.webp",
+          imagen_tv:"../../Assets/Imagenespeliculas/tv/furiosa_de_la_Saga_mad_max_2024-tv.webp",
           Descripcion:
             "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
             Video: "https://iframe.mediadelivery.net/embed/261653/5a9f0d91-d45e-47f5-b130-18c80d54a0dc",
@@ -74,8 +81,9 @@ export default {
         {
           id: 35,
           nombre: "Descendientes 4 (2024)",
-          imagen: "../../Imagenes_Pelis/decendientes2024.webp",
-          imagenX: "/imagenes/ilustrator.webp",
+          imagen:  "../../Imagenes_Pelis/decendientes2024.webp",
+          imagen_small: "../../Assets/Imagenespeliculas/small/descendientes_4_2024-small.webp",
+          imagen_tv:"../../Assets/Imagenespeliculas/tv/descendientes_4_2024-tv.webp",
           Descripcion:
             "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
             Video: "https://iframe.mediadelivery.net/embed/261653/e007c1fc-6c0c-4857-83fb-a773a5633f82",
@@ -84,8 +92,9 @@ export default {
         {
           id: 36,
           nombre: "Descendientes 3",
-          imagen: "../../Imagenes_Pelis/Los descendientes 3 (2019).webp",
-          imagenX: "/imagenes/ilustrator.webp",
+          imagen:  "../../Imagenes_Pelis/Los descendientes 3 (2019).webp",
+          imagen_small: "../../Assets/Imagenespeliculas/small/decendientes_3-small.webp",
+          imagen_tv:"../../Assets/Imagenespeliculas/tv/decendientes_3-tv.webp",
           Descripcion:
             "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
           Video: "https://iframe.mediadelivery.net/embed/261653/8085d69e-0137-4602-8573-bb4bdfe3bb7d",
@@ -94,8 +103,9 @@ export default {
         {
           id: 37,
           nombre: "Descendientes 2",
-          imagen: "../../Imagenes_Pelis/Los descendientes 2 (2017) (2).webp",
-          imagenX: "/imagenes/ilustrator.webp",
+          imagen:  "../../Imagenes_Pelis/Los descendientes 2 (2017) (2).webp",
+          imagen_small: "../../Assets/Imagenespeliculas/small/descendientes_2-small.webp",
+          imagen_tv:"../../Assets/Imagenespeliculas/tv/descendientes_2-tv.webp",
           Descripcion:
             "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
           Video: "https://iframe.mediadelivery.net/embed/261653/bea964f4-32f9-4dc0-8c23-8fb9ed5be859",
@@ -604,6 +614,15 @@ export default {
           Descripcion:
             "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
           Video: "https://iframe.mediadelivery.net/embed/261653/e4a625d4-6ac6-47c8-8af4-8e253ab017b5",
+        },
+        {
+          id: 470,
+          nombre: "KiKi Entregas a Domicilio",
+          imagen: "../../Imagenes_Pelis/KIKI_entregas_a_domicilio.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/1b8e8c89-4a65-4dcb-8e0c-736a71781ae3",
         },
         {
           id: 86,
@@ -2431,7 +2450,7 @@ export default {
           imagenX: "/imagenes/ilustrator.webp",
           Descripcion:
             "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
-          Video: "https://iframe.mediadelivery.net/embed/261653/34a4a708-4586-4ce4-a049-a762cb11c5a3",
+          Video: "https://iframe.mediadelivery.net/embed/261653/1bb434fb-8a66-4455-bb14-974a7306ee71",
         },
         {
           id: 281,
@@ -2575,7 +2594,7 @@ export default {
           imagenX: "/imagenes/ilustrator.webp",
           Descripcion:
             "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
-          Video: "https://iframe.mediadelivery.net/embed/261653/34815a4b-3199-43ba-9cbd-baa5bdaa946d",
+          Video: "https://iframe.mediadelivery.net/embed/261653/cbcb2929-4b8e-43ae-ade4-599452412b84",
         },
         {
           id: 297,
@@ -2668,7 +2687,99 @@ export default {
           Descripcion:
             "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
           Video: "https://iframe.mediadelivery.net/embed/261653/dad4197a-5571-4638-9a52-7c7a86273f2e",
+        },
+        {
+          id: 306,
+          nombre: "Monster House La Casa",
+          imagen: "../../Imagenes_Pelis/Monster_House.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/33ff61db-b30e-409f-a81b-98d5c804e846",
+        },
+        {
+          id: 307,
+          nombre: "Mavka Guardiana del bosque.2023",
+          imagen: "../../Imagenes_Pelis/mavka_guardina_del_bosque.jpg",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/dd26500d-a234-4f73-919e-348c5b1e3d59",
+        },
+        {
+          id: 308,
+          nombre: "Moana Un mar de aventuras",
+          imagen: "../../Imagenes_Pelis/moana_un_mar_de_aventuras.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/6122dfe7-271e-4885-8e31-137e75978a0b",
+        },
+        {
+          id: 309,
+          nombre: "Actividad Paranormal 1",
+          imagen: "../../Imagenes_Pelis/actividad_paranormal1 (2).webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/651a1fe7-40a2-463c-8249-731bf3bffc5a",
+        },
+        {
+          id: 310,
+          nombre: "Actividad.Paranormal 2",
+          imagen: "../../Imagenes_Pelis/actividad_paranormal2.jpg",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/fa7d0ad7-bce5-4e94-ae72-c8ddfe92e519",
+        },
+        {
+          id: 311,
+          nombre: "Actividad.Paranormal 3",
+          imagen: "../../Imagenes_Pelis/actividad_paranormal3.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/5e645efe-422d-4a7c-ad57-80a95d930e96",
+        },
+        {
+          id: 312,
+          nombre: "Actividad.Paranormal 4",
+          imagen: "../../Imagenes_Pelis/actividad_paranormal4.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/4e9e2e01-0a19-4ae3-8ce3-e5798e09ab6f",
+        },
+        {
+          id: 313,
+          nombre: "Actividad.Paranormal 5",
+          imagen: "../../Imagenes_Pelis/actividad_paranormal5.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/9abb3797-ff8b-4f89-b9b4-ed78a274757a",
+        },
+        {
+          id: 314,
+          nombre: "Actividad.Paranormal 6",
+          imagen: "../../Imagenes_Pelis/actividad_paranormal6.webp",
+          imagenX: "/imagenes/ilustrator.webp",
+          Descripcion:
+            "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+          Video: "https://iframe.mediadelivery.net/embed/261653/d317ed3b-ef98-4da8-a14f-5bc13a353202",
         }
+
+
+
+
+
+
+
+
+
+
+
 
         
        

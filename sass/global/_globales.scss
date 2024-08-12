@@ -27,7 +27,7 @@ html {
 [class*="__img"] {
   display: block;
   max-width: 100%;
-  filter: contrast(115%) saturate(106%) brightness(103%);
+  filter: contrast(116%) saturate(107%) brightness(105%);
 }
 body {
   width: 100%;
@@ -36,4 +36,5 @@ body {
   font-size: 1.6rem;
   background: v.$color-primario;
   background-color: #1D1C24!important;
+  // background-color: #030629f0 !important;
 }
