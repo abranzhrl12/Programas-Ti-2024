@@ -512,19 +512,3 @@ function actualizarURL2(pageNumber) {
   url.searchParams.set("page", pageNumber);
   window.history.pushState({}, '', url);
 }
-let botones = document.querySelectorAll('#Movile_Home, #Movile_Peliculas, #Movile_Series, #Movile_Faboritos, #Movile_More');
-
-botones.forEach(boton => {
-    boton.addEventListener('click', () => {
-        remov_Activ();
-        boton.classList.add('activ');
-    });
-});
-
-function add_Active(element) {
-    element.classList.add('activ')
-}
-
-function remov_Activ() {
-    botones.forEach(boton => boton.classList.remove('activ'));
-}

@@ -33,7 +33,6 @@ export function filtrarPeliculasPorNombre(nombre, peliculas) {
     });
 }
 
-// Función para actualizar las películas basadas en la búsqueda
 export function actualizarPeliculas(buscarPeliculaInput, peliculas, generarPeliculas, generarPaginacion, seccionPeliculas, paginaActual) {
     const nombre = buscarPeliculaInput.value.trim(); // Eliminamos espacios en blanco
     console.log('Valor de búsqueda:', nombre);
@@ -41,20 +40,21 @@ export function actualizarPeliculas(buscarPeliculaInput, peliculas, generarPelic
     if (nombre === '') {
         // Si el campo de búsqueda está vacío, mostrar todas las películas
         paginaActual = 1; // Restablecer a la primera página
-        generarPeliculas(peliculas);
-        generarPaginacion(peliculas);
+        generarPeliculas(peliculas); // Actualizar el grid con todas las películas
+        generarPaginacion(peliculas); // Actualizar la paginación
     } else {
         const peliculasFiltradas = filtrarPeliculasPorNombre(nombre, peliculas);
         console.log('Películas filtradas:', peliculasFiltradas);
         paginaActual = 1; // Restablecer a la primera página
-        generarPeliculas(peliculasFiltradas);
+        generarPeliculas(peliculasFiltradas); // Actualizar el grid con las películas filtradas
         generarPaginacion(peliculasFiltradas); // Actualizar la paginación según las películas filtradas
     }
+    
     // Desplazar al inicio de la sección de películas
     seccionPeliculas.scrollIntoView({ behavior: 'smooth' });
 }
 
-// Función para inicializar el evento de clic en el ícono de búsqueda
+
 export function inicializarBusqueda(iconobusqueda, buscarPelicula, buscarPeliculaInput) {
     iconobusqueda.addEventListener('click', () => {
         buscarPelicula.classList.add('buscar-pelicula--active');

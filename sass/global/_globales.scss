@@ -10,6 +10,9 @@
   --gradiente:linear-gradient(0deg, rgba(175,169,255,1) 0%, rgba(154,146,255,1) 14%, rgba(126,113,255,1) 52%, rgba(91,68,252,1) 100%);
 
   --bg_nav_movile:#011018;
+  // --bg_nav_movile:#07092B;
+
+  
   --color_nav_active:#d2df25;
   --color_nav_inactive:#b4b4b3;
 
@@ -48,5 +51,5 @@ body {
   font-size: 1.6rem;
   background: v.$color-primario;
   background-color: #1D1C24!important;
-  // background-color: #030629f0 !important;
+  // background-color: #000000f0 !important;
 }

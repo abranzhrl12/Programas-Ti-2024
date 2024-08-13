@@ -200,24 +200,32 @@
        
     }
 }
+.DetallePrograma__ConVideo{
+    width: 95%;
+    aspect-ratio: 16/9;
+    max-width: 120rem;
+    margin: 0 auto
+}
 .videovivo-contenedor{
     width: 100%;
     max-width: 120rem;
-    height: auto;
+    aspect-ratio: 16/9;
     display: flex;
     justify-content: center;
     position: relative;
     margin: 0 auto;
      align-items: center;
-     background-color: blue;
+
+     
    
 }
 #my-video{
-    width: 97%;
+    width: 100%;
     max-width: 80rem;
     height: fit-content;
     aspect-ratio: 16/9;
     position: absolute;
+    background-color: red;
     
   
 }

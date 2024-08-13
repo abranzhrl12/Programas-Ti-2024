@@ -15,19 +15,39 @@
         height: 44.2rem;
     }
     @include m.desktopFull {
-        height: 56rem;
+        height: 58rem;
     }
 }
-
+swiper-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  swiper-slide {
+    width: 100%;
+    object-fit: cover;
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+ 
+  }
 .generos{
     margin-top: 2rem;
     margin-bottom: -10rem;
 }
+picture{
+    width: 100%;
+    object-fit: cover;
+   
+}
 .portada{
     width: 100%;
-    // object-position: 0px 21rem;
      object-fit: cover; 
-     height: 100%;
+    //  height: 100%;
      @include m.desktop {
         max-width: 100%;
         object-fit: cover; 
@@ -35,7 +55,7 @@
     }
     @include m.desktopFull {
         object-fit: cover; 
-        object-position: 0px 150px;
+        object-position: 0px 200px;
     }
     }
   

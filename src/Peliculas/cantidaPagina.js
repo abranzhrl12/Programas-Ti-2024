@@ -1,5 +1,7 @@
 
 export function calcularProgramasPorPaginaActual() {
+
+  
     try {
         if (window.innerWidth > 369 && window.innerWidth < 455) {
             return { inicial: 27, incremento: 12, limite: 75 };

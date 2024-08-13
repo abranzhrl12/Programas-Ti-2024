@@ -114,7 +114,7 @@ export default {
       {
         id: 36,
         nombre: "Descendientes 3",
-        imagen: "../../Imagenes_Pelis/Los descendientes 3 (2019).webp",
+        imagen: "../../Assets/Imagenespeliculas/decendientes_3.webp",
         imagen_small:
           "../../Assets/Imagenespeliculas/small/decendientes_3-small.webp",
         imagen_tv: "../../Assets/Imagenespeliculas/tv/decendientes_3-tv.webp",
@@ -127,7 +127,7 @@ export default {
       {
         id: 37,
         nombre: "Descendientes 2",
-        imagen: "../../Assets/Imagenespeliculas/decendientes_3.webp",
+        imagen: "../../Assets/Imagenespeliculas/descendientes_2.webp",
         imagen_small:
           "../../Assets/Imagenespeliculas/small/descendientes_2-small.webp",
         imagen_tv: "../../Assets/Imagenespeliculas/tv/descendientes_2-tv.webp",
@@ -140,7 +140,7 @@ export default {
       {
         id: 38,
         nombre: "Descendientes 1",
-        imagen: "../../Imagenes_Pelis/Los descendientes1 (2).webp",
+        imagen: "../../Assets/Imagenespeliculas/decendientes_3.webp",
         imagenX: "/imagenes/ilustrator.webp",
         Descripcion:
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
@@ -241,7 +241,7 @@ export default {
       {
         id: 47,
         nombre: "John Wick 4 (2023)",
-        imagen: "../../Imagenes_Pelis/jhonwick4.webp",
+        imagen: "../../Assets/Imagenespeliculas/john_wick_4.webp",
         imagenX: "/imagenes/ilustrator.webp",
         Descripcion:
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
@@ -891,7 +891,7 @@ export default {
       {
         id: 93,
         nombre: "Eternals",
-        imagen: "../../Imagenes_Pelis/eternals.jpg",
+        imagen: "../../Assets/Imagenespeliculas/eternals-img2.webp",
         imagenX: "/imagenes/ilustrator.webp",
         Descripcion:
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
@@ -936,7 +936,7 @@ export default {
       {
         id: 97,
         nombre: "El Hobbit Un Viaje Inesperado (2012)",
-        imagen: "../../Imagenes_Pelis/elhobbit1.jpg",
+        imagen: "../../Assets/Imagenespeliculas/hobbit_viaje_inesperado.webp",
         imagenX: "/imagenes/ilustrator.webp",
         Descripcion:
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
@@ -947,7 +947,7 @@ export default {
       {
         id: 98,
         nombre: "El Hobbit La desolación de Smaug (2013)",
-        imagen: "../../Imagenes_Pelis/elhobbit2 (2).webp",
+        imagen: "../../Assets/Imagenespeliculas/hobbit_desolacion.webp",
         imagenX: "/imagenes/ilustrator.webp",
         Descripcion:
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
@@ -994,7 +994,7 @@ export default {
         id: 102,
         nombre: "El señor de los anillos 3",
         imagen:
-          "../../Imagenes_Pelis/el señor de los anillos 3 el retorno del rey.webp",
+          "../../Assets/Imagenespeliculas/el_señor_de_los_Anillos_retorno_del_rey.webp",
         imagenX: "/imagenes/ilustrator.webp",
         Descripcion:
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
@@ -1016,7 +1016,7 @@ export default {
       {
         id: 104,
         nombre: "Free Guy 2021",
-        imagen: "../../Imagenes_Pelis/freeguy2021.webp",
+        imagen: "../../Assets/Imagenespeliculas/free_guy_2021.webp",
         imagenX: "/imagenes/ilustrator.webp",
         Descripcion:
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
@@ -1082,7 +1082,7 @@ export default {
       {
         id: 110,
         nombre: "Harry potter 5",
-        imagen: "../../Imagenes_Pelis/harrypotter5.webp",
+        imagen: "../../Assets/Imagenespeliculas/harry_potter_5.webp",
         imagenX: "/imagenes/ilustrator.webp",
         Descripcion:
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
@@ -1127,7 +1127,7 @@ export default {
       {
         id: 114,
         nombre: "Un lugar en Silencio (2018)",
-        imagen: "../../Imagenes_Pelis/unlugarensilencio2018.webp",
+        imagen: "../../Assets/Imagenespeliculas/un_lugar_en_silencio_2018.webp",
         imagenX: "/imagenes/ilustrator.webp",
         Descripcion:
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
@@ -1901,7 +1901,7 @@ export default {
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
         Video:
           "https://iframe.mediadelivery.net/embed/261653/a0626e45-38d1-457a-afbb-6ee28a20f6ad",
-          Generos: ["Animación", "Aventura", "Fantasía"]
+          Generos: ["Animación", "Aventura", "Fantasía","Anime"]
       },
       {
         id: 185,
@@ -2199,7 +2199,7 @@ export default {
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
         Video:
           "https://iframe.mediadelivery.net/embed/261653/6997ee0c-90bc-4f6c-b5e1-d1ee0892eea9",
-          Generos: ["Acción", "Aventura", "Animación"]
+          Generos: ["Acción", "Aventura", "Animación","Anime"]
       },
       {
         id: 212,
@@ -2210,7 +2210,7 @@ export default {
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
         Video:
           "https://iframe.mediadelivery.net/embed/261653/1aea5910-dc70-4c9f-90e4-dd4612e661b2",
-          Generos: ["Acción", "Aventura", "Animación"]
+          Generos: ["Acción", "Aventura", "Animación","Anime"]
       },
       {
         id: 213,
@@ -2222,7 +2222,7 @@ export default {
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
         Video:
           "https://iframe.mediadelivery.net/embed/261653/218e0a98-2bdc-45df-aa71-4f0041d7cb47",
-          Generos: ["Acción", "Aventura", "Animación"]
+          Generos: ["Acción", "Aventura", "Animación","Anime"]
       },
       {
         id: 214,
@@ -2233,7 +2233,7 @@ export default {
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
         Video:
           "https://iframe.mediadelivery.net/embed/261653/eae8c0cb-8adb-40f8-9caa-a90a2d41080d",
-          Generos: ["Acción", "Aventura", "Animación"]
+          Generos: ["Acción", "Aventura", "Animación","Anime"]
       },
 
       {
@@ -2246,7 +2246,7 @@ export default {
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
         Video:
           "https://iframe.mediadelivery.net/embed/261653/6c70e043-94ff-452e-a80e-2186e62cbb00",
-          Generos: ["Acción", "Aventura", "Animación"]
+          Generos: ["Acción", "Aventura", "Animación","Anime"]
       },
       {
         id: 216,
@@ -2258,7 +2258,7 @@ export default {
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
         Video:
           "https://iframe.mediadelivery.net/embed/261653/5afb9a74-23f9-45b9-8099-1bf2b25c7f2a",
-          Generos: ["Acción", "Aventura", "Animación"]
+          Generos: ["Acción", "Aventura", "Animación","Anime"]
       },
       {
         id: 217,
@@ -2270,7 +2270,7 @@ export default {
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
         Video:
           "https://iframe.mediadelivery.net/embed/261653/87b37c55-abd4-4098-bcb5-ee2d3bb54d72",
-          Generos: ["Acción", "Aventura", "Animación"]
+          Generos: ["Acción", "Aventura", "Animación","Anime"]
       },
       {
         id: 218,
@@ -2282,7 +2282,7 @@ export default {
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
         Video:
           "https://iframe.mediadelivery.net/embed/261653/ccf1655b-b7b8-420f-8607-5e715b5dd005",
-          Generos: ["Acción", "Aventura", "Animación"]
+          Generos: ["Acción", "Aventura", "Animación","Anime"]
       },
       {
         id: 219,
@@ -2294,7 +2294,7 @@ export default {
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
         Video:
           "https://iframe.mediadelivery.net/embed/261653/a820e4e0-e782-44da-aba8-273336296b92",
-          Generos: ["Acción", "Aventura", "Animación"]
+          Generos: ["Acción", "Aventura", "Animación","Anime"]
       },
 
       {
@@ -2307,7 +2307,7 @@ export default {
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
         Video:
           "https://iframe.mediadelivery.net/embed/261653/cef37b8c-6e4e-41a0-9eab-291f952048ed",
-          Generos: ["Acción", "Aventura", "Animación"]
+          Generos: ["Acción", "Aventura", "Animación","Anime"]
       },
       {
         id: 221,
@@ -2318,7 +2318,7 @@ export default {
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
         Video:
           "https://iframe.mediadelivery.net/embed/261653/d8f7a148-baf4-409c-99ae-7c1d41be8bbd",
-          Generos: ["Acción", "Aventura", "Animación"]
+          Generos: ["Acción", "Aventura", "Animación","Anime"]
       },
 
       {
@@ -2331,7 +2331,7 @@ export default {
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
         Video:
           "https://iframe.mediadelivery.net/embed/261653/19981496-8ad3-42d6-aa0c-e36bde661bad",
-          Generos: ["Acción", "Aventura", "Animación"]
+          Generos: ["Acción", "Aventura", "Animación","Anime"]
       },
       {
         id: 223,
@@ -2343,7 +2343,7 @@ export default {
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
         Video:
           "https://iframe.mediadelivery.net/embed/261653/a0f19435-2443-4ca9-b52b-e693c833c38c",
-          Generos: ["Acción", "Aventura", "Animación"]
+          Generos: ["Acción", "Aventura", "Animación","Anime"]
       },
       {
         id: 224,
@@ -2355,7 +2355,7 @@ export default {
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
         Video:
           "https://iframe.mediadelivery.net/embed/261653/6a27be2a-4ad1-4a5c-952e-fe8779dafb6b",
-          Generos: ["Acción", "Aventura", "Animación"]
+          Generos: ["Acción", "Aventura", "Animación","Anime"]
       },
       {
         id: 225,
@@ -2367,7 +2367,7 @@ export default {
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
         Video:
           "https://iframe.mediadelivery.net/embed/261653/97b5140e-fe2d-427a-9395-1bc13a8bbe02",
-          Generos: ["Acción", "Aventura", "Animación"]
+          Generos: ["Acción", "Aventura", "Animación","Anime"]
       },
       {
         id: 226,
@@ -2379,7 +2379,7 @@ export default {
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
         Video:
           "https://iframe.mediadelivery.net/embed/261653/40ac62e8-db8c-44c6-8f9d-060f55b93951",
-          Generos: ["Acción", "Aventura", "Animación"]
+          Generos: ["Acción", "Aventura", "Animación","Anime"]
       },
       {
         id: 227,
@@ -2391,7 +2391,7 @@ export default {
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
         Video:
           "https://iframe.mediadelivery.net/embed/261653/a37bf829-2f74-40a1-9263-14ab8c83849c",
-          Generos: ["Acción", "Aventura", "Animación"]
+          Generos: ["Acción", "Aventura", "Animación","Anime"]
       },
       {
         id: 228,
@@ -2403,7 +2403,7 @@ export default {
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
         Video:
           "https://iframe.mediadelivery.net/embed/261653/616647e4-5706-4f0b-8c0c-b02ce4a7b8a2",
-          Generos: ["Acción", "Aventura", "Animación"]
+          Generos: ["Acción", "Aventura", "Animación","Anime"]
       },
       {
         id: 229,
@@ -2415,7 +2415,7 @@ export default {
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
         Video:
           "https://iframe.mediadelivery.net/embed/261653/aab8fa46-3ee9-4637-9a8a-6d1ba1765622",
-          Generos: ["Acción", "Aventura", "Animación"]
+          Generos: ["Acción", "Aventura", "Animación","Anime"]
       },
       {
         id: 230,
@@ -2427,7 +2427,7 @@ export default {
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
         Video:
           "https://iframe.mediadelivery.net/embed/261653/7aa2b287-44d6-4ebf-997b-c3ddfe1e0dde",
-          Generos: ["Acción", "Aventura", "Animación"]
+          Generos: ["Acción", "Aventura", "Animación","Anime"]
       },
 
       {
@@ -2440,7 +2440,7 @@ export default {
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
         Video:
           "https://iframe.mediadelivery.net/embed/261653/f2031b0f-f98c-44af-b794-d4557fa856e5",
-          Generos: ["Acción", "Aventura", "Animación"]
+          Generos: ["Acción", "Aventura", "Animación","Anime"]
       },
       {
         id: 232,
@@ -2452,7 +2452,7 @@ export default {
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
         Video:
           "https://iframe.mediadelivery.net/embed/261653/f285f135-ca2c-4b19-8e71-e025eef7f00b",
-          Generos: ["Acción", "Aventura", "Animación"]
+          Generos: ["Acción", "Aventura", "Animación","Anime"]
       },
       {
         id: 233,
@@ -2464,7 +2464,7 @@ export default {
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
         Video:
           "https://iframe.mediadelivery.net/embed/261653/d0a710a7-2007-48fd-b5a5-00d11546e184",
-          Generos: ["Acción", "Aventura", "Animación"]
+          Generos: ["Acción", "Aventura", "Animación","Anime"]
       },
       {
         id: 234,
@@ -2572,7 +2572,7 @@ export default {
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
         Video:
           "https://iframe.mediadelivery.net/embed/261653/78437cf0-4df1-4418-b80f-3bfc2773bb73",
-          Generos: ["Animación", "Aventura"]
+          Generos: ["Animación", "Aventura","Anime"]
       },
       {
         id: 244,
@@ -3211,7 +3211,7 @@ export default {
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
         Video:
           "https://iframe.mediadelivery.net/embed/261653/5ba17c71-4c19-493c-b314-aaf3e68d45c9",
-          genero: ["Animación", "Aventura", "Comedia"]
+          Generos: ["Animación", "Aventura", "Comedia"]
       },
       {
         id: 300,
@@ -3222,7 +3222,7 @@ export default {
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
         Video:
           "https://iframe.mediadelivery.net/embed/261653/31760284-8237-4e36-8676-bb082173ccc1",
-          genero: ["Animación", "Aventura", "Comedia"]
+          Generos: ["Animación", "Aventura", "Comedia"]
       },
       {
         id: 301,
@@ -3233,7 +3233,7 @@ export default {
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
         Video:
           "https://iframe.mediadelivery.net/embed/261653/a65083f4-c7d2-4a8b-a4cc-fca9e22b8b48",
-          genero: ["Animación", "Aventura", "Comedia"]
+          Generos: ["Animación", "Aventura", "Comedia"]
       },
       {
         id: 302,
@@ -3244,7 +3244,7 @@ export default {
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
         Video:
           "https://iframe.mediadelivery.net/embed/261653/bb40880e-3f50-437d-bf39-3fd3415f16d0",
-          genero: ["Animación", "Fantasía", "Musical"]
+          Generos: ["Animación", "Fantasía", "Musical"]
       },
       {
         id: 303,
@@ -3255,7 +3255,7 @@ export default {
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
         Video:
           "https://iframe.mediadelivery.net/embed/261653/f5ccf14b-bacf-4ec9-919a-b6a07751430d",
-          genero: ["Animación", "Aventura", "Drama"]
+          Generos: ["Animación", "Aventura", "Drama"]
       },
       {
         id: 304,
@@ -3266,7 +3266,7 @@ export default {
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
         Video:
           "https://iframe.mediadelivery.net/embed/261653/e9c85b26-5ca6-48af-a190-c91413a94a45",
-          genero: ["Comedia", "Fantasía"]
+          Generos: ["Comedia", "Fantasía"]
       },
       {
         id: 305,
@@ -3277,7 +3277,7 @@ export default {
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
         Video:
           "https://iframe.mediadelivery.net/embed/261653/dad4197a-5571-4638-9a52-7c7a86273f2e",
-          genero: ["Aventura", "Fantasía", "Familiar"]
+          Generos: ["Aventura", "Fantasía", "Familiar"]
       },
       {
         id: 306,
@@ -3288,7 +3288,7 @@ export default {
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
         Video:
           "https://iframe.mediadelivery.net/embed/261653/33ff61db-b30e-409f-a81b-98d5c804e846",
-          genero: ["Animación", "Aventura", "Comedia", "Terror"]
+          Generos: ["Animación", "Aventura", "Comedia", "Terror"]
       },
       {
         id: 307,
@@ -3299,7 +3299,7 @@ export default {
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
         Video:
           "https://iframe.mediadelivery.net/embed/261653/dd26500d-a234-4f73-919e-348c5b1e3d59",
-          genero: ["Animación", "Aventura", "Fantasía"]
+          Generos: ["Animación", "Aventura", "Fantasía"]
       },
       {
         id: 308,
@@ -3310,7 +3310,7 @@ export default {
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
         Video:
           "https://iframe.mediadelivery.net/embed/261653/6122dfe7-271e-4885-8e31-137e75978a0b",
-          genero: ["Animación", "Aventura", "Fantasía"]
+          Generos: ["Animación", "Aventura", "Fantasía"]
       },
       {
         id: 309,
@@ -3321,7 +3321,7 @@ export default {
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
         Video:
           "https://iframe.mediadelivery.net/embed/261653/651a1fe7-40a2-463c-8249-731bf3bffc5a",
-          genero: ["Terror", "Suspense"]
+          Generos: ["Terror", "Suspense"]
       },
       {
         id: 310,
@@ -3332,7 +3332,7 @@ export default {
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
         Video:
           "https://iframe.mediadelivery.net/embed/261653/fa7d0ad7-bce5-4e94-ae72-c8ddfe92e519",
-          genero: ["Terror", "Suspense"]
+          Generos: ["Terror", "Suspense"]
       },
       {
         id: 311,
@@ -3343,7 +3343,7 @@ export default {
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
         Video:
           "https://iframe.mediadelivery.net/embed/261653/5e645efe-422d-4a7c-ad57-80a95d930e96",
-          genero: ["Terror", "Suspense"]
+          Generos: ["Terror", "Suspense"]
       },
       {
         id: 312,
@@ -3354,7 +3354,7 @@ export default {
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
         Video:
           "https://iframe.mediadelivery.net/embed/261653/4e9e2e01-0a19-4ae3-8ce3-e5798e09ab6f",
-          genero: ["Terror", "Suspense"]
+          Generos: ["Terror", "Suspense"]
       },
       {
         id: 313,
@@ -3365,7 +3365,7 @@ export default {
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
         Video:
           "https://iframe.mediadelivery.net/embed/261653/9abb3797-ff8b-4f89-b9b4-ed78a274757a",
-          genero: ["Terror", "Suspense"]
+          Generos: ["Terror", "Suspense"]
       },
       {
         id: 314,
@@ -3376,7 +3376,7 @@ export default {
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
         Video:
           "https://iframe.mediadelivery.net/embed/261653/d317ed3b-ef98-4da8-a14f-5bc13a353202",
-          genero: ["Terror", "Suspense"]
+          Generos: ["Terror", "Suspense"]
       },
     ],
   },
