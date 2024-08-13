@@ -1,7 +1,5 @@
 @use "../Global/mixin" as m;
 
-
-
 .navegacion {
   width: 100%;
   padding: 0 3.5rem;
@@ -13,13 +11,13 @@
   align-items: center;
   position: fixed;
   z-index: 300;
-  &__contenedor{
-  width: 100%; 
+  &__contenedor {
+    width: 100%;
   }
   @include m.tablet {
     .lista {
       position: static;
-       display: flex;
+      display: flex;
     }
     &__icono {
       opacity: 0;
@@ -47,7 +45,7 @@
     align-items: center;
     color: #ffffff;
   }
-  &__img{
+  &__img {
     width: 15rem;
     cursor: pointer;
   }
@@ -60,17 +58,15 @@
 
   &__input {
     display: none;
-   
+
     &:checked + .lista {
       display: block;
       display: flex;
       flex-direction: column;
       align-items: center;
-     
     }
-    
   }
-  &__menu-close{
+  &__menu-close {
     display: none;
   }
   &__icono {
@@ -118,17 +114,15 @@
     align-items: center;
     position: relative;
   }
-  &__link--pading{
+  &__link--pading {
     display: block;
     width: 100%;
     display: flex;
     align-items: center;
     padding-bottom: 1rem;
-  
   }
-  
+
   &__drop {
-  
     display: none;
     width: 100%;
     list-style: none;
@@ -137,41 +131,34 @@
     color: #000000;
     // display: none;
     opacity: 0;
-    animation: opacity 0.5s forwards ;
-
-   
+    animation: opacity 0.5s forwards;
   }
-  
+
   &__item--desplegable {
-    
-     position: relative;
+    position: relative;
     display: flex;
     flex-direction: column;
     // height: max-content;
     // padding: unset;
- 
+
     @include m.tablet {
-    display: block;
-    &:hover .lista__drop {
-      position: absolute!important;
-      display: flex!important;
-      flex-direction: column;
+      display: block;
+      &:hover .lista__drop {
+        position: absolute !important;
+        display: flex !important;
+        flex-direction: column;
 
-      top:100%;
-      min-width: 18rem;
-      padding: 0;
-      z-index: 4;
+        top: 100%;
+        min-width: 18rem;
+        padding: 0;
+        z-index: 4;
 
-      // @include m.tablet {
-      //   position: absolute;
-      //   transition: opacity 10s;
-      // }
-
+        // @include m.tablet {
+        //   position: absolute;
+        //   transition: opacity 10s;
+        // }
+      }
     }
-
-    }
-   
-   
   }
 
   &__li {
@@ -182,7 +169,6 @@
       padding: 1.2rem;
       &:last-child {
         padding: 1.2rem;
-      
       }
     }
   }
@@ -195,7 +181,6 @@
     display: flex;
     justify-content: center;
     // background-color: #131218;
-   
   }
 
   &__img {
@@ -207,13 +192,13 @@
 }
 
 @keyframes opacity {
-  0%{
+  0% {
     opacity: 0;
   }
-  50%{
-    opacity: .5;
+  50% {
+    opacity: 0.5;
   }
-  100%{
+  100% {
     opacity: 1;
   }
 }

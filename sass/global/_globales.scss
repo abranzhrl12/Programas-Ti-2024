@@ -9,12 +9,17 @@
   --color_fondo:#07092B;
   --gradiente:linear-gradient(0deg, rgba(175,169,255,1) 0%, rgba(154,146,255,1) 14%, rgba(126,113,255,1) 52%, rgba(91,68,252,1) 100%);
 
+  --bg_nav_movile:#011018;
+  --color_nav_active:#d2df25;
+  --color_nav_inactive:#b4b4b3;
+
+
   
 }
 html {
   font-size: 62.5%;
   box-sizing: border-box;
-}
+} 
 
 *,
 *::before,
@@ -39,7 +44,6 @@ html {
 }
 body {
   width: 100%;
-  min-height: 100vh;
   font-family: v.$fuente_principal;
   font-size: 1.6rem;
   background: v.$color-primario;

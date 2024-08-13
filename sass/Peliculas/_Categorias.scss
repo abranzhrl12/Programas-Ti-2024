@@ -57,7 +57,7 @@
         
     }
     &__figura:nth-child(1){
-        --image-categorias: url("../../imagenCategoria/extrenos.webp");
+       
         background-size: 26.8rem;
         background-repeat: no-repeat;
       
@@ -65,20 +65,20 @@
             background-size: auto;
         }
         &:hover {
-          
+            --image-categorias: url("../../imagenCategoria/extrenos.webp");
            
         }
     }
     &__figura:nth-child(5){
-        --image-categorias: url("../../imagenCategoria/animacionpeliculas.webp");
+       
         &:hover {
           
-          
+            --image-categorias: url("../../imagenCategoria/animacionpeliculas.webp");
             
         }
     }
     &__figura:nth-child(2){
-        --image-categorias: url("../../imagenCategoria/accion.webp");
+       
         background-size: 26.8rem;
         background-repeat: no-repeat;
         @include m.TV {
@@ -87,13 +87,13 @@
         &:hover {
           
            
-           
+            --image-categorias: url("../../imagenCategoria/accion.webp");
           
    
         }
     }
     &__figura:nth-child(3){
-        --image-categorias: url("../../imagenCategoria/cienciaficcion.jpg");
+       
         
            
         background-size: 26.8rem;
@@ -102,26 +102,26 @@
             background-size: auto;
         }
         &:hover {
-          
+            --image-categorias: url("../../imagenCategoria/cienciaficcion.jpg");
          
         }
     }
     &__figura:nth-child(4){
-        --image-categorias: url("../../imagenCategoria/animes.webp");
+      
           
         background-size: 26.8rem;
         background-repeat: no-repeat;
         @include m.TV {
             background-size: auto;
         }
-    }
         &:hover {
-          
-         
-         
+            --image-categorias: url("../../imagenCategoria/animes.webp");;
+           
+        }
     }
+      
     &__figura:nth-child(6){
-        --image-categorias: url("../../imagenCategoria/terror.webp");
+        
         background-size: 28.8rem;
         background-repeat: no-repeat;
         @include m.TV {
@@ -129,13 +129,13 @@
         }
         &:hover {
           
-          
+            --image-categorias: url("../../imagenCategoria/terror.webp");
            
         
         }
     }
     &__figura:nth-child(7){
-        --image-categorias: url("../../imagenCategoria/comedias.webp");
+      
           
         background-size: 32.8rem;
         background-repeat: no-repeat;
@@ -143,13 +143,13 @@
             background-size: auto;
         }
         &:hover {
-          
+            --image-categorias: url("../../imagenCategoria/comedias.webp");
           
          
         }
     }
     &__figura:nth-child(8){
-        --image-categorias: url("../../imagenCategoria/romance.webp");
+      
         background-size: 30.8rem;
         background-repeat: no-repeat;
         @include m.TV {
@@ -157,7 +157,7 @@
         }
         &:hover {
           
-          
+            --image-categorias: url("../../imagenCategoria/romance.webp");
            
          
         }

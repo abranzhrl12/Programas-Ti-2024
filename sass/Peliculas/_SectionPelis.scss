@@ -2,6 +2,11 @@
 .Peliculas{
     margin-top: 12rem;
     margin-bottom: 5rem;
+    height: auto;
+    color: white;
+    @include m.tablet {
+        height: auto;
+    }
     &__contenedor{
         width: 98%;
       
@@ -16,15 +21,12 @@
     &__grid{
         max-width: 100%;
         display: grid;
-        // grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(10.5rem, 1fr));
        
         place-content: center;
         row-gap: 2.3rem;
          column-gap: 0.9rem;
   
-        @supports (display: grid) {
-            grid-template-columns: repeat(auto-fit, minmax(10.5rem, 1fr));
-        }
 
         @supports not (display: grid) {
             display: flex;
@@ -37,11 +39,11 @@
             }
         }
         @include m.telefonoFull {
-            @supports (display: grid) {
+          
                grid-template-columns: repeat(auto-fit, minmax(16rem, min-content));
                column-gap: 2rem;
                row-gap: 2.2rem;
-            }
+            
 
             @supports not (display: grid) {
                 .Peliculas__card {
@@ -52,11 +54,11 @@
            }
        }
        @include m.tablet {
-        @supports (display: grid) {
+       
            grid-template-columns: repeat(auto-fit, minmax(20rem, min-content));
            column-gap: 2rem;
            row-gap: 2.2rem;
-        }
+        
 
         @supports not (display: grid) {
             .Peliculas__card {
@@ -67,11 +69,11 @@
        }
    }
         @include m.tabletM {
-             @supports (display: grid) {
+            
                 grid-template-columns: repeat(auto-fit, minmax(16.8rem, min-content));
                 column-gap: 2rem;
                 row-gap: 2.2rem;
-             }
+             
 
              @supports not (display: grid) {
                  .Peliculas__card {
@@ -82,11 +84,11 @@
             }
         }
     @include m.desktop {
-        @supports (display: grid) {
+      
             grid-template-columns: repeat(auto-fit, minmax(21.8rem, 1fr));
             column-gap: 2rem;
             row-gap: 3rem;
-         }
+         
 
          @supports not (display: grid) {
              .Peliculas__card {
@@ -97,11 +99,11 @@
         } 
     }
     @include m.desktopFull {
-        @supports (display: grid) {
+      
             grid-template-columns: repeat(auto-fit, minmax(22.1rem, min-content));
             column-gap: 2rem;
             row-gap: 3rem;
-         }
+         
 
          @supports not (display: grid) {
              .Peliculas__card {
@@ -225,9 +227,9 @@
     border: none;
     padding: 1rem 2rem;
     border-radius: 0.8rem;
-    background-color: #2E8A7B;
+    background-color: #ffffff;
 
-    color: white;
+    color: rgba(42, 42, 43, 0.788);
     cursor: pointer;
     &:hover{
         transform: scale(1.05);
@@ -247,6 +249,7 @@ z-index: 99;
 }
 .generos{
     padding-left: 1.5rem;
+    color: white;
 }
 // .modal-content{
     

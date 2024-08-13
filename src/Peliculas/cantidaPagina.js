@@ -2,9 +2,9 @@
 export function calcularProgramasPorPaginaActual() {
     try {
         if (window.innerWidth > 369 && window.innerWidth < 455) {
-            return { inicial: 39, incremento: 12, limite: 75 };
+            return { inicial: 27, incremento: 12, limite: 75 };
         } else if (window.innerWidth > 456 && window.innerWidth < 572) {
-            return { inicial: 40, incremento: 16, limite: 88 };
+            return { inicial: 24, incremento: 16, limite: 88 };
         } else if (window.innerWidth > 571 && window.innerWidth < 599) {
             return { inicial: 45, incremento: 16, limite: 89 };
         } else if (window.innerWidth > 600 && window.innerWidth < 714) {
@@ -20,7 +20,7 @@ export function calcularProgramasPorPaginaActual() {
         } else if (window.innerWidth > 1495) {
             return { inicial: 56, incremento: 14, limite: 77 };
         } else {
-            return { inicial: 54, incremento: 12, limite: 75 };
+            return { inicial: 42, incremento: 12, limite: 75 };
         }
     } catch (error) {
         console.error("Error en calcularProgramasPorPaginaActual:", error);

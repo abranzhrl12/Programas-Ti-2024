@@ -1,17 +1,21 @@
 @use "../global/mixin" as m;
 .hero{
+    margin-top: 4rem;
     width: 100%;
-    margin-top: 8rem;
-    height: 18.8rem;
-   
+  
+    // margin-top: 8rem;
+    height: 21rem;
+  
+    overflow: hidden;
     @include m.tablet {
-        height: 40rem;
+        height: 40.2rem;
+        max-height: 40.1;
     }
     @include m.desktop {
-        height: 44rem;
+        height: 44.2rem;
     }
     @include m.desktopFull {
-        height: 52rem;
+        height: 56rem;
     }
 }
 
@@ -31,7 +35,7 @@
     }
     @include m.desktopFull {
         object-fit: cover; 
-        object-position: 0px 0px;
+        object-position: 0px 150px;
     }
     }
   

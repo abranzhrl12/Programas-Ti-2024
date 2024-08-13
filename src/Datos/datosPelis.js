@@ -32,7 +32,7 @@ export default {
       {
         id: 30,
         nombre: "Deapool 3",
-        imagen: "../../Imagenes_Pelis/deapool3.jpg",
+        imagen: "../../Imagenes_Pelis/deadpool3.webp",
         imagen_small:
           "../../Assets/Imagenespeliculas/small/deadpool3-small.webp",
         imagen_tv: "../../Assets/Imagenespeliculas/tv/deadpool3-tv.webp",
@@ -45,7 +45,7 @@ export default {
       {
         id: 31,
         nombre: "Immaculada 2024",
-        imagen: "../../Imagenes_Pelis/Immaculate.jpg",
+        imagen: "../../Assets/Imagenespeliculas/inmaculada_2024.webp",
         imagen_small:
           "../../Assets/Imagenespeliculas/small/inmaculada_2024-small.webp",
         imagen_tv: "../../Assets/Imagenespeliculas/tv/inmaculada_2024-tv.webp",
@@ -127,7 +127,7 @@ export default {
       {
         id: 37,
         nombre: "Descendientes 2",
-        imagen: "../../Imagenes_Pelis/Los descendientes 2 (2017) (2).webp",
+        imagen: "../../Assets/Imagenespeliculas/decendientes_3.webp",
         imagen_small:
           "../../Assets/Imagenespeliculas/small/descendientes_2-small.webp",
         imagen_tv: "../../Assets/Imagenespeliculas/tv/descendientes_2-tv.webp",

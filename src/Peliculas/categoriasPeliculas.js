@@ -1,56 +1,38 @@
-import Peliculas from "./../Datos/datosPelis";
+
+// import Peliculas from "./../Datos/datosPelis";
+// import { generarPeliculas, generarPaginacion, agregarBotonVerMas } from "./../pelis";
 
 // Función para filtrar películas por múltiples géneros
-export function filtrarPeliculasPorGeneros(generosBuscados) {
-  const peliculas = Peliculas.Peliculas.Extreno;
-
-  if (!peliculas) {
-    console.error("La lista de películas no está definida.");
-    return [];
+export function generarPaginacion(peliculas) {
+  if (!peliculas || !Array.isArray(peliculas)) {
+    console.error("La variable 'peliculas' no está definida o no es un array.");
+    return;
   }
 
-  // Convertir la cadena de géneros en un array
-  const generosArray = generosBuscados.split(',').map(genre => genre.trim());
+  const limite = calcularProgramasPorPaginaActual().limite;
+  const totalPaginas = Math.ceil(peliculas.length / limite);
+  const contenedorPaginacion = document.querySelector(".paginas");
 
-  const peliculasFiltradas = peliculas
-    .filter(pelicula => 
-      pelicula.Generos?.some(genero => generosArray.includes(genero))
-    )
-    .map(({ id, nombre, imagen, Video, Generos }) => ({
-      id,
-      nombre,
-      imagen,
-      Video,
-      Generos
-    }));
-
-  if (peliculasFiltradas.length === 0) {
-    console.warn(`No se encontraron películas para los géneros: ${generosBuscados}`);
+  if (!contenedorPaginacion) {
+    console.error("No se encontró el contenedor .paginas.");
+    return;
   }
 
-  return peliculasFiltradas;
-}
+  contenedorPaginacion.innerHTML = ""; // Limpiar contenido anterior
 
-export function manejarClickGenero(event) {
-    const elemento = event.target.closest('[data-genre]');
-    if (elemento) {
-      const generosBuscados = elemento.getAttribute('data-genre');
-      const peliculasFiltradas = filtrarPeliculasPorGeneros(generosBuscados);
-  
-      // Actualiza la grid con las películas filtradas
-      generarPeliculas(peliculasFiltradas);
-      generarPaginacion(peliculasFiltradas);
-      agregarBotonVerMas(peliculasFiltradas);
-  
-      // Opcional: Hacer scroll al inicio
-      const grid = document.querySelector('.Peliculas__grid');
-      if (grid) {
-        grid.scrollIntoView({ behavior: 'smooth' });
-      }
+  for (let index = 1; index <= totalPaginas; index++) {
+    const btnpaginacion = document.createElement("button");
+    btnpaginacion.classList.add("paginas__btn");
+    btnpaginacion.textContent = index;
+
+    if (index === paginaActual) {
+      btnpaginacion.classList.add("active");
     }
-  }
 
-// Asocia el manejador de eventos al contenedor de géneros
-document.querySelectorAll('.Genero-categorias__figura').forEach(elemento => {
-  elemento.addEventListener('click', manejarClickGenero);
-});
+    btnpaginacion.addEventListener("click", () => {
+      setPage(index, filtrosAplicados); // Pasar filtrosAplicados al cambiar de página
+    });
+
+    contenedorPaginacion.appendChild(btnpaginacion);
+  }
+}
