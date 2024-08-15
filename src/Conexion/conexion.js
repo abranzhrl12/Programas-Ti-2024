@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, query, where, getDocs, setDoc, doc, Timestamp } from 'firebase/firestore/lite';
+import { getFirestore, collection, query, where, getDocs, setDoc, doc, Timestamp,updateDoc } from 'firebase/firestore/lite';
 
 const firebaseConfig = {
   apiKey: "AIzaSyAKf5D2G62O_F80u7GvKqb0zKheyXYCnVo",
@@ -118,13 +118,46 @@ export async function verificarDispositivo(usuarioId, deviceId) {
 }
 
 export function verificarFechaExpiracion(fechaExpiracion) {
-  const ahora = Timestamp.now();
-  console.log('Fecha y hora actual:', ahora.toDate());
+  try {
+    const ahora = Timestamp.now();
+    console.log('Fecha y hora actual:', ahora.toDate());
+  
+    if (fechaExpiracion.toDate() < ahora.toDate()) {
+      console.log('La cuenta del usuario ha expirado.');
+      return { expired: true };
+    } else {
+      return { expired: false };
+    }
+  } catch (error) {
+    
+  }
+ 
+}
 
-  if (fechaExpiracion.toDate() < ahora.toDate()) {
-    console.log('La cuenta del usuario ha expirado.');
-    return { expired: true };
-  } else {
-    return { expired: false };
+
+
+export async function actualizarNombreUsuario(usuarioId, nuevoNombre) {
+  try {
+    // Referencia al documento del usuario
+    const usuarioRef = doc(db, 'usuarios', usuarioId);
+    
+    // Actualizar el nombre del usuario
+    await updateDoc(usuarioRef, {
+      nombreUsuario: nuevoNombre
+    });
+
+    // Actualizar el nombre en localStorage
+    const usuario = JSON.parse(localStorage.getItem('usuario'));
+    if (usuario) {
+      usuario.nombre = nuevoNombre;
+      localStorage.setItem('usuario', JSON.stringify(usuario));
+    }
+
+    console.log('Nombre del usuario actualizado correctamente.');
+    return { success: true };
+  } catch (error) {
+    console.error('Error al actualizar el nombre del usuario:', error);
+    return { success: false, reason: 'Error al actualizar el nombre del usuario', details: error.message };
   }
 }
+

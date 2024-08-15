@@ -8,6 +8,7 @@
     width: 21rem;
     max-width: 21rem;
     height: 40px;
+
     padding: 0;
     background-color: white;
     position: relative;
@@ -16,7 +17,7 @@
     font-weight: 600;
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(230, 227, 227, 0.134);;
-     transition: all 0.8s ease 0s;
+     transition: all 0.2s ease 0s;
      user-select: none;
      outline: none; /* Elimina el borde de enfoque */
  -webkit-tap-highlight-color: transparent; 
@@ -29,12 +30,12 @@
    & span {
         position: relative;
         z-index: 5;
-        transition: all 0.3s ease 0s;
+        transition: all 0.2s ease 0s;
         color: rgb(58, 55, 55);
     }
     &:hover::after{
         left: -1rem;
-        transition: all .5s;
+        transition: all .2s;
         
         
      }
@@ -57,11 +58,14 @@
           left: calc(-100% - 90px);
         border-bottom: 70px solid rgb(79, 202, 221);
          border-right: 70px solid transparent;
-        transition: all 0.4s ease-in-out 0s; 
+        transition: all 0.2s ease-in-out 0s; 
     
     }
 }
-
+.Peliculas__btn-vermas{
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
 
 .icon {
     position: absolute;

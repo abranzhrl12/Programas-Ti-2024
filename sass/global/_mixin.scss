@@ -6,7 +6,12 @@
   }
 }
 @mixin telefonoFull {
-  @media (width >= v.$telefonoFull) {
+  @media (width : v.$telefonoFull) {
+    @content;
+  }
+}
+@mixin tabletsmall {
+  @media (min-width: v.$tabletsmall) {
     @content;
   }
 }

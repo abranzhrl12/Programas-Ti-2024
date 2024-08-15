@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Usuarios</title>
+   
     <style>
         *{
             box-sizing: border-box;
@@ -11,6 +12,8 @@
             padding: 0;
         }
         body {
+            height: 100vh;
+        
             background-color: #000;
             color: #fff;
             font-family: Arial, sans-serif;
@@ -18,9 +21,10 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100vh;
+           
             margin: 0;
             text-align: center;
+            align-items: center;
         }
         img{
             filter: saturate(104%);
@@ -32,7 +36,7 @@
             transform: scale(1.1);
         }
         h1 {
-            margin-bottom: 50px;
+            margin-bottom: 30px;
         }
         .profile-container {
             display: grid;
@@ -41,6 +45,8 @@
             width: 100%;
             max-width: 1000px;
             padding: 0 20px;
+            
+          
         }
 
       
@@ -49,6 +55,9 @@
             flex-direction: column;
             align-items: center;
             gap: 15px;
+            user-select: none;
+            outline: none;
+            -webkit-tap-highlight-color: transparent;
         }
         .profile img {
             border-radius: 50%;
@@ -90,39 +99,102 @@
                 font-size: 14px;
                 padding: 8px 16px;
             }
+            .profiledatenew{
+                    margin-top: -2.5rem;
+            }
+
         }
+        .profiledatenew{
+            
+            width: 15rem;
+            height: 10rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 0.8rem;
+            overflow: hidden;
+            position: fixed;
+           
+            border-radius: .5rem;
+            background: rgba(255, 255, 255, 0.1); /* Fondo blanco semi-translúcido */
+             backdrop-filter: blur(10px); /* Efecto de desenfoque de fondo */
+            border: 1px solid rgba(255, 255, 255, 0.2); /* Opcional: Borde blanco semi-translúcido para mayor definición */
+         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Opcional: Sombra sutil para profundidad */
+          transition: all .4s ;
+             display: none;
+        
+          
+        }
+        .inputnamenew{
+            display: none; /* Oculta el botón por defecto */
+            border: none;
+            display: block;
+            width: 9.5rem;
+            padding: 0.6rem 0;
+            outline: none;
+            margin-top: 0.3rem;
+            border-radius: .2rem;
+            color: #635f5f;
+            text-align: center;
+            transition: transform .6s ease-in;
+            transform: translateY(10rem);
+
+        }
+      
+        .btnsavename{
+            display: none;
+            display: block;
+            
+           
+            border: none;        
+            
+            width: min-content;
+            padding: 0.5rem;
+            display: flex;
+            gap: 0.5rem;
+            border-radius: 1rem;
+            cursor: pointer;
+            align-items: center;
+            transition: transform .6s ease-in;
+            transform: translateY(10rem);
+        }
+
+        .inputnamenew.active,
+        .btnsavename.active{
+            transform: translateY(0);
+        }
+    .profiledatenew.active{
+        display: block;
+        display: flex;
+    
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
+    }
     </style>
+    <script src="./dist/bundle6.js" defer></script>
+    <script src="./dist/name.js" defer></script>
 </head>
 <body>
     <h1>¿Quién está viendo ahora?</h1>
     <div class="profile-container">
         <div class="profile">
-            <img src="ImagenesAvatares/Screenshot_1-topaz-enhance-4x.png" alt="Luis">
-            <div class="profile-name"></div>
+            <img src="ImagenesAvatares/Screenshot_1-topaz-enhance-4x.webp" alt="Usuarios" class="profile_img">
+            <div class="profile-name">
+            </div>
+            <div class="profiledatenew">
+                <input type="text" class="inputnamenew"  maxlength="15"> 
+                <button class="btnsavename" id="savenewname">Guardar<svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-location"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M21 3l-6.5 18a.55 .55 0 0 1 -1 0l-3.5 -7l-7 -3.5a.55 .55 0 0 1 0 -1l18 -6.5" /></svg></button>
+            </div>
+           
         </div>
-    
+       
     </div>
     <div class="button-container">
-        <button>Administrar perfiles</button>
+        <button id="saveNameButton">Administrar perfiles</button>
     </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Recuperar los datos del usuario desde localStorage
-            const usuario = JSON.parse(localStorage.getItem('usuario'));
-           
-            // Verificar que el usuario y el nombre existan en los datos recuperados
-            if (usuario && usuario.nombre) {
-                // Asignar el nombre al elemento con la clase 'profile-name'
-                document.querySelector('.profile-name').textContent = usuario.nombre;
-                const profile=document.querySelector('.profile')
-                profile.addEventListener('click',()=>{
-                    window.location.href = 'index.html';
-                })
-            } else {
-                console.log('No se encontró el nombre del usuario en localStorage.');
-            }
-        });
-    </script>
+  
 </body>
 </html>
 

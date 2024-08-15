@@ -52,7 +52,7 @@ export default {
         Descripcion:
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
         Video:
-          "https://iframe.mediadelivery.net/embed/261653/c9834c60-2585-4132-af7d-ebf2d07b8446",
+          "https://iframe.mediadelivery.net/embed/261653/533a29a6-d9d1-4c3c-bb49-0bd25401829f",
         Generos: ["Terror", "Drama"],
       },
       {
@@ -174,7 +174,7 @@ export default {
         id: 41,
         nombre: "Godzilla 2 : El Rey de Los Monstruos",
         imagen:
-          "../../Imagenes_Pelis/godzilla_El_Rey_De_Los_Monstruos (2).webp",
+          "../../Assets/Imagenespeliculas/godzilla2.webp",
         imagenX: "/imagenes/ilustrator.webp",
         Descripcion:
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
@@ -320,13 +320,24 @@ export default {
       },
       {
         id: 430,
-        nombre: "After Para.siempre 2023",
+        nombre: "After Para Siempre 2023",
         imagen: "../../Imagenes_Pelis/afterparasiempre2023.webp",
         imagenX: "/imagenes/ilustrator.webp",
         Descripcion:
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
         Video:
           "https://iframe.mediadelivery.net/embed/261653/d0b29c43-8b80-43f0-95ae-f32e967b04f7",
+        Generos: ["Romance", "Drama"],
+      },
+      {
+        id: 522,
+        nombre: "After Amor infinito 2022",
+        imagen: "../../Assets/Imagenespeliculas/After_amor_infinito_2022.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Descripcion:
+          "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/e63f9cfd-f331-4e87-ae19-92bd897ec0b3",
         Generos: ["Romance", "Drama"],
       },
       {
@@ -365,6 +376,30 @@ export default {
         Generos: ["Animación", "Aventura", "Comedia"],
       },
       {
+        id: 521,
+        nombre: "peter pan y wendy 2023 ",
+        imagen: "../../Assets/Imagenespeliculas/peter_pan_y_wendy_2023.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Descripcion:
+          "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/8dc9d36e-3a98-4231-9624-42d06fe962c2",
+        Generos: ["Animación", "Aventura", "Comedia"],
+      },
+      {
+        id: 525,
+        nombre: "Wish El poder de los deseos 2023",
+        imagen: "../../Assets/Imagenespeliculas/wish_el_poder_de_los_deseos_2023.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Descripcion:
+          "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/0f02169d-cc25-41c6-8ef1-d05c33dbb0ef",
+          Generos: ["Animación","Aventura","Fantasía","Musical"]
+      },
+     
+
+      {
         id: 54,
         nombre: "Kung Fu Panda 4",
         imagen: "../../Imagenes_Pelis/kunfupanda4.webp",
@@ -394,7 +429,7 @@ export default {
         Descripcion:
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
         Video:
-          "https://iframe.mediadelivery.net/embed/261653/05b04c79-7530-4215-9858-a3d60a3b68b0",
+          "https://iframe.mediadelivery.net/embed/261653/c0561561-e978-4037-82ba-c3be48ed152d",
         Generos: ["Animación", "Aventura", "Acción", "Comedia"],
       },
       {
@@ -405,7 +440,7 @@ export default {
         Descripcion:
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
         Video:
-          "https://iframe.mediadelivery.net/embed/261653/39e6f138-14da-48be-80c9-0595c428859e",
+          "https://iframe.mediadelivery.net/embed/261653/ef59b4d8-2ca2-40a6-a7ac-29c2f6dbbe04",
         Generos: ["Animación", "Aventura", "Acción", "Comedia"],
       },
       {
@@ -418,6 +453,17 @@ export default {
         Video:
           "https://iframe.mediadelivery.net/embed/261653/4d600fa1-6686-4fa1-a6f4-71f327614277",
           Generos: ["Animación", "Aventura", "Comedia"]
+      },
+      {
+        id: 523,
+        nombre: "Miraculous Las aventuras de Ladybug(2023)",
+        imagen: "../../Assets/Imagenespeliculas/Las_aventuras_de_Ladybug_(2023).webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Descripcion:
+          "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/b99edd5b-a5c7-4f57-974c-e84a72e13b31",
+          Generos: ["Animación", "Aventura", "Fantasía"]
       },
 
       {
@@ -568,7 +614,7 @@ export default {
       {
         id: 72,
         nombre: "Guardianes de la Galaxia vol. 2",
-        imagen: "../../Imagenes_Pelis/guardianesdelagalaxia2.webp",
+        imagen: "../../Assets/Imagenespeliculas/guardines_de_la_galaxia_2.webp",
         imagenX: "/imagenes/ilustrator.webp",
         Descripcion:
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
@@ -713,7 +759,7 @@ export default {
       {
         id: 85,
         nombre: "Red 2022",
-        imagen: "../../Imagenes_Pelis/red2022.webp",
+        imagen: "../../Assets/Imagenespeliculas/red2022.webp",
         imagenX: "/imagenes/ilustrator.webp",
         Descripcion:
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
@@ -746,7 +792,7 @@ export default {
       {
         id: 86,
         nombre: "Raya El Ultimo Dragon",
-        imagen: "../../Imagenes_Pelis/raya2021.webp",
+        imagen: "../../Assets/Imagenespeliculas/raya_el_ultimo_dragon.webp",
         imagenX: "/imagenes/ilustrator.webp",
         Descripcion:
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
@@ -808,6 +854,17 @@ export default {
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
         Video:
           "https://iframe.mediadelivery.net/embed/261653/1ed28543-c796-4d56-9788-c07ff6389bc5",
+          Generos: ["Animación", "Comedia", "Familiar"]
+      },
+      {
+        id: 528,
+        nombre: "Hotel Transilvania 1",
+        imagen: "../../Assets/Imagenespeliculas/hoter_transilvania_1.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Descripcion:
+          "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/a3042f1a-5cca-4533-b2de-ab93608eabf9",
           Generos: ["Animación", "Comedia", "Familiar"]
       },
       {
@@ -1229,7 +1286,7 @@ export default {
       {
         id: 124,
         nombre: "Rapidos y Furiosos 2",
-        imagen: "../../Imagenes_Pelis/rapidosyfuriosos2.webp",
+        imagen: "../../Assets/Imagenespeliculas/rapidos_y_furiosos2.webp",
         imagenX: "/imagenes/ilustrator.webp",
         Descripcion: "falta 10 8 7 6 5 4 3 2",
         Video:
@@ -1304,7 +1361,7 @@ export default {
       {
         id: 131,
         nombre: "Parque Jurasico 1",
-        imagen: "../../Imagenes_Pelis/jurasic1.jpg",
+        imagen: "../../Assets/Imagenespeliculas/jurassic1.webp",
         imagenX: "/imagenes/ilustrator.webp",
         Descripcion:
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
@@ -1514,7 +1571,7 @@ export default {
       {
         id: 150,
         nombre: "Transformers: El despertar de las bestias",
-        imagen: "../../Imagenes_Pelis/transformers2023.webp",
+        imagen: "../../Assets/Imagenespeliculas/transformers2023.webp",
         imagenX: "/imagenes/ilustrator.webp",
         Descripcion:
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
@@ -1547,7 +1604,7 @@ export default {
       {
         id: 153,
         nombre: "Transformers: El lado oscuro de la luna",
-        imagen: "../../Imagenes_Pelis/transformers3.webp",
+        imagen: "../../Assets/Imagenespeliculas/transformers3.webp",
         imagenX: "/imagenes/ilustrator.webp",
         Descripcion:
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
@@ -1716,8 +1773,8 @@ export default {
       },
       {
         id: 168,
-        nombre: "Dioses de Egipt",
-        imagen: "../../Imagenes_Pelis/diosesEgip.webp",
+        nombre: "Dioses de Egipto",
+        imagen: "../../Assets/Imagenespeliculas/dioses_de_egipto_2016.webp",
         imagenX: "/imagenes/ilustrator.webp",
         Descripcion:
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
@@ -1748,9 +1805,20 @@ export default {
           Generos: ["Aventura", "Fantástico"]
       },
       {
+        id: 527,
+        nombre: "Narnia 3",
+        imagen: "../../Assets/Imagenespeliculas/narnia_3_2010.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Descripcion:
+          "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/d30d336f-23ee-4079-a2bf-285cedbc724a",
+          Generos: ["Aventura", "Fantástico"]
+      },
+      {
         id: 171,
         nombre: "Coco",
-        imagen: "../../Imagenes_Pelis/coco.webp",
+        imagen: "../../Assets/Imagenespeliculas/coco.webp",
         imagenX: "/imagenes/ilustrator.webp",
         Descripcion:
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
@@ -2203,7 +2271,7 @@ export default {
       },
       {
         id: 212,
-        nombre: "Dragon Ball ZLos mejores rivales (1991)",
+        nombre: "Dragon Ball Z Los mejores rivales (1991)",
         imagen: "../../Imagenes_Pelis/dragonballlosmejoresrivales.webp",
         imagenX: "/imagenes/ilustrator.webp",
         Descripcion:
@@ -2311,7 +2379,7 @@ export default {
       },
       {
         id: 221,
-        nombre: "Dragon Ball ZDevuélvanme a mi Gohan",
+        nombre: "Dragon Ball Z Devuélvanme a mi Gohan",
         imagen: "../../Imagenes_Pelis/Dragon Ball ZDevuélvanme a mi Gohan.webp",
         imagenX: "/imagenes/ilustrator.webp",
         Descripcion:
@@ -2385,7 +2453,7 @@ export default {
         id: 227,
         nombre: "Dragon Ball La princesa durmiente del castillo",
         imagen:
-          "../../Imagenes_Pelis/Dragon Ball La princesa durmiente del castillo.webp",
+          "../../Assets/Imagenespeliculas/Dragon_Ball_La_princesa_durmiente_del_castillo.webp",
         imagenX: "/imagenes/ilustrator.webp",
         Descripcion:
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
@@ -2566,7 +2634,7 @@ export default {
       {
         id: 243,
         nombre: "One piece Film Red",
-        imagen: "../../Imagenes_Pelis/onepiecefildred (2).webp",
+        imagen: "../../Assets/Imagenespeliculas/one_piece_film_red.webp",
         imagenX: "/imagenes/ilustrator.webp",
         Descripcion:
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
@@ -2577,7 +2645,7 @@ export default {
       {
         id: 244,
         nombre: "Asu Mare 3",
-        imagen: "../../Imagenes_Pelis/asu_mare3.webp",
+        imagen: "../../Assets/Imagenespeliculas/asu_mare3.webp",
         imagenX: "/imagenes/ilustrator.webp",
         Descripcion:
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
@@ -2610,7 +2678,7 @@ export default {
       {
         id: 247,
         nombre: "Scary Movie 5",
-        imagen: "../../Imagenes_Pelis/scarymovie5.webp",
+        imagen: "../../Assets/Imagenespeliculas/scaryMovie5.webp",
         imagenX: "/imagenes/ilustrator.webp",
         Descripcion:
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
@@ -2621,7 +2689,7 @@ export default {
       {
         id: 248,
         nombre: "Scary Movie 4",
-        imagen: "../../Imagenes_Pelis/scarymovie4.webp",
+        imagen: "../../Assets/Imagenespeliculas/scaryMovie4.webp",
         imagenX: "/imagenes/ilustrator.webp",
         Descripcion:
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
@@ -2632,7 +2700,7 @@ export default {
       {
         id: 249,
         nombre: "Scary Movie 3",
-        imagen: "../../Imagenes_Pelis/scarymovie3.webp",
+        imagen: "../../Assets/Imagenespeliculas/scaryMovie3.webp",
         imagenX: "/imagenes/ilustrator.webp",
         Descripcion:
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
@@ -2643,7 +2711,7 @@ export default {
       {
         id: 250,
         nombre: "Scary Movie 2",
-        imagen: "../../Imagenes_Pelis/scarymovie2.jpg",
+        imagen: "../../Assets/Imagenespeliculas/scaryMovie2.webp",
         imagenX: "/imagenes/ilustrator.webp",
         Descripcion:
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
@@ -2654,7 +2722,7 @@ export default {
       {
         id: 251,
         nombre: "Scary Movie 1",
-        imagen: "../../Imagenes_Pelis/scarymovie1.jpg",
+        imagen: "../../Assets/Imagenespeliculas/scaryMovie1.webp",
         imagenX: "/imagenes/ilustrator.webp",
         Descripcion:
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
@@ -2698,7 +2766,7 @@ export default {
       {
         id: 255,
         nombre: "Interstellar 2014",
-        imagen: "../../Imagenes_Pelis/interstellar1.webp",
+        imagen: "../../Assets/Imagenespeliculas/interstellar1.webp",
         imagenX: "/imagenes/ilustrator.webp",
         Descripcion:
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
@@ -2720,7 +2788,7 @@ export default {
       {
         id: 257,
         nombre: "Angry Birds 1",
-        imagen: "../../Imagenes_Pelis/angrybirds1.webp",
+        imagen: "../../Assets/Imagenespeliculas/angry_birds1.webp",
         imagenX: "/imagenes/ilustrator.webp",
         Descripcion:
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
@@ -2742,7 +2810,7 @@ export default {
       {
         id: 259,
         nombre: "Furia de Titanes 2",
-        imagen: "../../Imagenes_Pelis/furiadetitanes2.jpg",
+        imagen: "../../Assets/Imagenespeliculas/furia_de_titanes2.webp",
         imagenX: "/imagenes/ilustrator.webp",
         Descripcion:
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
@@ -2968,7 +3036,7 @@ export default {
       {
         id: 279,
         nombre: "Y dónde están las rubias 2004",
-        imagen: "../../Imagenes_Pelis/ydondeestanlasrubias (2).webp",
+        imagen: "../../Assets/Imagenespeliculas/y_donde_estan_las_rubias.webp",
         imagenX: "/imagenes/ilustrator.webp",
         Descripcion:
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
@@ -2991,7 +3059,7 @@ export default {
       {
         id: 281,
         nombre: "Happy feet El pingüino 2",
-        imagen: "../../Imagenes_Pelis/happyfeet2.jpg",
+        imagen: "../../Assets/Imagenespeliculas/happy_feet2.webp",
         imagenX: "/imagenes/ilustrator.webp",
         Descripcion:
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
@@ -3090,7 +3158,7 @@ export default {
       {
         id: 290,
         nombre: "Barbie Equipo de espías (2016)",
-        imagen: "../../Imagenes_Pelis/baribieequipodeespias (2).webp",
+        imagen: "../../Assets/Imagenespeliculas/barbie_equipo_de_Espias.webp",
         imagenX: "/imagenes/ilustrator.webp",
         Descripcion:
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
@@ -3205,7 +3273,7 @@ export default {
       {
         id: 299,
         nombre: "Rango",
-        imagen: "../../Imagenes_Pelis/rango.jpg",
+        imagen: "../../Assets/Imagenespeliculas/rango.webp",
         imagenX: "/imagenes/ilustrator.webp",
         Descripcion:
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
@@ -3304,7 +3372,7 @@ export default {
       {
         id: 308,
         nombre: "Moana Un mar de aventuras",
-        imagen: "../../Imagenes_Pelis/moana_un_mar_de_aventuras.webp",
+        imagen: "../../Assets/Imagenespeliculas/moana.webp",
         imagenX: "/imagenes/ilustrator.webp",
         Descripcion:
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
@@ -3337,7 +3405,7 @@ export default {
       {
         id: 311,
         nombre: "Actividad.Paranormal 3",
-        imagen: "../../Imagenes_Pelis/actividad_paranormal3.webp",
+        imagen: "../../Assets/Imagenespeliculas/actividad_para_normal3.webp",
         imagenX: "/imagenes/ilustrator.webp",
         Descripcion:
           "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
@@ -3378,6 +3446,307 @@ export default {
           "https://iframe.mediadelivery.net/embed/261653/d317ed3b-ef98-4da8-a14f-5bc13a353202",
           Generos: ["Terror", "Suspense"]
       },
+      {
+        id: 315,
+        nombre: "El Mayor Payne 1995",
+        imagen: "../../Assets/Imagenespeliculas/el_mayor_payne_1995.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Descripcion:
+          "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/18e73ec6-0e9b-4814-9e85-0ab804ba3aaa",
+          Generos: ["Acción, Comedia"]
+      },
+      {
+        id: 316,
+        nombre: "12 Horas para el Fin del Mundo 2022",
+        imagen: "../../Assets/Imagenespeliculas/12_horas_para_el_fin_del_mundo.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Descripcion:
+          "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/35f007ac-c56d-4650-9feb-8317295f6d02",
+          Generos: ["Acción", "Suspenso", "Ciencia Ficción"]
+      },
+      {
+        id: 317,
+        nombre: "Escuadron Suicida 2016",
+        imagen: "../../Assets/Imagenespeliculas/escuadron_suicida_2016.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Descripcion:
+          "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/cca1d74b-b22c-4fd3-af51-a9e470877cd2",
+          Generos: ["Acción", "Aventura", "Ciencia Ficción"]
+      },
+    
+      {
+        id: 318,
+        nombre: "Doctor Dolitlle 2020",
+        imagen: "../../Assets/Imagenespeliculas/doctor_dolitlle_2020.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Descripcion:
+          "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/c75942dd-afbb-4546-84f7-d190e2632d02",
+          Generos: ["Aventura", "Comedia", "Familia", "Fantasía"]
+      },
+      {
+        id: 319,
+        nombre: "Ip Man 4",
+        imagen: "../../Assets/Imagenespeliculas/ip_man_4.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Descripcion:
+          "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/849df0e9-8859-4e3c-aeca-6042a3ee1ecd",
+          Generos: ["Acción", "Biografía"]
+      },
+      {
+        id: 320,
+        nombre: "Freddy vs Jason 2003",
+        imagen: "../../Assets/Imagenespeliculas/freddy_vs_jason_2003.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Descripcion:
+          "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/c961387c-7ae8-46f2-b6a0-769eea1cc9a1",
+          Generos: ["Terror", "Suspenso", "Acción"]
+      },
+      {
+        id: 321,
+        nombre: "Pokémon La Pelicula 2000",
+        imagen: "../../Assets/Imagenespeliculas/pokemon_la_pelicula_2000.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Descripcion:
+          "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/24e72112-3c23-4ded-bed5-545f94d5c102",
+          Generos: ["Animación", "Aventura", "Anime","Fantasía", "Familia"]
+      },
+      {
+        id: 322,
+        nombre: "WallE 2019",
+        imagen: "../../Assets/Imagenespeliculas/WALL.E_2019.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Descripcion:
+          "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/ca8e5c30-e546-40fd-9542-990ba7256c55",
+          Generos: ["Animación", "Aventura", "Ciencia Ficción", "Familia"]
+      },
+      {
+        id: 323,
+        nombre: "Pokémon Detective Pikachu",
+        imagen: "../../Assets/Imagenespeliculas/pokemon_detective_pikachu_2019.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Descripcion:
+          "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/33a1a14c-358e-451c-81b6-312f5ac4b6c0",
+          Generos: ["Aventura", "Comedia", "Familia", "Fantasia"]
+      },
+      {
+        id: 324,
+        nombre: "Los Caballeros del Zodiaco: La batalla de los dioses",
+        imagen: "../../Assets/Imagenespeliculas/Los_Caballeros_del_Zodiaco_La_batalla_de_los_dioses_(1988).webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Descripcion:
+          "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/6e919e8d-d4e3-471d-a5dd-d159d3daef55",
+          Generos: ["Animación", "Acción", "Aventura", "Fantasia","Anime"]
+      },
+      {
+        id: 325,
+        nombre: "Los Caballeros del Zodiaco: Overture",
+        imagen: "../../Assets/Imagenespeliculas/Los_Caballeros_del_Zodiaco_Capítulo_del_cielo_Overture_(2004).webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Descripcion:
+          "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/7dcf16cf-460f-4987-aed9-e36b045b0444",
+          Generos: ["Animación", "Acción", "Aventura", "Fantasia","Anime"]
+      },
+      {
+        id: 326,
+        nombre: "Los Caballeros del Zodiaco: La diosa malvada Eris",
+        imagen: "../../Assets/Imagenespeliculas/Los_Caballeros_del_Zodiaco_La_diosa_malvada_Eris_(1987).webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Descripcion:
+          "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/8a6d22df-fcb6-4b0c-a485-4b06c5b86066",
+          Generos: ["Animación", "Acción", "Aventura", "Fantasia","Anime"]
+      },
+      {
+        id: 327,
+        nombre: "Los Caballeros del Zodiaco: Contra Lucifer",
+        imagen: "../../Assets/Imagenespeliculas/Los_Caballeros_del_Zodiaco_Los_guerreros_de_la_última_guerra_santa_(1989).webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Descripcion:
+          "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/b3292e88-19c2-41d1-b825-9ef6b45fd98b",
+          Generos: ["Animación", "Acción", "Aventura", "Fantasia","Anime"]
+      },
+      
+      {
+        id: 328,
+        nombre: "Pokémon Las crónicas de Arceus 2022",
+        imagen: "../../Assets/Imagenespeliculas/Pokémon_Las_crónicas_de_Arceus_2022.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Descripcion:
+          "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/436e1bb2-058f-43dd-ae97-fb5f74c6f88d",
+          Generos: ["Animación", "Aventura", "Anime","Fantasía", "Familia"]
+      },
+      {
+        id: 329,
+        nombre: "La Momia 4",
+        imagen: "../../Assets/Imagenespeliculas/La_momia_4_(2017).webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Descripcion:
+          "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/cc96c335-921d-4580-b299-1a486e51af1f",
+          Generos: ["Acción", "Aventura", "Fantasía", "Terror"]
+
+      },
+      {
+        id: 330,
+        nombre: "La Momia 3",
+        imagen: "../../Assets/Imagenespeliculas/la_momia_3_el_regreso_del_emperador.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Descripcion:
+          "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/6796837f-b2ad-4bd8-9573-27d62ffe2060",
+          Generos: ["Acción", "Aventura", "Fantasía", "Terror"]
+      },
+      {
+        id: 331,
+        nombre: "La Momia 2",
+        imagen: "../../Assets/Imagenespeliculas/momia2_El regreso de la momia_(2001).webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Descripcion:
+          "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/e1146fcb-8632-4e07-9d32-418da7b62fd9",
+          Generos: ["Acción", "Aventura", "Fantasía", "Terror"]
+      },
+      {
+        id: 332,
+        nombre: "La Momia 1",
+        imagen: "../../Assets/Imagenespeliculas/la_momia_1_1999.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Descripcion:
+          "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/7bbf0aa3-d060-4f51-95e8-599fdc0df22c",
+          Generos: ["Acción", "Aventura", "Fantasía", "Terror"]
+      },
+      {
+        id: 333,
+        nombre: "Toy Story 4",
+        imagen: "../../Assets/Imagenespeliculas/toy_Story_4.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Descripcion:
+          "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/1ca88462-9b8a-4c55-bc3a-6f92b3d635ab",
+          Generos: ["Animación", "Aventura", "Comedia", "Familia"]
+      },
+      {
+        id: 334,
+        nombre: "Toy Story 3",
+        imagen: "../../Assets/Imagenespeliculas/toy_story_3.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Descripcion:
+          "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/98712ec7-25c3-4cc8-9b90-b41700d98f8e",
+          Generos: ["Animación", "Aventura", "Comedia", "Familia"]
+      },
+      {
+        id: 335,
+        nombre: "Toy Story 2",
+        imagen: "../../Assets/Imagenespeliculas/toy_story_2.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Descripcion:
+          "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/8d731a44-bdcf-4024-b2ed-a106dafb68cb",
+          Generos: ["Animación", "Aventura", "Comedia", "Familia"]
+      },
+      {
+        id: 336,
+        nombre: "Toy Story 1",
+        imagen: "../../Assets/Imagenespeliculas/Toy_Story_1.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Descripcion:
+          "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/44c22959-837e-4712-9752-1f0e0cd73b55",
+          Generos: ["Animación", "Aventura", "Comedia", "Familia"]
+      },
+      {
+        id: 337,
+        nombre: "Tadeo Jones 3",
+        imagen: "../../Assets/Imagenespeliculas/tadeo_3_La_Tabla_Esmeralda_(2022).webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Descripcion:
+          "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/1c7c9a6a-e49a-4960-981d-7fc86d43f86c",
+          Generos: ["Animación", "Aventura", "Comedia", "Familia"]
+      },
+      {
+        id: 338,
+        nombre: "Tadeo Jones 2",
+        imagen: "../../Assets/Imagenespeliculas/tadeo2_El secreto_del_rey_Midas_(2017).webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Descripcion:
+          "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/7eeff968-c084-44f0-9dd6-1f61fe71960d",
+          Generos: ["Animación", "Aventura", "Comedia", "Familia"]
+      },
+      {
+        id: 339,
+        nombre: "Tadeo Jones 2",
+        imagen: "../../Assets/Imagenespeliculas/tadeo_1.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Descripcion:
+          "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/778507bd-71ce-4b28-b0ec-e05409ebf20e",
+          Generos: ["Animación", "Aventura", "Comedia", "Familia"]
+      },
+      {
+        id: 340,
+        nombre: "El libro de la Selva 2016",
+        imagen: "../../Assets/Imagenespeliculas/El _libro_de_la_selva_2016.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Descripcion:
+          "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/144ff678-15c1-4f63-807d-82825e8d42e8",
+          Generos: ["Aventura", "Acción", "Fantasía", "Familia"]
+      },
+      {
+        id: 341,
+        nombre: "Lucy 2014",
+        imagen: "../../Assets/Imagenespeliculas/lucy_2014.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Descripcion:
+          "Ilustraciones profesionales con Illustrator. Crea diseños impactantes con herramientas intuitivas y versátiles.",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/b13319bd-fead-45e8-8844-932e899dbc74",
+          Generos: ["Acción", "Ciencia Ficción", "Thriller"]
+      },
     ],
+    
   },
 };

@@ -3,16 +3,35 @@
 .buscar-pelicula{
     width: 100%;
     height: auto;
-    height: 12dvh;
+    height: 12.5dvh;
     background-color: white;
     position: fixed;
+    left: 0;
     bottom: 0;
     z-index: 500;
     display: none;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    @include m.desktop {
+    @include m.tablet {
         height: auto;
-        height: 8dvh;
+        height: 20dvh;
+    }
+    @include m.tabletM {
+        height: auto;
+    background-color: transparent;
+    margin: unset;
+    padding: unset;
+    position: static;
+    align-content: center;
+    width: 15rem;
+    max-width: 19.5rem;
+    display: flex;
+    flex-grow: 1;
+   
+       
+    }
+    @include m.desktopFull {
+       
+    max-width: 23rem; 
     }
     &--active{
        display: block; 
@@ -25,6 +44,10 @@
         display: flex;
         gap: 2rem;
         position: relative;
+        @include m.tabletM {
+            padding: 0;
+        }
+       
         &__input{
             width: 100%;
             padding: 1.5rem 1rem;
@@ -32,6 +55,16 @@
             border: none;
             outline: .1rem  solid grey;
             box-shadow: 5px 5px 20px #d8e6fd, -5px -5px 30px rgba(255, 255, 255, 0.705);
+            @include m.tabletM {
+                box-shadow: none;
+                
+            }
+            @include m.desktop {
+                background-color: transparent;
+                outline: .1rem solid rgb(84, 81, 81);
+                color: rgb(198, 190, 190);
+                border-radius: .5rem;
+            }
             
         }
         &__btn{
@@ -43,6 +76,9 @@
             color: white;
             cursor: pointer;
             user-select: none;
+            @include m.tabletM {
+                display: none;
+            }
         }
         
       
@@ -86,4 +122,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    @include m.tabletM {
+        display: none;
+    }
 }

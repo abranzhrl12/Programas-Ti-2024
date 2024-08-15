@@ -9,14 +9,11 @@
   background-color: var(--bg_nav_movile);
   padding-bottom: 1rem;
   padding-top: 1rem;
-
-  
-
 //quitar si es necesario
   position: fixed;
   bottom: 0;
   left: 0; 
-  z-index: 50;
+  z-index: 999;
   width: 100%;  
   @include m.tabletM {
     display: none;
@@ -63,12 +60,12 @@
 
         > :nth-child(1) {
           display: block;
-          height: clamp(24px, 10vw, 44px);
+          height: 3.4rem;
           padding: 0.5rem;
           display: flex;
           justify-content: center;
           align-items: center;
-
+          
           svg {
             fill: var(--color_nav_inactive);
             width: 100%;

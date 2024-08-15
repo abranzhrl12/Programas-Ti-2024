@@ -6,10 +6,16 @@ export const btnBuscarPelicula = document.querySelector('.buscar__btn');
 export const seccionPeliculas = document.querySelector('.Peliculas');
 
 try {
+    
   const busquedaclose=document.querySelector('.busqueda__close')
 busquedaclose.addEventListener('click',()=>
   {
     buscarPelicula.classList.toggle('buscar-pelicula--active');
+    buscarPeliculaInput.value='';
+    inicializarBusqueda(iconobusqueda, buscarPelicula, buscarPeliculaInput)
+    
+
+   
   })
 
 } catch (error) {
@@ -41,19 +47,28 @@ export function actualizarPeliculas(buscarPeliculaInput, peliculas, generarPelic
         // Si el campo de búsqueda está vacío, mostrar todas las películas
         paginaActual = 1; // Restablecer a la primera página
         generarPeliculas(peliculas); // Actualizar el grid con todas las películas
-        generarPaginacion(peliculas); // Actualizar la paginación
+        
+        // Verificar el ancho de la pantalla y generar paginación solo si es mayor a 900px
+        if (window.innerWidth > 900) {
+            generarPaginacion(peliculas); // Actualizar la paginación
+            console.log(window.innerWidth ,"holaaaaa")
+        }
     } else {
         const peliculasFiltradas = filtrarPeliculasPorNombre(nombre, peliculas);
         console.log('Películas filtradas:', peliculasFiltradas);
         paginaActual = 1; // Restablecer a la primera página
         generarPeliculas(peliculasFiltradas); // Actualizar el grid con las películas filtradas
-        generarPaginacion(peliculasFiltradas); // Actualizar la paginación según las películas filtradas
+        
+        // Verificar el ancho de la pantalla y generar paginación solo si es mayor a 900px
+        if (window.innerWidth > 900) {
+            console.log(window.innerWidth ,"holaaaaa2222")
+            generarPaginacion(peliculasFiltradas); // Actualizar la paginación según las películas filtradas
+        }
     }
     
     // Desplazar al inicio de la sección de películas
     seccionPeliculas.scrollIntoView({ behavior: 'smooth' });
 }
-
 
 export function inicializarBusqueda(iconobusqueda, buscarPelicula, buscarPeliculaInput) {
     iconobusqueda.addEventListener('click', () => {

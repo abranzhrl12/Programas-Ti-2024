@@ -5,19 +5,18 @@
   padding: 0 3.5rem;
   height: 7.8rem;
   background-color: #131218;
+  // background-color: #07092B;
  
   display: flex;
   top: 0;
   align-items: center;
   position: fixed;
   z-index: 300;
-  
-  &__contenedor {
-    width: 100%;
 
-  }
-  @include m.tablet {
-    .lista {
+
+  @include m.tabletM {
+       .lista {
+      
       position: static;
       display: flex;
     }
@@ -30,31 +29,63 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    order: 2;
+    
+    @include m.tabletM {
+    
+     order: 0;
+    
+    
+    }
     
   }
   &__contenedor {
+    width: 100%;
     z-index: 1;
     height: 80px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    @include m.tabletM {
+      display: flex;
+      justify-content: space-between;
+    
+    }
+   
   }
   &__logo {
     width: fit-content;
+ 
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     color: #ffffff;
+    
+    @include m.tabletM {
+      display: block;
+    
+     }
+   
+    @include m.desktop {
+      flex: 1;
+      display: flex;
+      justify-content: flex-start;  
+    
+    }
   }
   &__img {
     width: 15rem;
     cursor: pointer;
+    @include m.tabletM {
+      max-width: 15rem;
+    }
   }
   &__label {
     cursor: pointer;
-    @include m.tablet {
+    
+    @include m.tabletM {
       display: none;
     }
   }
@@ -76,8 +107,97 @@
     cursor: pointer;
     color: white;
   }
+  &__logueo{
+
+    display: flex;
+    margin-left: 24%;
+   
+    @include m.telefonoFull {
+      margin-left: 48.5%;
+     
+     
+    }
+    @include m.tabletsmall {
+      margin-left: 57%;
+     
+    }
+   
+    @include m.tablet {
+     
+      margin-left: 59%;
+    
+      
+      // gap: 10rem;
+    
+    }
+    @include m.tabletM {
+      height: inherit;
+      margin: unset;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 2.1rem;
+      // flex: 1;
+    
+
+    }
+    @include m.desktop {
+      margin-left: 0;
+      flex: 1;
+    }
+  }
+  &__boton{
+    height: 50%;
+    cursor: pointer;
+   
+    display: none;  
+    background-color: white;
+    @include m.tablet {
+      display: none;
+    }
+    @include m.tabletM {
+         
+      display: block; 
+      width: 13.5rem;  
+     
+    }
+    @include m.desktop {
+
+      display: block;
+      text-align: center;
+      word-wrap: normal;
+      border: none;
+      padding:1rem 2rem;
+      border-radius: .5rem;
+     
+    }
+  }
+}
+.busqueda-label{
+  max-width: min-content;
 }
 
+.navegacion__perfil{
+  @include m.tablet {
+    display: none;
+  }
+  @include m.tabletM {
+    height: 5.9rem;
+  width: 5.9rem;
+  border-radius: 50%;
+  border: none;
+  background-image: url(/ImagenesAvatares/Screenshot_1-topaz-enhance-4x.webp);
+  background-size: cover;
+  cursor: pointer;
+  display: none;
+    &:hover{
+      transform: scale(1.04);
+    }
+
+  
+  
+  }
+  
+}
 .lista {
   position: fixed;
   height: auto;
@@ -85,11 +205,14 @@
   left: 0;
   list-style: none;
   width: 100%;
-  
   margin-top: -0.4rem;
   background-color: #131218;
-  
   display: none;
+
+  @include m.tabletM {
+    display: block;
+  
+  }
 
   &__item {
     display: inline-block;

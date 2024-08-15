@@ -30,6 +30,8 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 [class*="__contenedor"] {
@@ -43,7 +45,7 @@ html {
 [class*="__img"] {
   display: block;
   max-width: 100%;
-  filter: contrast(116%) saturate(107%) brightness(105%);
+  filter: contrast(116%) saturate(107%) brightness(106%);
 }
 body {
   width: 100%;
@@ -51,5 +53,5 @@ body {
   font-size: 1.6rem;
   background: v.$color-primario;
   background-color: #1D1C24!important;
-  // background-color: #000000f0 !important;
+  // background-color: #07092B !important;
 }
