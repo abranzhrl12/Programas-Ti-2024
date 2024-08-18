@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframe Video Controls</title>
+</head>
+<body>
+    <div style="position:relative;padding-top:56.25%;">
+        <iframe id="video-iframe" src="https://iframe.mediadelivery.net/embed/261653/6890d372-dd52-49e8-9f97-3125f79c0082?autoplay=true&loop=false&muted=false&preload=true&responsive=true" loading="lazy" style="border:0;position:absolute;top:0;height:100%;width:100%;" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
+    </div>
+
+    <button id="get-time-button">Obtener Tiempo</button>
+    <button id="mute-button">Mute</button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const iframe = document.getElementById('video-iframe');
+            const getTimeButton = document.getElementById('get-time-button');
+            const muteButton = document.getElementById('mute-button');
+
+            // Handler para el botón Obtener Tiempo
+            getTimeButton.addEventListener('click', function() {
+                // Enviar un mensaje al iframe para obtener el tiempo actual
+                iframe.contentWindow.postMessage({ type: 'getTime' }, '*');
+            });
+
+            // Handler para el botón Mute
+            muteButton.addEventListener('click', function() {
+                // Alternar el mute estado
+                iframe.contentWindow.postMessage({ type: 'toggleMute' }, '*');
+            });
+
+            // Listener para mensajes postMessage del iframe
+            window.addEventListener('message', function(event) {
+                // Verifica el origen del mensaje
+                if (event.origin === 'https://iframe.mediadelivery.net') {
+                    const data = event.data;
+
+                    // Imprime el tiempo actual del video en la consola
+                    if (data.type === 'time') {
+                        console.log(`Tiempo actual: ${data.time}`);
+                    }
+
+                    // Actualiza el estado del botón mute
+                    else if (data.type === 'muteStatus') {
+                        muteButton.textContent = data.muted ? 'Unmute' : 'Mute';
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

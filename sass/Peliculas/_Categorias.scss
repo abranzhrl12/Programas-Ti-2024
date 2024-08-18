@@ -4,15 +4,19 @@
     // padding-top: 3rem ;
     display: flex;
     justify-content: center;
-    &__contenedor {        max-width: 172rem;
-        margin: 2rem;
+  
+    &__contenedor {       
+        margin: 1rem;
+     
         display: flex;
         justify-content: center;
         flex-wrap: wrap; /* Permite que los elementos se ajusten en múltiples filas si es necesario */
          gap: 1.5rem;
+         max-width: 172rem;
         @include m.desktopFullHD {
             justify-content: space-between;
             gap: unset;
+            
         }
        @include m.TV {
         width: 90%;
@@ -28,7 +32,8 @@
         border-radius: 1rem;
         position: relative;
         background-image: var(--image-categorias);
-     
+        background-color:#273452;
+        opacity: .9;
         // filter: grayscale(100%);
         transition: background-image .5s;
         object-fit: contain;

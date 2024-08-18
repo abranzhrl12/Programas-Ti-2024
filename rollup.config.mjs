@@ -64,7 +64,7 @@ import { nodeResolve } from '@rollup/plugin-node-resolve'
 
 //   input: 'src/Login/login.js', // archivo de entrada de tu aplicación
 //   output: {
-//     file: 'dist/bundle6.js', // archivo de salida generado
+//     file: 'dist/bundle7.js', // archivo de salida generado
 //     sourcemap: 'inline', // mapeo de código fuente para depuración
 //     format: 'iife' // formato de salida, en este caso autoinvocable
 //   },
@@ -76,9 +76,9 @@ import { nodeResolve } from '@rollup/plugin-node-resolve'
 // import resolve from '@rollup/plugin-node-resolve';
 
 // export default {
-//   input: 'dist/bundle6.js', // Ruta a tu archivo pelis.js
+//   input: 'dist/bundle7.js', // Ruta a tu archivo pelis.js
 //   output: {
-//     file: 'dist/bundle7.js', // Ruta y nombre del archivo minificado
+//     file: 'dist/bundle8.js', // Ruta y nombre del archivo minificado
 //     format: 'iife', // Formato del bundle (IIFE para navegador)
    
 //   },
@@ -91,6 +91,46 @@ import { nodeResolve } from '@rollup/plugin-node-resolve'
 //     })
 //   ]
 // };
+
+
+
+// export default {
+//   input: "./src/cambiarName/name.js",
+//   output: [
+//     {
+//       file: 'dist/name.js',
+//       format: "cjs",
+//     },
+//     {
+//       file: 'dist/name.js',
+//       format: "iife",
+//       name: "version",
+//       plugins: [terser()],
+//     },
+//   ],
+     
+// };
+
+
+
+// export default {
+//   input: "src/cambiarName/name.js", // Ruta a tu archivo pelis.js
+//   output: {
+//     file: 'dist/name2.js', // Ruta y nombre del archivo minificado
+//     format: 'iife', // Formato del bundle (IIFE para navegador)
+   
+//   },
+//   plugins: [
+//     resolve(), // Permite resolver módulos desde node_modules
+//     terser({
+//       format: {
+//         comments: false, // Elimina todos los comentarios
+//       }
+//     })
+//   ]
+// };
+
+
 
 
 
@@ -113,7 +153,26 @@ import { nodeResolve } from '@rollup/plugin-node-resolve'
 // };
 
 
-// import commonjs from '@rollup/plugin-commonjs';
+
+// export default {
+//   input: "./src/pelis.js",
+//   output: [
+//     {
+//       file: "./public/Pelis.js",
+//       format: "cjs",
+//     },
+//     {
+//       file: "./public/Pelis.js",
+//       format: "iife",
+//       name: "version",
+//       plugins: [terser()],
+//     },
+//   ],
+     
+// };
+
+
+import commonjs from '@rollup/plugin-commonjs';
 // export default {
 //   input: "./src/pelis.js",
 //   output: {
@@ -130,19 +189,20 @@ import { nodeResolve } from '@rollup/plugin-node-resolve'
 
 import resolve from '@rollup/plugin-node-resolve';
 
+
 export default {
   input: 'public/Pelis.js', // Ruta a tu archivo pelis.js
   output: {
     file: 'dist/pelis.min.js', // Ruta y nombre del archivo minificado
-    format: 'iife', // Formato del bundle (IIFE para navegador)
-    name: 'Pelis' // Nombre global para el bundle (opcional)
+     format: 'iife', // Formato del bundle (IIFE para navegador)
+     name: 'Pelis' // Nombre global para el bundle (opcional)
   },
-  plugins: [
-    resolve(), // Permite resolver módulos desde node_modules
+   plugins: [
+     resolve(), // Permite resolver módulos desde node_modules
     terser({
-      format: {
-        comments: false, // Elimina todos los comentarios
-      }
+       format: {
+         comments: false, // Elimina todos los comentarios
+       }
     })
-  ]
-};
+   ]
+ };

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Player</title>
+    <style>
+        .play, .loader, .name {
+            cursor: pointer;
+        }
+        .titulowhite {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <audio id="audio-player" controls></audio>
+    <button id="play-pause">Play/Pause</button>
+    <button id="prev">Previous</button>
+    <button id="next">Next</button>
+    <input type="range" id="myRange" min="0" max="100" value="0">
+    <span id="current-time">00:00</span> / <span id="total-time">00:00</span>
+    <div id="song-title">Song Title</div>
+    <div id="artist">Artist</div>
+    <div class="play">Play</div>
+    <div class="loader">Loader</div>
+    <div class="name">Song Name</div>
+
+    <!-- Selector de pistas de audio -->
+    <select id="audio-track-selector">
+        <option value="0">Spanish</option>
+        <option value="1">English</option>
+    </select>
+
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script >
+        document.addEventListener('DOMContentLoaded', function() {
+    const audio = document.getElementById('audio-player');
+    const playPauseButton = document.getElementById('play-pause');
+    const prevButton = document.getElementById('prev');
+    const nextButton = document.getElementById('next');
+    const rangeSlider = document.getElementById('myRange');
+    const currentTimeElement = document.getElementById('current-time');
+    const totalTimeElement = document.getElementById('total-time');
+    const songTitleElement = document.getElementById('song-title');
+    const artistElement = document.getElementById('artist');
+    const audioTrackSelector = document.getElementById('audio-track-selector');
+
+    const playlistUrls = [
+        'https://vz-11d09321-43c.b-cdn.net/6890d372-dd52-49e8-9f97-3125f79c0082/playlist.m3u8',
+        'https://vz-11d09321-43c.b-cdn.net/e96d7ff3-e92c-4331-b450-ac5a02bdb428/playlist.m3u8',
+        'https://vz-11d09321-43c.b-cdn.net/28763d01-0187-405d-baa0-9b72b1889680/playlist.m3u8'
+    ];
+
+    let hls = new Hls();
+    let currentPlaylistIndex = 0;
+    let currentAudioTrackIndex = 0;
+
+    function loadTrack(index) {
+        if (index >= 0 && index < playlistUrls.length) {
+            audio.src = playlistUrls[index];
+            if (hls) {
+                hls.loadSource(playlistUrls[index]);
+                hls.attachMedia(audio);
+                hls.on(Hls.Events.MANIFEST_PARSED, function() {
+                    if (hls.audioTracks.length > 0) {
+                        hls.audioTrack = currentAudioTrackIndex;
+                    }
+                });
+            }
+        }
+    }
+
+    playPauseButton.addEventListener('click', function() {
+        if (audio.paused) {
+            audio.play();
+        } else {
+            audio.pause();
+        }
+    });
+
+    nextButton.addEventListener('click', function() {
+        currentPlaylistIndex = (currentPlaylistIndex + 1) % playlistUrls.length;
+        loadTrack(currentPlaylistIndex);
+    });
+
+    prevButton.addEventListener('click', function() {
+        currentPlaylistIndex = (currentPlaylistIndex - 1 + playlistUrls.length) % playlistUrls.length;
+        loadTrack(currentPlaylistIndex);
+    });
+
+    rangeSlider.addEventListener('input', function() {
+        const newTime = (rangeSlider.value / 100) * audio.duration;
+        audio.currentTime = newTime;
+    });
+
+    audio.addEventListener('timeupdate', function() {
+        const currentTime = Math.floor(audio.currentTime);
+        const duration = Math.floor(audio.duration);
+        rangeSlider.value = (currentTime / duration) * 100;
+        currentTimeElement.textContent = `${Math.floor(currentTime / 60)}:${('0' + (currentTime % 60)).slice(-2)}`;
+        totalTimeElement.textContent = `${Math.floor(duration / 60)}:${('0' + (duration % 60)).slice(-2)}`;
+    });
+
+    audioTrackSelector.addEventListener('change', function() {
+        currentAudioTrackIndex = parseInt(audioTrackSelector.value);
+        if (hls && hls.audioTracks.length > 0) {
+            hls.audioTrack = currentAudioTrackIndex;
+        }
+    });
+
+    // Example loaders and names, make sure these are defined in your HTML
+    const loaders = document.querySelectorAll('.loader');
+    const names = document.querySelectorAll(".name");
+
+    loaders.forEach((loader, index) => {
+        loader.addEventListener('click', function() {
+            loaders.forEach(loader => loader.style.backgroundColor = '');
+            loader.style.backgroundColor = '#121212';
+            names.forEach((name, nameIndex) => {
+                if (nameIndex === index) {
+                    name.parentElement.classList.add("titulowhite");
+                } else {
+                    name.parentElement.classList.remove("titulowhite");
+                }
+            });
+            currentPlaylistIndex = index;
+            loadTrack(currentPlaylistIndex);
+        });
+    });
+
+    loadTrack(currentPlaylistIndex);
+});
+
+    </script>
+</body>
+</html>

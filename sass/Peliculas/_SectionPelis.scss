@@ -1,6 +1,6 @@
 @use '../global/mixin' as m;
 .Peliculas{
-    margin-top: 12rem;
+    margin-top: 6rem;
     margin-bottom: 5rem;
     height: auto;
     color: white;
@@ -125,7 +125,15 @@
         cursor: pointer;
         user-select: none;
         outline: none; /* Elimina el borde de enfoque */
-    -webkit-tap-highlight-color: transparent; 
+         -webkit-tap-highlight-color: transparent; 
+        
+        animation: opacitys 1.2s forwards alternate;
+        aspect-ratio: auto;
+        transition: display .6s,opacity 1s;
+        transition-behavior :allow-discrete;
+   
+        display: block;
+        opacity: 1;
         @include m.tablet {
             width: 100%;
             height: auto;
@@ -255,10 +263,7 @@ opacity: .6;
 backdrop-filter: blur(2rem);
 z-index: 99;
 }
-.generos{
-    padding-left: 0.8rem;
-    color: white;
-}
+
 // .modal-content{
     
 //     width: 30rem;
@@ -268,3 +273,11 @@ z-index: 99;
 //     inset: 0;
 //     margin: auto;
 // }
+@keyframes opacitys {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

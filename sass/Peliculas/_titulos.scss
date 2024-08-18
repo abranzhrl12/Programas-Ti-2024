@@ -1,0 +1,38 @@
+@use "../global/mixin" as m;
+
+.nombres{
+    color: white;
+    margin-top: 4.5rem;
+    margin-bottom: 3rem;
+    
+    &__contenedor{
+        // background-color: red;
+        display: flex;
+        overflow: hidden;
+        @include m.desktopFull {
+            max-width: 172rem;
+        }
+    }  
+    &__generos{
+        display: inline-block;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      &::after{
+        content: "";
+        position: absolute;
+        display: block;
+        width: 100vw;
+        height: .2rem ;
+        left: 105%;
+        background-color: rgb(151, 145, 145);
+      }
+     &--pelis{
+      margin-top: -1rem;
+      margin-bottom: 0;
+     }
+    }
+ 
+}
+

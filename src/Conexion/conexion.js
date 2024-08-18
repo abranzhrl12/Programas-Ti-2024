@@ -2,12 +2,12 @@ import { initializeApp } from "firebase/app";
 import { getFirestore, collection, query, where, getDocs, setDoc, doc, Timestamp,updateDoc } from 'firebase/firestore/lite';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAKf5D2G62O_F80u7GvKqb0zKheyXYCnVo",
-  authDomain: "programas-ti.firebaseapp.com",
-  projectId: "programas-ti",
-  storageBucket: "programas-ti.appspot.com",
-  messagingSenderId: "535089377431",
-  appId: "1:535089377431:web:ba7b861507806d214839d2"
+  apiKey: "AIzaSyDs8wTtgLSOg-bnLpBK4K5Hege66pg9wVQ",
+  authDomain: "streamixmovie.firebaseapp.com",
+  projectId: "streamixmovie",
+  storageBucket: "streamixmovie.appspot.com",
+  messagingSenderId: "724237092696",
+  appId: "1:724237092696:web:7e2f773517853bb6b5872d"
 };
 
 

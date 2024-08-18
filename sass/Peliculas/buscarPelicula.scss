@@ -7,8 +7,9 @@
     background-color: white;
     position: fixed;
     left: 0;
-    bottom: 0;
-    z-index: 500;
+    top: 80vh;
+ 
+    z-index: 888;
     display: none;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     @include m.tablet {

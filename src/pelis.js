@@ -7,7 +7,6 @@ import {
 } from "./Conexion/conexion";
 import peliss from "./Peliculas/categoriasPeliculas";
 import { peliculas, generarPlantillaPelicula } from "./Peliculas/Peliculas";
-
 import { calcularProgramasPorPaginaActual } from "./Peliculas/cantidaPagina";
 import { cargarDatosUsuario } from "./Peliculas/datosUsuario";
 import {
@@ -24,20 +23,20 @@ import {
   desactivarTeclasDesarrollo,
 } from "./Peliculas/Seguridad";
 import peliculasData from "./Datos/datosPelis";
+// import '@justinribeiro/lite-youtube';
 
 // Llama a las funciones para activar la desactivación de menú y teclas de desarrollo
 desactivarMenuContextual();
 desactivarTeclasDesarrollo();
 
+// import {initializeSwiper} from './Peliculas/swipper.js';
 let widthViewport = window.innerWidth;
 let programasPorPagina = calcularProgramasPorPaginaActual();
 let paginaActual = 1;
-let herramientasAbiertasPrevias = false;
-let view2 = window.innerWidth;
 let view = window.innerWidth;
-let MOVIE_NAME = 'Tadeo Jones 2';
+let MOVIE_NAME = 'Tadeo ';
 let usuarioAutenticado = cargarDatosUsuario();
-
+const gridd = document.querySelector(".Peliculas__grid");
 
 function generarPeliculas(peliculas, cantidadMostrar = 0) {
   const grid = document.querySelector(".Peliculas__grid");
@@ -47,11 +46,11 @@ function generarPeliculas(peliculas, cantidadMostrar = 0) {
   grid.innerHTML = ""; // Limpiar contenido anterior
 
   if (!peliculas || !Array.isArray(peliculas)) {
-    console.error("La variable 'peliculas' no está definida o no es un array.");
+    console.log("La variable 'peliculas' no está definida o no es un array.");
     return;
   }
 
-  const { inicial, incremento, limite } = calcularProgramasPorPaginaActual();
+  const { inicial, incremento, limite } = programasPorPagina;
   const cantidad = cantidadMostrar || inicial;
 
   // Si el ancho de la ventana es menor a 900 píxeles, omite el límite
@@ -87,22 +86,16 @@ function agregarPeliculasAlGrid(peliculas) {
     grid.removeEventListener("click", handlePeliculaClick);
     grid.addEventListener("click", handlePeliculaClick);
   } catch (error) {
-    console.error("Error al manejar el evento click en la tarjeta:", error);
+    console.log("Error al manejar el evento click en la tarjeta:", error);
   }
 }
 
-// function inicializarAplicacion() {
-//   generarPeliculas(peliculas);
-//   agregarBotonVerMas(peliculas);
-// }
-
-// inicializarAplicacion();
 
 async function handlePeliculaClick(event) {
   event.preventDefault();
 
   const tarjeta = event.target.closest(".Peliculas__card");
-  console.log("hola");
+
   if (!tarjeta) return;
 
   buscarPeliculaInput.value = "";
@@ -159,6 +152,7 @@ async function handlePeliculaClick(event) {
       // const infopeli=document.querySelector(".Detalle-Pelicula")
       // infopeli.classList.toggle.add('active')
       MOVIE_NAME =  peliculaSeleccionada.nombre;
+      getMovieIdByName(MOVIE_NAME);
       await cargarVideoPelicula(peliculaSeleccionada.Video);
       const irVideo = document.querySelector("#fullscreenBtn");
       irVideo.scrollIntoView({ behavior: "smooth" });
@@ -175,7 +169,7 @@ async function handlePeliculaClick(event) {
 inicializarBusqueda(iconobusqueda, buscarPelicula, buscarPeliculaInput);
 
 btnBuscarPelicula.addEventListener("click", () => {
-  console.log('Botón de búsqueda clicado');
+
   actualizarPeliculas(
     buscarPeliculaInput,
     peliculas,
@@ -186,6 +180,19 @@ btnBuscarPelicula.addEventListener("click", () => {
   );
 });
 
+const iconobus=document.querySelector(".icono-busqueda")
+
+iconobus.addEventListener("click", () => {
+
+  actualizarPeliculas(
+    buscarPeliculaInput,
+    peliculas,
+    generarPeliculas,
+    generarPaginacion,
+    seccionPeliculas,
+    paginaActual
+  );
+});
 
 
 buscarPeliculaInput.addEventListener("keydown", (event) => {
@@ -215,7 +222,7 @@ function agregarBotonVerMas(peliculas) {
   newButton.addEventListener("click", () => {
     const grid = document.querySelector(".Peliculas__grid");
     const peliculasMostradas = grid.querySelectorAll(".Peliculas__card").length;
-    const { incremento, limite } = calcularProgramasPorPaginaActual();
+    const { incremento, limite } = programasPorPagina;
     const nuevasPeliculas = peliculasMostradas + incremento;
 
     if (nuevasPeliculas >= limite) {
@@ -228,13 +235,13 @@ function agregarBotonVerMas(peliculas) {
 
 function generarPaginacion(peliculas) {
   if (!peliculas || !Array.isArray(peliculas)) {
-    console.error("La variable 'peliculas' no está definida o no es un array.");
+    console.log("La variable 'peliculas' no está definida o no es un array.");
     return;
   }
 
   try {
     const totalPaginas = Math.ceil(
-      peliculas.length / calcularProgramasPorPaginaActual().limite
+      peliculas.length / programasPorPagina.limite
     );
     const contenedorPaginacion = document.querySelector(".paginas");
     contenedorPaginacion.innerHTML = ""; // Limpiar contenido anterior
@@ -254,7 +261,7 @@ function generarPaginacion(peliculas) {
         paginaActual = index;
         generarPeliculas(peliculas);
         agregarBotonVerMas(peliculas);
-
+     
         contenedorPaginacion
           .querySelectorAll(".paginas__btn")
           .forEach((btn) => {
@@ -262,6 +269,27 @@ function generarPaginacion(peliculas) {
           });
 
         btnpaginacion.classList.add("active");
+        setTimeout(() => {
+          // Selecciona todos los elementos con la clase '.Peliculas__card'
+          const cards = document.querySelectorAll(".Peliculas__card");
+        
+          // Verifica si hay al menos una tarjeta en la lista
+          if (cards.length > 0) {
+            // Selecciona la última tarjeta
+            const ultimaCard = cards[cards.length - 8];
+        
+      
+        
+            // Desplaza suavemente a la última tarjeta
+            ultimaCard.scrollIntoView({
+              behavior: "smooth", // Activa el desplazamiento suave
+              block: "start", // Desplaza el contenedor al principio del área visible
+            });
+          } else {
+            console.log("No se encontraron tarjetas con la clase '.Peliculas__card'");
+          }
+        }, 200); // Ajusta el tiempo si es necesario
+        
       });
 
       contenedorPaginacion.appendChild(btnpaginacion);
@@ -275,15 +303,10 @@ function generarPaginacion(peliculas) {
 window.addEventListener("DOMContentLoaded", async ()=> {
   try {
     await verificarYConfigurar2();
-    programasPorPagina = calcularProgramasPorPaginaActual();
+    // programasPorPagina = programasPorPagina;
     // Asegúrate de que la variable 'peliculas' esté definida y no sea nula
     if (peliculas && peliculas.length > 0) {
-      // Actualizar la página actual para asegurar que esté dentro de los límites de las páginas disponibles
-      // if (paginaActual > Math.ceil(peliculas.length / programasPorPagina)) {
-      //   paginaActual = Math.ceil(peliculas.length / programasPorPagina);
-      // }
-     
-      // Volver a agregar las películas al grid con el nuevo número de programas por página
+
       agregarPeliculasAlGrid(peliculas);
 
       // Verificar el ancho de la pantalla antes de generar la paginación
@@ -297,7 +320,7 @@ window.addEventListener("DOMContentLoaded", async ()=> {
   }
 });
 window.addEventListener("resize", async() => {
-  view2 = window.innerWidth;
+
   await verificarYConfigurar2()
 });
 async function verificarYConfigurar2() {
@@ -308,7 +331,7 @@ async function verificarYConfigurar2() {
   
   if (usuario) {
     // El usuario está autenticado, configurar la interfaz
-    console.log("Usuario autenticado");
+  
 
    
     if (btnperfil) {
@@ -408,7 +431,7 @@ function configurarEventosGeneros() {
   const categorias = document.querySelectorAll(".Genero-categorias__figura");
 
   // Mostrar en la consola el número de elementos encontrados
-  console.log(`Número de categorías encontradas: ${categorias.length}`);
+  // console.log(`Número de categorías encontradas: ${categorias.length}`);
 
   categorias.forEach((categoria, index) => {
     
@@ -441,10 +464,10 @@ function manejarClickGenero(event) {
 
       // Esperar a que el DOM se actualice antes de aplicar el desplazamiento
       setTimeout(() => {
-        const grid = document.querySelector(".Peliculas__grid");
+     
 
-        if (grid) {
-          grid.scrollIntoView({
+        if (gridd) {
+          gridd.scrollIntoView({
             behavior: "smooth", // Activa el desplazamiento suave
             block: "start", // Desplaza el contenedor al principio del área visible
           });
@@ -495,10 +518,10 @@ function manejarClickGenero(event) {
       
 
       setTimeout(() => {
-        const grid = document.querySelector(".Peliculas__grid");
+  
 
-        if (grid) {
-          grid.scrollIntoView({
+        if (gridd) {
+          gridd.scrollIntoView({
             behavior: "smooth", // Activa el desplazamiento suave
             block: "start", // Desplaza el contenedor al principio del área visible
           });
@@ -606,14 +629,87 @@ async function fetchMovieDetailsById(movieId) {
       const movieDetails = await response.json();
       
       // Usar w780 para el fondo (backdrop) y w342 para el póster
-      document.querySelector('.Detalle-Pelicula__back').src = `https://image.tmdb.org/t/p/w780${movieDetails.backdrop_path}`;
-      document.querySelector('.Detalle-Pelicula__img').src = `https://image.tmdb.org/t/p/w342${movieDetails.poster_path}`;
-      document.querySelector('.Detalle-Pelicula__tiulo').textContent = movieDetails.title;
-      document.querySelector('Detalle-Pelicula__descripcion').textContent = movieDetails.overview;
-      document.getElementById('movie-year').textContent = `Año: ${movieDetails.release_date.split('-')[0]}`;
+      document.querySelector('.Detalle-Pelicula__back').src = `https://image.tmdb.org/t/p/w1280${movieDetails.backdrop_path}`;
+      // document.querySelector('.Detalle-Pelicula__img').src = `https://image.tmdb.org/t/p/w780${movieDetails.poster_path}`;
+      document.querySelector('.Detalle-Pelicula__titulo').textContent = movieDetails.title;
+      let descr  = movieDetails.overview;
+      const durate= `${movieDetails.runtime}`;
+  
+   // Duración
+       document.querySelector('.Detalle-Pelicula__duracion').textContent =formatDuration(durate)
+
+       document.querySelector('.Detalle-Pelicula__descripcion').textContent=cortarDescripcion(descr)
+      document.getElementById('movie-year').textContent = `${movieDetails.release_date.split('-')[0]}`;
+    //calificacion
+     // Calificación
+     const rating = movieDetails.vote_average; // Calificación en escala de 0 a 10
+     document.querySelector('.Detalle-Pelicula__calif').textContent = `${rating}`;
+
+      //clasificacion
+      const releaseDatesResponse = await fetch(`https://api.themoviedb.org/3/movie/${movieId}/release_dates`, {
+        headers: {
+            Authorization: `Bearer ${API_KEY}`,
+            'Content-Type': 'application/json;charset=utf-8'
+        }
+    });
+    
+    if (!releaseDatesResponse.ok) {
+        throw new Error('Failed to fetch release dates');
+    }
+
+    const releaseDates = await releaseDatesResponse.json();
+    // Encuentra la clasificación en Estados Unidos
+    const releaseInfo = releaseDates.results.find(result => result.iso_3166_1 === 'US'); 
+    const certification = releaseInfo ? releaseInfo.release_dates[0].certification : 'No disponible';
+    
+    // Interpretar la clasificación
+    const interpretation = interpretCertification(certification);
+    document.querySelector('.Detalle-Pelicula__clasification').textContent = `  ${interpretation}`;
+
+
   } catch (error) {
-      console.error('Error:', error);
+      console.log('Error:', error);
+  }
+}
+function formatDuration(minutes) {
+  const hours = Math.floor(minutes / 60);
+  const remainingMinutes = minutes % 60;
+  return `${hours}h ${remainingMinutes}m`;
+}
+
+function interpretCertification(certification) {
+  switch (certification) {
+      case 'G':
+          return '5+'; // Apto para todas las edades
+      case 'PG':
+          return '7+'; // Apto para mayores de 7 años
+      case 'PG-13':
+          return '13+'; // Apto para mayores de 13 años
+      case 'R':
+          return '17+'; // Apto para mayores de 17 años
+      case 'NC-17':
+          return '18+'; // Solo para mayores de 18 años
+      default:
+          return 'Desconocida'; // Para clasificaciones no listadas
   }
 }
 
-getMovieIdByName(MOVIE_NAME);
+function cortarDescripcion(texto) {
+  // Divide el texto en partes utilizando el punto (.) como delimitador
+  const partes = texto.split('.');
+
+  // Verifica si hay al menos tres partes
+  if (partes.length > 3) {
+      // Une las primeras tres partes y añade puntos al final para mantener la estructura
+      return partes.slice(0, 3).join('.') + '.';
+  } else {
+      // Si hay menos de tres puntos, devuelve el texto tal cual
+      return texto;
+  }
+}
+
+const botonsession=document.querySelector(".navegacion__boton")
+
+botonsession.addEventListener("click", () => {
+  window.location.href = "login.html";
+});
