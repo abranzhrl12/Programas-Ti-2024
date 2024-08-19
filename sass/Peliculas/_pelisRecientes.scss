@@ -1,0 +1,138 @@
+@use "./../global/mixin" as m;
+
+.Pelis-Recientes{
+    height: auto;
+    width: 100%;
+     
+    &__contenedor{
+        width: 90%;
+        max-width: 120rem;
+        height: auto;
+        overflow: hidden;
+        @include m.desktopFull {
+            max-width: 159rem;
+        }
+    }
+    &__grid{
+        // display: flex;
+        // gap: 5rem;
+      
+        @include m.telefonom {
+            display: flex;
+            gap: 0.4rem;
+        }
+    
+       @include m.telefonoFull {
+        gap: unset;
+       }
+    //    overflow: hidden;
+    }
+   
+    &__card{
+        width: 13.5;
+        transition: transform .3s ease;
+        @include m.telefonom {
+            width: 14.4rem;
+        }
+       
+        @include m.telefonoFull {
+            width: 100%;
+            border-radius: 1rem;
+        }
+        @include m.desktop {
+            width: 100%;
+            border-radius: 1rem;
+        }
+      &:hover{
+       transform: scale(1.02);
+      }
+    }
+    
+    &__figure{
+        width: 100%;
+        height: 100%;
+        border-radius: 1rem;
+        object-position: center;
+        max-width: 100%;
+     
+        object-fit: cover;
+    }
+    &__img{
+        max-width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+    }
+    &__nombre{
+        margin-top: 1rem;
+        height: 4rem;
+        font-size: 1.2rem;
+        color: white;
+        border-radius: 1rem;
+        text-align: center;
+    }
+}
+
+
+
+.swiper {
+    width: 100%;
+ 
+    @include m.telefonoFull {
+        width: 90%;
+        margin: 0 auto;
+    }
+    @include m.tablet {
+        width: 90%;
+        margin: 0 auto;
+    }
+    @include m.tabletM {
+        width: 84%;
+        margin: 0 auto;
+    }
+    @include m.desktop {
+        width: 90%;
+        margin: 0 auto;
+    }
+   
+  }
+.swiper-wrapper{
+    padding: 0 0.4rem;
+    display: grid;
+    grid-template-columns: repeat(15,min-content);
+    
+    @include m.telefonom {
+        grid-template-columns: repeat(15,min-content);
+      
+    }
+  
+ 
+    @include m.telefonoFull {
+        grid-template-columns: repeat(15,18.4rem);
+        padding: unset;
+    }
+    @include m.tablet {
+        grid-template-columns: repeat(15,23.7rem);
+        padding: unset;
+    }
+    @include m.tabletM {
+        grid-template-columns: repeat(15,20.2rem);
+        padding: unset;
+    }
+    @include m.desktop {
+        grid-template-columns: repeat(15,1fr); 
+        padding: unset; 
+    }  
+  
+    cursor: pointer;
+    
+}
+  .swiper-slide {
+    width: 100%;
+    height: auto;
+     border-radius: 1rem;
+     @include m.desktop {
+        // width: 10rem;
+        // height: 25rem;
+     }
+  }

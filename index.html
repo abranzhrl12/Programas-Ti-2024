@@ -26,13 +26,13 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js" defer></script>
   <script src="/dist/pelis.min.js" defer></script>
 </head>
-<style>
+<!-- <style>
   @starting-style{
 	.Peliculas__card{
 	opacity 0;
 }
 }
-</style>
+</style> -->
 <body>
   <header class="header">
     <nav class="navegacion" id="nav">
@@ -103,8 +103,6 @@
             <ul class="perfiles__lista">
               <li class="perfiles__item">
                 <a class="perfiles__link" href="perfiles.html">Administrar Perfiles</a>
-
-
               </li>
               <li class="perfiles__item">Configuracion</li>
               <li class="perfiles__item">Ayuda</li>
@@ -148,7 +146,10 @@
 
       </swiper-container>
     </div>
+
   </header>
+
+
   <div class="nombres">
     <div class="nombres__contenedor">
       <h2 class="nombres__generos">Generos Populares</h2>
@@ -190,12 +191,51 @@
       </div>
     </div>
   </section>
+
+
+
   <div class="nombres">
     <div class="nombres__contenedor">
-      <h2 class="nombres__generos nombres__generos--pelis">Peliculas Recientes</h2>
+      <h2 class="nombres__generos nombres__generos--pelis">Recien Agregadas</h2>
+    
     </div>
 
   </div>
+
+
+
+  <!-- <div class="Pelis-Recientes"> -->
+    <!-- <div class="Pelis-Recientes__contenedor"> -->
+      <!-- <div  class="swiper mySwiper">
+        <div class="swiper-wrapper"> -->
+          <!-- Slides will be injected here by JavaScript -->
+      <!-- </div> -->
+      <!-- </div> -->
+      <!-- <div class="swiper-pagination"></div>
+    </div>
+    
+    </div> -->
+ 
+
+<div class="Pelis-Recientes">
+  <div class="Pelis-Recientes__contenedor swiper mySwiper2"> 
+    <div class="Pelis-Recientes__grid  swiper-wrapper">
+   
+    </div>
+    <div class="swiper-pagination"></div>  
+</div>
+
+</div>
+    
+<div class="nombres">
+  <div class="nombres__contenedor">
+    <h2 class="nombres__generos nombres__generos--pelis">Peliculas Recientes</h2>
+  
+  </div>
+
+</div>
+
+
   <section class="Peliculas">
     <div class="Peliculas__contenedor">
       <div class="Peliculas__grid"></div>
@@ -205,6 +245,8 @@
         <span>Ver más</span>
       </button>
     </div>
+
+
     <section class="paginacion" id="sectionpaginas">
       <div class="paginacion__contenedor">
         <div class="paginas" id="paginastotales"></div>
@@ -213,6 +255,9 @@
 
     <button id="fullscreenBtn">Pantalla Completa</button>
   </section>
+
+
+  
   <div id="Videosplay" class="DetallePrograma__ConVideo"></div>
 
   <div class="navMovile">
@@ -365,6 +410,8 @@
     </div>
     <span class="footer__copy">&copy2024 ProgramasTi.</span>
   </footer>
+
+
   <div id="modalDesarrollador">
     <div class="modal-content">
       <p style="display: none">
@@ -372,5 +419,66 @@
       </p>
     </div>
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+  function getSlidesPerView() {
+  const width = window.innerWidth;
+  let number;
+
+  switch (true) {
+    case width > 1584:
+      number = 7;
+      break;
+    case width > 1300:
+      number = 5;
+      break;
+    case width > 900:
+      number = 4;
+      break;
+      case width > 768:
+      number = 3;
+      break;
+      case width > 600:
+      number = 3;
+      break;
+    case width > 800:
+      number = 3;
+      break;
+      case width > 300:
+      number = 3;
+      break;
+    default:
+      number = 2;
+      break;
+  }
+
+  return number;
+}
+
+// Función para inicializar o actualizar Swiper
+function initSwiper() {
+  if (window.swiper) {
+    window.swiper.destroy();
+  }
+
+  let number = getSlidesPerView();
+
+  window.swiper = new Swiper('.mySwiper2', {
+    slidesPerView: number,
+    spaceBetween: 15,
+    freeMode: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
+}
+
+// Inicializa Swiper al cargar la página
+initSwiper();
+
+// Agrega un event listener para el cambio de tamaño de la ventana
+window.addEventListener('resize', initSwiper);
+  </script>
 </body>
 </html>

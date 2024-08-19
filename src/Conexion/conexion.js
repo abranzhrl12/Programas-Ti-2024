@@ -161,3 +161,24 @@ export async function actualizarNombreUsuario(usuarioId, nuevoNombre) {
   }
 }
 
+// export async function handleImageUpload(file, imageElement) {
+//   if (!file) {
+//       alert('Por favor selecciona una imagen primero.');
+//       return;
+//   }
+
+//   try {
+//       const storageRef = ref(storage, 'profileImages/' + file.name);
+//       const snapshot = await uploadBytes(storageRef, file);
+//       console.log('Archivo subido exitosamente:', snapshot);
+
+//       const downloadURL = await getDownloadURL(storageRef);
+//       console.log('URL de descarga:', downloadURL);
+
+//       // Actualiza el src del elemento de imagen con la URL de descarga
+//       imageElement.src = downloadURL;
+//   } catch (error) {
+//       console.error('Error al subir la imagen:', error);
+//       alert('Error al intentar guardar la imagen.');
+//   }
+// }

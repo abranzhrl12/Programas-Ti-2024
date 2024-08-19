@@ -77,6 +77,18 @@ export default {
         Generos: ["Terror", "Drama"],
       },
       {
+        id: 643,
+        nombre: "Trampa en alta mar 2024",
+        imagen: "../../Assets/Imagenespeliculas/Trampa.en.alta.mar.2024.webp",
+        imagen_small:
+          "../../Assets/Imagenespeliculas/small/inmaculada_2024-small.webp",
+        imagen_tv: "../../Assets/Imagenespeliculas/tv/inmaculada_2024-tv.webp",
+
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/e4138f77-763b-4194-b2e6-8a26ae1f42f1",
+        Generos: ["Suspense,Terror"],
+      },
+      {
         id: 32,
         nombre: "Lisa Frankenstein 2024",
         imagen: "../../Imagenes_Pelis/Lisa.Frankenstein.2024.webp",
@@ -3498,6 +3510,158 @@ export default {
         Video:
           "https://iframe.mediadelivery.net/embed/261653/b2b699c0-e863-4d61-b3a8-35f902258602",
         Generos: ["Acción", "Ciencia ficción", "Aventura"],
+      },
+      {
+        id: 345,
+        nombre: "Resident Evil: Bienvenidos a Raccoon City",
+        imagen: "../../Assets/Imagenespeliculas/Resident_Evil_Bienvenidos_a_Raccoon_City_(2021).webp",
+        imagenX: "/imagenes/ilustrator.webp",
+
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/53d4b883-43ed-406a-94f5-54bf40bbd174",
+        Generos: ["Terror,Ciencia ficción,Acción"],
+      },
+      {
+        id: 346,
+        nombre: "Wolverine Inmortal 2013",
+        imagen: "../../Assets/Imagenespeliculas/Wolverine_Inmortal..webp",
+        imagenX: "/imagenes/ilustrator.webp",
+
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/8272bbb0-dba7-4df6-92e2-1aca3c2f4c32",
+        Generos: ["Acción,Ciencia ficción,Aventura"],
+      },
+      {
+        id: 347,
+        nombre: "X-Men Dark Phoenix",
+        imagen: "../../Assets/Imagenespeliculas/X-Men.Dark.Phoenix.2019.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/7ce9d0db-d1eb-484f-a8f0-087a4a1b35d7",
+        Generos: ["Acción,Ciencia ficción,Aventura"],
+      },
+      {
+        id: 348,
+        nombre: "Resident Evil 5: La venganza",
+        imagen: "../../Assets/Imagenespeliculas/Resident.Evil.5.La.venganza.2012.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/977ee353-c1e6-4201-97e4-02fad13c3d6e",
+          Generos: ["Terror,Ciencia ficción,Acción"],
+      },
+      {
+        id: 349,
+        nombre: "Thi Yot Susurros Mortales",
+        imagen: "../../Assets/Imagenespeliculas/Thi.Yot.Susurros.Mortales.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/91ec097d-eaae-468b-a58b-8e39d7fbc82c",
+          Generos: ["Terror,Suspense"],
+      },
+      {
+        id: 350,
+        nombre: "Mi.Pobre.Angelito 5",
+        imagen: "../../Assets/Imagenespeliculas/Mi.pobre.angelito5.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/7da21962-ba13-4d53-8e31-ac58e2750ca1",
+          Generos: ["Comedia,Familia"],
+      },
+      {
+        id: 351,
+        nombre: "Mi.Pobre.Angelito 4",
+        imagen: "../../Assets/Imagenespeliculas/Mi.Pobre.Angelito.4.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/136e38f3-398f-4b4f-ba14-b5e629ebbf02",
+          Generos: ["Comedia,Familia"],
+      },
+      {
+        id: 352,
+        nombre: "Mi.Pobre.Angelito 3",
+        imagen: "../../Assets/Imagenespeliculas/Mi.Pobre.Angelito.3.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/5f772a18-b98d-4118-909f-b7db7e5339d3",
+          Generos: ["Comedia,Familia"],
+      },
+      {
+        id: 353,
+        nombre: "Mi.Pobre.Angelito 2",
+        imagen: "../../Assets/Imagenespeliculas/Mi.pobre.angelito.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/72b1e7b7-26d3-42c6-b76b-125da467ad6f",
+          Generos: ["Comedia,Familia"],
+      },
+     
+      {
+        id: 354,
+        nombre: "Mi.Pobre.Angelito 1",
+        imagen: "../../Assets/Imagenespeliculas/Mi.pobre.angelito1.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/423ee4b5-9e2d-4bab-989f-4b896e6c2072",
+          Generos: ["Comedia,Familia"],
+      },
+      
+      {
+        id: 355,
+        nombre: "Titanes del Pacífico 1",
+        imagen: "../../Assets/Imagenespeliculas/titanes_del_pacifico1.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/cf720f44-ee04-4d77-a6d9-66bbc22dc751",
+          Generos: ["Acción,Fantasía,Ciencia ficción,Aventura"],
+      },
+      {
+        id: 356,
+        nombre: "Titanes del Pacífico 2",
+        imagen: "../../Assets/Imagenespeliculas/titanes_del_pacifico2.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/a063320a-6f22-41dd-9ef9-4ec3b292a042",
+          Generos: ["Acción,Fantasía,Ciencia ficción,Aventura"],
+      },
+      {
+        id: 357,
+        nombre: "No Game No Life: Zero",
+        imagen: "../../Assets/Imagenespeliculas/No_Game_N_Life_Zero.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/fd12201e-0fcb-48ea-82b3-8589a7c57b17",
+          Generos: ["Anime"],
+      },
+      {
+        id: 358,
+        nombre: "Van Helsing Cazador de monstruos",
+        imagen: "../../Assets/Imagenespeliculas/Van.Helsing.Cazador.de.monstruos.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/913b60e5-f589-4d0d-bb2c-5cce57ad6068",
+          Generos: ["Terror,Aventura,Acción"],
+      },
+      {
+        id: 359,
+        nombre: "El exorcista del papa",
+        imagen: "../../Assets/Imagenespeliculas/El.exorcista.del.papa.2023.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/4d78ee04-381a-4405-82a1-38a341a59d0e",
+          Generos: ["Terror,Suspense"],
       },
     ],
   },

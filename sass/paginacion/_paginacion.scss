@@ -7,6 +7,9 @@
     align-items: center;
     margin-top: 6rem;
     margin-bottom: 0rem;
+    @include m.tabletM {
+        display: none;
+    }
     .paginas{
         display: flex;
         justify-content: center;
