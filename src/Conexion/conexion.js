@@ -1,6 +1,9 @@
-import { initializeApp } from "firebase/app";
-import { getFirestore, collection, query, where, getDocs, setDoc, doc, Timestamp,updateDoc } from 'firebase/firestore/lite';
 
+
+import { initializeApp } from "firebase/app";
+import { getFirestore, collection, query, where, getDocs, setDoc, doc, Timestamp,updateDoc,deleteDoc,getDoc } from 'firebase/firestore/lite';
+
+import { obtenerDetallesDispositivo } from './../Peliculas/dispostivo';
 const firebaseConfig = {
   apiKey: "AIzaSyDs8wTtgLSOg-bnLpBK4K5Hege66pg9wVQ",
   authDomain: "streamixmovie.firebaseapp.com",
@@ -13,6 +16,7 @@ const firebaseConfig = {
 
 const firebaseApp = initializeApp(firebaseConfig);
 const db = getFirestore(firebaseApp);
+
 
 const MAX_DEVICES = 2; // Máximo número de dispositivos permitidos por usuario
 
@@ -55,7 +59,7 @@ export async function registrarDispositivoYAutenticar(correo, contraseña, detal
       }
 
       // Guardar datos del usuario en localStorage
-      localStorage.setItem('usuario', JSON.stringify({ correo, contraseña, usuarioId: userId, nombre: userData.nombreUsuario }));
+      localStorage.setItem('usuario', JSON.stringify({ correo, contraseña, usuarioId: userId, nombre: userData.nombreUsuario ,avatarId: userData.avatarId }));
       localStorage.setItem('usuarioAutenticado', 'true');
 
       console.log("Usuario autenticado y dispositivo registrado correctamente.");
@@ -133,52 +137,92 @@ export function verificarFechaExpiracion(fechaExpiracion) {
   }
  
 }
-
-
-
-export async function actualizarNombreUsuario(usuarioId, nuevoNombre) {
+export async function actualizarNombreYAvatarUsuario(usuarioId, nuevoNombre, avatarId) {
   try {
-    // Referencia al documento del usuario
     const usuarioRef = doc(db, 'usuarios', usuarioId);
     
-    // Actualizar el nombre del usuario
     await updateDoc(usuarioRef, {
-      nombreUsuario: nuevoNombre
+      nombreUsuario: nuevoNombre,
+      avatarId: parseInt(avatarId, 10)
     });
 
-    // Actualizar el nombre en localStorage
     const usuario = JSON.parse(localStorage.getItem('usuario'));
     if (usuario) {
       usuario.nombre = nuevoNombre;
+      usuario.avatarId = parseInt(avatarId, 10);
       localStorage.setItem('usuario', JSON.stringify(usuario));
     }
 
-    console.log('Nombre del usuario actualizado correctamente.');
+    console.log('Nombre y avatar del usuario actualizados correctamente.');
     return { success: true };
   } catch (error) {
-    console.error('Error al actualizar el nombre del usuario:', error);
-    return { success: false, reason: 'Error al actualizar el nombre del usuario', details: error.message };
+    console.error('Error al actualizar el nombre y avatar del usuario:', error);
+    return { success: false, reason: 'Error al actualizar el nombre y avatar del usuario', details: error.message };
   }
 }
 
-// export async function handleImageUpload(file, imageElement) {
-//   if (!file) {
-//       alert('Por favor selecciona una imagen primero.');
-//       return;
-//   }
+export async function obtenerDatosActualizadosUsuario(usuarioId) {
+  try {
+      const usuarioRef = doc(db, 'usuarios', usuarioId);
+      const usuarioSnapshot = await getDoc(usuarioRef);
+      
+      if (usuarioSnapshot.exists()) {
+          const usuarioData = usuarioSnapshot.data();
+          // Actualizar localStorage con los datos más recientes
+          localStorage.setItem('usuario', JSON.stringify({ 
+              correo: usuarioData.correo, 
+              contraseña: usuarioData.contraseña, 
+              usuarioId: usuarioId, 
+              nombre: usuarioData.nombreUsuario,
+              avatarId: usuarioData.avatarId 
+          }));
+          console.log('Datos del usuario actualizados en localStorage:', usuarioData);
+          return usuarioData;
+      } else {
+          console.error('El usuario no existe en la base de datos.');
+          return null;
+      }
+  } catch (error) {
+      console.error('Error al obtener datos del usuario:', error);
+      return null;
+  }
+}
 
-//   try {
-//       const storageRef = ref(storage, 'profileImages/' + file.name);
-//       const snapshot = await uploadBytes(storageRef, file);
-//       console.log('Archivo subido exitosamente:', snapshot);
+export async function cerrarSesion() {
+  try {
+    const usuario = JSON.parse(localStorage.getItem('usuario'));
 
-//       const downloadURL = await getDownloadURL(storageRef);
-//       console.log('URL de descarga:', downloadURL);
+    if (!usuario || !usuario.usuarioId) {
+      console.log("No hay un usuario autenticado.");
+      return;
+    }
 
-//       // Actualiza el src del elemento de imagen con la URL de descarga
-//       imageElement.src = downloadURL;
-//   } catch (error) {
-//       console.error('Error al subir la imagen:', error);
-//       alert('Error al intentar guardar la imagen.');
-//   }
-// }
+    const detallesDispositivo = await obtenerDetallesDispositivo();
+    const deviceId = detallesDispositivo.deviceId;
+
+    // Elimina el dispositivo asociado a este usuario
+    const dispositivosRef = collection(db, 'dispositivos');
+    const dispositivoQuery = query(dispositivosRef, where('usuarioId', '==', usuario.usuarioId), where('deviceId', '==', deviceId));
+    const dispositivoSnapshot = await getDocs(dispositivoQuery);
+
+    if (dispositivoSnapshot.size > 0) {
+      const dispositivoDocRef = dispositivoSnapshot.docs[0].ref;
+      await deleteDoc(dispositivoDocRef);
+      console.log("Dispositivo eliminado correctamente.");
+    } else {
+      console.log("No se encontró el dispositivo en la base de datos.");
+    }
+
+    // Limpia el localStorage para cerrar sesión
+    localStorage.removeItem('usuario');
+    localStorage.removeItem('usuarioAutenticado');
+    console.log("Sesión cerrada correctamente.");
+  } catch (error) {
+    console.error("Error al cerrar sesión:", error);
+  }
+}
+
+
+
+
+

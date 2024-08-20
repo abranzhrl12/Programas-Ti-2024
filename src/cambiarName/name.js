@@ -1,198 +1,122 @@
-import { actualizarNombreUsuario,handleImageUpload } from './../Conexion/conexion';
 
-document.addEventListener('DOMContentLoaded', function() {
-    try {
-        // Recuperar los datos del usuario desde localStorage
-     
-        const usuario = JSON.parse(localStorage.getItem('usuario'));
 
-        // Verificar que el usuario y el nombre existan en los datos recuperados
-        if (usuario && usuario.nombre) {
-            console.log('Usuario recuperado:', usuario);
-            
-            // Asignar el nombre al elemento con la clase 'profile-name'
-            const profileNameElement = document.querySelector('.profile-name');
-            if (profileNameElement) {
-                profileNameElement.textContent = usuario.nombre;
-            } else {
-                console.error('No se encontró el elemento .profile-name');
-            }
 
-            // Configurar el evento del botón "Administrar perfiles"
-            const saveNameButton = document.getElementById('saveNameButton');
-            const inputNameNew = document.querySelector('.inputnamenew');
-            const saveNewNameButton = document.getElementById('savenewname');
-            const profilenewdata = document.querySelector('.profiledatenew');
-            
-            if (saveNameButton && inputNameNew && saveNewNameButton) {
-                saveNameButton.addEventListener('click', function() {
-                    console.log('Botón "Administrar perfiles" clickeado');
-                    // Alternar la clase 'active' en los elementos para mostrar el campo de edición
-                    profilenewdata.classList.toggle('active');
-                    
-                    setTimeout(() => {
-                        inputNameNew.classList.toggle('active');
-                        saveNewNameButton.classList.toggle('active');
-                        inputNameNew.value = usuario.nombre; // Establecer el valor actual del nombre
-                        console.log('Campo de edición mostrado con valor:', inputNameNew.value);
-                    }, 40); // Ajusta el tiempo según lo necesites (en milisegundos)
-                });
-            } else {
-                console.error('No se encontraron los elementos necesarios para editar el nombre');
-            }
+import { actualizarNombreYAvatarUsuario,obtenerDatosActualizadosUsuario } from './../Conexion/conexion';
+import AvataresData from './../Datos/Avatares';
 
-            // Configurar el evento del botón "Guardar" para actualizar el nombre
-            if (saveNewNameButton) {
-                saveNewNameButton.addEventListener('click', async function() {
-                    try {
-                        const nuevoNombre = inputNameNew.value;
-                        console.log('Nuevo nombre ingresado:', nuevoNombre);
+document.addEventListener('DOMContentLoaded', async function() {
+    // 1. Obtener datos del localStorage
+    const usuario = JSON.parse(localStorage.getItem('usuario'));
+    console.log('Usuario recuperado desde localStorage:', usuario);
 
-                        if (nuevoNombre.trim() && usuario && usuario.usuarioId) {
-                            const resultado = await actualizarNombreUsuario(usuario.usuarioId, nuevoNombre);
+    if (!usuario || !usuario.usuarioId) {
+        console.error('Datos del usuario no encontrados en localStorage');
+        return;
+    }
 
-                            if (resultado.success) {
-                                document.querySelector('.profile-name').textContent = nuevoNombre;
-                                inputNameNew.classList.remove('active'); // Ocultar el campo de edición
-                                saveNewNameButton.classList.remove('active'); // Ocultar el botón de guardar
-                                setTimeout(() => {
-                                    profilenewdata.classList.remove('active'); // Ocultar el campo de edición
-                                    console.log('Nombre actualizado y campo de edición oculto');
-                                }, 250); // Ajusta el tiempo según lo necesites (en milisegundos)
-                            
-                            } else {
-                                console.error('Error al actualizar el nombre:', resultado.reason);
-                                alert(`Error: ${resultado.reason}`);
-                            }
-                        } else {
-                            alert('El nombre no puede estar vacío');
-                        }
-                    } catch (error) {
-                        console.error('Error en el evento del botón "Guardar":', error);
-                        alert('Ocurrió un error al intentar guardar el nuevo nombre');
-                    }
-                });
-            } else {
-                console.error('No se encontró el botón de guardar');
-            }
+    // 2. Obtener datos actualizados desde la base de datos
+    const datosActualizados = await obtenerDatosActualizadosUsuario(usuario.usuarioId);
+    console.log('Datos actualizados obtenidos:', datosActualizados);
 
-            // Configurar el evento del elemento con la clase 'profile'
-            const profileElement = document.querySelector('.profile_img');
-            if (profileElement) {
-                profileElement.addEventListener('click', () => {
-                    window.location.href = 'index.html';
-                });
-            } else {
-                console.error('No se encontró el elemento con la clase .profile_img');
-            }
+    // 3. Mostrar datos actualizados en la interfaz
+    mostrarDatosUsuario(datosActualizados);
+
+    // Configurar eventos de la interfaz
+    configurarEventosUI();
+});
+
+function mostrarDatosUsuario(datos) {
+    if (!datos) return;
+
+    // Mostrar el nombre del usuario
+    const profileNameElement = document.querySelector('.profile-name'); // Asegurándonos de usar .profile-name para el nombre
+    if (profileNameElement) {
+        profileNameElement.textContent = datos.nombreUsuario;
+        console.log('Nombre de usuario asignado al elemento .profile-name:', datos.nombreUsuario);
+    } else {
+        console.error('No se encontró el elemento .profile-name');
+    }
+
+    // Mostrar el avatar del usuario
+    const avatarElement = document.getElementById('avatarImg');
+    if (avatarElement && datos.avatarId) {
+        const rutaAvatar = obtenerRutaAvatar(parseInt(datos.avatarId, 10));
+        if (rutaAvatar) {
+            avatarElement.src = rutaAvatar;
+            avatarElement.dataset.avatarId = datos.avatarId;
+            console.log('Ruta del avatar obtenida:', rutaAvatar);
         } else {
-            console.log('No se encontró el nombre del usuario en localStorage.');
+            console.error('Ruta del avatar no encontrada para el ID:', datos.avatarId);
+        }
+    } else {
+        console.error('No se encontró el elemento de avatar o el campo avatarId está vacío');
+    }
+}
+
+function obtenerRutaAvatar(id) {
+    const avatar = AvataresData.Avatares.find(avatar => avatar.id === id);
+    console.log('Ruta del avatar buscada para el ID', id, ':', avatar ? avatar.ruta : 'No encontrado');
+    return avatar ? avatar.ruta : null;
+}
+
+
+function configurarEventosUI() {
+    const saveNameButton = document.getElementById('saveNameButton');
+    const saveNewNameButton = document.getElementById('savenewname');
+
+    saveNameButton.addEventListener('click', toggleProfileEdit);
+    saveNewNameButton.addEventListener('click', actualizarNombre);
+
+    // Redirigir a index.html al hacer clic en el avatar si hay datos en localStorage
+    const profileElement = document.querySelector('.profile_img');
+    if (profileElement) {
+        profileElement.addEventListener('click', () => {
+            if (localStorage.getItem('usuario')) {
+                window.location.href = 'index.html';
+            }
+        });
+    }
+}
+
+function toggleProfileEdit() {
+    const profilenewdata = document.querySelector('.profiledatenew');
+    const inputNameNew = document.querySelector('.inputnamenew');
+    const saveNewNameButton = document.getElementById('savenewname');
+
+    profilenewdata.classList.toggle('active');  // Muestra u oculta el contenedor de edición
+    inputNameNew.classList.toggle('active');   // Muestra u oculta el campo de entrada de texto
+    saveNewNameButton.classList.toggle('active');  // Muestra u oculta el botón de guardar
+    inputNameNew.value = document.querySelector('.profile-name').textContent;
+}
+
+async function actualizarNombre() {
+    const inputNameNew = document.querySelector('.inputnamenew');
+    const nuevoNombre = inputNameNew.value.trim();
+    const avatarId = document.getElementById('avatarImg').dataset.avatarId;
+
+    if (!nuevoNombre) {
+        alert('El nombre no puede estar vacío');
+        return;
+    }
+
+    const usuario = JSON.parse(localStorage.getItem('usuario'));
+
+    try {
+        const resultado = await actualizarNombreYAvatarUsuario(usuario.usuarioId, nuevoNombre, parseInt(avatarId, 10));
+
+        if (resultado.success) {
+            // Actualizar localStorage después de una actualización exitosa en Firebase
+            usuario.nombre = nuevoNombre;
+            localStorage.setItem('usuario', JSON.stringify(usuario));
+
+            // Actualizar el nombre en la interfaz
+            document.querySelector('.profile-name').textContent = nuevoNombre;
+            alert('Nombre actualizado correctamente.');
+        } else {
+            alert(`Error: ${resultado.reason}`);
         }
     } catch (error) {
-        console.error('Error al inicializar la página:', error);
+        console.error('Error al intentar guardar el nuevo nombre:', error);
+        alert('Ocurrió un error al intentar guardar el nuevo nombre');
     }
-});
-// document.addEventListener('DOMContentLoaded', function() {
-//     try {
-//         // Recuperar los datos del usuario desde localStorage
-//         const usuario = JSON.parse(localStorage.getItem('usuario'));
-
-//         // Verificar que el usuario y el nombre existan en los datos recuperados
-//         if (usuario && usuario.nombre) {
-//             console.log('Usuario recuperado:', usuario);
-            
-//             // Asignar el nombre al elemento con la clase 'profile-name'
-//             const profileNameElement = document.querySelector('.profile-name');
-//             if (profileNameElement) {
-//                 profileNameElement.textContent = usuario.nombre;
-//             } else {
-//                 console.error('No se encontró el elemento .profile-name');
-//             }
-
-//             // Configurar el evento del botón "Administrar perfiles"
-//             const saveNameButton = document.getElementById('saveNameButton');
-//             const inputNameNew = document.querySelector('.inputnamenew');
-//             const saveNewNameButton = document.getElementById('savenewname');
-//             const profilenewdata = document.querySelector('.profiledatenew');
-//             const saveImageButton = document.getElementById('saveImageButton');
-//             const fileInput = document.getElementById('fileInput');
-//             const profileImage = document.getElementById('profileImage');
-
-//             if (saveNameButton && inputNameNew && saveNewNameButton) {
-//                 saveNameButton.addEventListener('click', function() {
-//                     console.log('Botón "Administrar perfiles" clickeado');
-//                     // Alternar la clase 'active' en los elementos para mostrar el campo de edición
-//                     profilenewdata.classList.toggle('active');
-                    
-//                     setTimeout(() => {
-//                         inputNameNew.classList.toggle('active');
-//                         saveNewNameButton.classList.toggle('active');
-//                         inputNameNew.value = usuario.nombre; // Establecer el valor actual del nombre
-//                         console.log('Campo de edición mostrado con valor:', inputNameNew.value);
-//                     }, 40); // Ajusta el tiempo según lo necesites (en milisegundos)
-//                 });
-//             } else {
-//                 console.error('No se encontraron los elementos necesarios para editar el nombre');
-//             }
-
-//             // Configurar el evento del botón "Guardar" para actualizar el nombre
-//             if (saveNewNameButton) {
-//                 saveNewNameButton.addEventListener('click', async function() {
-//                     try {
-//                         const nuevoNombre = inputNameNew.value;
-//                         console.log('Nuevo nombre ingresado:', nuevoNombre);
-
-//                         if (nuevoNombre.trim() && usuario && usuario.usuarioId) {
-//                             const resultado = await actualizarNombreUsuario(usuario.usuarioId, nuevoNombre);
-
-//                             if (resultado.success) {
-//                                 profileNameElement.textContent = nuevoNombre;
-//                                 inputNameNew.classList.remove('active'); // Ocultar el campo de edición
-//                                 saveNewNameButton.classList.remove('active'); // Ocultar el botón de guardar
-//                                 setTimeout(() => {
-//                                     profilenewdata.classList.remove('active'); // Ocultar el campo de edición
-//                                     console.log('Nombre actualizado y campo de edición oculto');
-//                                 }, 250); // Ajusta el tiempo según lo necesites (en milisegundos)
-                            
-//                             } else {
-//                                 console.error('Error al actualizar el nombre:', resultado.reason);
-//                                 alert(`Error: ${resultado.reason}`);
-//                             }
-//                         } else {
-//                             alert('El nombre no puede estar vacío');
-//                         }
-//                     } catch (error) {
-//                         console.error('Error en el evento del botón "Guardar":', error);
-//                         alert('Ocurrió un error al intentar guardar el nuevo nombre');
-//                     }
-//                 });
-//             } else {
-//                 console.error('No se encontró el botón de guardar');
-//             }
-
-//             // Configurar el evento del botón "Guardar Imagen"
-//             if (saveImageButton && fileInput && profileImage) {
-//                 saveImageButton.addEventListener('click', function() {
-//                     const file = fileInput.files[0];
-//                     handleImageUpload(file, profileImage);
-//                 });
-//             } else {
-//                 console.error('No se encontraron los elementos necesarios para guardar la imagen.');
-//             }
-
-//             // Configurar el evento del elemento con la clase 'profile'
-//             const profileElement = document.querySelector('.profile_img');
-//             if (profileElement) {
-//                 profileElement.addEventListener('click', () => {
-//                     window.location.href = 'index.html';
-//                 });
-//             } else {
-//                 console.error('No se encontró el elemento con la clase .profile_img');
-//             }
-//         } else {
-//             console.log('No se encontró el nombre del usuario en localStorage.');
-//         }
-//     } catch (error) {
-//         console.error('Error al inicializar la página:', error);
-//     }
-// });
+}
