@@ -1,0 +1,204 @@
+:root {
+  --image-categorias: none;
+  --colorLetra:#AFA9FF
+  --color_segundario: #9A92FF;
+  --color_tercero: #7E71FF;
+  --color_cuarto: #5B44FC;
+  --color_fondo:#0B101A;
+  --gradiente:linear-gradient(0deg, rgba(175,169,255,1) 0%, rgba(154,146,255,1) 14%, rgba(126,113,255,1) 52%, rgba(91,68,252,1) 100%);
+  --bg_nav_movile:#011018;
+  --color_nav_active:#d2df25;
+  --color_nav_inactive:#b4b4b3;
+  --color_fondo2:#1D1C24;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+[class*=__contenedor] {
+  max-width: 143rem;
+  width: 97.6%;
+  margin: 0 auto;
+}
+@media (min-width: 1367px) {
+  [class*=__contenedor] {
+    max-width: 162rem;
+  }
+}
+
+[class*=__img] {
+  display: block;
+  max-width: 100%;
+  filter: contrast(117%) saturate(107%) brightness(106%);
+}
+
+body {
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  background-color: #111828;
+}
+
+.footer {
+  width: 100%;
+  background: var(--color_fondo);
+  padding-top: 11.5rem;
+  padding-bottom: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.footer__contenedor {
+  width: 95%;
+  max-width: 120rem;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 4rem;
+  padding-bottom: 8rem;
+}
+@media (min-width: 768px) {
+  .footer__contenedor {
+    flex-direction: row;
+    justify-content: space-around;
+    gap: unset;
+  }
+}
+.footer__item {
+  width: 100%;
+  display: flex;
+  gap: 1.2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-wrap: pretty;
+  padding: 0 2rem;
+}
+@media (min-width: 768px) {
+  .footer__item {
+    width: fit-content;
+    align-items: flex-start;
+  }
+}
+.footer__titulo {
+  font-size: 2.5rem;
+  color: #bbb9e7;
+}
+.footer__texto {
+  width: 30rem;
+}
+@media (min-width: 768px) {
+  .footer__texto {
+    margin-left: -0.5rem;
+  }
+}
+
+.Detalle-Pelicula {
+  width: 100%;
+  min-height: 100vh;
+  position: fixed;
+  top: 0rem;
+  z-index: 600;
+  background-color: var(--color_fondo);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.Detalle-Pelicula__back {
+  width: 100%;
+  height: 53vh;
+  background-color: white;
+  border-bottom-left-radius: 0.8rem;
+  border-bottom-right-radius: 0.8rem;
+  border-radius: 1rem;
+  object-fit: cover;
+  margin-top: -3rem;
+}
+@media (min-width: 390px) {
+  .Detalle-Pelicula__back {
+    width: 100%;
+    height: 59vh;
+  }
+}
+@media (min-width: 414px) {
+  .Detalle-Pelicula__back {
+    height: 64.2vh;
+  }
+}
+.Detalle-Pelicula__img {
+  width: 80%;
+}
+.Detalle-Pelicula__info {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+.Detalle-Pelicula__texts {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  object-fit: cover;
+  color: white;
+  gap: 0.9rem;
+}
+.Detalle-Pelicula__verbtn {
+  display: block;
+  width: 100%;
+  padding: 1.4rem 0;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+  background-color: #0B8BF5;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+.Detalle-Pelicula__titulo {
+  color: white;
+  text-wrap: balance;
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+}
+.Detalle-Pelicula__generos {
+  font-size: 1rem;
+}
+.Detalle-Pelicula__temp {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.Detalle-Pelicula :is(.Detalle-Pelicula__clasification, .Detalle-Pelicula__year, .Detalle-Pelicula__duracion, .Detalle-Pelicula__calif) {
+  background-color: #272727;
+  padding: 0.1rem 0.9rem;
+  border-radius: 1rem;
+}
+.Detalle-Pelicula__descripcion {
+  font-size: 1.1rem;
+  text-align: left;
+  text-wrap: pretty;
+  word-break: break-all;
+  padding: 1rem;
+}

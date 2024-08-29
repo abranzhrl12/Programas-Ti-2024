@@ -1,4 +1,4 @@
-import platform from 'platform';
+import  platform  from 'platform';
 
 let detallesDispositivo = null;
 
@@ -23,3 +23,4 @@ async function getDeviceDetails() {
     ipPublica: ipData.ip
   };
 }
+

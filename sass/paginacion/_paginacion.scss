@@ -7,9 +7,17 @@
     align-items: center;
     margin-top: 6rem;
     margin-bottom: 0rem;
-    @include m.tabletM {
+    display: none;
+    @include m.telefonoFull {
         display: none;
     }
+    @include m.tablet {
+        display: none;
+    }
+    @include m.tabletM {
+        display: block;
+    }
+   
     .paginas{
         display: flex;
         justify-content: center;

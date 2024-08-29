@@ -6,108 +6,549 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="public/style.css">
+<style>
+ 
+body {
+  font-family: Arial, sans-serif;
+  color: #fff;
+  background-color: #1a1a1a;
+  margin: 0;
+  padding: 0;
+}
 
+/* Bloque: main-content */
+.trailers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 50px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url('Assets/ImagenesPortada/dragon_Ball.jpg') no-repeat center center;
+  background-size: cover;
+  height: 80vh;
+  position: relative;
+ 
+}
+
+.trailers__pelicula{
+    flex: 1;
+    outline: 1px solid red;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.trailers__estrellas{
+    
+    outline: 1px solid yellow;
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+}
+/* .trailers__puntuacion{
+    width: 20px;
+    height: 20px; 
+  
+} */
+
+.ultima-starts{
+    fill: linear-gradient();
+   
+}
+
+.trailers__siguiente{
+    flex: 1;
+    outline: 1px solid red;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.trailer__resumen{
+    font-size: 1.8rem;
+}
+
+.linea-tiempo{
+    display: block;
+    width: min-content;
+    height: auto;
+    align-self: center;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 7rem;
+    overflow: hidden;
+
+}
+
+.trailers__info{
+display: flex;
+flex-direction: column;
+gap: 0.5rem;
+}
+.trailers__descripcion{
+    display: flex;
+}
+
+.linea-tiempo__boton{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    position: relative;
+    background-color: white;
+    cursor: pointer;
+}
+:where(.linea-tiempo__boton:not(.linea-tiempo__boton:last-child)):after {
+    content: "";
+    width: 4px;
+    height: 950%;
+    background-color: white; /* O el color deseado */
+    position: absolute;
+    top: 50%;
+    left: calc(50% - 2px);
+    z-index: 0;
+}
+
+
+.linea-tiempo__boton.active{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: white !important;
+    position: relative;
+}
+
+
+.trailers__descripcion{
+    display: flex;
+    gap: 2rem;
+}
+
+.trailers__tiempo{
+  
+    position: relative;
+    padding-left: 2rem;
+    
+    
+}
+.trailers__tiempo::before{
+content: "";
+display: block;
+width: 2px;
+height:100%;
+left: 0;
+background-color: white;
+position: absolute;
+
+}
+
+.trailers__interpretacion{
+    position: relative;
+    padding-left: 2rem;
+}
+
+.trailers__interpretacion::before{
+    content: "";
+display: block;
+width: 2px;
+height:100%;
+left: 0;
+background-color: white;
+position: absolute;
+}
+
+.trailers__play{
+    display: block;
+    display: flex;
+    align-content: center;
+    gap: 1rem;
+    text-decoration: none;
+    color: white;
+    padding-left: 1rem;
+
+}
+.trailers_play-texto{
+    display: flex;
+    align-items: center;
+}
+
+.estrelll{
+    fill: red;
+    background-color: red;
+}
+
+
+</style>
 </head>
 
 <body>
+<header class="header">
 
+  
+    <div class="trailers">
 
-    <div class="navMovile">
-        <ul class="navMovile__containerItem">
-            <li class="navMovile__containerItem__Item">
-                <button id="Movile_Home" class="activ">
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24"
-                            width="512" height="512">
-                            <path
-                                d="M24,9.762v9.365a5.009,5.009,0,0,1-3.748,4.841A1,1,0,0,1,19,22.994V13a3,3,0,0,0-3-3H8a3,3,0,0,0-3,3v9.994a1,1,0,0,1-1.252.974A5.009,5.009,0,0,1,0,19.127V9.762A5,5,0,0,1,2.2,5.618L9.2.894a5,5,0,0,1,5.594,0l7,4.724A5,5,0,0,1,24,9.762ZM16,15H8a1,1,0,0,1-1-1V13a1,1,0,0,1,1-1h8a1,1,0,0,1,1,1v1A1,1,0,0,1,16,15Z" />
-                        </svg>
-                    </div>
-                    <div>
-                        <span>
-                            Home
-                        </span>
-                    </div>
-                </button>
-            </li>
-            <li class="navMovile__containerItem__Item">
-                <button id="Movile_Peliculas">
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" id="Bold" viewBox="0 0 24 24" width="512" height="512">
-                            <path
-                                d="M20.463,7.713l-9.1-6.677A5.317,5.317,0,0,0,2.9,5.323V18.677a5.311,5.311,0,0,0,8.46,4.287l9.105-6.677a5.315,5.315,0,0,0,0-8.574Zm-1.774,6.155-9.1,6.677A2.317,2.317,0,0,1,5.9,18.677V5.323a2.276,2.276,0,0,1,1.27-2.066A2.328,2.328,0,0,1,8.223,3a2.3,2.3,0,0,1,1.362.455l9.1,6.677a2.316,2.316,0,0,1,0,3.736Z" />
-                        </svg>
-                    </div>
-                    <div>
-                        <span>
-                            Peliculas
-                        </span>
-                    </div>
+      <div class="trailers__pelicula">
 
-                </button>
-            </li>
-            <li class="navMovile__containerItem__Item">
-                <button id="Movile_Series">
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
-                            id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;"
-                            xml:space="preserve" width="512" height="512">
-                            <g>
-                                <path
-                                    d="M394.667,64H266.496c-1.723-0.008-3.419-0.425-4.949-1.216L198.72,29.867c-10.698-5.6-22.592-8.528-34.667-8.533h-46.72   C52.561,21.404,0.071,73.895,0,138.667v234.667c0.071,64.772,52.561,117.263,117.333,117.333h277.333   c64.772-0.071,117.263-52.561,117.333-117.333v-192C511.929,116.561,459.439,64.071,394.667,64z M448,373.333   c0,29.455-23.878,53.333-53.333,53.333H117.333C87.878,426.667,64,402.789,64,373.333V169.963h382.72   c0.839,3.732,1.268,7.545,1.28,11.371V373.333z" />
-                            </g>
+      
+    <div class="trailers__estrellas" id="star-container">
+            
 
-                        </svg>
-
-                    </div>
-                    <div>
-                        <span>
-                            Series
-                        </span>
-                    </div>
-
-                </button>
-            </li>
-            <li class="navMovile__containerItem__Item">
-                <button id="Movile_Faboritos">
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" id="Bold" viewBox="0 0 24 24" width="512" height="512">
-                            <path
-                                d="M17.5,0H6.5A5.507,5.507,0,0,0,1,5.5V20.472a3.5,3.5,0,0,0,6.044,2.4l4.912-5.2,5.013,5.25A3.5,3.5,0,0,0,23,20.51V5.5A5.507,5.507,0,0,0,17.5,0ZM20,20.51a.5.5,0,0,1-.861.345l-6.1-6.391A1.5,1.5,0,0,0,11.95,14h0a1.5,1.5,0,0,0-1.086.47l-6,6.345a.479.479,0,0,1-.549.122A.471.471,0,0,1,4,20.472V5.5A2.5,2.5,0,0,1,6.5,3h11A2.5,2.5,0,0,1,20,5.5Z" />
-                        </svg>
-
-                    </div>
-                    <div>
-                        <span>
-                            Faboritos
-                        </span>
-                    </div>
-
-                </button>
-            </li>
-            <li class="navMovile__containerItem__Item">
-                <button id="Movile_More">
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24"
-                            width="512" height="512">
-                            <path
-                                d="M0,3.5c0-.83,.67-1.5,1.5-1.5H17.5c.83,0,1.5,.67,1.5,1.5s-.67,1.5-1.5,1.5H1.5c-.83,0-1.5-.67-1.5-1.5Zm17.5,14.5H1.5c-.83,0-1.5,.67-1.5,1.5s.67,1.5,1.5,1.5H17.5c.83,0,1.5-.67,1.5-1.5s-.67-1.5-1.5-1.5Zm5-8H6.5c-.83,0-1.5,.67-1.5,1.5s.67,1.5,1.5,1.5H22.5c.83,0,1.5-.67,1.5-1.5s-.67-1.5-1.5-1.5Z" />
-                        </svg>
-
-
-                    </div>
-                    <div>
-                        <span>
-                            More
-                        </span>
-                    </div>
-
-                </button>
-            </li>
-
-        </ul>
-    </div>
+    <defs>
+      <style>
+        .cls-1 {
+          fill: yellow;
+        }
+      </style>
+    </defs>
+    <g id="Capa_1-2" data-name="Capa 1">
+      <path stroke="yellow" class="cls-1" d="m6.37.27l1.45,2.95c.07.14.21.24.37.27l3.25.47c.4.06.56.55.27.83l-2.35,2.29c-.12.11-.17.27-.14.43l.56,3.24c.07.4-.35.7-.71.52l-2.91-1.53c-.14-.07-.31-.07-.45,0l-2.91,1.53c-.36.19-.78-.12-.71-.52l.56-3.24c.03-.16-.03-.32-.14-.43L.15,4.79c-.29-.28-.13-.78.27-.83l3.25-.47c.16-.02.3-.12.37-.27L5.49.27c.18-.36.7-.36.88,0Z"/>
+    </g>
+  </svg>
+        </div>
    
+    <div class="trailers__info">
+        <h2 class="trailers__titulo">DEADPOOL Y WOLVERINE</h2>
+        <div class="trailers__descripcion">
+            <span>2024</span>
+            <span class="trailers__tiempo">123min</span>
+            <span class="trailers__interpretacion">18+</span>
+        </div>
+       
+    </div>
+    <div class="trailer__resumen">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum id ducimus necessitatibus, consectetur ipsum vel.</p>
+    </div>
+    <div class="trailers__reproducir">
+       <a href="#" class="trailers__play">
+        <!-- <span class="trailers__icono-play"> -->
+            <svg id="Capa_8" width="28" data-name="Capa 2" viewBox="0 0 20.38 20.38">
+                <defs>
+                  <style>
+                    .cls-9 {
+                      fill: #fff;
+                    }
+              
+                    .cls-2 {
+                      fill: none;
+                      stroke: #fff;
+                      stroke-miterlimit: 10;
+                      stroke-width: .5px;
+                    }
+                  </style>
+                </defs>
+                <g id="Capa_1-2" >
+                  <g>
+                    <path class="cls-9"  d="m7.55,13.71l1.06-2.53c.27-.64.27-1.36,0-2l-1.06-2.53c-.23-.54.37-1.05.87-.75l6.11,3.76c.38.23.38.79,0,1.03l-6.11,3.76c-.5.31-1.1-.21-.87-.75Z"/>
+                    <circle class="cls-2" cx="10.19" cy="10.19" r="9.94"/>
+                  </g>
+                </g>
+              </svg>
+              
+        <!-- </span> -->
+       <p class="trailers_play-texto">Ver ahora</p> 
+       </a>
+    </div>
+        </div>  
+
+
+
+        <div class="trailers__siguiente">
+            <div class="linea-tiempo">
+     
+                <div class="linea-tiempo__boton"></div>
+                <div class="linea-tiempo__boton"></div>
+                <div class="linea-tiempo__boton active"></div>
+                <div class="linea-tiempo__boton"></div>
+                <div class="linea-tiempo__boton"></div>
+               
+              </div>
+              <button class="linea-tiempo__boton-navegacion linea-tiempo__boton-navegacion--abajo"></button>
+              <button class="linea-tiempo__boton-navegacion linea-tiempo__boton-navegacion--arriba"></button>
+        </div>
+   
+    </div>
+</header>
+  <script>
+      // Plantillas SVG
+      const starTemplates = {
+            "vacia": `
+                <svg class="trailers__estrella-vacia" width="22" id="Capa_2" data-name="Capa 2" viewBox="0 0 11.86 11.33" stroke="1" stroke-width="0.3">
+  <g id="Capa_1-2" data-name="Capa 1" >
+    <path stroke="yellow"  class="cls-1"  d="m5.93.51l1.44,2.93c.14.29.42.49.74.54l3.24.45-2.35,2.29c-.23.23-.34.55-.28.88l.57,3.23-2.91-1.53c-.14-.07-.3-.11-.46-.11s-.32.04-.46.11l-2.89,1.54.56-3.24c.06-.32-.05-.65-.28-.88L.49,4.45l3.25-.47c.32-.05.6-.25.74-.54l1.44-2.92m0-.51c-.17,0-.35.09-.44.27l-1.45,2.95c-.07.14-.21.24-.37.27l-3.25.47c-.4.06-.56.55-.27.83l2.35,2.29c.12.11.17.27.14.43l-.56,3.24c-.05.32.2.57.48.57.08,0,.15-.02.23-.06l2.91-1.53c.07-.04.15-.06.23-.06s.16.02.23.06l2.91,1.53c.07.04.15.06.23.06.28,0,.54-.26.48-.57l-.56-3.24c-.03-.16.03-.32.14-.43l2.35-2.29c.29-.28.13-.78-.27-.83l-3.25-.47c-.16-.02-.3-.12-.37-.27L6.37.27c-.09-.18-.26-.27-.44-.27h0Z"/>
+  </g>
+</svg>
+            `,
+    "15":`
+    <svg class="trailers__estrella-15" width="22"  id="Capa_2" data-name="Capa 2"  viewBox="0 0 11.87 11.33" stroke="1" stroke-width="0.3">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: yellow !important;
+      }
+    </style>
+  </defs>
+  <g id="Capa_1-2" data-name="Capa 1">
+    <path stroke="yellow" class="cls-1" d="m11.71,4.79c.29-.28.13-.77-.27-.83l-3.25-.47c-.16-.02-.3-.12-.37-.27L6.37.28c-.09-.19-.27-.28-.44-.28-.18,0-.35.09-.44.28l-1.45,2.94c-.03.06-.07.11-.11.14-.07.08-.16.12-.26.13l-3.25.47c-.26.04-.42.26-.42.49,0,.12.05.24.15.34l2.35,2.3c.11.11.17.27.14.43l-.56,3.24c-.06.4.35.7.71.51l1.14-.6,1.77-.93c.07-.03.15-.05.23-.05s.15.02.23.05l2.9,1.53c.08.04.15.06.23.06.28,0,.54-.26.48-.57l-.55-3.24c-.03-.16.02-.32.14-.43l2.35-2.3Zm-2.41,6.04l-2.91-1.53c-.14-.07-.3-.11-.46-.11s-.32.04-.46.11l-1.54.82-.64.34v-6.41l.45-.07c.07-.01.13-.02.19-.05.24-.08.44-.26.55-.49l1.45-2.92,1.44,2.92c.15.29.42.5.75.54l3.24.46-2.35,2.29c-.24.23-.34.55-.29.87l.58,3.23Z"/>
+  </g>
+</svg>
+    `,
+
+
+            "25": `
+              <svg class="trailers__estrella-25" width="22"  id="Capa_2" data-name="Capa 2"  viewBox="0 0 11.87 11.33" stroke="1" stroke-width="0.3">
+    <defs>
+      <style>
+        .cls-1 {
+          fill: yellow!important;
+        }
+      </style>
+    </defs>
+    <g id="Capa_1-2" data-name="Capa 1">
+      <path stroke="yellow"  class="cls-1" d="m11.72,4.8c.29-.29.13-.78-.27-.84l-3.25-.47c-.16-.02-.3-.12-.37-.27L6.37.28c-.09-.18-.26-.28-.43-.28-.18,0-.35.1-.44.28l-1.46,2.94c-.07.15-.21.25-.36.27l-3.25.47c-.41.06-.57.55-.28.84l2.36,2.29c.11.11.16.27.14.43l-.56,3.24c-.05.31.2.57.48.57.08,0,.16-.02.23-.06l2.91-1.53c.07-.03.15-.05.23-.05.07,0,.15.02.22.05l2.91,1.53c.07.04.15.06.23.06.28,0,.53-.26.48-.57l-.56-3.24c-.02-.16.03-.32.14-.43l2.36-2.29Zm-2.42,6.03l-2.9-1.53c-.15-.07-.31-.11-.46-.11-.16,0-.32.04-.46.11l-2.9,1.54.56-3.23c.05-.33-.05-.65-.28-.88L.5,4.46l3.25-.48c.32-.04.6-.24.74-.54l1.45-2.92,1.44,2.92c.14.3.42.5.74.54l3.25.46-2.35,2.29c-.24.23-.34.55-.29.88l.57,3.22Z"/>
+      <path class="cls-1" d="m3.89,3.94v6.2l-1.31.7.56-3.23c.05-.33-.05-.65-.28-.88L.5,4.46l3.25-.48s.1-.02.14-.04Z"/>
+    </g>
+  </svg>
+            `,
+            "50": `
+               <svg class="trailers__estrella-50" width="22" id="Capa_2" data-name="Capa 2"  viewBox="0 0 11.87 11.33" stroke="1" stroke-width="0.3">
+    <defs>
+      <style>
+        .cls-1 {
+          fill: yellow!important;
+        }
+      </style>
+    </defs>
+    <g id="Capa_1-2" data-name="Capa 1">
+      <path stroke="yellow" class="cls-1" d="m11.72,4.8c.29-.29.13-.78-.27-.84l-3.25-.47c-.16-.02-.3-.12-.37-.27L6.37.28c-.09-.18-.26-.28-.43-.28-.18,0-.35.1-.44.28l-1.46,2.94c-.07.15-.21.25-.36.27l-3.25.47c-.41.06-.57.55-.28.84l2.36,2.29c.11.11.16.27.14.43l-.56,3.24c-.05.31.2.57.48.57.08,0,.16-.02.23-.06l2.91-1.53c.07-.03.15-.05.23-.05.07,0,.15.02.22.05l2.91,1.53c.07.04.15.06.23.06.28,0,.53-.26.48-.57l-.56-3.24c-.02-.16.03-.32.14-.43l2.36-2.29Zm-2.42,6.03l-2.9-1.53c-.15-.07-.31-.11-.46-.11-.16,0-.32.04-.46.11l-2.9,1.54.56-3.23c.05-.33-.05-.65-.28-.88L.5,4.46l3.25-.48c.32-.04.6-.24.74-.54l1.45-2.92,1.44,2.92c.14.3.42.5.74.54l3.25.46-2.35,2.29c-.24.23-.34.55-.29.88l.57,3.22Z"/>
+      <path class="cls-1" d="m5.94.52v8.67c-.16,0-.32.04-.46.11l-2.9,1.54.56-3.23c.05-.33-.05-.65-.28-.88L.5,4.46l3.25-.48c.32-.04.6-.24.74-.54l1.45-2.92Z"/>
+    </g>
+  </svg>
+            `,
+            "75": `
+                 <svg class="trailers__estrella-75" width="22" id="Capa_2" data-name="Capa 2"  viewBox="0 0 11.87 11.33" stroke="1" stroke-width="0.3">
+   
+    <g id="Capa_1-2" data-name="Capa 1">
+      <path stroke="yellow" class="cls-1" d="m11.72,4.8c.29-.29.13-.78-.27-.84l-3.25-.47c-.16-.02-.3-.12-.37-.27L6.37.28c-.09-.18-.26-.28-.43-.28-.18,0-.35.1-.44.28l-1.46,2.94c-.07.15-.21.25-.36.27l-3.25.47c-.41.06-.57.55-.28.84l2.36,2.29c.11.11.16.27.14.43l-.56,3.24c-.05.31.2.57.48.57.08,0,.16-.02.23-.06l2.91-1.53c.07-.03.15-.05.23-.05.07,0,.15.02.22.05l2.91,1.53c.07.04.15.06.23.06.28,0,.53-.26.48-.57l-.56-3.24c-.02-.16.03-.32.14-.43l2.36-2.29Zm-2.42,6.03l-1.32-.7V3.94c.05.02.09.03.14.04l3.25.46-2.35,2.29c-.24.23-.34.55-.29.88l.57,3.22Z"/>
+    </g>
+  </svg>
+            `,
+
+            "90":`
+    <svg class="trailers__estrella-90" width="22"  id="Capa_2" data-name="Capa 2"  viewBox="0 0 11.87 11.33" stroke="1" stroke-width="0.3">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #yellow;
+      }
+    </style>
+  </defs>
+  <g stroke="yellow" id="Capa_1-2" data-name="Capa 1">
+    <path class="cls-1" d="m11.71,4.79c.29-.28.13-.77-.27-.83l-.2-.03-2.68-.39-.37-.05c-.16-.02-.3-.12-.37-.27L6.37.28c-.09-.19-.27-.28-.44-.28-.18,0-.35.09-.44.28l-1.45,2.94c-.03.06-.07.11-.11.14-.07.08-.16.12-.26.13l-3.25.47c-.26.04-.42.26-.42.49,0,.12.05.24.15.34l2.35,2.3c.11.11.17.27.14.43l-.56,3.24c-.06.4.35.7.71.51l1.14-.6,1.77-.93c.07-.03.15-.05.23-.05s.15.02.23.05l2.9,1.53c.07.04.14.06.21.06h.02c.28,0,.54-.26.48-.57l-.55-3.24c-.03-.16.02-.32.14-.43l2.35-2.3Zm-2.99,2.71l.07.5.51,2.83-.11-.06-.63-.33v-6.4l2.3.33.5.07-2.35,2.29c-.19.19-.29.44-.3.69v.02s.01.04.01.06Z"/>
+  </g>
+</svg>
+    `,
+
+
+            "100": `
+                <svg class="trailers__estrella-100" width="22" id="Capa_2" data-name="Capa 2"  viewBox="0 0 11.86 11.33" stroke="1" stroke-width="0.3">
+    <defs>
+      <style>
+        .cls-1 {
+          fill: yellow;
+        }
+      </style>
+    </defs>
+    <g id="Capa_1-2" data-name="Capa 1">
+      <path stroke="yellow" class="cls-1" d="m6.37.27l1.45,2.95c.07.14.21.24.37.27l3.25.47c.4.06.56.55.27.83l-2.35,2.29c-.12.11-.17.27-.14.43l.56,3.24c.07.4-.35.7-.71.52l-2.91-1.53c-.14-.07-.31-.07-.45,0l-2.91,1.53c-.36.19-.78-.12-.71-.52l.56-3.24c.03-.16-.03-.32-.14-.43L.15,4.79c-.29-.28-.13-.78.27-.83l3.25-.47c.16-.02.3-.12.37-.27L5.49.27c.18-.36.7-.36.88,0Z"/>
+    </g>
+  </svg>
+            `
+        };
+        function generateStars(rating) {
+    const container = document.querySelector('.trailers__estrellas');
+    container.innerHTML = ''; // Limpiar el contenedor
+
+    const fullStars = Math.floor(rating);
+    const remainder = rating - fullStars;
+
+    // Añadir estrellas completas
+    for (let i = 0; i < fullStars; i++) {
+        container.innerHTML += starTemplates["100"];
+    }
+
+    // Añadir estrella con porcentaje según el decimal
+    if (remainder > 0 && remainder <= 0.20) {
+        container.innerHTML += starTemplates["15"];
+    } else if (remainder > 0.20 && remainder <= 0.40) {
+        container.innerHTML += starTemplates["25"];
+    } else if (remainder > 0.40 && remainder <= 0.60) {
+        container.innerHTML += starTemplates["50"];
+    } else if (remainder > 0.60 && remainder <= 0.80) {
+        container.innerHTML += starTemplates["75"];
+    } else if (remainder > 0.80 && remainder <= 1.00) {
+        container.innerHTML += starTemplates["90"];
+    }
+
+    // Añadir estrella completa si el decimal es exacto (1)
+    if (remainder === 1.00) {
+        container.innerHTML += starTemplates["100"];
+    }
+
+    // Añadir estrellas vacías si es necesario
+    const totalStars = 5;
+    const starsToFill = fullStars + (remainder > 0 ? 1 : 0);
+    const emptyStars = totalStars - starsToFill;
+
+    for (let i = 0; i < emptyStars; i++) {
+        container.innerHTML += starTemplates["vacia"];
+    }
+}
+
+// Ejemplo de uso
+
+
+
+
+// Llamar a la nueva función en el contexto adecuado
+
+const API_KEY = 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4MGQ5ZDM1YzVhODI5YTFlMWZiOWYxNmU4NGVmZDBkMyIsIm5iZiI6MTcyMzczOTI5OC4yMzY4ODcsInN1YiI6IjY2YjhiZjA2Yjk5M2E0YWM3YWY2ZWRmOCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.IjYIcnw-1YdzrBn-HlxfNmiNUbyz2oZwLoNFQ3B9rsE';
+
+  // Nombre en español
+
+//api themviedb
+
+let MOVIE_NAME = 'Deadpool & Wolverine';
+getMovieIdByName(MOVIE_NAME);
+async function getMovieIdByName(movieName) {
+  try {
+      const response = await fetch(`https://api.themoviedb.org/3/search/movie?query=${encodeURIComponent(movieName)}&language=es-ES`, {
+          headers: {
+              Authorization: `Bearer ${API_KEY}`,
+              'Content-Type': 'application/json;charset=utf-8'
+          }
+      });
+
+      if (!response.ok) {
+          throw new Error('Failed to search movie by name');
+      }
+
+      const searchResults = await response.json();
+      
+      if (searchResults.results && searchResults.results.length > 0) {
+          const firstResult = searchResults.results[0];
+          const movieId = firstResult.id;
+          
+          fetchMovieDetailsById(movieId);
+      } else {
+          console.log('No se encontraron resultados.');
+      }
+  } catch (error) {
+      console.error('Error:', error);
+  }
+}
+
+async function fetchMovieDetailsById(movieId) {
+  try {
+      const response = await fetch(`https://api.themoviedb.org/3/movie/${movieId}?language=es-MX`, {
+          headers: {
+              Authorization: `Bearer ${API_KEY}`,
+              'Content-Type': 'application/json;charset=utf-8'
+          }
+      });
+
+      if (!response.ok) {
+          throw new Error('Failed to fetch movie details');
+      }
+
+      const movieDetails = await response.json();
+      
+      // Usar w780 para el fondo (backdrop) y w342 para el póster
+    //   document.querySelector('.Detalle-Pelicula__back').src = `https://image.tmdb.org/t/p/w1280${movieDetails.backdrop_path}`;
+    //   // document.querySelector('.Detalle-Pelicula__img').src = `https://image.tmdb.org/t/p/w780${movieDetails.poster_path}`;
+    //   document.querySelector('.Detalle-Pelicula__titulo').textContent = movieDetails.title;
+      let descr  = movieDetails.overview;
+      const durate= `${movieDetails.runtime}`;
+  
+   // Duración
+    //    document.querySelector('.Detalle-Pelicula__duracion').textContent =formatDuration(durate)
+
+       document.querySelector('.trailer__resumen').textContent=cortarDescripcion(descr)
+    //   document.getElementById('movie-year').textContent = `${movieDetails.release_date.split('-')[0]}`;
+    //calificacion
+     // Calificación
+     const rating = movieDetails.vote_average; // Calificación en escala de 0 a 10
+
+     console.log("hola", rating/2)
+     generateStars(rating/2)
+    //  generateStars(rating/2)
+
+      //clasificacion
+      const releaseDatesResponse = await fetch(`https://api.themoviedb.org/3/movie/${movieId}/release_dates`, {
+        headers: {
+            Authorization: `Bearer ${API_KEY}`,
+            'Content-Type': 'application/json;charset=utf-8'
+        }
+    });
+    
+    if (!releaseDatesResponse.ok) {
+        throw new Error('Failed to fetch release dates');
+    }
+
+    const releaseDates = await releaseDatesResponse.json();
+    // Encuentra la clasificación en Estados Unidos
+    const releaseInfo = releaseDates.results.find(result => result.iso_3166_1 === 'US'); 
+    const certification = releaseInfo ? releaseInfo.release_dates[0].certification : 'No disponible';
+    
+    // Interpretar la clasificación
+    const interpretation = interpretCertification(certification);
+    // document.querySelector('.Detalle-Pelicula__clasification').textContent = `  ${interpretation}`;
+
+
+  } catch (error) {
+      console.log('Error:', error);
+  }
+}
+function formatDuration(minutes) {
+  const hours = Math.floor(minutes / 60);
+  const remainingMinutes = minutes % 60;
+  return `${hours}h ${remainingMinutes}m`;
+}
+
+function interpretCertification(certification) {
+  switch (certification) {
+      case 'G':
+          return '5+'; // Apto para todas las edades
+      case 'PG':
+          return '7+'; // Apto para mayores de 7 años
+      case 'PG-13':
+          return '13+'; // Apto para mayores de 13 años
+      case 'R':
+          return '17+'; // Apto para mayores de 17 años
+      case 'NC-17':
+          return '18+'; // Solo para mayores de 18 años
+      default:
+          return 'Desconocida'; // Para clasificaciones no listadas
+  }
+}
+
+function cortarDescripcion(texto) {
+  // Divide el texto en partes utilizando el punto (.) como delimitador
+  const partes = texto.split('.');
+
+  // Verifica si hay al menos tres partes
+  if (partes.length > 3) {
+      // Une las primeras tres partes y añade puntos al final para mantener la estructura
+      return partes.slice(0, 3).join('.') + '.';
+  } else {
+      // Si hay menos de tres puntos, devuelve el texto tal cual
+      return texto;
+  }
+}
+       
+  </script>
 </body>
 
 </html>

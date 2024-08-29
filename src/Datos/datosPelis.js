@@ -2,6 +2,19 @@ export default {
   Peliculas: {
     Extreno: [
       {
+        id: 25,
+        nombre: "Alien: Romulus",
+        imagen: "../../Assets/Imagenespeliculas/Alien_Romulus2024.webp",
+        imagen_small: "../../Assets/Imagenespeliculas/romper_circulo_2024.webp",
+        imagen_tv:
+          "../../Assets/Imagenespeliculas/tv/telma_el_unicornio_2024-tv.webp",
+
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/78c7dad2-cf8c-43cf-8c86-07887c1df270",
+        Generos: ["Terror,Ciencia Ficción"],
+        Año: "2024"
+      },
+      {
         id: 26,
         nombre: "Romper el Circulo",
         imagen: "../../Assets/Imagenespeliculas/romper_circulo_2024.webp",
@@ -12,10 +25,11 @@ export default {
         Video:
           "https://iframe.mediadelivery.net/embed/261653/b4c174a5-b83b-46c1-820d-b02281c0efd7",
         Generos: ["Drama", "Romance"],
+        Año: "2024"
       },
       {
         id: 27,
-        nombre: "Tornados 2024",
+        nombre: "Tornados",
         imagen: "../../Assets/Imagenespeliculas/tornados_2024.webp",
         imagen_small:
           "../../Assets/Imagenespeliculas/small/telma_el_unicornio_2024-small.webp",
@@ -25,10 +39,11 @@ export default {
         Video:
           "https://iframe.mediadelivery.net/embed/261653/ab967e2e-7159-4bff-8ad7-11609cb769cb",
         Generos: ["Acción", "Aventura", "Drama", "Suspense"],
+        Año: "2024"
       },
       {
         id: 28,
-        nombre: "Telma La Unicornio 2024",
+        nombre: "Telma La Unicornio",
         imagen: "../../Assets/Imagenespeliculas/telma_el_unicornio_2024.webp",
         imagen_small:
           "../../Assets/Imagenespeliculas/small/telma_el_unicornio_2024-small.webp",
@@ -38,10 +53,11 @@ export default {
         Video:
           "https://iframe.mediadelivery.net/embed/261653/f12ee4c1-3660-4932-856f-e8c3779b5e91",
         Generos: ["Animación", "Aventura"],
+        Año: "2024"
       },
       {
         id: 29,
-        nombre: "Un lugar en silencio: Día uno (2024)",
+        nombre: "Un lugar en silencio: Día uno",
         imagen: "../../Imagenes_Pelis/unlugarensilencio2024.webp",
         imagen_small:
           "../../Assets/Imagenespeliculas/small/un_lugar_en_silencio_2024-small.webp",
@@ -51,6 +67,7 @@ export default {
         Video:
           "https://iframe.mediadelivery.net/embed/261653/c7e38666-613b-49d0-891c-fb02f99f9ff6",
         Generos: ["Terror", "Suspense"],
+        Año: "2024"
       },
       {
         id: 30,
@@ -63,10 +80,11 @@ export default {
         Video:
           "https://iframe.mediadelivery.net/embed/261653/0f93e18c-70d6-4764-aa2c-f87cc0a2102b",
         Generos: ["Acción", "Comedia"],
+        Año: "2024"
       },
       {
         id: 31,
-        nombre: "Immaculada 2024",
+        nombre: "Immaculada",
         imagen: "../../Assets/Imagenespeliculas/inmaculada_2024.webp",
         imagen_small:
           "../../Assets/Imagenespeliculas/small/inmaculada_2024-small.webp",
@@ -75,10 +93,24 @@ export default {
         Video:
           "https://iframe.mediadelivery.net/embed/261653/533a29a6-d9d1-4c3c-bb49-0bd25401829f",
         Generos: ["Terror", "Drama"],
+        Año: "2024"
       },
       {
-        id: 643,
-        nombre: "Trampa en alta mar 2024",
+        id: 811,
+        nombre: "Megamente contra el sindicato de la perdición",
+        imagen: "../../Assets/Imagenespeliculas/Megamente contra el sindicato de la perdición.webp",
+        imagen_small:
+          "../../Assets/Imagenespeliculas/small/inmaculada_2024-small.webp",
+        imagen_tv: "../../Assets/Imagenespeliculas/tv/inmaculada_2024-tv.webp",
+
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/ca400773-34a2-42fa-b6be-536ecac13597",
+        Generos: ["Animación,Comedia,Ciencia ficción"],
+        Año: "2024"
+      },
+      {
+        id: 32,
+        nombre: "Trampa en alta mar",
         imagen: "../../Assets/Imagenespeliculas/Trampa.en.alta.mar.2024.webp",
         imagen_small:
           "../../Assets/Imagenespeliculas/small/inmaculada_2024-small.webp",
@@ -87,10 +119,11 @@ export default {
         Video:
           "https://iframe.mediadelivery.net/embed/261653/e4138f77-763b-4194-b2e6-8a26ae1f42f1",
         Generos: ["Suspense,Terror"],
+        Año: "2024"
       },
       {
-        id: 32,
-        nombre: "Lisa Frankenstein 2024",
+        id: 33,
+        nombre: "Lisa Frankenstein",
         imagen: "../../Imagenes_Pelis/Lisa.Frankenstein.2024.webp",
         imagen_small:
           "../../Assets/Imagenespeliculas/small/lisa_frankentein_2024-small.webp",
@@ -100,10 +133,27 @@ export default {
         Video:
           "https://iframe.mediadelivery.net/embed/261653/6fac1415-642e-486a-b55f-a0e55a0686db",
         Generos: ["Comedia", "Terror"],
+        Año: "2024"
       },
+
       {
-        id: 33,
-        nombre: "Amigos Imaginarios (2024)",
+        id: 887,
+        nombre: "Al rescate de Fondo de Bikini: La película de Arenita Mejillas",
+        imagen: "../../Assets/Imagenespeliculas/al_rescate_fondo_de_bikini.webp",
+        imagen_small:
+          "../../Assets/Imagenespeliculas/small/amigos_imaginarios_2024-small.webp",
+        imagen_tv:
+          "../../Assets/Imagenespeliculas/tv/amigos_imaginarios_2024-tv.webp",
+
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/5232f595-cc5e-4812-8871-aa4d2519ce1a",
+        Generos: ["Comedia", "Aventura"],
+        Año: "2024"
+      },
+
+      {
+        id: 34,
+        nombre: "Amigos Imaginarios",
         imagen: "../../Imagenes_Pelis/Amigos.imaginarios.(2024).webp",
         imagen_small:
           "../../Assets/Imagenespeliculas/small/amigos_imaginarios_2024-small.webp",
@@ -113,9 +163,10 @@ export default {
         Video:
           "https://iframe.mediadelivery.net/embed/261653/7b9a8340-50a7-48ba-ab5c-712325bce518",
         Generos: ["Comedia", "Aventura"],
+        Año: "2024"
       },
       {
-        id: 34,
+        id: 35,
         nombre: "Furiosa De la Saga Mad.Max (2024)",
         imagen: "../../Imagenes_Pelis/Furiosa.De.la.Saga.Mad.Max.(2024).webp",
         imagen_small:
@@ -126,10 +177,11 @@ export default {
         Video:
           "https://iframe.mediadelivery.net/embed/261653/5a9f0d91-d45e-47f5-b130-18c80d54a0dc",
         Generos: ["Acción", "Aventura"],
+        Año: "2024"
       },
       {
-        id: 35,
-        nombre: "Descendientes 4 (2024)",
+        id: 36,
+        nombre: "Los descendientes 4",
         imagen: "../../Imagenes_Pelis/decendientes2024.webp",
         imagen_small:
           "../../Assets/Imagenespeliculas/small/descendientes_4_2024-small.webp",
@@ -139,10 +191,11 @@ export default {
         Video:
           "https://iframe.mediadelivery.net/embed/261653/e007c1fc-6c0c-4857-83fb-a773a5633f82",
         Generos: ["Musical", "Animación"],
+        Año: "2024"
       },
       {
-        id: 36,
-        nombre: "Descendientes 3",
+        id: 37,
+        nombre: "Los descendientes 3",
         imagen: "../../Assets/Imagenespeliculas/decendientes_3.webp",
         imagen_small:
           "../../Assets/Imagenespeliculas/small/decendientes_3-small.webp",
@@ -151,10 +204,11 @@ export default {
         Video:
           "https://iframe.mediadelivery.net/embed/261653/8085d69e-0137-4602-8573-bb4bdfe3bb7d",
         Generos: ["Musical", "Animación"],
+        Año: "2019"
       },
       {
-        id: 37,
-        nombre: "Descendientes 2",
+        id: 38,
+        nombre: "Los descendientes 2",
         imagen: "../../Assets/Imagenespeliculas/descendientes_2.webp",
         imagen_small:
           "../../Assets/Imagenespeliculas/small/descendientes_2-small.webp",
@@ -163,19 +217,21 @@ export default {
         Video:
           "https://iframe.mediadelivery.net/embed/261653/bea964f4-32f9-4dc0-8c23-8fb9ed5be859",
         Generos: ["Musical", "Animación"],
+        Año:"2017"
       },
       {
-        id: 38,
-        nombre: "Descendientes 1",
-        imagen: "../../Assets/Imagenespeliculas/decendientes_3.webp",
+        id: 39,
+        nombre: "Los descendientes 1",
+        imagen: "../../Assets/Imagenespeliculas/decendientes1.webp",
         imagenX: "/imagenes/ilustrator.webp",
 
         Video:
           "https://iframe.mediadelivery.net/embed/261653/2c83d9e8-bfd5-46ca-a35a-466082defa3b",
         Generos: ["Musical", "Animación"],
+        Año: "2015"
       },
       {
-        id: 39,
+        id: 40,
         nombre: "Godzilla y Kong: El nuevo imperio",
         imagen: "../../Imagenes_Pelis/godzilla2024.webp",
         imagenX: "/imagenes/ilustrator.webp",
@@ -183,39 +239,43 @@ export default {
         Video:
           "https://iframe.mediadelivery.net/embed/257368/54593201-b492-4b5b-8f44-85f8c39e80c0",
         Generos: ["Acción", "Ciencia ficción"],
+        Año: "2024"
       },
       {
-        id: 40,
-        nombre: "Godzilla vs Kong (2021)",
+        id: 41,
+        nombre: "Godzilla vs Kong",
         imagen: "../../Imagenes_Pelis/Godzilla.vs.Kong.2021.webp",
         imagenX: "/imagenes/ilustrator.webp",
 
         Video:
           "https://iframe.mediadelivery.net/embed/261653/bf1c5a19-5b66-43d6-99ef-c1552075506d",
         Generos: ["Acción", "Ciencia ficción"],
+        Año: "2021"
       },
       {
-        id: 41,
-        nombre: "Godzilla 2 : El Rey de Los Monstruos",
+        id: 42,
+        nombre: "Godzilla : El Rey de Los Monstruos",
         imagen: "../../Assets/Imagenespeliculas/godzilla2.webp",
         imagenX: "/imagenes/ilustrator.webp",
 
         Video:
           "https://iframe.mediadelivery.net/embed/261653/5b083208-249b-4b36-abaa-6e8935b3aae5",
         Generos: ["Acción", "Ciencia ficción"],
+        Año: "2019"
       },
       {
-        id: 42,
-        nombre: "Godzilla 1 (2014)",
+        id: 43,
+        nombre: "Godzilla",
         imagen: "../../Imagenes_Pelis/godzilla2014.webp",
         imagenX: "/imagenes/ilustrator.webp",
 
         Video:
           "https://iframe.mediadelivery.net/embed/261653/adbfceed-a20c-4678-8bfe-482fad5db9a6",
         Generos: ["Acción", "Ciencia ficción"],
+        Año: "2014"
       },
       {
-        id: 43,
+        id: 44,
         nombre: "Mi villano Favorito 4",
         imagen: "../../Imagenes_Pelis/mivillanofavorito4.webp",
         imagenX: "/imagenes/ilustrator.webp",
@@ -223,19 +283,21 @@ export default {
         Video:
           "https://iframe.mediadelivery.net/embed/261653/05ceee44-f248-45b6-ac3d-84b53cfa057f",
         Generos: ["Animación", "Comedia"],
+        Año: "2024"
       },
       {
-        id: 44,
-        nombre: "Garfield 2024",
+        id: 45,
+        nombre: "Garfield",
         imagen: "../../Imagenes_Pelis/garfield2024.webp",
         imagenX: "/imagenes/ilustrator.webp",
 
         Video:
           "https://iframe.mediadelivery.net/embed/261653/72498cd5-85d4-4a28-b7b0-b29f5eff59ca",
         Generos: ["Animación", "Comedia"],
+        Año: "2024"
       },
       {
-        id: 45,
+        id: 576,
         nombre: "El Reino del planeta de los Simios",
         imagen:
           "../../Imagenes_Pelis/El_reino_del_planeta_de_los_simios-663256597-large.webp",
@@ -244,10 +306,11 @@ export default {
         Video:
           "https://iframe.mediadelivery.net/embed/261653/9f2e36a7-f127-42da-8c3e-4898c278902a",
         Generos: ["Acción", "Ciencia ficción"],
+        Año: "2024"
       },
       {
         id: 577,
-        nombre: "El planeta de los Simios: La guerra 2017",
+        nombre: "El planeta de los Simios: La guerra",
         imagen:
           "../../Assets/Imagenespeliculas/el_planeta_de_los_simios_2017.webp",
         imagenX: "/imagenes/ilustrator.webp",
@@ -255,29 +318,56 @@ export default {
         Video:
           "https://iframe.mediadelivery.net/embed/261653/d45029f2-f89c-4b62-a2f6-aee8a1fda168",
         Generos: ["Drama", "Ciencia ficción", "Guerra"],
+        Año: "2017"
+      },
+      {
+        id: 584,
+        nombre: "El amanecer del planeta de los simios",
+        imagen:
+          "../../Assets/Imagenespeliculas/El amanecer del planeta de los simios.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/b2c6d46e-af24-4bf8-b35e-d648990187e4",
+        Generos: ["Ciencia ficción,Acción,Drama,Suspense"],
+        Año: "2014"
+      },
+      {
+        id: 784,
+        nombre: "El planeta de los simios: (R)evolución",
+        imagen:
+          "../../Assets/Imagenespeliculas/El_planeta_de_los_simios_(R)evolución.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/1d8d2c0a-e54f-43a6-bcd7-0fba6b1c773a",
+        Generos: ["Ciencia ficción,Acción,Drama,Suspense"],
+        Año: "2011"
       },
       {
         id: 46,
-        nombre: "BadBoys 4",
+        nombre: "Bad Boys 4",
         imagen: "../../Imagenes_Pelis/bab_boys_4.webp",
         imagenX: "/imagenes/ilustrator.webp",
 
         Video:
           "https://iframe.mediadelivery.net/embed/261653/bcd4abc1-cb2a-435d-99fe-1d1eda3716ad",
         Generos: ["Acción", "Comedia"],
+        Año: "2024"
       },
       {
         id: 47,
-        nombre: "John Wick 4 (2023)",
+        nombre: "John Wick 4",
         imagen: "../../Assets/Imagenespeliculas/john_wick_4.webp",
         imagenX: "/imagenes/ilustrator.webp",
 
         Video:
           "https://iframe.mediadelivery.net/embed/261653/33b1071d-75a6-486b-99e8-966b42c6a597",
         Generos: ["Acción", "Suspenso"],
+        Año: "2023"
       },
       {
-        id: 400,
+        id: 1400,
         nombre: "John Wick 3",
         imagen: "../../Imagenes_Pelis/jhonwick3.webp",
         imagenX: "/imagenes/ilustrator.webp",
@@ -285,9 +375,10 @@ export default {
         Video:
           "https://iframe.mediadelivery.net/embed/261653/6edcd33e-4b52-4ea1-b9c1-647347a89f79",
         Generos: ["Acción", "Suspenso"],
+        Año:"2019"
       },
       {
-        id: 401,
+        id: 1401,
         nombre: "John Wick 2",
         imagen: "../../Imagenes_Pelis/jhonwick2.webp",
         imagenX: "/imagenes/ilustrator.webp",
@@ -295,9 +386,10 @@ export default {
         Video:
           "https://iframe.mediadelivery.net/embed/261653/6541c5d9-9b11-472b-b902-527e7a51a08f",
         Generos: ["Acción", "Suspenso"],
+        Año: "2017"
       },
       {
-        id: 402,
+        id: 1402,
         nombre: "John Wick 1",
         imagen: "../../Imagenes_Pelis/jhonwick1.webp",
         imagenX: "/imagenes/ilustrator.webp",
@@ -305,11 +397,12 @@ export default {
         Video:
           "https://iframe.mediadelivery.net/embed/261653/63af36d0-f48a-46c0-b8d3-f4e2f1b4991e",
         Generos: ["Acción", "Suspenso"],
+        Año:"2014"
       },
 
       {
         id: 48,
-        nombre: "Sobrevivientes después del terremoto (2023)",
+        nombre: "Sobrevivientes después del terremoto",
         imagen:
           "../../Imagenes_Pelis/Sobrevivientes.después.del.terremoto.2023 (2).webp",
         imagenX: "/imagenes/ilustrator.webp",
@@ -317,6 +410,7 @@ export default {
         Video:
           "https://iframe.mediadelivery.net/embed/261653/24109fc9-c15f-4500-bfd0-431acccebd37",
         Generos: ["Drama", "Acción"],
+        Año: "2023"
       },
       {
         id: 49,
@@ -327,6 +421,7 @@ export default {
         Video:
           "https://iframe.mediadelivery.net/embed/261653/e56995dd-071d-4c56-be26-6d8f150f872b",
         Generos: ["Animación", "Aventura"],
+        Año:"2023"
       },
 
       {
@@ -338,26 +433,40 @@ export default {
         Video:
           "https://iframe.mediadelivery.net/embed/261653/b99bc74a-27b1-4b8d-a20f-10c7d32fdf27",
         Generos: ["Drama", "Romance"],
+        Año: "2023"
       },
       {
         id: 430,
-        nombre: "After Para Siempre 2023",
+        nombre: "After Para Siempre",
         imagen: "../../Imagenes_Pelis/afterparasiempre2023.webp",
         imagenX: "/imagenes/ilustrator.webp",
 
         Video:
           "https://iframe.mediadelivery.net/embed/261653/d0b29c43-8b80-43f0-95ae-f32e967b04f7",
         Generos: ["Romance", "Drama"],
+        Año: "2023"
       },
       {
         id: 522,
-        nombre: "After Amor infinito 2022",
+        nombre: "After Amor infinito",
         imagen: "../../Assets/Imagenespeliculas/After_amor_infinito_2022.webp",
         imagenX: "/imagenes/ilustrator.webp",
 
         Video:
           "https://iframe.mediadelivery.net/embed/261653/e63f9cfd-f331-4e87-ae19-92bd897ec0b3",
         Generos: ["Romance", "Drama"],
+        Año: "2022"
+      },
+      {
+        id: 622,
+        nombre: "After: Almas Perdidas",
+        imagen: "../../Assets/Imagenespeliculas/After_Almas_Perdidas.jpg",
+        imagenX: "/imagenes/ilustrator.webp",
+
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/b7744b82-766f-4655-baaa-d6a47f0be130",
+        Generos: ["Romance", "Drama"],
+        Año: "2021"
       },
       {
         id: 51,
@@ -368,6 +477,7 @@ export default {
         Video:
           "https://iframe.mediadelivery.net/embed/261653/123855d7-6d89-49b6-b170-2949f422979e",
         Generos: ["Drama", "Romance"],
+        Año:"2020"
       },
 
       {
@@ -377,33 +487,36 @@ export default {
         imagenX: "/imagenes/ilustrator.webp",
 
         Video:
-          "https://iframe.mediadelivery.net/embed/257368/e46d440d-7ed7-4e6a-88f5-5e61b5b3033e",
+          "https://iframe.mediadelivery.net/embed/261653/1d9942dc-bdfb-44ad-b490-b64b026d82a8",
         Generos: ["Animación", "Aventura", "Comedia"],
+        Año: "2024"
       },
 
       {
         id: 53,
-        nombre: "Intensamente 1",
+        nombre: "Intensa-Mente",
         imagen: "../../Imagenes_Pelis/intensamente1.webp",
         imagenX: "/imagenes/ilustrator.webp",
 
         Video:
           "https://iframe.mediadelivery.net/embed/261653/8184b6a8-176e-4fed-8338-df7d2c136762",
         Generos: ["Animación", "Aventura", "Comedia"],
+        Año: "2015"
       },
       {
         id: 521,
-        nombre: "peter pan y wendy 2023 ",
+        nombre: "Peter Pan y Wendy",
         imagen: "../../Assets/Imagenespeliculas/peter_pan_y_wendy_2023.webp",
         imagenX: "/imagenes/ilustrator.webp",
 
         Video:
           "https://iframe.mediadelivery.net/embed/261653/8dc9d36e-3a98-4231-9624-42d06fe962c2",
         Generos: ["Animación", "Aventura", "Comedia"],
+        Año: "2023"
       },
       {
         id: 525,
-        nombre: "Wish El poder de los deseos 2023",
+        nombre: "Wish: El poder de los deseos 2023",
         imagen:
           "../../Assets/Imagenespeliculas/wish_el_poder_de_los_deseos_2023.webp",
         imagenX: "/imagenes/ilustrator.webp",
@@ -411,6 +524,7 @@ export default {
         Video:
           "https://iframe.mediadelivery.net/embed/261653/0f02169d-cc25-41c6-8ef1-d05c33dbb0ef",
         Generos: ["Animación", "Aventura", "Fantasía", "Musical"],
+        Año: "2023"
       },
 
       {
@@ -422,6 +536,7 @@ export default {
         Video:
           "https://iframe.mediadelivery.net/embed/261653/d70e03ea-9e04-4cea-817c-b40da14218eb",
         Generos: ["Animación", "Aventura", "Acción", "Comedia"],
+        Año: "2024"
       },
       {
         id: 55,
@@ -432,6 +547,7 @@ export default {
         Video:
           "https://iframe.mediadelivery.net/embed/261653/d25d1dec-52bb-46bf-9930-2e39d5d65102",
         Generos: ["Animación", "Aventura", "Acción", "Comedia"],
+        Año: "2016"
       },
       {
         id: 56,
@@ -442,16 +558,18 @@ export default {
         Video:
           "https://iframe.mediadelivery.net/embed/261653/c0561561-e978-4037-82ba-c3be48ed152d",
         Generos: ["Animación", "Aventura", "Acción", "Comedia"],
+        Año: "2011"
       },
       {
         id: 57,
-        nombre: "Kung Fu Panda 1",
+        nombre: "Kung Fu Panda",
         imagen: "../../Imagenes_Pelis/kunfupanda1.webp",
         imagenX: "/imagenes/ilustrator.webp",
 
         Video:
           "https://iframe.mediadelivery.net/embed/261653/ef59b4d8-2ca2-40a6-a7ac-29c2f6dbbe04",
         Generos: ["Animación", "Aventura", "Acción", "Comedia"],
+        Año: "2008"
       },
       {
         id: 58,
@@ -462,10 +580,11 @@ export default {
         Video:
           "https://iframe.mediadelivery.net/embed/261653/4d600fa1-6686-4fa1-a6f4-71f327614277",
         Generos: ["Animación", "Aventura", "Comedia"],
+        Año: "2023"
       },
       {
         id: 523,
-        nombre: "Miraculous Las aventuras de Ladybug(2023)",
+        nombre: "Miraculous: - La Película",
         imagen:
           "../../Assets/Imagenespeliculas/Las_aventuras_de_Ladybug_(2023).webp",
         imagenX: "/imagenes/ilustrator.webp",
@@ -473,37 +592,52 @@ export default {
         Video:
           "https://iframe.mediadelivery.net/embed/261653/b99edd5b-a5c7-4f57-974c-e84a72e13b31",
         Generos: ["Animación", "Aventura", "Fantasía"],
+        Año: "2023"
       },
 
       {
         id: 59,
-        nombre: "Evil Dead El despertar 2023",
+        nombre: "Evil Dead: El despertar",
         imagen: "../../Assets/Imagenespeliculas/evildead_2023.webp",
         imagenX: "/imagenes/ilustrator.webp",
 
         Video:
           "https://iframe.mediadelivery.net/embed/261653/4eee20db-87c6-4e9f-b09f-a627e5207ede",
         Generos: ["Terror", "Suspense"],
+        Año: "2023"
       },
       {
         id: 60,
-        nombre: "Gato con Botas 2022",
+        nombre: "Gato con Botas: El último deseo",
         imagen: "../../Imagenes_Pelis/gatoconbotas2022 (2).webp",
         imagenX: "/imagenes/ilustrator.webp",
 
         Video:
           "https://iframe.mediadelivery.net/embed/261653/a2854722-465e-4ae1-93e7-a48567e6e351",
         Generos: ["Animación", "Aventura", "Comedia"],
+        Año: "2022"
+      },
+      {
+        id: 682,
+        nombre: "Gato con botas",
+        imagen: "../../Assets/Imagenespeliculas/Gato_con_botas.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/4528301a-2f1f-4fb1-b14c-61399ae94ba7",
+        Generos: ["Animación,Familia,Fantasía,Aventura,Comedia"],
+        Año: "2011"
       },
       {
         id: 61,
-        nombre: "WifeLike (2022)",
+        nombre: "WifeLike",
         imagen: "../../Assets/Imagenespeliculas/Wifelike_2022.webp",
         imagenX: "/imagenes/ilustrator.webp",
 
         Video:
           "https://iframe.mediadelivery.net/embed/261653/c7d4eeb0-7bfb-4f5c-aa58-a28e85f05012",
         Generos: ["Ciencia Ficción", "Thriller"],
+        Año: "2022"
       },
 
       {
@@ -515,47 +649,52 @@ export default {
         Video:
           "https://iframe.mediadelivery.net/embed/261653/9d135a79-a9e8-488d-9c33-8e247c302dd0",
         Generos: ["Animación", "Drama", "Romance"],
+        Año: "2016"
       },
       {
         id: 63,
-        nombre: "El Ultimo Conjuro",
+        nombre: "El último conjuro",
         imagen: "../../Imagenes_Pelis/ELULTIMOCONJURO.webp",
         imagenX: "/imagenes/ilustrator.webp",
 
         Video:
           "https://iframe.mediadelivery.net/embed/261653/f101512d-4cff-460a-a8cc-82e4b9aadff1",
         Generos: ["Terror", "Suspense"],
+        Año: "2023"
       },
       {
         id: 64,
-        nombre: "El Conjuro 3",
+        nombre: "El Conjuro 3: El diablo me obligó a hacerlo",
         imagen: "../../Assets/Imagenespeliculas/el_conjuro_3.webp",
         imagenX: "/imagenes/ilustrator.webp",
 
         Video:
           "https://iframe.mediadelivery.net/embed/261653/7bdcab42-23aa-459b-bfdc-fb63277ac412",
         Generos: ["Terror", "Suspense"],
+        Año: "2021"
       },
 
       {
         id: 65,
-        nombre: "Depredador La Presa",
+        nombre: "Depredador: La presa",
         imagen: "../../Imagenes_Pelis/depredadorlapresa2022.webp",
         imagenX: "/imagenes/ilustrator.webp",
 
         Video:
           "https://iframe.mediadelivery.net/embed/261653/3e9fccb5-3d9a-42a3-ada3-fe6628c4b280",
         Generos: ["Ciencia Ficción", "Acción", "Suspense"],
+        Año: "2022"
       },
       {
         id: 66,
-        nombre: "Depredador (2018)",
+        nombre: "El Depredador 2018",
         imagen: "../../Assets/Imagenespeliculas/depredador_2018.webp",
         imagenX: "/imagenes/ilustrator.webp",
 
         Video:
           "https://iframe.mediadelivery.net/embed/261653/742f37f0-8473-42fe-885f-fa3f11faeeac",
         Generos: ["Ciencia Ficción", "Acción", "Suspense"],
+        Año: "2018"
       },
       {
         id: 67,
@@ -566,16 +705,18 @@ export default {
         Video:
           "https://iframe.mediadelivery.net/embed/261653/b35ac330-4eb4-40aa-86fe-c700535f0501",
         Generos: ["Terror", "Suspense"],
+        Año: "2023"
       },
       {
         id: 68,
-        nombre: "Aquaman 2",
+        nombre: "Aquaman y el reino perdido",
         imagen: "../../Imagenes_Pelis/aquaman2.webp",
         imagenX: "/imagenes/ilustrator.webp",
 
         Video:
           "https://iframe.mediadelivery.net/embed/261653/e4403f77-c5ef-4e67-9638-87fa2bcf6a45",
         Generos: ["Acción", "Aventura", "Fantasía"],
+        Año: "2023"
       },
       {
         id: 69,
@@ -586,106 +727,117 @@ export default {
         Video:
           "https://iframe.mediadelivery.net/embed/261653/b12ab136-94cc-47cc-8fc1-dc5be027a729",
         Generos: ["Acción", "Aventura", "Fantasía"],
+        Año: "2018"
       },
       {
         id: 70,
-        nombre: "La Monja 2",
+        nombre: "La monja II",
         imagen: "../../Imagenes_Pelis/cartel la monja 2.jpg",
         imagenX: "/imagenes/ilustrator.webp",
 
         Video:
           "https://iframe.mediadelivery.net/embed/261653/14610fed-2221-4058-ab24-72815a8473ee",
         Generos: ["Terror", "Suspense"],
+        Año: "2023"
       },
       {
         id: 71,
-        nombre: "Guardianes de la Galaxia vol. 3",
+        nombre: "Guardianes de la Galaxia volumen 3",
         imagen: "../../Imagenes_Pelis/Guardians.Of.The.Galaxy.Vol.3.webp",
         imagenX: "/imagenes/ilustrator.webp",
 
         Video:
           "https://iframe.mediadelivery.net/embed/261653/37b70bc0-c1d0-4a35-af0d-ee55a445f0f2",
         Generos: ["Acción", "Aventura", "Ciencia Ficción", "Comedia"],
+        Año: "2023"
       },
       {
         id: 72,
-        nombre: "Guardianes de la Galaxia vol. 2",
+        nombre: "Guardianes de la Galaxia 2 (Guardians of the Galaxy Vol. 2)",
         imagen: "../../Assets/Imagenespeliculas/guardines_de_la_galaxia_2.webp",
         imagenX: "/imagenes/ilustrator.webp",
 
         Video:
-          "https://iframe.mediadelivery.net/embed/261653/23cc21ca-84e5-4826-b1d1-685e027c37d2",
+          "https://iframe.mediadelivery.net/embed/261653/b1ff9255-cf9b-4fd0-a775-facf48bb30d5",
         Generos: ["Acción", "Aventura", "Ciencia Ficción", "Comedia"],
+         Año: "2017"
       },
       {
         id: 73,
-        nombre: "Guardianes de la Galaxia vol. 1",
+        nombre: "Guardianes de la galaxia",
         imagen: "../../Assets/Imagenespeliculas/guardines_de_la_galaxia_1.webp",
         imagenX: "/imagenes/ilustrator.webp",
 
         Video:
           "https://iframe.mediadelivery.net/embed/261653/a9981311-1a62-4b33-8f03-49671f8d8aca",
         Generos: ["Acción", "Aventura", "Ciencia Ficción", "Comedia"],
+        Año: "2014"
       },
       {
         id: 74,
-        nombre: "Ant-Man y la Avispa: Quantumanía 2023",
+        nombre: "Ant-Man and the Wasp: Quantumania",
         imagen: "../../Imagenes_Pelis/atman3.webp",
         imagenX: "/imagenes/ilustrator.webp",
 
         Video:
           "https://iframe.mediadelivery.net/embed/261653/e331dc46-cf09-47e8-809b-692eab8bf55f",
         Generos: ["Acción", "Aventura", "Ciencia Ficción"],
+        Año: "2023"
       },
       {
         id: 75,
-        nombre: "Ant-Man y La Avispa 2018",
+        nombre: "Ant-Man 2: La Avispa",
         imagen: "../../Imagenes_Pelis/atman2.webp",
         imagenX: "/imagenes/ilustrator.webp",
 
         Video:
           "https://iframe.mediadelivery.net/embed/261653/efc70612-3bba-47fc-a7be-4e7d3f824d10",
         Generos: ["Acción", "Aventura", "Ciencia Ficción"],
+        Año: "2018"
       },
       {
         id: 76,
-        nombre: "Ant-Man El hombre hormiga 2015",
+        nombre: "Ant-Man: El hombre Hormiga",
         imagen: "../../Imagenes_Pelis/atman.webp",
         imagenX: "/imagenes/ilustrator.webp",
 
         Video:
           "https://iframe.mediadelivery.net/embed/261653/379422c9-3ae0-417e-8fb3-14ad18ba3b07",
         Generos: ["Acción", "Aventura", "Ciencia Ficción"],
+        Año: "2015"
       },
       {
         id: 77,
-        nombre: "Super Mario Bros (2023)",
+        nombre: "Super Mario Bros. La película",
         imagen: "../../Imagenes_Pelis/supermariobros2023.webp",
         imagenX: "/imagenes/ilustrator.webp",
 
         Video:
           "https://iframe.mediadelivery.net/embed/261653/5f063302-fed1-4df1-96f0-9b06bfe1a600",
         Generos: ["Animación", "Aventura", "Comedia", "Familia"],
+        Año: "2023"
       },
       {
         id: 78,
-        nombre: "Oppen Heimer 2023",
+        nombre: "Oppenheimer",
         imagen: "../../Imagenes_Pelis/Oppenheimer.2023.webp",
         imagenX: "/imagenes/ilustrator.webp",
 
         Video:
           "https://iframe.mediadelivery.net/embed/261653/b140ec67-a922-433a-8b3e-aac14e5008b7",
         Generos: ["Biografía", "Drama", "Histórico"],
+        Año:"2023"
       },
       {
         id: 79,
-        nombre: "Finch (2021)",
+        nombre: "Finch",
         imagen: "../../Imagenes_Pelis/Finch (2021) (2).webp",
         imagenX: "/imagenes/ilustrator.webp",
 
         Video:
           "https://iframe.mediadelivery.net/embed/261653/f5e6fa06-534c-4d58-a654-0204d3d89b80",
         Generos: ["Drama", "Ciencia Ficción", "Aventura"],
+        Año: "2021"
       },
 
       {
@@ -697,6 +849,7 @@ export default {
         Video:
           "https://iframe.mediadelivery.net/embed/261653/ddea9f5d-cb23-417b-9586-56ad8dcbc8b2",
         Generos: ["Comedia", "Fantasía", "Familia"],
+        Año: "2023"
       },
       {
         id: 81,
@@ -707,16 +860,18 @@ export default {
         Video:
           "https://iframe.mediadelivery.net/embed/261653/6f497905-c7ca-4edf-b937-471e29e8c737",
         Generos: ["Aventura", "Familia", "Fantástico"],
+        Año: "2023"
       },
       {
         id: 82,
-        nombre: "Dora La Ciudad Perdida",
+        nombre: "Dora y La Ciudad Perdida",
         imagen: "../../Imagenes_Pelis/doralaciudadperdida (2).webp",
         imagenX: "/imagenes/ilustrator.webp",
 
         Video:
           "https://iframe.mediadelivery.net/embed/261653/2e3c3da2-f719-45c6-9747-18f06812bb8d",
         Generos: ["Aventura", "Comedia", "Familiar"],
+        Año: "2019"
       },
 
       {
@@ -780,7 +935,7 @@ export default {
         Generos: ["Animación", "Aventura", "Fantasía"],
       },
       {
-        id: 410,
+        id: 1410,
         nombre: "Ferdinand 2017",
         imagen: "../../Imagenes_Pelis/Ferdinand2017.webp",
         imagenX: "/imagenes/ilustrator.webp",
@@ -790,7 +945,7 @@ export default {
         Generos: ["Animación", "Aventura", "Comedia"],
       },
       {
-        id: 411,
+        id: 1411,
         nombre: "Pinocho 2022",
         imagen: "../../Imagenes_Pelis/Pinocho-2022.webp",
         imagenX: "/imagenes/ilustrator.webp",
@@ -800,7 +955,7 @@ export default {
         Generos: ["Animación", "Aventura", "Fantasía"],
       },
       {
-        id: 412,
+        id: 1412,
         nombre: "Wifi Ralph 2018",
         imagen: "../../Imagenes_Pelis/Wifi.Ralph.2018.webp",
         imagenX: "/imagenes/ilustrator.webp",
@@ -810,7 +965,7 @@ export default {
         Generos: ["Animación", "Aventura", "Comedia"],
       },
       {
-        id: 413,
+        id: 1413,
         nombre: "Alicia en el país de las maravillas",
         imagen:
           "../../Imagenes_Pelis/Alicia.en.el.país.de.las.maravillas.2010 (2).webp",
@@ -821,7 +976,7 @@ export default {
         Generos: ["Aventura", "Fantasía", "Familiar"],
       },
       {
-        id: 414,
+        id: 1414,
         nombre: "Hotel Transilvania 2",
         imagen: "../../Imagenes_Pelis/Hotel.Transilvania.2.2015.webp",
         imagenX: "/imagenes/ilustrator.webp",
@@ -841,7 +996,7 @@ export default {
         Generos: ["Animación", "Comedia", "Familiar"],
       },
       {
-        id: 415,
+        id: 1415,
         nombre: "Que viaje con papa 2022",
         imagen: "../../Imagenes_Pelis/Que.viaje.con.papa.2022.jpg",
         imagenX: "/imagenes/ilustrator.webp",
@@ -2113,6 +2268,17 @@ export default {
         Generos: ["Acción", "Aventura", "Ciencia ficción"],
       },
       {
+        id: 610,
+        nombre: "El Hombre de Acero",
+        imagen: "../../Assets/Imagenespeliculas/El_Hombre_de_Acero.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/e795d77e-f281-4ade-9728-97d1ae9cf288",
+        Generos: ["Acción,Aventura,Ciencia ficción"],
+        Año:"2013"
+      },
+      {
         id: 211,
         nombre: "Dragon Ball Gran aventura mística (1988)",
         imagen: "../../Imagenes_Pelis/dragonballunaaventuramistica1988.webp",
@@ -2275,6 +2441,18 @@ export default {
         Video:
           "https://iframe.mediadelivery.net/embed/261653/97b5140e-fe2d-427a-9395-1bc13a8bbe02",
         Generos: ["Acción", "Aventura", "Animación", "Anime"],
+      },
+      {
+        id: 555,
+        nombre: "Dragon Ball Z: Los dos Guerreros del Futuro Gohan y Trunks",
+        imagen:
+          "../../Assets/Imagenespeliculas/dragon_ball_z_gohan_futuro.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/3a28d8b9-3e9d-48aa-a35d-190973e573d0",
+        Generos: ["Aventura", "Animación", "Anime"],
+        Año:"1993"
       },
       {
         id: 226,
@@ -2785,7 +2963,7 @@ export default {
       {
         id: 275,
         nombre: "Crepúsculo Eclipse 2010",
-        imagen: "../../Imagenes_Pelis/crepusculosagaluna (2).webp",
+        imagen: "../../Assets/Imagenespeliculas/crepusculo_eclipse.webp",
         imagenX: "/imagenes/ilustrator.webp",
 
         Video:
@@ -3036,6 +3214,39 @@ export default {
           "https://iframe.mediadelivery.net/embed/261653/69e82ad9-f88f-42eb-a2b5-a12e3e1f0c53",
         Generos: ["Terror", "Suspense"],
       },
+      {
+        id: 668,
+        nombre: "Camino hacia el terror 4",
+        imagen: "../../Assets/Imagenespeliculas/camino_hacia_El_terror_4.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/240bfc54-84bd-4387-ade8-e394072bff02",
+        Generos: ["Terror", "Suspense"],
+        Año: "2011"
+      },
+    
+    {
+      id: 669,
+      nombre: "Camino hacia el terror 5",
+      imagen: "../../Assets/Imagenespeliculas/camino_hacia_el_terror_5.webp",
+      imagenX: "/imagenes/ilustrator.webp",
+
+      Video:
+        "https://iframe.mediadelivery.net/embed/261653/2fc6dbbf-c8cb-42e8-bb68-28db71bbe1a5",
+      Generos: ["Terror", "Suspense"],
+         Año: "2012"
+    },
+    {
+      id: 670,
+      nombre: "Camino Hacia el Terror 6: La Herencia",
+      imagen: "../../Assets/Imagenespeliculas/camino_hacia_el_terror_6.webp",
+      imagenX: "/imagenes/ilustrator.webp",
+      Video:
+        "https://iframe.mediadelivery.net/embed/261653/577e647a-0ec5-4feb-8a57-0ae60d274791",
+      Generos: ["Terror", "Suspense"],
+      Año: "2014"
+    },
 
       {
         id: 299,
@@ -3066,7 +3277,31 @@ export default {
         Video:
           "https://iframe.mediadelivery.net/embed/261653/a65083f4-c7d2-4a8b-a4cc-fca9e22b8b48",
         Generos: ["Animación", "Aventura", "Comedia"],
+        Año:"2006"
       },
+      {
+        id: 1300,
+        nombre: "Cars 2",
+        imagen: "../../Assets/Imagenespeliculas/Cars 2.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/75cd4271-4b45-4f40-9f04-32f1c57fb3de",
+        Generos: ["Familia,Animación,Aventura,Comedia"],
+        Año:"2011"
+      },
+      {
+        id: 1301,
+        nombre: "Cars 3",
+        imagen: "../../Assets/Imagenespeliculas/Cars 3.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/397bfbc2-5664-4ad8-b4ce-1e9a9a30974d",
+        Generos: ["Familia,Animación,Aventura,Comedia"],
+        Año:"2017"
+      },
+      
       {
         id: 302,
         nombre: "Blanca Nieves y los siete enanos.1937",
@@ -3249,6 +3484,17 @@ export default {
           "https://iframe.mediadelivery.net/embed/261653/849df0e9-8859-4e3c-aeca-6042a3ee1ecd",
         Generos: ["Acción", "Biografía"],
       },
+      {
+        id: 549,
+        nombre: "Ip Man",
+        imagen: "../../Assets/Imagenespeliculas/ipman_1.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/f0d506a7-690c-406c-913f-a1081c084ddc",
+        Generos: ["Acción", "Biografía"],
+      },
+    
       {
         id: 320,
         nombre: "Freddy vs Jason 2003",
@@ -3662,6 +3908,589 @@ export default {
         Video:
           "https://iframe.mediadelivery.net/embed/261653/4d78ee04-381a-4405-82a1-38a341a59d0e",
           Generos: ["Terror,Suspense"],
+      },
+      {
+        id: 360,
+        nombre: "X-Men",
+        imagen: "../../Assets/Imagenespeliculas/X-Men1.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/62382734-d75d-471b-82d6-4a09957657f6",
+          Generos: ["Aventura,Acción,Ciencia Ficción"],
+      },
+      {
+        id: 361,
+        nombre: "X-Men 2",
+        imagen: "../../Assets/Imagenespeliculas/X-men2.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/13d25251-fa4f-43e5-a3d0-aafd1770e692",
+          Generos: ["Aventura,Acción,Ciencia Ficción"],
+      },
+      {
+        id: 362,
+        nombre: "X-Men 3",
+        imagen: "../../Assets/Imagenespeliculas/X-Men_La_última_batalla_(2006).webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/018e3fa8-0019-4a10-9167-b66cee8e9983",
+          Generos: ["Aventura,Acción,Ciencia Ficción"],
+      },
+      {
+        id: 363,
+        nombre: "X-Men Primera generacion 2011",
+        imagen: "../../Assets/Imagenespeliculas/X-Men_primera_generacion.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/1cdab89d-a8ca-4d7d-bf6a-39dd9df4645f",
+          Generos: ["Aventura,Acción,Ciencia Ficción"],
+      },
+      {
+        id: 364,
+        nombre: "X-Men Días del futuro pasado 2014",
+        imagen: "../../Assets/Imagenespeliculas/X-Men_dias_en_el_futuro.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/11818840-c421-48ec-a4e9-f5c05a7a945b",
+          Generos: ["Aventura,Acción,Ciencia Ficción"],
+      },
+      {
+        id: 365,
+        nombre: "X-Men Apocalipsis 2016",
+        imagen: "../../Assets/Imagenespeliculas/X-Men_apocalicsis.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/11818840-c421-48ec-a4e9-f5c05a7a945b",
+          Generos: ["Aventura,Acción,Ciencia Ficción"],
+      },
+      {
+        id: 366,
+        nombre: "Alien Covenant 2017",
+        imagen: "../../Assets/Imagenespeliculas/Alien.Covenant2017.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/35d80d1a-2249-41bb-9ce8-6bf4af876b4e",
+          Generos: ["Ciencia ficción,Terror,Thriller"],
+      },
+      {
+        id: 367,
+        nombre: "Ghost Rider el vengador fantasma",
+        imagen: "../../Assets/Imagenespeliculas/Ghost Rider1.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/f632ac60-0363-4c85-be26-2f5744a3ea1e",
+          Generos: ["Thriller,Acción,Fantasía"],
+          Año:"2007"
+      },
+      {
+        id: 556,
+        nombre: "Ghost Rider 2: Espíritu de Venganza",
+        imagen: "../../Assets/Imagenespeliculas/ghost_rider_2.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/7d1556e8-5567-409c-8af6-48899936385f",
+          Generos: ["Thriller,Acción,Fantasía"],
+           Año:"2011"
+      },
+      {
+        id: 368,
+        nombre: "As the Gods Will",
+        imagen: "../../Assets/Imagenespeliculas/As the Gods Will.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/5a091038-cadb-472f-a27a-6e0de005bbe0",
+          Generos: ["Terror,Ciencia ficción"],
+      },
+      {
+        id: 369,
+        nombre: "Resident Evil 1",
+        imagen: "../../Assets/Imagenespeliculas/resident_evil_1.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/10f58e9a-68e8-454c-b402-1465c6f6541f",
+          Generos: ["Terror,Acción,Ciencia Ficción"],
+      },
+      {
+        id: 370,
+        nombre: "Resident Evil 2",
+        imagen: "../../Assets/Imagenespeliculas/resident_evil_2.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/9580e28b-310c-4df0-971b-ca33e4c58cc8",
+          Generos: ["Terror,Acción,Ciencia Ficción"],
+      },
+      {
+        id: 371,
+        nombre: "Resident Evil 3",
+        imagen: "../../Assets/Imagenespeliculas/resident_evil_3.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/bf7be5c4-04b6-43f7-b7d4-1ed409bab56e",
+          Generos: ["Terror,Acción,Ciencia Ficción"],
+      },
+      {
+        id: 372,
+        nombre: "Resident Evil 4",
+        imagen: "../../Assets/Imagenespeliculas/resident_Evil_4.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/2f1712a7-bd64-4ff3-bdbb-4a1aa6f9993f",
+          Generos: ["Terror,Acción,Ciencia Ficción"],
+      },
+      {
+        id: 373,
+        nombre: "Jeepers Creepers ",
+        imagen: "../../Assets/Imagenespeliculas/Jeepers_Creepers_1.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/217d68f1-9247-4ea3-b49e-90d007106874",
+          Generos: ["Terror,Thriller,Misterio"],
+      },
+      {
+        id: 374,
+        nombre: "Jeepers Creepers 2 ",
+        imagen: "../../Assets/Imagenespeliculas/Jeepers_Creepers_2.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/16284639-03ab-4839-9792-07e584d891ea",
+          Generos: ["Terror,Thriller,Misterio"],
+      },
+      {
+        id: 375,
+        nombre: "Jeepers Creepers 3 ",
+        imagen: "../../Assets/Imagenespeliculas/Jeepers_Creepers _3.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/edc63705-9713-47a2-aa54-423d3449792b",
+          Generos: ["Terror,Thriller,Misterio"],
+      },
+      {
+        id: 376,
+        nombre: "Jeepers Creepers 4 ",
+        imagen: "../../Assets/Imagenespeliculas/Jeepers_Creepers_4.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/33b70689-119c-41e0-b666-90ab7a83f1e7",
+          Generos: ["Terror,Thriller,Misterio"],
+      },
+      {
+        id: 377,
+        nombre: "Junto con los dioses Los dos mundos ",
+        imagen: "../../Assets/Imagenespeliculas/Junto_con_los_dioses_Los_dos_mundos.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/f0e8ad96-d85f-49db-b3c4-f4ec7a140c23",
+          Generos: ["Acción,Aventura,Drama,Fantasía,Thriller,Misterio"],
+      },
+      {
+        id: 378,
+        nombre: "Life",
+        imagen: "../../Assets/Imagenespeliculas/Life.vida.inteligente.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/30103aa4-270f-4572-a261-0c4566538688",
+          Generos: ["Acción,Aventura,Drama,Fantasía,Thriller,Misterio"],
+      },
+      {
+        id: 379,
+        nombre: "Diaro de una pasión",
+        imagen: "../../Assets/Imagenespeliculas/Diario de una pasión.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/bf505297-a5f7-4ba7-983b-5c6cb409f493",
+          Generos: ["Romance,Drama"],
+      },
+      {
+        id: 380,
+        nombre: "¿Conoces a Joe Black?",
+        imagen: "../../Assets/Imagenespeliculas/Conoces.a.Joe.Black.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/fa16efc6-2fb0-4c83-aa85-f0a4d7f59ac2",
+          Generos: ["Fantasía,Drama,Romance"],
+      },
+      {
+        id: 381,
+        nombre: "Maze Runner 1",
+        imagen: "../../Assets/Imagenespeliculas/maz_runner1.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/f6655687-5347-415a-89cb-31a750198ef8",
+          Generos: ["Acción,Misterio,Ciencia ficción,Suspense"],
+      },
+      {
+        id: 382,
+        nombre: "Maze Runner 2",
+        imagen: "../../Assets/Imagenespeliculas/maze_runner2.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/5100a613-d993-4dc5-ba3f-d02d637f993f",
+          Generos: ["Acción,Misterio,Ciencia ficción,Suspense"],
+      },
+      {
+        id: 383,
+        nombre: "Maze Runner 3",
+        imagen: "../../Assets/Imagenespeliculas/maze_runner3.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/47edeeb9-1a9d-4439-91be-91ce4a57b59e",
+          Generos: ["Acción,Misterio,Ciencia ficción,Suspense"],
+      },
+      {
+        id: 384,
+        nombre: "300  2007",
+        imagen: "../../Assets/Imagenespeliculas/300.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/bc50778e-dd07-420b-9379-2a8f07383b00",
+          Generos: ["Acción,Aventura,Bélica"],
+      },
+      {
+        id: 385,
+        nombre: "Corazones Malheridos",
+        imagen: "../../Assets/Imagenespeliculas/corazones_malheridos.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/64b60aa2-0843-4c80-8e82-cd4f888cd637",
+          Generos: ["Acción,Aventura,Bélica"],
+      },
+      {
+        id: 386,
+        nombre: "El oso Paddington 1",
+        imagen: "../../Assets/Imagenespeliculas/el_oso_Paddington1.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/f9a525b6-026f-49c6-acd1-931d4d323552",
+          Generos: ["Comedia,Aventura,Familia"],
+      },
+      {
+        id: 387,
+        nombre: "El oso Paddington 2",
+        imagen: "../../Assets/Imagenespeliculas/el_oso_paddington2.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/34b521a3-3011-4afa-9221-8eabfc1327f6",
+          Generos: ["Comedia,Aventura,Familia"],
+      },
+      {
+        id: 388,
+        nombre: "La princesa Mononoke",
+        imagen: "../../Assets/Imagenespeliculas/La princesa Mononoke.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/219dd3ef-04a3-42b3-835e-053d189ff188",
+          Generos: ["Aventura,Fantasía,Animación"],
+      },
+      {
+        id: 389,
+        nombre: "KIMETSU NO YAIBA: Tren Infinito",
+        imagen: "../../Assets/Imagenespeliculas/Guardianes de la Noche Tren infinito.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/8b4bde12-b9e9-4699-a412-46608ce9b4db",
+          Generos: ["Anime"],
+      },
+      {
+        id: 390,
+        nombre: "Annabelle 1",
+        imagen: "../../Assets/Imagenespeliculas/annabelle1.jpg",
+        imagenX: "/imagenes/ilustrator.webp",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/cd25fc9c-1290-4cd6-8b8c-3b3ce72703ec",
+          Generos: ["Terror"],
+      },
+      {
+        id: 391,
+        nombre: "Annabelle 2: La Creación",
+        imagen: "../../Assets/Imagenespeliculas/Annabelle2.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/72691aa0-92ae-4ab8-9666-ce07fe952def",
+          Generos: ["Terror"],
+          Año:"2017"
+      },
+      {
+        id: 392,
+        nombre: "Golpe Bajo: El Juego Final",
+        imagen: "../../Assets/Imagenespeliculas/Golpe Bajo El Juego Final.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/30e89c5d-0817-4382-a8ef-07102a514c95",
+          Generos: ["Drama,Comedia"],
+          Año:"2005"
+      },
+    
+      {
+        id: 393,
+        nombre: "Warcraft: El primer encuentro de dos mundos",
+        imagen: "../../Assets/Imagenespeliculas/warcraft.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/075cfbad-c076-460c-bd56-4c35785b4662",
+          Generos: ["Acción, Aventura,Fantasía"],
+          Año:"2016"
+      },
+      {
+        id: 394,
+        nombre: "365 días más",
+        imagen: "../../Assets/Imagenespeliculas/365 días más.jpg",
+        imagenX: "/imagenes/ilustrator.webp",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/74f704e1-597e-4215-b8df-cf8936deaf79",
+          Generos: ["Romance,Drama"],
+          Año:"2022"
+      },
+      {
+        id: 395,
+        nombre: "Los Diez Mandamientos",
+        imagen: "../../Assets/Imagenespeliculas/Los Diez Mandamientos.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/f1be1ba0-5a52-40bd-9046-b137b410a1e4",
+          Generos: ["Drama,Historia"],
+          Año:"1956"
+      },
+      {
+        id: 396,
+        nombre: "It (Eso)",
+        imagen: "../../Assets/Imagenespeliculas/it_2017.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/a9f9dfff-58cb-4e70-b615-0d4b08a9d277",
+          Generos: ["Terror"],
+          Año:"2017"
+      },
+      {
+        id: 397,
+        nombre: "Como si fuera la primera vez",
+        imagen: "../../Assets/Imagenespeliculas/Como_si_fuera_la_primera_vez.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/d9592164-78a1-4f85-994a-bc1e806bf628",
+          Generos: ["Comedia,Romance"],
+          Año:"2004"
+      },
+      {
+        id: 398,
+        nombre: "Tom y Jerry: El cascanueces",
+        imagen: "../../Assets/Imagenespeliculas/Tom_y_Jerry_El_cascanueces.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/fa9db6bc-db7f-4447-bf86-4aceeecc4092",
+          Generos: ["Animación,Comedia,Familia"],
+          Año:"2007"
+      },
+      {
+        id: 399,
+        nombre: "La vida secreta de tus mascotas",
+        imagen: "../../Assets/Imagenespeliculas/La vida secreta de tus mascotas.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/f8c70d90-abf1-480f-baa1-3367f2ab3235",
+          Generos: ["Aventura,Comedia,Animación,Familia"],
+          Año:"2016"
+      },
+      {
+        id: 400,
+        nombre: "La Vida Secreta De Tus Mascotas 2",
+        imagen: "../../Assets/Imagenespeliculas/La Vida Secreta De Tus Mascotas 2.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/711ba774-a150-487c-bcb9-b8ae89dd76af",
+          Generos: ["Aventura,Comedia,Animación,Familia"],
+          Año:"2019"
+      },
+      {
+        id: 401,
+        nombre: "Jack: El Cazagigantes",
+        imagen: "../../Assets/Imagenespeliculas/Jack.El.Cazagigantes..webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/87f66553-bc03-47ed-b330-5b26ab434605",
+          Generos: ["Fantasía,Acción,Aventura,Drama"],
+          Año:"2013"
+      },
+      {
+        id: 402,
+        nombre: "Spirit: El Corcel Indomable",
+        imagen: "../../Assets/Imagenespeliculas/Spirit_El Corcel Indomable.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/9a86dbe2-c6ca-45dc-aa19-6a959464497c",
+          Generos: ["Animación,Aventura,Comedia,Familia,Drama,Western,Romance"],
+          Año:"2002"
+      },
+      {
+        id: 403,
+        nombre: "Spirit: El Indomable",
+        imagen: "../../Assets/Imagenespeliculas/Spirit_El Indomable.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/604dd69d-f77c-48fa-81c0-576263d72a58",
+          Generos: ["Animación,Aventura,Familia,Western"],
+          Año:"2021"
+      },
+      {
+        id: 404,
+        nombre: "Viaje al centro de la Tierra",
+        imagen: "../../Assets/Imagenespeliculas/Viaje al centro de la Tierra.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/d7f0c136-e566-4641-b1fd-f295aa08d361",
+          Generos: ["Acción,Ciencia ficción,Aventura,Comedia,Familia"],
+          Año:"2008"
+      },
+      {
+        id: 405,
+        nombre: "Un Jefe en Pañales",
+        imagen: "../../Assets/Imagenespeliculas/Un Jefe en Pañales.jpg",
+        imagenX: "/imagenes/ilustrator.webp",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/156b3e63-89d9-4f4f-959f-aeea20e1d2fb",
+          Generos: ["Animación,Comedia,Familia"],
+          Año:"2017"
+      },
+      {
+        id: 406,
+        nombre: "Buscando a Nemo",
+        imagen: "../../Assets/Imagenespeliculas/Buscando a Nemo.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/469eb9d8-0218-497b-86cc-cb5f91252cc8",
+          Generos: ["Animación,Familia"],
+          Año:"2003"
+      },
+      {
+        id: 407,
+        nombre: "Canguro Jack",
+        imagen: "../../Assets/Imagenespeliculas/Canguro Jack.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/7331e28f-2b1b-4a45-a6ca-64c008465c22",
+          Generos: ["Acción,Aventura,Comedia,Familia,Crimen"],
+          Año:"2003"
+      },
+      {
+        id: 408,
+        nombre: "Las travesuras de Peter Rabbit",
+        imagen: "../../Assets/Imagenespeliculas/Las travesuras de Peter Rabbit.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/23b6bdeb-1221-45c1-9eb1-d68683265afd",
+          Generos: ["Animación,Aventura,Familia"],
+          Año:"2018"
+      },
+      {
+        id: 409,
+        nombre: "Mi Amigo El Gigante",
+        imagen: "../../Assets/Imagenespeliculas/Mi Amigo El Gigante.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/6ebfb484-a58a-45fc-a33a-baad875a1065",
+          Generos: ["Aventura,Familia,Fantasía"],
+          Año:"2016"
+      },
+      {
+        id: 410,
+        nombre: "La telaraña de Charlotte",
+        imagen: "../../Assets/Imagenespeliculas/La telaraña de Charlotte.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/98851c6e-6c0d-4f85-9e19-f0fd9cafcff3",
+          Generos: ["Comedia,Familia,Fantasía"],
+          Año:"2006"
+      },
+      {
+        id: 411,
+        nombre: "Doraemon: Nobita y la leyenda de las sirenas",
+        imagen: "../../Assets/Imagenespeliculas/Doraemon Nobita y la leyenda de las sirenas.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/4e6df7fc-adab-4cb3-98ec-2dae31cb53cb",
+          Generos: ["Aventura,Familia,Animación,Fantasía"],
+          Año:"2010"
+      },
+      {
+        id: 412,
+        nombre: "Doraemon: Nobita y la isla de los milagros",
+        imagen: "../../Assets/Imagenespeliculas/Doraemon Nobita y la isla de los milagros.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/23d3bf42-9501-4359-8eba-3c90a91d0d3e",
+          Generos: ["Aventura,Familia,Animación,Fantasía"],
+          Año:"2012"
+      },
+      {
+        id: 413,
+        nombre: "Un Gallo con muchos huevos",
+        imagen: "../../Assets/Imagenespeliculas/Un Gallo con muchos huevos.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/2a0e9c74-e6e9-4377-80c9-f7a70f773f94",
+          Generos: ["Animación,Aventura,Comedia,Familia"],
+          Año:"2015"
+      },
+      {
+        id: 414,
+        nombre: "Los Croods 2: Una Nueva Era",
+        imagen: "../../Assets/Imagenespeliculas/Los Croods 2 Una Nueva Era.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/e368484d-da5d-47fb-8131-89d0966e2d24",
+          Generos: ["Animación,Familia,Aventura,Fantasía,Comedia"],
+          Año:"2020"
+      },
+      {
+        id: 415,
+        nombre: "Los Croods",
+        imagen: "../../Assets/Imagenespeliculas/Los Croods.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/80c4d65a-1754-4fe0-bb3a-fc089c75816b",
+          Generos: ["Animación,Familia,Aventura,Fantasía,Comedia"],
+          Año:"2013"
+      },
+      {
+        id: 416,
+        nombre: "Monsters, Inc.",
+        imagen: "../../Assets/Imagenespeliculas/Monsters, Inc..webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/a371e08d-b0cb-41ec-98d9-86b8be8bf4c7",
+          Generos: ["Animación,Comedia,Familia"],
+          Año:"2001"
+      },
+   
+      {
+        id: 417,
+        nombre: "Monsters University",
+        imagen: "../../Assets/Imagenespeliculas/Monsters University.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/c3d3852e-d189-40d4-a16b-71893495391e",
+          Generos: ["Animación,Comedia,Familia"],
+          Año:"2013"
+      },
+      {
+        id: 418,
+        nombre: "La La Land: Una Historia de Amor",
+        imagen: "../../Assets/Imagenespeliculas/La La Land Una Historia de Amor.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/301ef7bd-1f49-4449-b02d-3cdac13968d7",
+          Generos: ["Comedia,Drama,Romance,Música"],
+          Año:"2016"
+      },
+      {
+        id: 419,
+        nombre: "Annabelle 3: Viene a casa",
+        imagen: "../../Assets/Imagenespeliculas/Annabelle 3 Viene a casa.webp",
+        imagenX: "/imagenes/ilustrator.webp",
+        Video:
+          "https://iframe.mediadelivery.net/embed/261653/b3630a1f-d771-4dbf-8f32-8677f851f099",
+          Generos: ["Terror"],
+          Año:"2019"
       },
     ],
   },

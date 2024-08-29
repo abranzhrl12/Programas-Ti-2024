@@ -20,6 +20,11 @@
     @content;
   }
 }
+@mixin tabletmsmall {
+  @media (min-width: v.$tabletmsmall) {
+    @content;
+  }
+}   
 @mixin tablet {
   @media (min-width: v.$tablet) {
     @content;
@@ -30,27 +35,26 @@
     @content;
   }
 }
-
-
+@mixin tabletxl {
+  @media (min-width: v.$tabletxl) {
+    @content;
+  }
+} 
 @mixin desktop {
   @media (min-width: v.$desktop) {
     @content;
   }
 }
-
-
 @mixin desktopFull {
   @media (min-width: v.$desktopFull) {
     @content;
   }
 }
-
 @mixin desktopFullHD {
   @media (min-width: v.$desktopfulhd) {
     @content;
   }
 }
-
 @mixin TV {
   @media (min-width: v.$TV) {
     @content;

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./public/cuenta.js" defer></script>
+</head>
+
+<style>
+    html {
+      scroll-behavior: smooth;
+      font-size: 62.5%;
+      box-sizing: border-box;
+    }
+    *,
+    *::before,
+    *::after {
+      box-sizing: inherit;
+      margin: 0;
+      padding: 0;
+    }
+    [class*="__img"] {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+    body {
+      font-family: sans-serif;
+      font-size: 1.6rem;
+      line-height: 1.6;
+       min-height: 100vh;
+    }
+    .faqs{
+  
+    background-color: #fff;
+    width: min(90%, 900px);
+    margin: 0 auto;
+    border-radius: 10px;
+    margin-top: 1rem;
+   
+    box-shadow: 0 0 6px -2px #00000086;
+}
+
+.faqs__content{
+    
+    width: 90%;
+    margin: 0 auto;
+    padding: 30px 0;
+  
+    list-style: none;
+
+    display: grid;
+    gap: 1rem;
+}
+
+.faqs__element{
+    --color-titulo: var(--color-headings);
+    --image-question: url("./Assets/icon-open.svg");
+    --faqs-rows: 0fr;
+
+    border-bottom: 1px solid #f1f1f6;
+    padding: 1rem;
+
+    display: grid;
+    grid-template-rows: max-content var(--faqs-rows);
+    transition: grid-template-rows .5s;
+}
+
+.faqs__element:has(input:checked){
+    --faqs-rows: 1fr;
+    --color-titulo: #4A4AFF;
+    --image-question: url("./Assets/icon-close.svg");
+}
+
+.faqs__element:last-of-type{
+    border-bottom: 0;
+}
+
+.faqs__label{
+    color: var(--color-titulo);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-size: clamp(18px, 4vw ,26px);
+    cursor: pointer;
+}
+
+[id^="question"]{
+    display: none;
+}
+
+.faqs__icon{
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-size: cover;
+    background-image: var(--image-question);
+
+    transition: background-image .5s;
+}
+
+.faqs__answer{
+    color: #5f5c90;
+    padding-left: 0.5rem;
+
+    overflow: hidden;
+}
+
+.faqs__answer::after, .faqs__answer::before{
+    content: "";
+    height: 1.5rem;
+    display: block;
+}
+.contenedor-dispositivos{
+    /* background-color: red; */
+    height: auto;
+  
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+   
+}
+.dispostivos{
+    font-size: 1.2rem;
+    margin-top: 0.2rem;
+    margin-bottom: 0.7rem;
+    margin-right: 1rem; 
+    width: 97%;
+    height: 14rem;
+    background-color: rgb(255, 252, 252);
+    outline: 1px solid rgb(219, 205, 205);
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0 1rem;
+    
+
+   }
+
+   .dispositivo__info{
+    width: min-content;
+    height: 100%;
+    background-color: white;
+    padding-top: 2rem;
+
+  
+   }
+   .dispositivo__text{
+    width: 100%;
+    height: 100%;
+    padding-top: 2rem;
+
+
+   }
+
+@media(min-width: 768px) {
+    .contenedor-dispositivos{
+    /* background-color: red; */
+    height: auto;
+  
+    display: flex;
+    flex-direction: row;
+   
+}
+.dispostivos{
+    font-size: 1rem;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+    margin-right: 1rem; 
+    width: 25%;
+    height: 12rem;
+    background-color: rgb(255, 252, 252);
+    outline: 1px solid rgb(219, 205, 205);
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0 0.5rem;
+   
+}
+ }
+</style>
+<body>
+    <section class="faqs">
+
+        <ul class="faqs__content">
+  
+            <li class="faqs__element">
+  
+                <h3 class="faqs__question">
+                    <label for="question1" class="faqs__label">
+                        Cuenta
+  
+                        <span class="faqs__icon"></span>
+                    </label>
+                </h3>
+  
+                <input type="checkbox" id="question1">
+  
+  
+                <div class="faqs__answer">
+                    <p>
+                    
+                      Correo: <span id="coreo">prueba@gmail.com</span></p>
+                    <br>
+                    <p>
+                     
+                      Contraseña: <span id="contraseña" >********</span></p>
+                 
+                </div>
+  
+            </li>
+  
+            <li class="faqs__element">
+  
+                <h3 class="faqs__question">
+                    <label for="question2" class="faqs__label">
+                        Menbresía
+  
+                        <span class="faqs__icon"></span>
+                    </label>
+                </h3>
+  
+                <input type="checkbox" id="question2">
+  
+  
+                <div class="faqs__answer">
+                    <p>
+                    
+                      Plan: <span>Standar 2 Dispostivos</span></p>
+                    <br>
+                    <p>
+                      Fecha Activación:</p>
+                    <br>
+                    <p>
+                    
+                      Fecha Expiración</p>
+                   
+                    
+                </div>
+  
+            </li>
+  
+            <li class="faqs__element">
+  
+                <h3 class="faqs__question">
+                  <label for="question3" class="faqs__label">
+                    Dispositivos
+                    <span class="faqs__icon"></span>
+                </label>
+            </h3>
+            <input type="checkbox" id="question3">
+                <div class="faqs__answer contenedor-dispositivos">
+             <div class="dispostivos">
+                <div class="dispositivo__info">
+                    <p>Device_Id:</p>
+                    <p>Fecha_R:</p>
+                    <p>Dispositivos:</p>
+                    <p>sistema Operativo:</p>
+                </div>
+                <div class="dispositivo__text">
+                    <p id="deviceId">aa</p>
+                    <p id="fechaRegistro"></p>
+                    <p id="dispositivos"></p>
+                    <p id="sistemaOperativo"></p>
+                </div>
+               
+             </div>
+             <div class="dispostivos">
+
+             </div>
+             
+            </div>
+            </li>
+  
+            <li class="faqs__element">
+  
+              <h3 class="faqs__question">
+                  <label for="question4" class="faqs__label">
+                   Perfiles
+  
+                      <span class="faqs__icon"></span>
+                  </label>
+              </h3>
+  
+              <input type="checkbox" id="question4">
+  
+  
+              <div class="faqs__answer">
+                  <p>
+                    <svg width="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#697fa5" d="M0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zM188.3 147.1c-7.6 4.2-12.3 12.3-12.3 20.9l0 176c0 8.7 4.7 16.7 12.3 20.9s16.8 4.1 24.3-.5l144-88c7.1-4.4 11.5-12.1 11.5-20.5s-4.4-16.1-11.5-20.5l-144-88c-7.4-4.5-16.7-4.7-24.3-.5z"/></svg>
+                    Encabezados (<code>&lt;h1&gt;</code>, <code>&lt;h6&gt;</code>)</p>
+              </div>
+  
+          </li>
+            
+  
+        </ul>
+  
+    </section>
+  
+    
+          </div>
+      </section>
+
+      <script>
+// Obtener el objeto de 'usuario' almacenado en localStorage
+
+const usuarioJSON = localStorage.getItem('usuario');
+const usuario = JSON.parse(usuarioJSON);
+const deviceId = localStorage.getItem('deviceId');
+
+console.log("probaaaaaaaaaa" , deviceId)
+// Asignar los valores al HTML
+document.getElementById('coreo').textContent = usuario.correo;
+document.getElementById('contraseña').textContent = usuario.contraseña;
+
+
+
+      </script>
+</body>
+</html>

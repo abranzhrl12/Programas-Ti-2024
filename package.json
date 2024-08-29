@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "sass --watch sass/app.scss:public/style.css --no-source-map",
     "postcss": "postcss public/style.css -o public/style.css --watch --no-map",
-    "cssall": "concurrently  \"npm run sass\" \"npm run postcss\"",
+    
     "build": "rollup --watch --config"
   },
   "keywords": [],

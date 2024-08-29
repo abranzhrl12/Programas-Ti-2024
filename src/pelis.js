@@ -4,6 +4,7 @@ import {
   verificarCredenciales,
   verificarDispositivo,
   verificarFechaExpiracion,
+  cerrarSesion
 } from "./Conexion/conexion";
 import peliss from "./Peliculas/categoriasPeliculas";
 import { peliculas, generarPlantillaPelicula,generarPlantillaPelicula2 } from "./Peliculas/Peliculas";
@@ -172,7 +173,7 @@ async function handlePeliculaClick(event) {
 inicializarBusqueda(iconobusqueda, buscarPelicula, buscarPeliculaInput);
 
 btnBuscarPelicula.addEventListener("click", () => {
-
+ 
   actualizarPeliculas(
     buscarPeliculaInput,
     peliculas,
@@ -199,13 +200,17 @@ iconobus.addEventListener("click", () => {
 
 
 buscarPeliculaInput.addEventListener("keydown", (event) => {
+    
   if (event.key === "Enter") {
     event.preventDefault(); // Evitar que se realice el comportamiento predeterminado
+   
+
     actualizarPeliculas(
       buscarPeliculaInput,
       peliculas,
       generarPeliculas,
       generarPaginacion,
+      setPage,
       seccionPeliculas,
       paginaActual
     );
@@ -235,6 +240,123 @@ function agregarBotonVerMas(peliculas) {
     generarPeliculas(peliculas, nuevasPeliculas);
   });
 }
+// function crearIntersectionObserver(callback, rootMargin = '0px', threshold = 0) {
+//     return new IntersectionObserver((entries) => {
+//         entries.forEach(entry => {
+//             if (entry.isIntersecting) {
+//                 callback(entry);
+//             }
+//         });
+//     }, {
+//         rootMargin: rootMargin,
+//         threshold: threshold
+//     });
+// }
+
+// function inicializarObservador(peliculas) {
+//   const grid = document.querySelector(".Peliculas__grid");
+//   if (!grid) {
+//       throw new Error("No se encontró el contenedor Peliculas__grid.");
+//   }
+
+//   let peliculasMostradas = grid.querySelectorAll(".Peliculas__card").length;
+
+//   // Crear una instancia de IntersectionObserver
+//   const observer = new IntersectionObserver((entries) => {
+//       const lastEntry = entries[0];
+
+//       if (lastEntry.isIntersecting) {
+//           observer.unobserve(lastEntry.target); // Deja de observar el elemento actual
+
+//           // Llamar a la función para cargar más películas
+//           cargarMasPeliculas(peliculas);
+//       }
+//   }, {
+//       rootMargin: '0px 0px 200px 0px' // Empieza a cargar más películas cuando el último elemento esté a 200px del viewport
+//   });
+
+//   // Función para observar el último elemento de la grid
+//   function observarUltimoElemento() {
+//       const lastCard = document.querySelector(".Peliculas__card:last-child");
+//       if (lastCard) {
+//           observer.observe(lastCard);
+//       }
+//   }
+
+//   // Generar las primeras películas
+//   generarPeliculas(peliculas, programasPorPagina.inicial);
+
+//   // Observar el último elemento de la grid cuando se generan las primeras películas
+//   observarUltimoElemento();
+// }
+// function cargarMasPeliculas(peliculas) {
+//   const grid = document.querySelector(".Peliculas__grid");
+//   if (!grid) {
+//       throw new Error("No se encontró el contenedor Peliculas__grid.");
+//   }
+
+//   // Obtener la cantidad actual de películas mostradas
+//   const peliculasMostradas = grid.querySelectorAll(".Peliculas__card").length;
+//   const { incremento, limite } = programasPorPagina;
+//   const nuevasPeliculas = peliculasMostradas + incremento;
+
+//   // Generar más películas basadas en la cantidad de nuevas películas
+//   generarPeliculas(peliculas, nuevasPeliculas);
+
+//   // Volver a observar el nuevo último elemento después de la carga
+//   const observer = new IntersectionObserver((entries) => {
+//       const lastEntry = entries[0];
+
+//       if (lastEntry.isIntersecting) {
+//           observer.unobserve(lastEntry.target); // Deja de observar el elemento actual
+
+//           // Llamar nuevamente a la función para cargar más películas
+//           cargarMasPeliculas(peliculas);
+//       }
+//   }, {
+//       rootMargin: '0px 0px 200px 0px'
+//   });
+
+//   const lastCard = document.querySelector(".Peliculas__card:last-child");
+//   if (lastCard) {
+//       observer.observe(lastCard);
+//   }
+
+//   // Ocultar el botón "Ver más" si se alcanza el límite
+//   const botonVerMas = document.querySelector(".boton-vermas");
+//   if (nuevasPeliculas >= programasPorPagina.limite) {
+//       if (botonVerMas) {
+//           botonVerMas.style.display = "none";
+//       }
+//   } else {
+//       if (botonVerMas) {
+//           botonVerMas.style.display = "block";
+//       }
+//   }
+// }
+// function observarUltimaCard() {
+//   const lastCard = document.querySelector(".Peliculas__card:last-child");
+//   if (!lastCard) {
+//       console.log("No se encontró el último .Peliculas__card.");
+//       return;
+//   }
+
+//   console.log("Último card encontrado:", lastCard);
+
+//   const observer = new IntersectionObserver((entries) => {
+//       entries.forEach(entry => {
+//           if (entry.isIntersecting) {
+//               console.log("¡La última card está a punto de mostrarse!");
+//           }
+//       });
+//   }, {
+//       root: null, // Observa en relación al viewport
+//       rootMargin: '0px 0px -100px 0px', // Ajusta el margen inferior para que se active antes de llegar al viewport
+//       threshold: 0 // Activar cuando el elemento esté parcialmente visible
+//   });
+
+//   observer.observe(lastCard);
+// }
 
 function generarPaginacion(peliculas) {
   if (!peliculas || !Array.isArray(peliculas)) {
@@ -305,18 +427,22 @@ function generarPaginacion(peliculas) {
 // agregarPeliculasAlGrid(peliculas)
 window.addEventListener("DOMContentLoaded", async ()=> {
   try {
+
+    // inicializarObservador(peliculas);
     await verificarYConfigurar2();
     // programasPorPagina = programasPorPagina;
     // Asegúrate de que la variable 'peliculas' esté definida y no sea nula
     if (peliculas && peliculas.length > 0) {
-
       agregarPeliculasAlGrid(peliculas);
 
       // Verificar el ancho de la pantalla antes de generar la paginación
       if (window.innerWidth > 920) {
         // Volver a generar la paginación solo si el ancho de la pantalla es mayor a 900 píxeles
         generarPaginacion(peliculas);
+        verificarYConfigurar2()
+        // observarUltimaCard()
       }else{
+        // observarUltimaCard()
         agregarBotonVerMas(peliculas)
       }
     }
@@ -324,49 +450,95 @@ window.addEventListener("DOMContentLoaded", async ()=> {
     console.error("Error al manejar el evento DOMContentLoaded:", error);
   }
 });
+let viewp=window.innerWidth
 window.addEventListener("resize", async() => {
-
-  await verificarYConfigurar2()
-});
-async function verificarYConfigurar2() {
-  // Verificar si hay datos de usuario en localStorage
-  const usuario = localStorage.getItem('usuarioAutenticado');
-  const btnperfil = document.querySelector(".navegacion__boton");
-  const btnlogueoperfil=document.querySelector(".navegacion__perfil")
+  viewp=window.innerWidth
+  programasPorPagina = calcularProgramasPorPaginaActual();
+  if(viewp > 920){
+    console.log(viewp)
+    agregarPeliculasAlGrid(peliculas)
+    generarPaginacion(peliculas)
+    console.log(programasPorPagina)
+    verificarYConfigurar2()
   
-  if (usuario) {
-    // El usuario está autenticado, configurar la interfaz
+}else if(viewp<920){
+  agregarPeliculasAlGrid(peliculas)
+agregarBotonVerMas(peliculas)
+}
+await verificarYConfigurar2()
+});
+// async function verificarYConfigurar2() {
+//   // Verificar si hay datos de usuario en localStorage
+//   const usuario = localStorage.getItem('usuarioAutenticado');
+//   const btnperfil = document.querySelector(".navegacion__boton");
+//   const btnlogueoperfil=document.querySelector(".navegacion__perfil")
+  
+//   if (usuario) {
+//     // El usuario está autenticado, configurar la interfaz
   
 
    
-    if (btnperfil) {
-      btnperfil.textContent = "";
-      btnperfil.style.display = "none";
+//     if (btnperfil) {
+//       btnperfil.textContent = "";
+//       btnperfil.style.display = "none";
     
-      if (window.innerWidth > 924) {
+//       if (window.innerWidth > 924) {
         
-        btnlogueoperfil.style.display="block"
-        btnlogueoperfil.addEventListener('click',()=>{
-          window.location.href="perfiles.html"
-        })
+//         btnlogueoperfil.style.display="block"
+//         btnlogueoperfil.addEventListener('click',()=>{
+//           window.location.href="perfiles.html"
+//         })
 
-      }else{
+//       }else{
     
-         btnlogueoperfil.style.display="none"
-      }
-      // console.log(busquedainputt)
-      //   busquedainputt.style.right = "19%"
-    } else {
-      console.log("Botón de perfil no encontrado.");
+//          btnlogueoperfil.style.display="none"
+//       }
+//       // console.log(busquedainputt)
+//       //   busquedainputt.style.right = "19%"
+//     } else {
+//       console.log("Botón de perfil no encontrado.");
       
+//     }
+//   } else {
+ 
+//     console.log("No hay usuario autenticado en localStorage.");
+//   }
+// }
+
+export async function verificarYConfigurar2() {
+  // Verificar si hay datos de usuario en localStorage
+  const usuario = localStorage.getItem('usuarioAutenticado');
+  const btnperfil = document.querySelector(".navegacion__boton");
+  const btnlogueoperfil = document.querySelector(".navegacion__perfil");
+
+  if (usuario) {
+    // El usuario está autenticado, configurar la interfaz
+
+    if (btnperfil) {
+      btnperfil.style.display = "none";
+    }
+
+    if (btnlogueoperfil) {
+      if (window.innerWidth > 924) {
+        btnlogueoperfil.style.display = "block";
+        btnlogueoperfil.addEventListener('click', () => {
+          
+        });
+      } else {
+        btnlogueoperfil.style.display = "none";
+      }
     }
   } else {
- 
-    console.log("No hay usuario autenticado en localStorage.");
+    // Usuario no autenticado, ajustar visibilidad de botones
+    // if (btnperfil) {
+    //   btnperfil.style.display = "block";
+    // }
+
+    if (btnlogueoperfil) {
+      btnlogueoperfil.style.display = "none";
+    }
   }
 }
-
-
 
 function getCurrentPage() {
   const params = new URLSearchParams(window.location.search);
@@ -571,141 +743,106 @@ async function verificarYConfigurar() {
         window.location.href = "perfiles.html";
       });
     } else {
-      alert("Credenciales incorrectas. Por favor, vuelve a iniciar sesión.");
-      window.location.href = "login.html";
+      console.log("Nose encontraron credenciales  aaaa");
+      
     }
   }
 }
 
 // Llamar a la nueva función en el contexto adecuado
 verificarYConfigurar();
-const API_KEY = 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4MGQ5ZDM1YzVhODI5YTFlMWZiOWYxNmU4NGVmZDBkMyIsIm5iZiI6MTcyMzczOTI5OC4yMzY4ODcsInN1YiI6IjY2YjhiZjA2Yjk5M2E0YWM3YWY2ZWRmOCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.IjYIcnw-1YdzrBn-HlxfNmiNUbyz2oZwLoNFQ3B9rsE';
+
 
   // Nombre en español
 
-//api themviedb
-async function getMovieIdByName(movieName) {
-  try {
-      const response = await fetch(`https://api.themoviedb.org/3/search/movie?query=${encodeURIComponent(movieName)}&language=es-ES`, {
-          headers: {
-              Authorization: `Bearer ${API_KEY}`,
-              'Content-Type': 'application/json;charset=utf-8'
-          }
-      });
+// //api themviedb
+// async function getMovieIdByName(movieName) {
+//   try {
+//       const response = await fetch(`https://api.themoviedb.org/3/search/movie?query=${encodeURIComponent(movieName)}&language=es-ES`, {
+//           headers: {
+//               Authorization: `Bearer ${API_KEY}`,
+//               'Content-Type': 'application/json;charset=utf-8'
+//           }
+//       });
 
-      if (!response.ok) {
-          throw new Error('Failed to search movie by name');
-      }
+//       if (!response.ok) {
+//           throw new Error('Failed to search movie by name');
+//       }
 
-      const searchResults = await response.json();
+//       const searchResults = await response.json();
       
-      if (searchResults.results && searchResults.results.length > 0) {
-          const firstResult = searchResults.results[0];
-          const movieId = firstResult.id;
+//       if (searchResults.results && searchResults.results.length > 0) {
+//           const firstResult = searchResults.results[0];
+//           const movieId = firstResult.id;
           
-          fetchMovieDetailsById(movieId);
-      } else {
-          console.log('No se encontraron resultados.');
-      }
-  } catch (error) {
-      console.error('Error:', error);
-  }
-}
+//           fetchMovieDetailsById(movieId);
+//       } else {
+//           console.log('No se encontraron resultados.');
+//       }
+//   } catch (error) {
+//       console.error('Error:', error);
+//   }
+// }
 
-async function fetchMovieDetailsById(movieId) {
-  try {
-      const response = await fetch(`https://api.themoviedb.org/3/movie/${movieId}?language=es-ES`, {
-          headers: {
-              Authorization: `Bearer ${API_KEY}`,
-              'Content-Type': 'application/json;charset=utf-8'
-          }
-      });
+// async function fetchMovieDetailsById(movieId) {
+//   try {
+//       const response = await fetch(`https://api.themoviedb.org/3/movie/${movieId}?language=es-ES`, {
+//           headers: {
+//               Authorization: `Bearer ${API_KEY}`,
+//               'Content-Type': 'application/json;charset=utf-8'
+//           }
+//       });
 
-      if (!response.ok) {
-          throw new Error('Failed to fetch movie details');
-      }
+//       if (!response.ok) {
+//           throw new Error('Failed to fetch movie details');
+//       }
 
-      const movieDetails = await response.json();
+//       const movieDetails = await response.json();
       
-      // Usar w780 para el fondo (backdrop) y w342 para el póster
-      document.querySelector('.Detalle-Pelicula__back').src = `https://image.tmdb.org/t/p/w1280${movieDetails.backdrop_path}`;
-      // document.querySelector('.Detalle-Pelicula__img').src = `https://image.tmdb.org/t/p/w780${movieDetails.poster_path}`;
-      document.querySelector('.Detalle-Pelicula__titulo').textContent = movieDetails.title;
-      let descr  = movieDetails.overview;
-      const durate= `${movieDetails.runtime}`;
+//       // Usar w780 para el fondo (backdrop) y w342 para el póster
+//       document.querySelector('.Detalle-Pelicula__back').src = `https://image.tmdb.org/t/p/w1280${movieDetails.backdrop_path}`;
+//       // document.querySelector('.Detalle-Pelicula__img').src = `https://image.tmdb.org/t/p/w780${movieDetails.poster_path}`;
+//       document.querySelector('.Detalle-Pelicula__titulo').textContent = movieDetails.title;
+//       let descr  = movieDetails.overview;
+//       const durate= `${movieDetails.runtime}`;
   
-   // Duración
-       document.querySelector('.Detalle-Pelicula__duracion').textContent =formatDuration(durate)
+//    // Duración
+//        document.querySelector('.Detalle-Pelicula__duracion').textContent =formatDuration(durate)
 
-       document.querySelector('.Detalle-Pelicula__descripcion').textContent=cortarDescripcion(descr)
-      document.getElementById('movie-year').textContent = `${movieDetails.release_date.split('-')[0]}`;
-    //calificacion
-     // Calificación
-     const rating = movieDetails.vote_average; // Calificación en escala de 0 a 10
-     document.querySelector('.Detalle-Pelicula__calif').textContent = `${rating}`;
+//        document.querySelector('.Detalle-Pelicula__descripcion').textContent=cortarDescripcion(descr)
+//       document.getElementById('movie-year').textContent = `${movieDetails.release_date.split('-')[0]}`;
+//     //calificacion
+//      // Calificación
+//      const rating = movieDetails.vote_average; // Calificación en escala de 0 a 10
+//      document.querySelector('.Detalle-Pelicula__calif').textContent = `${rating}`;
 
-      //clasificacion
-      const releaseDatesResponse = await fetch(`https://api.themoviedb.org/3/movie/${movieId}/release_dates`, {
-        headers: {
-            Authorization: `Bearer ${API_KEY}`,
-            'Content-Type': 'application/json;charset=utf-8'
-        }
-    });
+//       //clasificacion
+//       const releaseDatesResponse = await fetch(`https://api.themoviedb.org/3/movie/${movieId}/release_dates`, {
+//         headers: {
+//             Authorization: `Bearer ${API_KEY}`,
+//             'Content-Type': 'application/json;charset=utf-8'
+//         }
+//     });
     
-    if (!releaseDatesResponse.ok) {
-        throw new Error('Failed to fetch release dates');
-    }
+//     if (!releaseDatesResponse.ok) {
+//         throw new Error('Failed to fetch release dates');
+//     }
 
-    const releaseDates = await releaseDatesResponse.json();
-    // Encuentra la clasificación en Estados Unidos
-    const releaseInfo = releaseDates.results.find(result => result.iso_3166_1 === 'US'); 
-    const certification = releaseInfo ? releaseInfo.release_dates[0].certification : 'No disponible';
+//     const releaseDates = await releaseDatesResponse.json();
+//     // Encuentra la clasificación en Estados Unidos
+//     const releaseInfo = releaseDates.results.find(result => result.iso_3166_1 === 'US'); 
+//     const certification = releaseInfo ? releaseInfo.release_dates[0].certification : 'No disponible';
     
-    // Interpretar la clasificación
-    const interpretation = interpretCertification(certification);
-    document.querySelector('.Detalle-Pelicula__clasification').textContent = `  ${interpretation}`;
+//     // Interpretar la clasificación
+//     const interpretation = interpretCertification(certification);
+//     document.querySelector('.Detalle-Pelicula__clasification').textContent = `  ${interpretation}`;
 
 
-  } catch (error) {
-      console.log('Error:', error);
-  }
-}
-function formatDuration(minutes) {
-  const hours = Math.floor(minutes / 60);
-  const remainingMinutes = minutes % 60;
-  return `${hours}h ${remainingMinutes}m`;
-}
+//   } catch (error) {
+//       console.log('Error:', error);
+//   }
+// }
 
-function interpretCertification(certification) {
-  switch (certification) {
-      case 'G':
-          return '5+'; // Apto para todas las edades
-      case 'PG':
-          return '7+'; // Apto para mayores de 7 años
-      case 'PG-13':
-          return '13+'; // Apto para mayores de 13 años
-      case 'R':
-          return '17+'; // Apto para mayores de 17 años
-      case 'NC-17':
-          return '18+'; // Solo para mayores de 18 años
-      default:
-          return 'Desconocida'; // Para clasificaciones no listadas
-  }
-}
-
-function cortarDescripcion(texto) {
-  // Divide el texto en partes utilizando el punto (.) como delimitador
-  const partes = texto.split('.');
-
-  // Verifica si hay al menos tres partes
-  if (partes.length > 3) {
-      // Une las primeras tres partes y añade puntos al final para mantener la estructura
-      return partes.slice(0, 3).join('.') + '.';
-  } else {
-      // Si hay menos de tres puntos, devuelve el texto tal cual
-      return texto;
-  }
-}
 
 const botonsession=document.querySelector(".navegacion__boton")
 
@@ -811,8 +948,8 @@ async function handlePeliculaClickR(event) {
       }
 
       // Procesar la película seleccionada
-      MOVIE_NAME = peliculaSeleccionada.nombre;
-      getMovieIdByName(MOVIE_NAME);
+      // MOVIE_NAME = peliculaSeleccionada.nombre;
+      // getMovieIdByName(MOVIE_NAME);
       await cargarVideoPelicula(peliculaSeleccionada.Video);
       const irVideo = document.querySelector("#fullscreenBtn");
       if (irVideo) {
@@ -833,4 +970,24 @@ agregarPeliculasRecientes(PelisRecientes);
 // Configura el manejador de eventos para el contenedor de tarjetas
 document.querySelector(".Pelis-Recientes__grid").addEventListener("click", (event) => {
   handlePeliculaClickR(event);
+});
+
+const cerrarSession = document.querySelector("#cerrarsession");
+cerrarSession.addEventListener("click", async () => {
+  
+
+  // Llamada a la función cerrarSesion()
+  await cerrarSesion();
+
+  // Cambiar la visibilidad de los elementos después de cerrar sesión
+  if(viewp>920){
+
+    const navegacionPerfil = document.querySelector('.navegacion__perfil');
+    const navegacionBoton = document.querySelector('.navegacion__boton');
+   navegacionPerfil.style.display = 'none'
+   navegacionBoton.style.display = 'block';
+   
+    console.log("Sesión cerrada y usuario redirigido.");
+  }
+
 });

@@ -1,9 +1,11 @@
-
+import {calcularProgramasPorPaginaActual} from "./cantidaPagina";
 export const iconobusqueda = document.querySelector('.busqueda-label');
 export const buscarPelicula = document.querySelector('.buscar-pelicula');
 export const buscarPeliculaInput = document.querySelector('.buscar__input');
 export const btnBuscarPelicula = document.querySelector('.buscar__btn');
 export const seccionPeliculas = document.querySelector('.Peliculas');
+
+const {limite}=calcularProgramasPorPaginaActual;
 
 try {
     
@@ -39,7 +41,7 @@ export function filtrarPeliculasPorNombre(nombre, peliculas) {
     });
 }
 
-export function actualizarPeliculas(buscarPeliculaInput, peliculas, generarPeliculas, generarPaginacion, seccionPeliculas, paginaActual) {
+export function actualizarPeliculas(buscarPeliculaInput, peliculas, generarPeliculas, generarPaginacion, setPage,seccionPeliculas, paginaActual) {
     const nombre = buscarPeliculaInput.value.trim(); // Eliminamos espacios en blanco
     console.log('Valor de búsqueda:', nombre);
 
@@ -57,11 +59,15 @@ export function actualizarPeliculas(buscarPeliculaInput, peliculas, generarPelic
         const peliculasFiltradas = filtrarPeliculasPorNombre(nombre, peliculas);
         console.log('Películas filtradas:', peliculasFiltradas);
         paginaActual = 1; // Restablecer a la primera página
-        generarPeliculas(peliculasFiltradas); // Actualizar el grid con las películas filtradas
+       
+        generarPeliculas(peliculasFiltradas,limite); // Actualizar el grid con las películas filtradas
         
         // Verificar el ancho de la pantalla y generar paginación solo si es mayor a 900px
         if (window.innerWidth > 900) {
-            console.log(window.innerWidth ,"holaaaaa2222")
+            paginaActual = 1; // Restablecer a la primera página
+        setPage(1)
+       
+        generarPeliculas(peliculasFiltradas,limite); // Actualizar el grid con las películas filtradas
             generarPaginacion(peliculasFiltradas); // Actualizar la paginación según las películas filtradas
         }
     }

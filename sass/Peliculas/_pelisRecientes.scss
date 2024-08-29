@@ -19,11 +19,11 @@
       
         @include m.telefonom {
             display: flex;
-            gap: 0.4rem;
+            padding: 0.4rem;
         }
     
        @include m.telefonoFull {
-        gap: unset;
+        padding: unset;
        }
     //    overflow: hidden;
     }
@@ -38,6 +38,12 @@
         @include m.telefonoFull {
             width: 100%;
             border-radius: 1rem;
+        }
+        @include m.tabletxl {
+            width: 24rem;
+        }
+        @include m.tabletM {
+           width: 18rem;
         }
         @include m.desktop {
             width: 100%;
@@ -62,14 +68,19 @@
         height: 100%;
 
         object-fit: cover;
+        
     }
     &__nombre{
         margin-top: 1rem;
         height: 4rem;
         font-size: 1.2rem;
         color: white;
-        border-radius: 1rem;
+        width: auto;
+        overflow: hidden;
+        color: #ffffff;
         text-align: center;
+        white-space: nowrap; /* Asegura que el texto no se rompa en varias líneas */
+        text-overflow: ellipsis;
     }
 }
 
@@ -99,6 +110,7 @@
 .swiper-wrapper{
     padding: 0 0.4rem;
     display: grid;
+    cursor: pointer;
     grid-template-columns: repeat(15,min-content);
     
     @include m.telefonom {
@@ -111,28 +123,38 @@
         grid-template-columns: repeat(15,18.4rem);
         padding: unset;
     }
+    @include m.tabletsmall {
+        grid-template-columns: repeat(15,19.5rem);
+        padding: unset;
+    }
+    @include m.tabletmsmall {
+        grid-template-columns: repeat(15,16.6rem);
+        padding: unset;
+    }
+   
     @include m.tablet {
         grid-template-columns: repeat(15,23.7rem);
         padding: unset;
     }
-    @include m.tabletM {
-        grid-template-columns: repeat(15,20.2rem);
+    @include m.tabletxl {
+        grid-template-columns: repeat(15,26rem);
         padding: unset;
     }
+    @include m.tabletM {
+        grid-template-columns: repeat(15,19.3rem);
+        padding: unset;
+     }
     @include m.desktop {
         grid-template-columns: repeat(15,1fr); 
         padding: unset; 
     }  
   
-    cursor: pointer;
+    
     
 }
   .swiper-slide {
     width: 100%;
     height: auto;
      border-radius: 1rem;
-     @include m.desktop {
-        // width: 10rem;
-        // height: 25rem;
-     }
+   
   }

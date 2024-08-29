@@ -59,21 +59,22 @@
 
 
 
-import { nodeResolve } from '@rollup/plugin-node-resolve'
-// export default {
+import { nodeResolve } from '@rollup/plugin-node-resolve';
+// import commonjs from '@rollup/plugin-commonjs';
 
-//   input: 'src/Login/login.js', // archivo de entrada de tu aplicación
+// export default {
+//   input: 'src/Login/login.js',
 //   output: {
-//     file: 'dist/bundle7.js', // archivo de salida generado
-//     sourcemap: 'inline', // mapeo de código fuente para depuración
-//     format: 'iife' // formato de salida, en este caso autoinvocable
+//     file: 'dist/bundle7.js',
+//     sourcemap: 'inline',
+//     format: 'iife'
 //   },
 //   plugins: [
-//     nodeResolve() // resuelve los módulos npm durante la construcción
+//     nodeResolve(),
+//     commonjs() // Convierte los módulos CommonJS a ES6 para que Rollup los pueda procesar
 //   ]
 // };
-
-// import resolve from '@rollup/plugin-node-resolve';
+import resolve from '@rollup/plugin-node-resolve';
 
 // export default {
 //   input: 'dist/bundle7.js', // Ruta a tu archivo pelis.js
@@ -136,6 +137,29 @@ import { nodeResolve } from '@rollup/plugin-node-resolve'
 
 
 // export default {
+//   input: "src/cambiarName/name.js",
+//   output: {
+//     file: 'dist/name2.js',
+//     format: 'iife',
+//   },
+//   plugins: [
+//     resolve(),
+//     commonjs({
+//       namedExports: {
+//         'node_modules/platform/platform.js': ['platform'] // especifica los exports aquí
+//       }
+//     }),
+//     terser({
+//       format: {
+//         comments: false,
+//       }
+//     })
+//   ]
+// };
+
+
+
+// export default {
 //   input: "./src/pelis.js",
 //   output: [
 //     {
@@ -187,7 +211,28 @@ import commonjs from '@rollup/plugin-commonjs';
 //   ]
 // };
 
-import resolve from '@rollup/plugin-node-resolve';
+
+
+//para cuenta
+
+
+
+// export default {
+//   input: "./src/DatosCuenta/cuenta.js",
+//   output: {
+//     file: "./public/cuenta.js",
+//     sourcemap: 'inline',
+//     format: 'iife',
+//     name: 'MyBundle'
+//   },
+//   plugins: [
+//     nodeResolve(),
+//     commonjs() // Añade el plugin commonjs
+//   ]
+// };
+
+
+// import resolve from '@rollup/plugin-node-resolve';
 
 
 export default {

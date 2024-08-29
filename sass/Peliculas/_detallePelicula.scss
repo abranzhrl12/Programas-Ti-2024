@@ -2,7 +2,7 @@
 @use '../global/mixin' as m;
 .Detalle-Pelicula{
     width: 100%;
-    min-height:50%;
+    min-height:100vh;
     position: fixed;
     top: 0rem;
     z-index: 600;

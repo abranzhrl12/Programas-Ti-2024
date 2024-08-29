@@ -8,7 +8,11 @@ export function generarPlantillaPelicula(pelicula) {
             <figure class="Peliculas__figure">
                 <img class="Peliculas__img" src="${pelicula.imagen}" alt="">
             </figure>
-            <p class="Peliculas__nombre">${pelicula.nombre}</p>
+            <div class="Peliculas__infor">
+            <span class="Peliculas__nombre">${pelicula.nombre}</span>
+              <span class="Peliculas__Año">${pelicula.Año}</span>
+            </div>
+            
         </div>
     `;
 }

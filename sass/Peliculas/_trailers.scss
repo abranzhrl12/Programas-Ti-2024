@@ -1,0 +1,200 @@
+@use './../global/mixin' as m;
+
+.trailers{
+    visibility: hidden;
+    @include m.tabletM {
+        visibility: visible;
+        position: fixed;
+        z-index: 999;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        margin-top: 1.8rem;
+        pointer-events: none;
+    }
+  
+&__pelicula{
+    @include m.tabletM {
+        flex: 1;
+   
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+        padding-left: 2rem;
+    }
+  
+}
+&__estrellas{  
+    @include m.tabletM {
+        display: flex;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+   
+}
+
+&__info{
+    @include m.tabletM {
+        display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem; 
+    }
+   
+ 
+    }
+
+    &__descripcion{
+
+        @include m.tabletM {
+            display: flex;
+    
+            gap: 2rem; 
+        }
+      
+    }
+    &__tiempo{
+
+        @include m.tabletM {
+            position: relative;
+        padding-left: 2rem;
+        }
+        
+      
+        
+    }
+    &__tiempo::before{
+        @include m.tabletM {
+            content: "";
+            display: block;
+            width: 2px;
+            height:100%;
+            left: 0;
+            background-color: white;
+            position: absolute;
+        }
+       
+    }
+    &__interpretacion{
+        @include m.tabletM {
+            position: relative;
+        padding-left: 2rem; 
+        }
+       
+    }
+    &__interpretacion::before{
+        @include m.tabletM {
+            content: "";
+            display: block;
+            width: 2px;
+            height:100%;
+            left: 0;
+            background-color: white;
+            position: absolute;
+        }
+       
+    }
+
+&__resumen{
+
+    @include m.tabletM {
+        font-size: 1.8rem;
+    text-align: left; 
+    }
+   
+}
+&__play{
+
+    @include m.tabletM {
+        display: flex;
+    width: max-content;
+    align-content: center;
+    gap: 1rem;
+    text-decoration: none;
+    color: white;
+    padding-left: 1rem;
+   padding: 1rem 2rem;
+   background-color: rgba(255, 255, 255, 0.165);
+   border-radius: 1rem;
+   backdrop-filter: blur(5px);
+   pointer-events: auto; 
+    }
+
+   
+}
+//este es de la liena de tiempo
+&__siguiente{
+
+    @include m.tabletM {
+        flex: 1;
+  
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;   
+    }
+  
+}
+}
+
+
+.linea-tiempo{
+    @include m.tabletM {
+        display: block;
+        width: min-content;
+        height: auto;
+        align-self: center;
+        padding: 0 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 7rem;
+        overflow: hidden;
+        margin-top: -7rem;
+    }
+   
+
+}
+.linea-tiempo__boton{
+@include m.tabletM {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    position: relative;
+    background-color: white;
+    cursor: pointer;
+}
+
+  
+}
+:where(.linea-tiempo__boton:not(.linea-tiempo__boton:last-child)):after {
+
+    @include m.tabletM {
+        content: "";
+    width: 4px;
+    height: 950%;
+    background-color: white; /* O el color deseado */
+    position: absolute;
+    top: 50%;
+    left: calc(50% - 2px);
+    z-index: 0; 
+    }
+   
+}
+
+
+.linea-tiempo__boton.active{
+    @include m.tabletM {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: white !important;
+        position: relative;
+    }
+   
+}

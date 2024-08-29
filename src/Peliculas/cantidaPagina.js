@@ -3,9 +3,9 @@ export function calcularProgramasPorPaginaActual() {
         const anchoVentana = window.innerWidth;
 
         if (anchoVentana > 350 && anchoVentana < 455) {
-            return { inicial: 21, incremento: 9, limite: 75 };
+            return { inicial: 21, incremento: 15, limite: 75 };
         } else if (anchoVentana > 455 && anchoVentana < 572) {
-            return { inicial: 201, incremento: 9, limite: 88 };
+            return { inicial: 201, incremento: 15, limite: 88 };
         } else if (anchoVentana > 571 && anchoVentana < 599) {
             return { inicial: 29, incremento: 16, limite: 89 };
         } else if (anchoVentana > 598 && anchoVentana < 714) {

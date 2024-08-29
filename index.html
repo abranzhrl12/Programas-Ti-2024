@@ -24,15 +24,18 @@
   <link rel="stylesheet" href="Public/style.css" />
   <!-- Scripts diferidos -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js" defer></script>
+
+   <!-- Plyr JS -->
+   <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js" defer></script>
+   <!-- HLS.js -->
+   <script src="https://cdn.jsdelivr.net/npm/hls.js@latest" defer></script>
+
+  <script src="./dist/trailer.js" defer></script>
+
   <script src="/dist/pelis.min.js" defer></script>
+ 
 </head>
-<!-- <style>
-  @starting-style{
-	.Peliculas__card{
-	opacity 0;
-}
-}
-</style> -->
+
 <body>
   <header class="header">
     <nav class="navegacion" id="nav">
@@ -63,7 +66,7 @@
               <a href="musica.html" class="lista__link lista__link--pading"><span>Series</span></a>
             </li>
             <li class="lista__item">
-              <a href="#" class="lista__link">Extrenos</a>
+              <a href="detalle.html" class="lista__link" >Extrenos</a>
             </li>
             <li class="lista__item">
               <a href="https://onlinefutbol.jdoxx.com/" class="lista__link">Recien agregados</a>
@@ -104,9 +107,9 @@
               <li class="perfiles__item">
                 <a class="perfiles__link" href="perfiles.html">Administrar Perfiles</a>
               </li>
-              <li class="perfiles__item">Configuracion</li>
+              <li class="perfiles__item"> <a href="cuenta.html">Configuracion</a></li>
               <li class="perfiles__item">Ayuda</li>
-              <li class="perfiles__item">Cerrar Sesssion</li>
+              <li class="perfiles__item" id="cerrarsession">Cerrar Sesssion</li>
             </ul>
           </section>
         </div>
@@ -117,11 +120,92 @@
     <div class="hero">
       <swiper-container class="mySwiper hero" navigation="false" space-between="30" centered-slides="true">
         <swiper-slide>
-          <picture>
-            <source srcset="./Assets/ImagenesPortada/planeta_de_los_simios_2024_portada-small.webp"
-              media="(max-width: 650px)" />
-            <img src="./ImagenesTV/cesar.webp" alt="Cesar" class="portada" loading="lazy" />
-          </picture>
+       
+          <video id="video" playsinline muted autoplay>
+           
+          </video>
+          <div class="trailers">
+
+            <div class="trailers__pelicula">
+      
+            
+          <div class="trailers__estrellas" id="star-container">
+                  
+          <defs>
+            <style>
+              .cls-1 {
+                fill: yellow;
+              }
+            </style>
+          </defs>
+          <g id="Capa_1-2" data-name="Capa 1">
+            <path stroke="yellow" class="cls-1" d="m6.37.27l1.45,2.95c.07.14.21.24.37.27l3.25.47c.4.06.56.55.27.83l-2.35,2.29c-.12.11-.17.27-.14.43l.56,3.24c.07.4-.35.7-.71.52l-2.91-1.53c-.14-.07-.31-.07-.45,0l-2.91,1.53c-.36.19-.78-.12-.71-.52l.56-3.24c.03-.16-.03-.32-.14-.43L.15,4.79c-.29-.28-.13-.78.27-.83l3.25-.47c.16-.02.3-.12.37-.27L5.49.27c.18-.36.7-.36.88,0Z"/>
+          </g>
+        </svg>
+              </div>
+         
+          <div class="trailers__info">
+              <h2 class="trailers__titulo">DEADPOOL Y WOLVERINE</h2>
+              <div class="trailers__descripcion">
+                  <span class="trailers__año">2024</span>
+                  <span class="trailers__tiempo">123min</span>
+                  <span class="trailers__interpretacion">18+</span>
+              </div>
+             
+          </div>
+          <div class="trailers__resumen">
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum id ducimus necessitatibus, consectetur ipsum vel.</p>
+          </div>
+          <div class="trailers__reproducir">
+             <a href="#" class="trailers__play">
+              <!-- <span class="trailers__icono-play"> -->
+                  <svg id="Capa_8" width="28" data-name="Capa 2" viewBox="0 0 20.38 20.38">
+                      <defs>
+                        <style>
+                          .cls-9 {
+                            fill: #fff;
+                          }
+                    
+                          .cls-2 {
+                            fill: none;
+                            stroke: #fff;
+                            stroke-miterlimit: 10;
+                            stroke-width: .5px;
+                          }
+                        </style>
+                      </defs>
+                      <g id="Capa_1-2" >
+                        <g>
+                          <path class="cls-9"  d="m7.55,13.71l1.06-2.53c.27-.64.27-1.36,0-2l-1.06-2.53c-.23-.54.37-1.05.87-.75l6.11,3.76c.38.23.38.79,0,1.03l-6.11,3.76c-.5.31-1.1-.21-.87-.75Z"/>
+                          <circle class="cls-2" cx="10.19" cy="10.19" r="9.94"/>
+                        </g>
+                      </g>
+                    </svg>
+                    
+              <!-- </span> -->
+             <p class="trailers_play-texto">Ver ahora</p> 
+             </a>
+          </div>
+              </div>  
+      
+      
+      
+              <div class="trailers__siguiente">
+                  <div class="linea-tiempo">
+           
+                      <div class="linea-tiempo__boton"></div>
+                      <div class="linea-tiempo__boton"></div>
+                      <div class="linea-tiempo__boton active"></div>
+                      <div class="linea-tiempo__boton"></div>
+                      <div class="linea-tiempo__boton"></div>
+                     
+                    </div>
+                    <button class="linea-tiempo__boton-navegacion linea-tiempo__boton-navegacion--abajo"></button>
+                    <button class="linea-tiempo__boton-navegacion linea-tiempo__boton-navegacion--arriba"></button>
+              </div>
+         
+          </div>
+     
         </swiper-slide>
         <swiper-slide>
           <picture>
@@ -129,26 +213,17 @@
             <img src="./ImagenesTV/dragon ball.webp" alt="Dragon Ball" class="portada" loading="lazy" />
           </picture>
         </swiper-slide>
-        <swiper-slide>
-          <picture>
-            <source srcset="./Assets/ImagenesPortada/intensamente2_portada.webp" media="(max-width: 650px)" />
-            <img src="./ImagenesTV/intensamente-2-lecciones.webp" alt="Intensamente 2 Lecciones" class="portada"
-              loading="lazy" />
-          </picture>
-        </swiper-slide>
-
-        <swiper-slide>
-          <picture>
-            <source srcset="./ImagenesTV/descendants-3-small.webp" media="(max-width: 650px)" />
-            <img src="./ImagenesTV/descendants-3.jpg" alt="Descendants 3" class="portada" loading="lazy" />
-          </picture>
-        </swiper-slide>
-
       </swiper-container>
     </div>
 
   </header>
-
+  <div class="videoModal">
+    <div class="videoModal__modalContent">
+        <h5>Welcome!</h5>
+        <p>Click the button below to start watching the video with sound.</p>
+        <button class="videoModal__close"><svg class="videoModal__icono" width="22" viewBox="0 0 384 512"><path fill="#ffffff" d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg></button>
+    </div>
+</div>
 
   <div class="nombres">
     <div class="nombres__contenedor">
@@ -355,40 +430,6 @@
 
     </ul>
   </div>
-  <!-- <div class="Detalle-Pelicula__poster"> 
-                <img class="Detalle-Pelicula__img" src="" alt="Carátula de la Película">  
-             
-          </div> 
-      <section class="Detalle-Pelicula">
-   
-        <div class="Detalle-Pelicula__portada" >
-            <img class="Detalle-Pelicula__back" id="portadaimg"  src="" alt="Poster de Fondo">
-            
-        </div>
-        <div class="Detalle-Pelicula__texts">
-          <div>
-            <h1 class="Detalle-Pelicula__titulo">Título de la Película</h1>
-            <p class="Detalle-Pelicula__generos">Familia / Animacion / etc</p>
-          </div>
-         
-          <div class="Detalle-Pelicula__info">
-               
-            <p class="Detalle-Pelicula__descripcion">Descripción de la Película</p>
-            <div class="Detalle-Pelicula__temp">
-              <p class="Detalle-Pelicula__clasification">2h</p>
-              <p id="movie-year" class="Detalle-Pelicula__year">2022</p>
-              <p class="Detalle-Pelicula__duracion">2h</p>
-              <p class="Detalle-Pelicula__calif"></p>
-             
-            </div>
-           
-        </div>
-            <button class="Detalle-Pelicula__verbtn">Ver Pelicula</button>
-           
-        </div>
-   
-    </section>  -->
-
   <footer class="footer">
     <div class="footer__contenedor">
       <div class="footer__item">
@@ -420,7 +461,7 @@
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script>
+  <script >
   function getSlidesPerView() {
   const width = window.innerWidth;
   let number;
@@ -438,6 +479,9 @@
       case width > 768:
       number = 3;
       break;
+      case width > 714:
+      number = 4;
+      break;
       case width > 600:
       number = 3;
       break;
@@ -448,7 +492,7 @@
       number = 3;
       break;
     default:
-      number = 2;
+      number = 3;
       break;
   }
 
@@ -476,8 +520,6 @@ function initSwiper() {
 
 // Inicializa Swiper al cargar la página
 initSwiper();
-
-// Agrega un event listener para el cambio de tamaño de la ventana
 window.addEventListener('resize', initSwiper);
   </script>
 </body>

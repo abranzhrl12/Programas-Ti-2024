@@ -2,18 +2,21 @@
 
 .navegacion {
   width: 100%;
-  padding: 0 3.5rem;
+  padding: 0 3.2rem;
   height: 7.8rem;
   background: var(--color_fondo);
+ 
   backdrop-filter: blur(10px);
   display: flex;
   top: 0;
   align-items: center;
   position: fixed;
   z-index: 300;
+  
 
 
   @include m.tabletM {
+
        .lista {
       
       position: static;
@@ -64,6 +67,9 @@
     
     @include m.tabletM {
       display: block;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     
      }
    
@@ -110,7 +116,7 @@
 
     display: flex;
     margin-left: 24%;
-   
+    
     @include m.telefonoFull {
       margin-left: 48.5%;
      
@@ -150,9 +156,7 @@
    
     display: none;  
     background-color: white;
-    @include m.tablet {
-      display: none;
-    }
+  
     @include m.tabletM {
          
       display: block; 
@@ -211,23 +215,24 @@
   list-style: none;
   width: 100%;
   margin-top: -0.4rem;
-  // background-color: #131218;
-  background-color: #07092B;
-  background-color: transparent;
+ 
+  background: var(--color_fondo);
   display: none;
 
   @include m.tabletM {
     display: block;
+   
   
   }
  @include m.desktopFull {
   display: flex;
-  gap: 5rem;
+  gap: 4rem;
  }
 
   &__item {
     display: inline-block;
-    height: fit-content;
+    width: min-content;
+    // height: fit-content;
     display: flex;
     align-items: center;
     color: #ffffff;
@@ -237,6 +242,8 @@
     justify-content: center;
     align-items: center;
     text-wrap: nowrap;
+  
+    
     @include m.tablet {
       padding: 0;
     }
