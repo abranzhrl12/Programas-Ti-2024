@@ -1,6 +1,6 @@
 @use "../global/mixin" as m;
 .hero{
-    margin-top: 4rem;
+ 
     width: 100%;
   
     // margin-top: 8rem;
@@ -12,10 +12,11 @@
         max-height: 40.1;
     }
     @include m.desktop {
-        height: 44.2rem;
+        height: 46.2rem;
     }
     @include m.desktopFull {
-        height: 58rem;
+        height: 64.4rem;
+        mask-image: linear-gradient(#1B233A 99%, transparent);
     }
 }
 swiper-container {

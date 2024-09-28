@@ -4,16 +4,19 @@
   width: 100%;
   padding: 0 3.2rem;
   height: 7.8rem;
-  background: var(--color_fondo);
- 
-  backdrop-filter: blur(10px);
+  // background: var(--color_fondo);
+  
+
+  // background: linear-gradient(90deg, #151E2D, #171F30, #192233);
+  // background: linear-gradient(90deg, #192133, #171F30, #182031);
+
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.007);
+  backdrop-filter: blur(1px);
   display: flex;
   top: 0;
   align-items: center;
   position: fixed;
   z-index: 300;
-  
-
 
   @include m.tabletM {
 
@@ -216,7 +219,7 @@
   width: 100%;
   margin-top: -0.4rem;
  
-  background: var(--color_fondo);
+  background: transparent;
   display: none;
 
   @include m.tabletM {
@@ -347,4 +350,8 @@
   100% {
     opacity: 1;
   }
+}
+.scrolled{
+  background: linear-gradient(90deg, #1a2236, #1f3962, #22396c);
+  // background: linear-gradient(90deg, #1a2236, #1b2f50, #15264a);
 }

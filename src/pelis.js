@@ -153,13 +153,12 @@ async function handlePeliculaClick(event) {
         window.location.href = "login.html";
         return;
       }
-      // const infopeli=document.querySelector(".Detalle-Pelicula")
-      // infopeli.classList.toggle.add('active')
-      MOVIE_NAME =  peliculaSeleccionada.nombre;
-      getMovieIdByName(MOVIE_NAME);
-      await cargarVideoPelicula(peliculaSeleccionada.Video);
-      const irVideo = document.querySelector("#fullscreenBtn");
-      irVideo.scrollIntoView({ behavior: "smooth" });
+    
+    
+        // Abre una nueva pestaña con la URL detalle.html?id=idPelicula
+        window.location.href = `detalle.html?id=${idPelicula}`;
+
+     
       // Agregar un retraso de 200ms antes de ejecutar la función generarPeliculas
      
     }
@@ -170,6 +169,12 @@ async function handlePeliculaClick(event) {
     window.location.href = "login.html";
   }
 }
+
+
+  // const infopeli=document.querySelector(".Detalle-Pelicula")
+      // infopeli.classList.toggle.add('active')
+      // MOVIE_NAME =  peliculaSeleccionada.nombre;
+      // getMovieIdByName(MOVIE_NAME);
 inicializarBusqueda(iconobusqueda, buscarPelicula, buscarPeliculaInput);
 
 btnBuscarPelicula.addEventListener("click", () => {
@@ -450,23 +455,42 @@ window.addEventListener("DOMContentLoaded", async ()=> {
     console.error("Error al manejar el evento DOMContentLoaded:", error);
   }
 });
-let viewp=window.innerWidth
-window.addEventListener("resize", async() => {
-  viewp=window.innerWidth
-  programasPorPagina = calcularProgramasPorPaginaActual();
-  if(viewp > 920){
-    console.log(viewp)
-    agregarPeliculasAlGrid(peliculas)
-    generarPaginacion(peliculas)
-    console.log(programasPorPagina)
-    verificarYConfigurar2()
-  
-}else if(viewp<920){
-  agregarPeliculasAlGrid(peliculas)
-agregarBotonVerMas(peliculas)
-}
-await verificarYConfigurar2()
+let viewp = window.innerWidth;
+let resizeTimeout;
+
+window.addEventListener("resize", () => {
+  clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(async () => {
+    const newViewp = window.innerWidth;
+
+    // Verificamos si el ancho ha cambiado en al menos 50px
+    if (Math.abs(newViewp - viewp) >= 50) {
+      console.log(`Ancho anterior: ${viewp}, Nuevo ancho: ${newViewp}`);
+
+      // Restamos 50 píxeles del ancho total para el cálculo
+      const adjustedWidth = newViewp - 50;
+      const programasPorPagina = calcularProgramasPorPaginaActual(adjustedWidth);
+
+      if (newViewp > 920) {
+        console.log(`Ancho mayor a 920: ${newViewp}`);
+        agregarPeliculasAlGrid(peliculas);
+        generarPaginacion(peliculas);
+        console.log(`Programas por página: ${programasPorPagina}`);
+        await verificarYConfigurar2();
+      } else if (newViewp < 920) {
+        console.log(`Ancho menor a 920: ${newViewp}`);
+        agregarPeliculasAlGrid(peliculas);
+        agregarBotonVerMas(peliculas);
+      }
+
+      viewp = newViewp; // Actualizamos el ancho anterior
+      await verificarYConfigurar2();
+    }
+  }, 200); // Espera 200 ms después de que el usuario deja de redimensionar
 });
+
+
+
 // async function verificarYConfigurar2() {
 //   // Verificar si hay datos de usuario en localStorage
 //   const usuario = localStorage.getItem('usuarioAutenticado');
@@ -571,22 +595,7 @@ function setPage(page) {
   // generarPaginacion(peliculas);
 }
 
-function cargarVideoPelicula(pelicula) {
-  try {
-    buscarPelicula.classList.remove("buscar-pelicula--active");
-    const videoPelicula = document.querySelector(".DetallePrograma__ConVideo");
-    if (!videoPelicula) {
-      throw new Error(
-        "No se encontró el contenedor .DetallePrograma__ConVideo."
-      );
-    }
 
-    const plantilla = `
-      <iframe id="myIframe" src=${pelicula}?autoplay=true&loop=false&muted=false&preload=true&responsive=true" loading="lazy" style="border:0;height:100%;width:100%;" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true"></iframe>
-    `;
-    videoPelicula.innerHTML = plantilla;
-  } catch (error) {}
-}
 window.addEventListener("popstate", () => {
   paginaActual = getCurrentPage(); // Actualizar la página actual según la URL
   setPage(paginaActual);
@@ -599,9 +608,9 @@ window.addEventListener("load", () => {
   setPage(currentPage); // Establecer la página actual y cargar los programas
 });
 
-import { enableFullscreen } from "./Peliculas/botonAgrandarVideo";
+// import { enableFullscreen } from "./Peliculas/botonAgrandarVideo";
 // Activa el modo fullscreen al hacer clic en el botón
-enableFullscreen();
+// enableFullscreen();
 const peliculasEstreno = peliculasData.Peliculas.Extreno;
 function configurarEventosGeneros() {
   const categorias = document.querySelectorAll(".Genero-categorias__figura");
@@ -946,15 +955,14 @@ async function handlePeliculaClickR(event) {
         window.location.href = "login.html";
         return;
       }
+      window.location.href = `detalle.html?id=${idPelicula}`;
 
-      // Procesar la película seleccionada
-      // MOVIE_NAME = peliculaSeleccionada.nombre;
-      // getMovieIdByName(MOVIE_NAME);
-      await cargarVideoPelicula(peliculaSeleccionada.Video);
-      const irVideo = document.querySelector("#fullscreenBtn");
-      if (irVideo) {
-        irVideo.scrollIntoView({ behavior: "smooth" });
-      }
+  
+      // await cargarVideoPelicula(peliculaSeleccionada.Video);
+      // const irVideo = document.querySelector("#fullscreenBtn");
+      // if (irVideo) {
+      //   irVideo.scrollIntoView({ behavior: "smooth" });
+      // }
     } else {
       console.log("No se encontró la película con el ID:", idPelicula);
     }

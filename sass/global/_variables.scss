@@ -1,15 +1,13 @@
-$fuente_principal: "Poppins", sans-serif;
-$telefono: 390px;
-$telefonom:414px;
-$telefonoFull: 520px;
-$tabletsmall:630px;
-$tabletmsmall:714px;
-$tablet: 768px;
-$tabletxl:810px;
-$tabletM: 900px;
-$desktop: 1024px;
-$color-card: #fff;
-$color-primario:#14131a;
-$desktopFull: 1367px;
-$desktopfulhd: 1500px;
-$TV: 1925px;
+// Puntos de quiebre en un enfoque desktop-first
+$desktop: 1024px;          // Desktops
+$desktop-full: 1367px;     // Large desktops
+$desktopfulhd: 1500px; // Ultra HD desktops
+$tablet-medium: 900px;     // Medium tablets
+$tabletxl: 810px; // Extra-large tablets
+$tablet: 768px;            // Tablets
+$tabletmsmall: 714px; // Medium-small tablets
+$tabletsmall: 630px;      // Small tablets
+$phone-large: 520px;       // Phone (large screens)
+$telefonom: 414px;      // Phone (medium screens)
+$telefono: 390px;             // Phone (small screens)
+$TV: 1918;

@@ -6,7 +6,7 @@ export function generarPlantillaPelicula(pelicula) {
     return `
     <div class="Peliculas__card" data-id="${pelicula.id}">
             <figure class="Peliculas__figure">
-                <img class="Peliculas__img" src="${pelicula.imagen}" alt="">
+                <img loading="lazy" class="Peliculas__img" src="${pelicula.imagen}"  alt="">
             </figure>
             <div class="Peliculas__infor">
             <span class="Peliculas__nombre">${pelicula.nombre}</span>
@@ -22,7 +22,7 @@ export function generarPlantillaPelicula2(pelicula) {
    <div class="Pelis-Recientes__slider swiper-slide">
     <div class="Pelis-Recientes__card" data-id="${pelicula.id}">
             <figure class="Pelis-Recientes__figure">
-                <img class="Pelis-Recientes__img" src="${pelicula.imagen}" alt="">
+                <img loading="lazy" class="Pelis-Recientes__img" src="${pelicula.imagen}" alt="">
             </figure>
             <p class="Pelis-Recientes__nombre">${pelicula.nombre}</p>
         </div>

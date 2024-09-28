@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Series</title>
+</head>
+<style>
+  body{
+    background-color: rgb(14, 62, 88);
+    color: white;
+  }
+.series__episodes{
+  display: flex;
+  gap: 2rem;
+
+}
+.series__episode{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+img{
+  display: block;
+  width: 15rem;
+}
+</style>
+<body>
+
+<div id="seriesContainer"></div>
+
+<script>
+const seriesData = {
+  Series: [
+    {
+      id: 5000,
+      nombre: "KIMETZU NO YAIBA",
+      imagen: "../../Assets/ImagenesSeries/serie_ejemplo_1.webp",
+      imagen_small: "../../Assets/ImagenesSeries/serie_ejemplo_1-small.webp",
+      imagen_tv: "../../Assets/ImagenesSeries/tv/serie_ejemplo_1-tv.webp",
+      Generos: ["Drama", "Ciencia Ficción"],
+      Año: "2024",
+      Temporadas: [
+        {
+          temporada: 1,
+          capitulos: [
+            {
+              capitulo: 1,
+              nombre: "Capítulo 1: El Comienzo",
+              imagen: "./Assets/seriesAnime/kimetzunoyaibatemp1.webp",
+              Video: "https://iframe.mediadelivery.net/embed/261653/dfbee95c-7e0f-4a3c-bc64-d5e31470f5fd",
+              Duracion: "45 min"
+            },
+            {
+              capitulo: 2,
+              nombre: "Capítulo 2: La Revelación",
+              imagen: "./Assets/seriesAnime/kimetzunoyaibatemp1.webp",
+              Video: "https://iframe.mediadelivery.net/embed/261653/08eab860-e140-4f63-bc55-c5b9fbff8a55",
+              Duracion: "50 min"
+            }
+          ]
+        },
+        {
+          temporada: 2,
+          capitulos: [
+            {
+              capitulo: 1,
+              nombre: "Capítulo 1: El Retorno",
+                  imagen: "./Assets/seriesAnime/temp2.webp",
+              Video: "https://iframe.mediadelivery.net/embed/261653/d84fc988-5d2c-42d7-98de-2b1ae696295b",
+              Duracion: "52 min"
+            }
+            // Puedes seguir agregando más capítulos y temporadas aquí
+          ]
+        }
+      ]
+    },
+    // Agrega más series aquí si lo deseas
+  ]
+};
+const seriesContainer = document.getElementById('seriesContainer');
+
+seriesData.Series.forEach(serie => {
+  const serieElement = document.createElement('div');
+  serieElement.className = 'series__item'; // Block: series, Element: item
+  serieElement.innerHTML = `<h2 class="series__title">${serie.nombre} (${serie.Año})</h2>`;
+
+  serie.Temporadas.forEach(temporada => {
+    const temporadaElement = document.createElement('div');
+    temporadaElement.className = 'series__season'; // Block: series, Element: season
+    temporadaElement.innerHTML = `<h3 class="series__season-title">Temporada ${temporada.temporada}</h3>`;
+
+    const episodesWrapperElement = document.createElement('div');
+    episodesWrapperElement.className = 'series__episodes'; // Block: series, Element: episodes (contiene todos los episodios)
+
+    temporada.capitulos.forEach(capitulo => {
+      const capituloElement = document.createElement('div');
+      capituloElement.className = 'series__episode'; // Block: series, Element: episode
+      capituloElement.innerHTML = `
+        <h4 class="series__episode-title"> ${capitulo.nombre}</h4>
+        <a class="series__episode-link" href="${capitulo.Video}" target="_blank">
+          <img class="series__episode-image" src="${capitulo.imagen}" alt="${capitulo.nombre}">
+        </a>
+   
+      `;
+      episodesWrapperElement.appendChild(capituloElement);
+    });
+
+    temporadaElement.appendChild(episodesWrapperElement);
+    serieElement.appendChild(temporadaElement);
+  });
+
+  seriesContainer.appendChild(serieElement);
+});
+
+
+</script>
+
+</body>
+</html>

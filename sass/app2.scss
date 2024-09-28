@@ -1,3 +1,8 @@
 @use "./global/globales";
  @use "./nav/footer";
- @use"./Peliculas/detallePelicula"
+ @use "./nav/navegacion";
+ @use "./Peliculas/buscarPelicula.scss";
+ @use"./Peliculas/detallePelicula";
+ @use "./Peliculas/settingspc";
+ @use "./Peliculas//_extras";
+ @use "./global/loader"

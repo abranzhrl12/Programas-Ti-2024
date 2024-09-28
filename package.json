@@ -6,9 +6,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass --watch sass/app.scss:public/style.css --no-source-map",
+    "sass": "sass --watch sass/app.scss:public/style.css  --no-source-map --style=compressed",
     "postcss": "postcss public/style.css -o public/style.css --watch --no-map",
-    
+    "cssall": "concurrently \"npm run sass\" \"npm run postcss\"",
+    "sass3": "sass --watch sass/app2.scss:public/style2.css --no-source-map",
     "build": "rollup --watch --config"
   },
   "keywords": [],

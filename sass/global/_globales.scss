@@ -44,14 +44,38 @@ html {
 [class*="__img"] {
   display: block;
   max-width: 100%;
-  filter: contrast(117%) saturate(107%) brightness(106%);
+  filter: contrast(117%) saturate(107%) brightness(104%);
 }
 body {
   width: 100%;
-  font-family: v.$fuente_principal;
   font-size: 1.6rem;
   
-  // background: var(--color_fondo2);
-  background-color: #111828;
+  font-family:  "Poppins", sans-serif;
+  // background: radial-gradient(circle at center, #002b24, #004d40, #003333);
+  // background: radial-gradient(circle at center, #002b24, #004d40, #003333, #00574b);
 
+
+  // background: radial-gradient(circle at center, #111828, #0B101A, #1a2330);
+  // background: linear-gradient(90deg, #0a0f1e, #101c42, #162352);
+  // background: linear-gradient(90deg, #1a2236, #2a4c85, #3a64a1, #2a4c85, #1a2236);
+  // background: linear-gradient(90deg, #1e2940, #2b456d, #3b5b8c, #2b456d, #1e2940);
+
+  // background: linear-gradient(90deg, #1c2538, #283e5e, #304d73, #283e5e, #1c2538);
+  // background: linear-gradient(90deg, #1a2236, #203a65, #263f77);
+  
+
+  // background: linear-gradient(90deg, #192133, #171F30, #182031);
+
+  // background: radial-gradient(circle, #192133, #171F30, #182031);
+  background: linear-gradient(90deg, #1d2541, #1b2338, #20273b);
+
+
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: blue #fff;
+
+
+
+  // max-width: 100vw;
 }

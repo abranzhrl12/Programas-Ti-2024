@@ -213,10 +213,36 @@ import commonjs from '@rollup/plugin-commonjs';
 
 
 
-//para cuenta
+
+// import resolve from '@rollup/plugin-node-resolve';
+
+
+// export default {
+
+//   input: 'public/Pelis.js', // Ruta a tu archivo pelis.js
+//   output: {
+//     file: 'dist/pelis.min.js', // Ruta y nombre del archivo minificado
+//      format: 'iife', // Formato del bundle (IIFE para navegador)
+//      name: 'Pelis' // Nombre global para el bundle (opcional)
+//   },
+//    plugins: [
+//      resolve(), // Permite resolver módulos desde node_modules
+//     terser({
+//        format: {
+//          comments: false, // Elimina todos los comentarios
+//        }
+//     })
+//    ]
+//  };
 
 
 
+
+
+
+
+
+ 
 // export default {
 //   input: "./src/DatosCuenta/cuenta.js",
 //   output: {
@@ -232,22 +258,23 @@ import commonjs from '@rollup/plugin-commonjs';
 // };
 
 
-// import resolve from '@rollup/plugin-node-resolve';
 
 
 export default {
-  input: 'public/Pelis.js', // Ruta a tu archivo pelis.js
+  input: "./src/detalepelis.js",
   output: {
-    file: 'dist/pelis.min.js', // Ruta y nombre del archivo minificado
-     format: 'iife', // Formato del bundle (IIFE para navegador)
-     name: 'Pelis' // Nombre global para el bundle (opcional)
+    file: "./public/dettallepelis.js",
+    format: 'iife',
+    name: 'MyBundle',
+    sourcemap: false // Desactiva la creación de sourcemaps
   },
-   plugins: [
-     resolve(), // Permite resolver módulos desde node_modules
+  plugins: [
+    nodeResolve(),
+    commonjs(),
     terser({
-       format: {
-         comments: false, // Elimina todos los comentarios
-       }
+      format: {
+        comments: false // Elimina los comentarios
+      }
     })
-   ]
- };
+  ]
+}

@@ -11,7 +11,7 @@
   }
 }
 @mixin telefonoFull {
-  @media (min-width : v.$telefonoFull) {
+  @media (min-width : v.$phone-large) {
     @content;
   }
 }
@@ -31,7 +31,7 @@
   }
 }
 @mixin tabletM {
-  @media (min-width: v.$tabletM) {
+  @media (min-width: v.$tablet-medium) {
     @content;
   }
 }
@@ -46,7 +46,7 @@
   }
 }
 @mixin desktopFull {
-  @media (min-width: v.$desktopFull) {
+  @media (min-width: v.$desktop-full) {
     @content;
   }
 }

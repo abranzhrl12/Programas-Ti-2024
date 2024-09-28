@@ -3,44 +3,221 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./public/styl2e.css">
+    <link rel="icon" href="/LOGO- SVG/svgtopng/icono.png" type="image/x-icon" />
+    <title>Stream Movies</title>
+    <link rel="preload" href="Public/style.css" as="style" />
+    <link rel="stylesheet" href="./public/style2.css">
     <script src="public/infoPelis.js" defer></script>
+    <script src="public/dettallepelis.js" defer></script>
 </head>
+<style>
+  .navegacion{
+    z-index: 20;
+    background-color: transparent!important;
+    backdrop-filter: blur(2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.333);
+  }
+  .lista{
+    background-color: transparent!important;
+  }
+  .footer{
+   background: #0B101A!important;
+  }
+</style>
 <body>
-     <div class="Detalle-Pelicula__poster"> 
-                <img class="Detalle-Pelicula__img" src="" alt="Carátula de la Película">  
-             
-          </div> 
+  <header>
+    <div class="overlay" id="loader">
+     
+      <span class="loader"></span>
+      <img style="width: 300px; margin-top: -20rem;" src="./LOGO- SVG/logo.svg" alt="">
+  </div> 
+  </header>
+  <nav class="navegacion" id="nav">
+    <div class="navegacion__contenedor">
+      <div class="navegacion__logo">
+        <a href="index.html" title="boton logo">
+          <img class="navegacion__img" src="/LOGO- SVG/logo.svg" alt="">
+        </a>
+
+      </div>
+
+      <div class="navegacion__menu">
+        <label for="icono" class="navegacion__label"><svg width="20" class="navegacion__menu-start" width="20"
+            fill="#ffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path
+              d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+          </svg><svg width="20" class="navegacion__menu-close" fill="#fff" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 384 512">
+            <path
+              d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+          </svg></label><input type="checkbox" class="navegacion__input" id="icono"
+          title="Icono de menu desplegable" />
+        <ul class="lista">
+          <li class="lista__item">
+            <a href="index.html" id="#boton-inicio" class="lista__link">Peliculas</a>
+          </li>
+          <li class="lista__item lista__item--desplegable lista__item--hover">
+            <a href="musica.html" class="lista__link lista__link--pading"><span>Series</span></a>
+          </li>
+          <li class="lista__item">
+            <a href="detalle.html" class="lista__link" >Extrenos</a>
+          </li>
+          <li class="lista__item">
+            <a href="https://onlinefutbol.jdoxx.com/" class="lista__link">Recien agregados</a>
+          </li>
+          <li class="lista__item">
+            <a href="musica.html" class="lista__link">Musica</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="navegacion__logueo">
+        <div class="buscar-pelicula">
+          <div class="buscar-pelicula__contenedor">
+            <div class="buscar">
+              <!-- <input class="buscar__input" type="text" placeholder="buscar" /><button class="buscar__btn">Go</button> -->
+              <div class="busqueda__close">
+                <svg class="buscar__icon" width="50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <path fill="#9b9fab"
+                    d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c-9.4 9.4-9.4 24.6 0 33.9l47 47-47 47c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l47-47 47 47c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-47-47 47-47c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-47 47-47-47c-9.4-9.4-24.6-9.4-33.9 0z"
+                    stroke="black" stroke-width="0.5" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <label class="busqueda-label" for="">
+          <svg class="icono-busqueda " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path fill="#ffffff"
+              d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+          </svg></label>
+        <button class="navegacion__boton">Iniciar Session</button>
+        <button class="navegacion__perfil">
+
+        </button>
+
+        <section class="perfiles">
+          <ul class="perfiles__lista">
+            <li class="perfiles__item">
+              <a class="perfiles__link" href="perfiles.html">Administrar Perfiles</a>
+            </li>
+            <li class="perfiles__item"> <a href="cuenta.html">Configuracion</a></li>
+            <li class="perfiles__item">Ayuda</li>
+            <li class="perfiles__item" id="cerrarsession">Cerrar Sesssion</li>
+          </ul>
+        </section>
+      </div>
+
+    </div>
+  </nav>
       <section class="Detalle-Pelicula">
    
         <div class="Detalle-Pelicula__portada" >
-            <img class="Detalle-Pelicula__back" id="portadaimg"  src="" alt="Poster de Fondo">
-            
-        </div>
-        <div class="Detalle-Pelicula__texts">
-          <div>
-            <h1 class="Detalle-Pelicula__titulo">Título de la Película</h1>
-            <p class="Detalle-Pelicula__generos">Familia / Animacion / etc</p>
-          </div>
-         
-          <div class="Detalle-Pelicula__info">
-               
-            <p class="Detalle-Pelicula__descripcion">Descripción de la Película</p>
-            <div class="Detalle-Pelicula__temp">
-              <p class="Detalle-Pelicula__clasification">2h</p>
-              <p id="movie-year" class="Detalle-Pelicula__year">2022</p>
-              <p class="Detalle-Pelicula__duracion">2h</p>
-              <p class="Detalle-Pelicula__calif"></p>
+            <img class="Detalle-Pelicula__back" id="portadaimg"  src="./LOGO- SVG/logo.svg" alt="Poster de Fondo">
+            <!-- <div class="Detalle-Pelicula__poster">  -->
              
+        <!-- </div>  -->
+        </div>
+      
+        <div class="Detalle-Pelicula__texts">
+          <img class="Detalle-Pelicula__img" src="./LOGO- SVG/icono.svg" alt="Carátula de la Película">  
+          <div class="Detalle-Pelicula__detalle">
+           
+            <div class="Detalle-Pelicula__principal">
+              <div class="Detalle-Pelicula__estrellas-rating">
+                <div class="Detalle-Pelicula__estrellas"" >Estrellas </div>
+                <span class="Detalle-Pelicula__estrellas-ra"></span>
+              </div>
+             
+              <h1 class="Detalle-Pelicula__titulo">Título de la Película</h1>
+              <p class="Detalle-Pelicula__generos">Familia / Animacion / etc</p>
             </div>
            
-        </div>
-            <button class="Detalle-Pelicula__verbtn">Ver Pelicula</button>
+            <div class="Detalle-Pelicula__info">
+                 
+              <p class="Detalle-Pelicula__descripcion">Descripción de la Película</p>
+            
+          </div>
+        
+          <div class="Detalle-Pelicula__temp">
+          
+            <p id="movie-year" class="Detalle-Pelicula__year">2022</p>
+            <p class="Detalle-Pelicula__duracion">2h</p>
+            <p class="Detalle-Pelicula__clasification">2h</p>
+            <p class="Detalle-Pelicula__calif"></p>
+           
+          </div>
            
         </div>
-   
+           
+           
+        </div>
+        <div class="Detalle-Pelicula__botones">
+          <button class="Detalle-Pelicula__verbtn"> <svg id="Capa_8" width="22" data-name="Capa 2" viewBox="0 0 20.38 20.38">
+            <defs>
+              <style>
+                .cls-9 {
+                  fill: #fff;
+                }
+          
+                .cls-2 {
+                  fill: none;
+                  stroke: #fff;
+                  stroke-miterlimit: 10;
+                  stroke-width: .5px;
+                }
+              </style>
+            </defs>
+            <g id="Capa_1-2" >
+              <g>
+                <path class="cls-9"  d="m7.55,13.71l1.06-2.53c.27-.64.27-1.36,0-2l-1.06-2.53c-.23-.54.37-1.05.87-.75l6.11,3.76c.38.23.38.79,0,1.03l-6.11,3.76c-.5.31-1.1-.21-.87-.75Z"/>
+                <circle class="cls-2" cx="10.19" cy="10.19" r="9.94"/>
+              </g>
+            </g>
+          </svg>Ver Pelicula</button>
+          <button class="Detalle-Pelicula__btnfavoritos">
+            <img src="./LOGO- SVG/mas_streamix.svg" alt="">
+            Añadir a Favoritos</button>
+        </div>
+       
     </section> 
+
+
+    <section class="Extras">
+      <div class="Extras__contenedor">
+        <div class="Extras__menu">
+          <a href="#" class="Extras__item">Autores</a>
+          <a href="#" class="Extras__item">Relacionados</a>
+          <a href="#" class="Extras__item">Trailers</a>
+        </div>
+     
+      </div>
+      <div class="Extras__actores"> 
+
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__contenedor">
+        <div class="footer__item">
+          <img src="./LOGO- SVG/logo.svg" alt="">
+          <p class="footer__texto">
+            Somos un grupo de personas que no tiene dinero para pagar Netflix.
+          </p>
+        </div>
+        <div class="footer__item">
+          <h3 class="footer__titulo">Recursos Adicionales</h3>
+          <p>Preguntas Frecuentas</p>
+          <p>Surencias y Feedback</p>
+        </div>
+        <div class="footer__item">
+          <h4 class="footer__titulo">Mantente en Contacto</h4>
+          <p>programasti@gmail.com</p>
+          <p>programasti@gmail.com</p>
+        </div>
+      </div>
+      <span class="footer__copy">&copy2024 ProgramasTi.</span>
+    </footer>
 
 </body>
 </html>

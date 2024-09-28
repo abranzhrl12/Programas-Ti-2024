@@ -18,7 +18,7 @@ const firebaseApp = initializeApp(firebaseConfig);
 const db = getFirestore(firebaseApp);
 
 
-const MAX_DEVICES = 2; // Máximo número de dispositivos permitidos por usuario
+const MAX_DEVICES = 3; // Máximo número de dispositivos permitidos por usuario
 
 let dispo="";
 export async function registrarDispositivoYAutenticar(correo, contraseña, detallesDispositivo) {

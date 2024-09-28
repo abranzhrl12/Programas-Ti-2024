@@ -17,14 +17,18 @@
   <noscript>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet" />
   </noscript>
-  <!-- Preload de imagenes -->
-  <link rel="preload" href="./ImagenesTV/cesar-small.webp" as="image" />
   <!-- Preload y carga de CSS principal -->
   <link rel="preload" href="Public/style.css" as="style" />
   <link rel="stylesheet" href="Public/style.css" />
   <!-- Scripts diferidos -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js" defer></script>
-
+<style>
+  @starting-style{
+    .Peliculas__card{
+      opacity: 0;
+    }
+  }
+</style>
    <!-- Plyr JS -->
    <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js" defer></script>
    <!-- HLS.js -->
@@ -33,7 +37,7 @@
   <script src="./dist/trailer.js" defer></script>
 
   <script src="/dist/pelis.min.js" defer></script>
- 
+
 </head>
 
 <body>
@@ -63,7 +67,7 @@
               <a href="index.html" id="#boton-inicio" class="lista__link">Peliculas</a>
             </li>
             <li class="lista__item lista__item--desplegable lista__item--hover">
-              <a href="musica.html" class="lista__link lista__link--pading"><span>Series</span></a>
+              <a href="series.html" class="lista__link lista__link--pading"><span>Series</span></a>
             </li>
             <li class="lista__item">
               <a href="detalle.html" class="lista__link" >Extrenos</a>
@@ -118,7 +122,7 @@
     </nav>
 
     <div class="hero">
-      <swiper-container class="mySwiper hero" navigation="false" space-between="30" centered-slides="true">
+      <swiper-container class="mySwiper hero"  navigation="false" space-between="30" centered-slides="true">
         <swiper-slide>
        
           <video id="video" playsinline muted autoplay>
@@ -145,7 +149,7 @@
               </div>
          
           <div class="trailers__info">
-              <h2 class="trailers__titulo">DEADPOOL Y WOLVERINE</h2>
+              <h2 class="trailers__titulo">Robot salvaje</h2>
               <div class="trailers__descripcion">
                   <span class="trailers__año">2024</span>
                   <span class="trailers__tiempo">123min</span>
@@ -328,12 +332,12 @@
       </div>
     </section>
 
-    <button id="fullscreenBtn">Pantalla Completa</button>
+    <!-- <button id="fullscreenBtn">Pantalla Completa</button> -->
   </section>
 
 
   
-  <div id="Videosplay" class="DetallePrograma__ConVideo"></div>
+  <!-- <div id="Videosplay" class="DetallePrograma__ConVideo"></div> -->
 
   <div class="navMovile">
     <ul class="navMovile__containerItem">
@@ -521,6 +525,17 @@ function initSwiper() {
 // Inicializa Swiper al cargar la página
 initSwiper();
 window.addEventListener('resize', initSwiper);
+document.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.navegacion');
+    const scrollThreshold = window.innerWidth * 0.05; // 10vw
+
+    if (window.scrollY > scrollThreshold) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+});
+
   </script>
 </body>
 </html>

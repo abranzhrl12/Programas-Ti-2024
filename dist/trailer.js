@@ -1,12 +1,9 @@
 
-// Agrega un event listener para el cambio de tamaño de la ventana
-
-
 document.addEventListener('DOMContentLoaded', async function () {
-    let MOVIE_NAME2 = 'Deadpool & Wolverine';
+    let MOVIE_NAME2 = 'Robot salvaje (The Wild Robot)';
     getMovieIdByName(MOVIE_NAME2);
             const video = document.getElementById('video');
-            const source = 'https://vz-6c2d4433-dec.b-cdn.net/d7df55a6-ca73-4024-ae88-c0d022407721/playlist.m3u8';
+            const source = 'https://vz-6c2d4433-dec.b-cdn.net/778f9e1b-5035-4911-bb11-f2a96f427601/playlist.m3u8';
 
             const hls = new Hls();
 
@@ -26,7 +23,6 @@ document.addEventListener('DOMContentLoaded', async function () {
                     });
                 });
             }
-
             // Agregar evento de clic para alternar reproducción
             video.addEventListener('click', function () {
                 if (video.paused) {
@@ -36,14 +32,8 @@ document.addEventListener('DOMContentLoaded', async function () {
                 } else {
                     video.pause();
                 }
-            });
-
-        
+            });    
         });
-
-
-
-     
         const cerrarModal = document.querySelector('.videoModal__close');
         cerrarModal.addEventListener('click', () => {
             const modalAbierto = document.querySelector('.videoModal');
@@ -54,8 +44,6 @@ document.addEventListener('DOMContentLoaded', async function () {
             video.muted = false; // Desmutear el video
         });
         const API_KEY = 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4MGQ5ZDM1YzVhODI5YTFlMWZiOWYxNmU4NGVmZDBkMyIsIm5iZiI6MTcyMzczOTI5OC4yMzY4ODcsInN1YiI6IjY2YjhiZjA2Yjk5M2E0YWM3YWY2ZWRmOCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.IjYIcnw-1YdzrBn-HlxfNmiNUbyz2oZwLoNFQ3B9rsE';
-      
-
         const starTemplates = {
             "vacia": `
                 <svg class="trailers__estrella-vacia" width="22" id="Capa_2" data-name="Capa 2" viewBox="0 0 11.86 11.33" stroke="1" stroke-width="0.3">
@@ -174,7 +162,6 @@ document.addEventListener('DOMContentLoaded', async function () {
           } else if (remainder > 0.80 && remainder <= 1.00) {
           container.innerHTML += starTemplates["90"];
           }
-          
           // Añadir estrella completa si el decimal es exacto (1)
           if (remainder === 1.00) {
           container.innerHTML += starTemplates["100"];
@@ -188,9 +175,7 @@ document.addEventListener('DOMContentLoaded', async function () {
           for (let i = 0; i < emptyStars; i++) {
           container.innerHTML += starTemplates["vacia"];
           }
-          }
-          
-         
+          }      
           //para trailers
           async function getMovieIdByName(movieName) {
             try {
@@ -297,8 +282,7 @@ document.addEventListener('DOMContentLoaded', async function () {
                   default:
                       return 'Desconocida'; // Para clasificaciones no listadas
               }
-            }
-            
+            }   
             function cortarDescripcion(texto) {
               // Divide el texto en partes utilizando el punto (.) como delimitador
               const partes = texto.split('.');

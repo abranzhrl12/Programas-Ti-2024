@@ -11,8 +11,9 @@
         align-items: center;
         justify-content: center;
         color: white;
-        margin-top: 1.8rem;
+        margin-top: 5.5rem;
         pointer-events: none;
+       
     }
   
 &__pelicula{
@@ -156,11 +157,13 @@
         gap: 7rem;
         overflow: hidden;
         margin-top: -7rem;
+       
     }
    
 
 }
 .linea-tiempo__boton{
+    pointer-events: auto; 
 @include m.tabletM {
     width: 8px;
     height: 8px;
@@ -168,12 +171,13 @@
     position: relative;
     background-color: white;
     cursor: pointer;
+    pointer-events: auto; 
 }
 
   
 }
 :where(.linea-tiempo__boton:not(.linea-tiempo__boton:last-child)):after {
-
+  
     @include m.tabletM {
         content: "";
     width: 4px;

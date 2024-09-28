@@ -9,7 +9,11 @@
     margin: auto;
     top: 50%;
     transform: translateY(-50%);
-    animation: hideLoader 1.5s forwards; /* Agrega una animación para cambiar el display */
+    animation: hideLoader 2.3s forwards; /* Agrega una animación para cambiar el display */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 .loader:after {
     content: '';
@@ -25,7 +29,7 @@
     inset: 0px;
     margin: auto;
     background: #de3500;
-    animation: crlMugLoader 0.5s linear infinite alternate;
+    animation: crlMugLoader 0.9s linear infinite alternate;
 }
 @keyframes crlMugLoader {
     0%, 10% { transform: translateY(64px); }
@@ -47,8 +51,11 @@
     display: grid;
     place-items: center;
     z-index: 99;
-    animation: hideLoader .5s forwards;
+    animation: hideLoader .9s forwards;
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .nombrelogo23{
   width: 35rem;
@@ -58,7 +65,7 @@
   top: calc(50% - 12.4rem);
   left: calc((50% - 10rem ) - 6.5rem);
   opacity: 1;
-  animation: loadertext .5s forwards;
+  animation: loadertext .9s forwards;
 }
 @keyframes loadertext {
   0%{
